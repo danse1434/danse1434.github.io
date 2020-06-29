@@ -2,7 +2,7 @@ body{
     margin: 0px;
     font-family: "Muli", sans-serif;
     background: rgb(2,0,36);
-background: linear-gradient(133deg, rgba(2,0,36,1) 1%, rgba(76,64,138,1) 19%, rgba(0,179,255,1) 43%, rgba(0,196,255,1) 72%, rgba(0,255,246,1) 91%);
+    background: linear-gradient(133deg, rgba(2,0,36,1) 1%, rgba(76,64,138,1) 19%, rgba(0,179,255,1) 43%, rgba(0,196,255,1) 72%, rgba(0,255,246,1) 91%);
 }
 
 h1{
