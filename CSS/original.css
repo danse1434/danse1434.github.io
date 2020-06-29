@@ -1,3 +1,10 @@
+.jumbotron{
+    background: rgb(2,0,36);
+    background: linear-gradient(133deg, rgba(2,0,36,1) 1%, rgba(76,64,138,1) 19%, rgba(0,179,255,1) 43%, rgba(0,196,255,1) 72%, rgba(0,255,246,1) 91%);
+    color: white;
+}
+
+
 .bg-4 {
       background-color: #2f2f2f;
       color: #ffffff;
@@ -13,8 +20,12 @@
     background-color: #f6f6f6;
   }
 
+  .bg-grey h2{
+    color: #658DC6;
+  }
+
   .bg-2{
-    background-color: #474e5d; /* Dark Blue */
+    background-color: #0F4C81; /* Color del año 2020 */
     color: #ffffff;
   }
 
