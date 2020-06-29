@@ -17,22 +17,28 @@
 
 <body>
 
-  <div class="pos-f-t">
-  <div class="colapse" id = "navbarToggleExternalContent">
-    
   <!--Panel de Navegación-->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+    
     <!---Marca-->
-    <a class="navbar-brand" href="#">Hola Soy Daniel!</a>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navCollapse" aria-controls="navCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="./CSS/icons/three-bars-16.svg">
+      </button>
+      <a class="navbar-brand" href="#">Hola Soy Daniel!</a>
+    </div>
+    
+    <!--Colapsable en pantallas pequeñas-->
+    <div class="collapse navbar-collapse" id="navCollapse">
     <!--Botones--->
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="navbar-nav ml-auto">
       <!--Botón 1-->
       <li class="nav-item">
         <a class="nav-link" href="./Modulos/General/About_Me.html">Acerca de mí</a>
       </li>
       <!--Botón 2-->
       <li class="nav-item">
-        <a class="nav-link" href="#">Contacto</a>
+        <a class="nav-link" href="./Modulos/Blog/Blog.html">Blog</a>
       </li>
       <!--Lista Desplegable-->
       <li class="nav-item dropdown">
@@ -46,15 +52,10 @@
         </div>
       </li>
     </ul>
-  </nav>
-</div>
+    </div>
 
-<nav class="navbar navbar-dark bg-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-</nav>
-</div>
+  </nav>
+
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
