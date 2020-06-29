@@ -12,39 +12,82 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href=".\CSS\original.css">
+    
 </head>
 
-<div class="jumbotron text-center">
-    <h1>Hola Soy Danielo</h1>
-</div>
-
 <body>
-    <section>
-        <h2> Bibliografía </h2>
-        <p>Soy químico farmacéutico de la Universidad Nacional de Colombia con interés especial en el Modelamiento y Simulación 
-            aplicado a la terapéutica. </p>    
-    </section>
 
-    <div class="container">
+  <!--Panel de Navegación-->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <!---Marca-->
+    <a class="navbar-brand" href="#">Hola Soy Daniel!</a>
+    <!--Botones--->
+    <ul class="nav navbar-nav navbar-right">
+      <!--Botón 1-->
+      <li class="nav-item">
+        <a class="nav-link" href="#">Acerca de mí</a>
+      </li>
+      <!--Botón 2-->
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contacto</a>
+      </li>
+      <!--Lista Desplegable-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Proyectos
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">PK-POP de piperacilina en UCI</a>
+          <a class="dropdown-item" href="#">PK-POP de antibióticos en NF</a>
+          <a class="dropdown-item" href="#">Coronavirus</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+<!--Cuerp de Sitio Web-->
+  <div class="container">
+    <img src="./figures/CV0.png" class="img-thumbnail" alt="Cinque Terre" width="236" height="304">
+  </div>
+  <div class="container">
+    <h2> Bibliografía </h2>
+    <p>Soy químico farmacéutico de la <abbr title="Universidad Nacional de Colombia">UNAL</abbr> con interés especial en <abbr title="Modelamiento y Simulación">M&S</abbr> aplicado a la terapéutica. </p>    
+  </div>
+
+  <!--Contenedor de contacto-->
+  <div class="container-fluid bg-grey">
+    <h2 class="text-center">Contacto</h2>
+    <div class="row">
+      <div class="col-sm-5">
+        <p>Estaré en contacto con usted lo más pronto posible.</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> Bogotá, CO</p>
+        <p><span class="glyphicon glyphicon-phone"></span> +51 314 33 29 106</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> danse1434@hotmail.com</p>
+      </div>
+      <div class="col-sm-7">
         <div class="row">
-          <div class="col-sm-4">
-            <h3>Column 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Nombre" type="text" required>
           </div>
-          <div class="col-sm-4">
-            <h3>Column 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Correo electrónico" type="email" required>
           </div>
-          <div class="col-sm-4">
-            <h3>Column 3</h3>        
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Comentario" rows="5"></textarea><br>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button type="button" class="btn btn-outline-primary" type="submit">Enviar</button>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
+    
+  <!--Pie de página-->
+  <footer class="container-fluid bg-4 text-center">
+    <p>Tema de Bootstrap Hecho por: <a href="https://danse1434.github.io/">Daniel Parra G.</a></p>
+  </footer>
 
 
 </body>
