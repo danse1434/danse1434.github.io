@@ -24,9 +24,14 @@
     color: #658DC6;
   }
 
+
+
   .bg-2{
     background-color: #0F4C81; /* Color del año 2020 */
     color: #ffffff;
+  }
+  .bg-2 a{
+      color: white;
   }
 
   .carousel-inner img{
