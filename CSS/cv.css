@@ -1,0 +1,22 @@
+.bg-cv-0{
+  background-color: burlywood; /* Color del año 2020 */
+  color: black;
+  width: 90%;
+}
+
+.bg-cv-1{
+    background-color: aliceblue; /* Color del año 2020 */
+    color: black;
+    width: 90%;
+  }
+
+
+  @media (max-width: 1200px) {
+    .bg-cv-0{width: 90%;}
+    .bg-cv-1{width: 90%;}
+  }
+
+  @media (max-width: 768px) {
+    .bg-cv-0{width: 100%;}
+    .bg-cv-1{width: 100%;}
+  }

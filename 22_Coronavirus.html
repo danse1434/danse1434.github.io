@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Modelamiento aplicado a COVID-19</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href=".\CSS\original.css">
+  <link rel="stylesheet" type="text/css" href=".\CSS\cv.css">
+  <link rel="stylesheet" type="text/css" href=".\CSS\estilos_blog.css">
+
+  <script type="text/javascript">
+    $(function () {
+      var includes = $('[data-include]');
+      jQuery.each(includes, function () {
+        var file = 'components/' + $(this).data('include') + '.html';
+        $(this).load(file);
+      });
+    });
+  </script>
+</head>
+
+<body>
+    <!--Incluir barra de navegación-->
+    <div data-include="navbar"></div>
+    <!--Caso de la Ivermectina-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1>Coronavirus</h1>
+        </div>
+    </div>
+
+
+    <div class="container-fluid bg-blog-0">
+        <h2>La Ivermectina en el tratamiento del COVID-19</h2>
+        <p> La ivermectina es un fármaco del tipo avermectina con actividad antiparasitaria y con un gran espectro de acción. Se
+          ha utilizado en el tratamiento de infecciones por parásitos como: <i>Onchocerca spp.</i>, <i>Loa Loa</i>, <i>>Enterobius
+            spp.</i>, <i>Wuchereria spp.</i>, entre muchos otros.
+        </p>
+        <p>
+          A continuación, se muestra un análisis farmacocinético para determinar la factibilidad de uso de ivermectina en
+          la infección por SARS-CoV-2. Este análisis se acompaña de consideraciones farmacodinámicas y de cinética viral. 
+        </p>
+    </div>
+
+    <div class="container-fluid text-center">
+        <iframe src="./Modulos/Blog/Presentacion_Modelo_COVID-19.pdf" width="90%" height="500px">Ejemplo</iframe>
+    </div>
+    
+    <hr>
+    <div class="container-fluid text-center bg-blog-0">
+      <h2 class="text-left">Seguridad</h2>
+      <p class="text-justify"> A continuación, se muestra un resumen de los efectos adversos reportados de Ivermectina en
+        forma de Treemap. Esta fue construida mediante web scrapping del resumen de EAM reportados en la <a
+          href="http://www.vigiaccess.org/">Base de Datos Vigiaccess del Uppsala Monitoring Center</a>, en donde se 
+          recopilan los EAM reportados a nivel nacional en los países miembro.</p>
+        <iframe src="./Modulos/Blog/Heat_Map_IVM.pdf" width="90%" height="500px">Ejemplo</iframe>
+    </div>
+
+  <!--Incluir Footer-->
+  <div data-include="footer"></div>
+</body>
+
+</html>

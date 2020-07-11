@@ -39,13 +39,13 @@
   <!--Jumbotron-->
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1>Hola Soy Daniel!!!</h1>
-      <p>Mi nombre es Daniel y soy muito lo buena gente</p>
+      <h1>Hola Soy Daniel!</h1>
+      <p>Mi nombre es Daniel y soy Farmacéutico</p>
     </div>
   </div>
 
 
-  <div class="container-fluid text-center">
+  <div class="container-sm text-center">
     <div id="demo" class="carousel slide" data-ride="carousel">
 
       <!-- Indicators -->
@@ -112,7 +112,9 @@
     </div>
 
   </div>
-
+  
+  <hr>
+  
   <!--Cuerpo de Sitio Web-->
   <div class="container-fluid bg-2 text-center">
     <img src="./figures/CV0.png" class="img-thumbnail" alt="Cinque Terre" width="236" height="304">
@@ -120,9 +122,13 @@
     <p>Soy Químico Farmacéutico de la <abbr title="Universidad Nacional de Colombia">UNAL</abbr> con interés especial en
       <abbr title="Modelamiento y Simulación">M&S</abbr> aplicado a la terapéutica. </p>
     <p><img src="./CSS/icons/mortar-board-16.svg"><a href="./Modulos/CV_DANIEL.pdf"> Hoja de Vida </a> </p>
-    <button type="button" class="btn btn-outline-primary" type="submit">Buscar</button>
+    <button type="button" class="btn btn-outline-primary" type="submit">
+      <a
+        href="https://www.google.com/search?q=%22Daniel+Sebastian+parra+gonzalez%22&rlz=1C1CHBD_esCO757CO757&oq=%22Daniel+Sebastian+parra+gonzalez%22&aqs=chrome..69i57j69i59l3.631j0j7&sourceid=chrome&ie=UTF-8">Buscar</a>
+    </button>
   </div>
 
+  <hr>
 
   <!--Contenedor de contacto-->
   <div class="container-fluid bg-grey">
@@ -134,7 +140,7 @@
         <p><img src="./CSS/icons/location-16.svg"> Bogotá, CO</p>
         <p><img src="./CSS/icons/unmute-16.svg"> +51 314 33 29 106</p>
         <p><img src="./CSS/icons/mail-16.svg"> danse1434@hotmail.com</p>
-        <p><img src="./CSS/icons/mark-github-16.svg"> https://github.com/danse1434</p>
+        <p><img src="./CSS/icons/mark-github-16.svg"> <a href="https://github.com/danse1434">github.com/danse1434</a></p>
       </div>
       <div class="col-sm-7">
         <div class="row">
@@ -157,6 +163,24 @@
 
   <!--Incluir Footer-->
   <div data-include="footer"></div>
+
+  <script type="text/javascript">
+    var $form = $('form#test-form'),
+      url = 'https://script.google.com/macros/s/AKfycby9iY7yyb73vh9fj0pcYMmCR-9PrTJoPwqG7mhRT5P5ZjYf0y4/exec'
+
+    $('#submit-form').on('click', function (e) {
+      e.preventDefault();
+      var jqxhr = $.ajax({
+        url: url,
+        method: "GET",
+        dataType: "json",
+        data: $form.serializeObject()
+      }).success(
+        // do something
+      );
+    })
+
+  </script>
 
 </body>
 

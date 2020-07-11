@@ -10,47 +10,67 @@
 }
 
 .bg-4 {
-      background-color: #2f2f2f;
-      color: #ffffff;
-      }
-      .navbar{
-        margin-bottom: 0;
-      }
-      .container-fluid {
-    padding: 60px 50px;
+  background-color: #2f2f2f;
+  color: #ffffff;
   }
-
-  .bg-grey {
-    background-color: #f6f6f6;
+  .navbar{
+    margin-bottom: 0;
   }
+  .container-fluid {
+  padding: 60px 50px;
+}
 
-  .bg-grey h2{
-    color: #658DC6;
-  }
+.bg-grey {
+  background-color: #f6f6f6;
+}
 
+.bg-grey h2{
+  color: #658DC6;
+}
 
+.bg-2{
+  background-color: #0F4C81; /* Color del año 2020 */
+  color: #ffffff;
+}
+.bg-2 a{
+  color: white;
+}
 
-  .bg-2{
-    background-color: #0F4C81; /* Color del año 2020 */
-    color: #ffffff;
-  }
-  .bg-2 a{
-      color: white;
-  }
-
+/* Configuraciones del Carrusel */
+.carousel-inner img{
+  -webkit-filter: grayscale(90%);
+  filter: grayscale(90%); /* make all photos black and white */
+  width: 50%;
+  margin:auto;
+}
+.carousel-caption h3 {
+  color: #fff !important;
+}
+/*Breakpoints para Sitio Web con responsibidad en el carrusel*/
+@media (max-width: 1200px) {
   .carousel-inner img{
-    -webkit-filter: grayscale(90%);
-    filter: grayscale(90%); /* make all photos black and white */
-      width: 50%;
-      margin:auto;
+    width: 50%;
   }
+}
+@media (max-width: 992px) {
+  .carousel-inner img{
+    width: 60%;
+  }
+}
 
-  .carousel-caption h3 {
-    color: #fff !important;
+@media (max-width: 768px) {
+  .carousel-inner img{
+    width: 100%;
   }
+}
+@media (max-width: 575px) {
+  .carousel-inner img{
+    filter: none; /* Color normal */
+    -webkit-filter: none;
+    width: 100%;
+  }
+  .carousel-caption {
+    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+}
 
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
-  }
