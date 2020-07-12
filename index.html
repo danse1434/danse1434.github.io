@@ -142,7 +142,9 @@
         <p><img src="./CSS/icons/mail-16.svg"> danse1434@hotmail.com</p>
         <p><img src="./CSS/icons/mark-github-16.svg"> <a href="https://github.com/danse1434">github.com/danse1434</a></p>
       </div>
-      <div class="col-sm-7">
+
+      
+      <form id="test-form" action="" class="col-sm-7">
         <div class="row">
           <div class="col-sm-6 form-group">
             <input class="form-control" id="name" name="name" placeholder="Nombre" type="text" required>
@@ -152,12 +154,17 @@
           </div>
         </div>
         <textarea class="form-control" id="comments" name="comments" placeholder="Comentario" rows="5"></textarea><br>
+        
         <div class="row">
+
           <div class="col-sm-12 form-group">
-            <button type="button" class="btn btn-outline-primary" type="submit">Enviar</button>
+            <button id="submit-form" type="button" class="btn btn-outline-primary" type="submit">Enviar</button>
           </div>
+
         </div>
-      </div>
+      </form>
+  
+
     </div>
   </div>
 
@@ -176,10 +183,9 @@
         dataType: "json",
         data: $form.serializeObject()
       }).success(
-        // do something
+        // Hacer algo
       );
     })
-
   </script>
 
 </body>
