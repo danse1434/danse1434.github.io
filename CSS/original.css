@@ -53,15 +53,13 @@
   }
 }
 @media (max-width: 992px) {
-  .carousel-inner img{
-    width: 60%;
-  }
+  .carousel-inner img{width: 60%;}
+  .bg-2{width: 95%;}
 }
 
 @media (max-width: 768px) {
-  .carousel-inner img{
-    width: 100%;
-  }
+  .carousel-inner img{width: 100%;}
+  .bg-2{width: 100%;}
 }
 @media (max-width: 575px) {
   .carousel-inner img{

@@ -6,3 +6,7 @@
 .bg-blog-0 p{
     color: black;
 }
+
+@media (max-width: 768px) {
+  .bg-blog-0{width: 100%;}
+}
