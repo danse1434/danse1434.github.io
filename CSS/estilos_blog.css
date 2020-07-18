@@ -10,6 +10,7 @@
   text-align: justify;
 }
 
+
 @media (max-width: 1200px) {
   .bg-blog-0{width:90%;}
   .bg-blog-0 p{width:90%;}
@@ -18,6 +19,12 @@
 }
 @media (max-width: 768px) {
   .bg-blog-0{width: 100%;}
-  .bg-blog-0 p{width: 100%;}
-  .bg-blog-0 h2{width: 100%;}
+  
+  .bg-blog-0 p{width: 98%;}
+
+  .bg-blog-0 h2{
+    width: 100%;
+    text-align: left;
+  }
+
 }
