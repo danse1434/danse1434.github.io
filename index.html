@@ -23,10 +23,17 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href=".\CSS\original.css">
-
-  <!--DOM-->
   
-  
+  <script type="text/javascript">
+    $(function () {
+      var includes = $('[data-include]');
+      jQuery.each(includes, function () {
+        var file = 'components/' + $(this).data('include') + '.html';
+        $(this).load(file);
+      });
+    });
+  </script>
+    
 </head>
 
 <!-- Body -->

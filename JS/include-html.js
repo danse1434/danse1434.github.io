@@ -29,37 +29,3 @@ $('#testForm').submit(function(e) {
   $('.success-message').show();
   $('#testForm')[0].reset();
 });
-
-/*
-
-document.getElementById("test-form").addEventListener('submit-form', formSubmit);
-
-/*Subir formulario
-function formSubmit(e) {
-  e.preventDefault();
-  let name     = document.querySelector('#name').value;
-  let email    = document.querySelector('#email').value;
-  let comments = document.querySelector('#comments').value;
-}
-
-sendMessage(name, email, comments);
-//Show Alert Message
-// document.querySelector('.alert').style.display = 'block';
- //Hide Alert Message After Seven Seconds
- setTimeout(function() {
-   document.querySelector('.alert').style.display = 'none';
- }, 7000);
- 
- document.getElementById("test-form").reset();
-
-//Send Message to Firebase(4)
-function sendMessage(name, email, comments) {
-  let newFormMessage = formMessage.push();
-  newFormMessage.set({
-    name: name,
-    email: email,
-    comments: comments
-  });
-
-}
-*/
