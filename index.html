@@ -24,15 +24,9 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href=".\CSS\original.css">
 
-  <script type="text/javascript">
-    $(function () {
-      var includes = $('[data-include]');
-      jQuery.each(includes, function () {
-        var file = 'components/' + $(this).data('include') + '.html';
-        $(this).load(file);
-      });
-    });
-  </script>
+  <!--DOM-->
+  
+  
 </head>
 
 <!-- Body -->
@@ -135,64 +129,49 @@
 
   <hr>
 
-  <!--Contenedor de contacto-->
-  <div class="container-fluid bg-grey">
-    <h2 class="text-center">Contacto</h2>
-    <div class="row">
-      <div class="col-sm-5">
-        <br></br>
-        <p>Estaré en contacto con usted lo más pronto posible.</p>
-        <p><img src="./CSS/icons/location-16.svg"> Bogotá, CO</p>
-        <p><img src="./CSS/icons/unmute-16.svg"> +51 314 33 29 106</p>
-        <p><img src="./CSS/icons/mail-16.svg"> danse1434@hotmail.com</p>
-        <p><img src="./CSS/icons/mark-github-16.svg"> <a href="https://github.com/danse1434">github.com/danse1434</a></p>
-      </div>
-
-      
-      <form id="test-form" action="" class="col-sm-7">
-        <div class="row">
-          <div class="col-sm-6 form-group">
-            <input class="form-control" id="name" name="name" placeholder="Nombre" type="text" required>
-          </div>
-          <div class="col-sm-6 form-group">
-            <input class="form-control" id="email" name="email" placeholder="Correo electrónico" type="email" required>
-          </div>
-        </div>
-        <textarea class="form-control" id="comments" name="comments" placeholder="Comentario" rows="5"></textarea><br>
-        
-        <div class="row">
-
-          <div class="col-sm-12 form-group">
-            <button id="submit-form" type="button" class="btn btn-outline-primary" type="submit">Enviar</button>
-          </div>
-
-        </div>
-      </form>
-  
-
+<!--Contenedor de contacto-->
+<div class="container-fluid bg-grey">
+  <h2 class="text-center">Contacto</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <br></br>
+      <p>Estaré en contacto con usted lo más pronto posible.</p>
+      <p><img src="./CSS/icons/location-16.svg"> Bogotá, CO</p>
+      <p><img src="./CSS/icons/unmute-16.svg"> +51 314 33 29 106</p>
+      <p><img src="./CSS/icons/mail-16.svg"> danse1434@hotmail.com</p>
+      <p><img src="./CSS/icons/mark-github-16.svg"> <a href="https://github.com/danse1434">github.com/danse1434</a></p>
     </div>
-  </div>  
+    <form id="testForm" action="" class="col-sm-7">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control name" id="name" name="name" placeholder="Nombre" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control email" id="email" name="email" placeholder="Correo electrónico" type="email"
+            required>
+        </div>
+      </div>
+      <textarea class="form-control comments" id="comments" name="comments" placeholder="Comentario"
+        rows="5"></textarea><br>
+
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button id="submit-form" class="btn btn-outline-primary" type="submit">Enviar</button>
+        </div>
+      </div>
+    <!--Mensaje de Alerta Conectado a JS-->
+    <div class="alert alert-success success-message" style="display:none;">Información subida de forma satisfactoria.</div>    
+    </form>
+  </div>
+</div>
 
   <!--Incluir Footer-->
   <div data-include="footer"></div>
 
-  <!--https://medium.com/@dmccoy/how-to-submit-an-html-form-to-google-sheets-without-google-forms-b833952cc175-->
-  <script type="text/javascript">
-    var $form = $('form#test-form'),
-      url = 'https://script.google.com/macros/s/AKfycby9iY7yyb73vh9fj0pcYMmCR-9PrTJoPwqG7mhRT5P5ZjYf0y4/exec'
-
-    $('#submit-form').on('click', function (e) {
-      e.preventDefault();
-      var jqxhr = $.ajax({
-        url: url,
-        method: "GET",
-        dataType: "json",
-        data: $form.serializeObject()
-      }).success(
-        // Hacer algo
-      );
-    })
-  </script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+  <script src="./JS/include-html.js"></script>
 
 </body>
 
