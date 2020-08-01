@@ -1,3 +1,7 @@
+.img-thumbnail{
+  width: 50%;
+}
+
 .bg-blog-0{
     background-color: white; /* Color del año 2020 */
   }
@@ -25,6 +29,9 @@
   .bg-blog-0 h2{
     width: 100%;
     text-align: left;
+  }
+  .img-thumbnail{
+    width: 95%;
   }
 
 }
