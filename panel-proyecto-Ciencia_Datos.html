@@ -1,13 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+    <title>Autenticación</title>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Sitio Web Oficial de Daniel Sebastian Parra González">
+    <meta name="keywords"
+    content="Daniel, Sebastian, Parra, González, Daniel Sebastian Parra González, Farmacéutico, Farmacia, Farmacocinética, QSP,quimico farmaceutico">
+    <meta name="author" content="Daniel Parra G.">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href=".\CSS\original.css">
+    <link rel="stylesheet" href="./CSS/estilos_blog.css">
+
+    <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg">
+    
+    <script type="text/javascript">
+        $(function () {
+        var includes = $('[data-include]');
+        jQuery.each(includes, function () {
+            var file = 'components/' + $(this).data('include') + '.html';
+            $(this).load(file);
+        });
+        });
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ciencia de Datos</title>
 </head>
 
 <body>
     
-    Nueva Página
+    <!--Incluir barra de navegación-->
+    <div data-include="navbar"></div>
+    
+    <div class="container-fluid"></div>
+    
+    <div class="text-center mb-4"> 
+        <h1>Verificación de Usuario</h1>        
+    </div>
+
+    <div class="container-lg mx-auto" style="width: 60%;">
+    
+        <div class="form-label-group pb-4">
+            <input type="text" class="form-control" id='inputEmail' placeholder="Email" required autofocus>
+        </div>
+        
+        <div class="form-label-group pb-4">
+            <input type="text" class="form-control" id='password' placeholder="Contraseña" type="password" required autofocus>
+        </div>
+        
+        <div class="checkbox mb-3">
+            <label for=""><input type="checkbox" value="remember-me">
+                Recuérdame
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" id='btnSignIn' onclick="getInfo()">
+            Ingresa
+        </button>
+    </div>
+    <div id="alert_placeholder"></div>
+    <div class="container-fluid"></div>
+
+    <!--Incluir Footer-->
+    <div data-include="footer"></div>
+    
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script> -->
+    <script src="./JS/index1.js"></script>
 </body>
 </html>
