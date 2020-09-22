@@ -1,0 +1,115 @@
+.tg  {
+    border-collapse:collapse;
+    border-color:#aaa;
+    border-spacing:0;
+}
+
+.tg td{
+    background-color:#fff;
+    border-bottom-width:1px;
+    border-color:#aaa;
+    border-style:solid;
+    border-top-width:1px;
+    border-width:0px;
+    color:#333;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;
+}
+
+.tg th{
+    background-color:#f38630;
+    border-bottom-width:1px;
+    border-color:#aaa;
+    border-style:solid;
+    border-top-width:1px;
+    border-width:0px;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;
+    
+}
+.tg .tg-sx1p{
+    background-color:#f38630;
+    font-weight:bold;
+    position:-webkit-sticky;
+    position:sticky;
+    text-align:center;
+    top:-1px;
+    vertical-align:middle;
+    will-change:transform
+}
+.tg .tg-pnt8{
+    background-color:#FCFBE3;
+    text-align:center;
+    vertical-align:middle
+}
+
+/* Dark BG */
+.tg .tg-hb2y{
+    background-color:#FCFBE3;
+    text-align:left;
+    vertical-align:middle
+}
+.tg .tg-hb2y a { 
+    /* Para volver a la celda en un vínculo HTML */
+    display:block;
+    text-decoration:none;
+    color: black;
+}
+/* Light BG */
+.tg .tg-cly1{
+    text-align:left;
+    vertical-align:middle
+}
+.tg .tg-cly1 a { 
+    /* Para volver a la celda en un vínculo HTML */
+    display:block;
+    text-decoration:none;
+    color: black;
+}
+
+
+.tg .tg-dg7a{
+    background-color:#FCFBE3;
+    text-align:left;
+    vertical-align:top
+}
+/* Estilos de texto de celda */
+.tg .tg-nrix{
+    text-align:center;
+    vertical-align:middle
+}
+.tg .tg-0lax{
+    text-align:left;
+    vertical-align:middle
+}
+
+cobl{
+    margin: 1%;
+    padding: 1%;
+    background: orange;
+    border-radius: 10%;
+    color: snow;
+}
+
+BC{
+    margin: 0.1%;
+    padding: 0.3% 1% 0.1% 1%;
+    background: gray;
+    border-radius: 5%;
+    color: snow;
+}
+EC{
+    margin: 0.1%;
+    padding: 0.3% 1% 0.1% 1%;
+    background: blue;
+    border-radius: 5%;
+    color: whitesmoke;
+}
