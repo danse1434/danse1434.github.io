@@ -21,6 +21,7 @@ function getInfo() {
             console.log(username + ' está autorizado')            
             document.getElementById('inputEmail').value = ''; 
             document.getElementById('password').value = '';
+            window.open('./dime_pajarito/main.html', name='_self');
             return
         } 
     
