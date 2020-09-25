@@ -94,9 +94,10 @@
 cobl{
     margin: 1%;
     padding: 1%;
-    background: orange;
-    border-radius: 10%;
-    color: snow;
+    background: white;
+    border-radius: 1%;
+    border-color: black;
+    color: white;
 }
 
 BC{

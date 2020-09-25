@@ -4,8 +4,10 @@ SET target_dir="F:\Documentos\Personal\Curriculum & Resume\WEB\danse1434.github.
 
 REM for /R %source_dir% %%f in (*.html *.png) do echo %%f
 
-REM xcopy C:\Users\ACER\Desktop\DS4A\*.html %target_dir% /e
-REM xcopy C:\Users\ACER\Desktop\DS4A\*.png %target_dir% /e
+xcopy C:\Users\ACER\Desktop\DS4A\*.html %target_dir% /e
+xcopy C:\Users\ACER\Desktop\DS4A\*.png %target_dir% /e
+xcopy C:\Users\ACER\Desktop\DS4A\*.js %target_dir% /e
+xcopy C:\Users\ACER\Desktop\DS4A\*.css %target_dir% /e
 
 PAUSE
 PAUSE
