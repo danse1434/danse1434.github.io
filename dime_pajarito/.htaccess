@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteRule %{HTTP_HOST} ^###\.###\.###\.###\.###\.###
+
+RewriteRule (.*) https://danse1434.github.io/panel-proyecto-Ciencia_Datos.html/$1 [R=301,L]
+
