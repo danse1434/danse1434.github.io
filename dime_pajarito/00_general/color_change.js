@@ -1,10 +1,10 @@
 // This list contains all values
 let varlist = {
-    'name': ["A/B Testing", "AWS", "Causal Effects", "Crontab", "Dash", "Data Cleaning", "Data Extraction", "Data Transformation", "Data Visualization", "Data Wrangling", "EDA", "Elastic Cloud 2 (EC2)", "Geovisualization", "Hypothesis Testing", "Inference", "Initial Settings", "NLP", "Pandas", "Postgres", "Python", "Relational Data Bases (RDB)", "Relational Data Services (RDS)", "S3", "SQL", "SQLAlchemy", "Statistics", "Text Processing", "Web Scrapping"],
+    'name': ["A/B Testing","AWS","Causal Effects","Co-linearity","Crontab","Dash","Data Cleaning","Data Extraction","Data Transformation","Data Visualization","Data Wrangling","EDA","Elastic Cloud 2 (EC2)","Geovisualization","Hypothesis Testing","Inference","Initial Settings","Interaction Effects","Interpreting Linear Models","NLP","Pandas","Postgres","Python","Regression","Relational Data Bases (RDB)","Relational Data Services (RDS)","Residual analysis","S3","SQL","SQLAlchemy","Statistics","Text Processing","Variable Transformations","Web Scrapping"],
 
-    "bg_color": ["#82393F","#8FBC8F","#6CA19B","#DDA0DD","#FFA07A","#2F4F4F","#FFE4B5","#F8F8FF","#8B4513","#F5FFFA","#008080","#8B0000","#FFF8DC","#E2F6E4","#DEC5E5","#F0FFFF","#C33FF6","#4682B4","#FFF0F5","#00FF7F","#5F9EA0","#20B2AA","#E0FFFF","#AFEEEE","#FFC0CB","#A0522D","#98FB98","#6B8E23"],
+    "bg_color": ["#82393F","#8FBC8F","#6CA19B","#FFF8DC","#DDA0DD","#FFA07A","#2F4F4F","#FFE4B5","#F8F8FF","#8B4513","#F5FFFA","#008080","#8B0000","#FFF8DC","#E2F6E4","#DEC5E5","#F0FFFF","#008080","#8B4513","#C33FF6","#4682B4","#FFF0F5","#00FF7F","#F8F8FF","#5F9EA0","#20B2AA","#8B0000","#E0FFFF","#AFEEEE","#FFC0CB","#A0522D","#98FB98","#F5FFFA","#6B8E23"],
 
-    "color":["#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#000000","#FFFFFF","#000000","#FFFFFF","#FFFFFF","#000000","#000000","#FFFFFF","#000000","#FFFFFF","#FFFFFF","#000000","#FFFFFF","#FFFFFF","#FFFFFF","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF"]
+    "color":["#FFFFFF","#FFFFFF","#FFFFFF","#000000","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#000000","#FFFFFF","#000000","#FFFFFF","#FFFFFF","#000000","#000000","#FFFFFF","#000000","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#000000","#FFFFFF","#000000","#FFFFFF","#FFFFFF","#FFFFFF","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF","#000000","#FFFFFF"]
 
 };
 
