@@ -8,6 +8,9 @@ xcopy C:\Users\ACER\Desktop\DS4A\*.html %target_dir% /e
 xcopy C:\Users\ACER\Desktop\DS4A\*.png %target_dir% /e
 xcopy C:\Users\ACER\Desktop\DS4A\*.js %target_dir% /e
 xcopy C:\Users\ACER\Desktop\DS4A\*.css %target_dir% /e
+xcopy C:\Users\ACER\Desktop\DS4A\*.jpg %target_dir% /e
+xcopy C:\Users\ACER\Desktop\DS4A\*.jpge %target_dir% /e
+xcopy C:\Users\ACER\Desktop\DS4A\*.gif %target_dir% /e
 
 PAUSE
 PAUSE
