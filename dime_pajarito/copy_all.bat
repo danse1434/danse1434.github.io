@@ -12,5 +12,7 @@ xcopy C:\Users\ACER\Desktop\DS4A\*.jpg %target_dir% /e
 xcopy C:\Users\ACER\Desktop\DS4A\*.jpge %target_dir% /e
 xcopy C:\Users\ACER\Desktop\DS4A\*.gif %target_dir% /e
 
+xcopy C:\Users\ACER\Desktop\DS4A\00_general\data.json %target_dir%\00_general /e
+
 PAUSE
 PAUSE
