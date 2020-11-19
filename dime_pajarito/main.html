@@ -19,6 +19,7 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
     
+    <!-- Este módulo permite la importación de otros módulos HTML -->
     <script type="text/javascript">
         $(function () {
             var includes = $('[data-include]');
@@ -29,9 +30,9 @@
         });
     </script>
 
+    <!-- Lectura de archivo con equivalencia de palabras y colores -->
     <script type="text/javascript">
         let varlist;
-
         $.getJSON("./00_general/data.json", function (data) {
             varlist = data;
         })
@@ -791,7 +792,7 @@
                 <tr>
                     <td class="tg-nrix">63</td>
                     <td class="tg-nrix">9</td>
-                    <td class="tg-cly1"><a href="" class="href">
+                    <td class="tg-cly1"><a href="./12_semana9/01_case_8.1_student/case_8.1.html" class="href">
                         Case 8.1: How do I select survey participants to plan my new sandwich shop's menu?
                     </a></td>
                     <td class="tg-0lax">
@@ -802,7 +803,7 @@
                 <tr>
                     <td class="tg-pnt8">64</td>
                     <td class="tg-pnt8">9</td>
-                    <td class="tg-hb2y"><a href="" class="href">
+                    <td class="tg-hb2y"><a href="./12_semana9/02_case_18.3_student/case_18_3.html" class="href">
                         Case 18.3: How can we predict cancerous mutations from images of human cells?
                     </a></td>
                     <td class="tg-dg7a">
@@ -812,7 +813,7 @@
                 <tr>
                     <td class="tg-nrix">65</td>
                     <td class="tg-nrix">9</td>
-                    <td class="tg-cly1"><a href="" class="href">
+                    <td class="tg-cly1"><a href="./12_semana9/03_case_23.1_student/case_23.1.html" class="href">
                         Case 23.1: How do I optimize promotions placement on an e-commerce website?
                     </a></td>
                     <td class="tg-0lax">
@@ -822,7 +823,7 @@
                 <tr>
                     <td class="tg-pnt8">66</td>
                     <td class="tg-pnt8">9</td>
-                    <td class="tg-hb2y"><a href="" class="href">
+                    <td class="tg-hb2y"><a href="./12_semana9/04_case_24.1_student/case_24.1.html" class="href">
                         Case 24.1: Recommendation system for movies
                     </a></td>
                     <td class="tg-dg7a">
@@ -878,7 +879,10 @@
             }
         }
     </script>
-    <!-- Change colors by category -->
+    
+    <!-- Cambiar colores por categoría -->
+    <!-- Al cargarlo de esta manera (module-async) permite que se cargen los módulos anteriores,
+         se ejecute el código y continue con la formación de HTML -->
     <script src="./00_general/color_change.js" type="module" async></script>
 
 </body>
