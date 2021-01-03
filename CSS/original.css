@@ -40,12 +40,14 @@
 .carousel-inner img{
   -webkit-filter: grayscale(90%);
   filter: grayscale(90%); /* make all photos black and white */
-  width: 50%;
   margin:auto;
+  height: auto;
+  max-height: 600px;
 }
 .carousel-caption h3 {
   color: #fff !important;
 }
+
 /*Breakpoints para Sitio Web con responsibidad en el carrusel*/
 @media (max-width: 1200px) {
   .carousel-inner img{
@@ -58,14 +60,14 @@
 }
 
 @media (max-width: 768px) {
-  .carousel-inner img{width: 100%;}
+  .carousel-inner img{max-height: 400px;}
   .bg-2{width: 100%;}
 }
 @media (max-width: 575px) {
   .carousel-inner img{
     filter: none; /* Color normal */
     -webkit-filter: none;
-    width: 100%;
+    max-height: 300px;
   }
   .carousel-caption {
     display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
