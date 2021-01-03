@@ -5,18 +5,126 @@
 }
 
 .bg-cv-1{
-    background-color: aliceblue; /* Color del año 2020 */
+    background-color: #FFFFFF; /* Color del año 2020 */
     color: black;
     width: 90%;
   }
 
+/* #experiences .experience { margin-bottom: 20px; }
+#experiences .experience p > strong { display: block; padding-top: 8px; margin-bottom: 10px; }
+#experiences .experience .experience-details { display: block; margin-top: 6px; }
+#experiences .experience .experience-details * { color: #22A39F; }
+#experiences .experience .experience-details .seperator { color: #BCBCBC; } */
+
+.Experiencia{
+  background-color: rgb(243, 239, 224);
+  border-radius: 1%;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+div.h4{
+  font-family: 'Open Sans', sans-serif !important; 
+  font-size: 18px;
+  font-weight: 700; 
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: auto;
+}
+.experience-period{
+  margin-bottom: 10px;
+}
+p.cargoTitulo{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-style: italic;
+}
+
+p.cajaDescrip {
+  width: auto;
+  font-size: small;
+}
+
+.cajaDescrip> div{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cajaDescrip> ul> li{
+  width: fit-content;
+}
+.Locacion {
+  color: #22A39F;
+  padding-bottom: 1%;
+  width: 90%;
+}
+.Locacion > img > path{
+  fill: #22A39F;
+  color: #22A39F;
+}
+.Locacion > a {
+  color: #22A39F;
+  padding-bottom: 1%;
+  width: 90%;
+}
+
+p.tituloEducativo{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-style: italic;
+}
+
+
+/* Educación No Formal */
+.EducacionNF{
+  background-color: rgb(243, 239, 224);
+  border-radius: 1%;
+  margin: auto;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+div.h5{
+  font-family: 'Open Sans', sans-serif !important; 
+  font-size: 14px;
+  font-weight: 700; 
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: auto;
+}
+p.tituloEducativoNF{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: small;
+}
 
   @media (max-width: 1200px) {
     .bg-cv-0{width: 90%;}
     .bg-cv-1{width: 90%;}
+    .Experiencia{width: 90%; border-radius: 0%;}
   }
 
   @media (max-width: 768px) {
     .bg-cv-0{width: 100%;}
     .bg-cv-1{width: 100%;}
+    .Experiencia{width: 100%; border-radius: 1%;}
+    p.cajaDescrip{font-size: smaller;}
+    /* Comportamiento móvil títulos */
+    p.cargoTitulo{padding-bottom: 0%; padding-top: 0%; margin-top: 5px; margin-bottom: 5px;}
+    div.h4{padding-bottom: 0%; padding-top: 0%; margin-bottom: 5px; margin-top: 5px;}
+    div.h5{padding-bottom: 0%; padding-top: 0%; margin-bottom: 5px; margin-top: 5px;}
+    p.experience-period{padding-bottom: 0%; padding-top: 0%; margin-bottom: 0%;}
+    p.tituloEducativo{padding-bottom: 0%; padding-top: 0%; margin-top: 2px; margin-bottom: 2px;}
+    p.tituloEducativoNF{padding-bottom: 0%; padding-top: 0%; margin-top: 2px; margin-bottom: 2px;}
+    .EducacionNF{margin-top: 0px; margin-bottom: 0px;}
   }

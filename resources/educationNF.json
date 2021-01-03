@@ -1,0 +1,62 @@
+{
+    "01":{
+        "dv": "educacionNF1",
+        "Institucion": "International Pharmaceutical Students’ Federation",
+        "Fecha": 2012,
+        "Descripcion": "Participación en The 58th IPSF World Congress",
+        "Lugar": "Hurghada, Egypt",
+        "URL":{"Nombre": "Certificate", "URL": "./Modulos/Certificados/IPSF_CertificateAttendance.pdf"}
+    },
+    "02":{
+        "dv": "educacionNF2",
+        "Institucion": "Corporación CIDEIM",
+        "Fecha": 2015,
+        "Descripcion": "Asistencia a VI International Symposium on HAI: Antimicrobial Stewardship",
+        "Lugar": "Bogotá D.C."  
+    },
+    "03":{
+        "dv": "educacionNF3",
+        "Institucion": "Society of Infectious Disease Pharmacists",
+        "Fecha": 2016,
+        "Descripcion": "Curso SIDP Antimicrobial Stewardship - A Certificate Program for Pharmacists",
+        "Lugar": "Online"  
+    },
+    "04":{
+        "dv": "educacionNF4",
+        "Institucion": "INVIMA",
+        "Fecha": 2017,
+        "Descripcion": "Participación XIV Encuentro Internacional de Farmacovigilancia y IV Encuentro Nacional de Farmacovigilancia",
+        "Lugar": "Bogotá D.C."  
+    },
+    "05":{
+        "dv": "educacionNF5",
+        "Institucion": "Asociación Colombiana de Nutrición Clínica",
+        "Fecha": 2018,
+        "Descripcion": "Asistencia a Congreso Colombiano de Metabolismo y Nutrición Clínica Versión 32",
+        "Lugar": "Bogotá D.C."  
+    },
+    "06":{
+        "dv": "educacionNF6",
+        "Institucion": "Asociación Colombiana de Farmacovigilancia",
+        "Fecha": 2019,
+        "Descripcion": "Curso de Buenas Prácticas de Farmacovigilancia con enfoque en la Gestión del Riesgo",
+        "Lugar": "Bogotá D.C.",
+        "URL":{"Nombre": "Certificado", "URL": "./Modulos/Certificados/ACF_1049629987_Daniel Parra.pdf"}
+    },
+    "07":{
+        "dv": "educacionNF7",
+        "Institucion": "Correlation One - Ministerio de Tecnologías e Información de Colombia",
+        "Fecha": 2020,
+        "Descripcion": "Programa de Formación en Ciencia de Datos (Data Science for All) - Graduated with Honors and Outstanding Individual Achievement",
+        "Lugar": "Online",
+        "URL":{"Nombre": "Certificado", "URL": "https://www.credential.net/01fac316-0567-40e3-96e0-8ed46e18dfd1"}
+    },
+    "08":{
+        "dv": "educacionNF8",
+        "Institucion": "Coursera - University of Alberta, Alberta Machine Intelligence Institute",
+        "Fecha": 2020,
+        "Descripcion": "Fundamentals of Reinforcement Learning",
+        "Lugar": "Online",
+        "URL":{"Nombre": "Certificate", "URL": "https://coursera.org/share/298edf7216d24c44e6fc6f8b2e25ade3"}
+    }
+}

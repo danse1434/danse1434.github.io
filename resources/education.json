@@ -1,0 +1,23 @@
+{
+    "03":{
+        "dv": "educacion3",
+        "institucion": "Universidad Nacional de Colombia",
+        "titulo": "Maestría en Ciencias - Farmacología (candidato)", 
+        "periodo": "Ene 2017 - Jun 2021",
+        "locacion": "Bogotá D.C."
+    }, 
+    "02":{
+        "dv": "educacion2",
+        "institucion": "Universidad Nacional de Colombia",
+        "titulo": "Químico Farmacéutico", 
+        "periodo": "Ene 2009 - Jun 2014",
+        "locacion": "Bogotá D.C."
+    }, 
+    "01":{
+        "dv": "educacion1",
+        "institucion": "Colegio Colombo Británico",
+        "titulo": "Bachiller Académico", 
+        "periodo": "Ene 2007 - Dic 2008",
+        "locacion": "Tunja"
+    }
+}

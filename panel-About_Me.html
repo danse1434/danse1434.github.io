@@ -17,7 +17,10 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href=".\CSS\original.css">
   <link rel="stylesheet" type="text/css" href=".\CSS\cv.css">
+  <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg">
+  <script src="JS/aboutMeScripts.js"></script>
 
+  <!-- Cargar archivos HTML adicionales -->
   <script type="text/javascript">
     $(function () {
       var includes = $('[data-include]');
@@ -36,92 +39,68 @@
   <!--Jumbotron-->
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1>Hola Soy Daniel!!!</h1>
+      <h1>Experiencias</h1>
+      <p style="text-justify: auto;"> “The dreamers are the saviors of the world. As the visible world is sustained 
+        by the invisible, so men, through all their trials and sins and sordid vocations, are nourished by the 
+        beautiful visions of their solitary dreamers.”</p>
+      <p>– James Allen (As a Man Thinketh)</p>
     </div>
   </div>
   
-  <div class="container-fluid bg-cv-0 p-4 text-justify">
-    <h2> Sobre mí </h2>
-    <p>Soy Químico Farmacéutico de la Universidad Nacional de Colombia, con Maestría en Ciencias Farmacología. Tengo
-      especial interés en Modelamiento y Simulación aplicado a la terapéutica, con conocimientos y experiencia en farmacocinética
-      poblacional, farmacodinamia (PK-PD), y modelos de farmacología cuantitativa de sistemas (QSP). </p>
+  <div class="container-fluid bg-cv-1 p-4 text-justify">
+    <h2>Sobre mí</h2>
+    <br>
+    <div class="container Experiencia" id="about_me">
+      <br>
+      <p>Soy Químico Farmacéutico de la Universidad Nacional de Colombia, candidato a Maestría en Ciencias Farmacología. Tengo
+        especial interés en Modelamiento y Simulación aplicado a la terapéutica, con conocimientos y experiencia en farmacocinética
+        poblacional, farmacodinamia (PK-PD), y modelos de farmacología cuantitativa de sistemas (QSP). </p>
 
-    <p>Tengo conocimientos en programación en R, Python, y C++. Además manejo lenguajes de marcado (p.ej. HTML y Markdown) y
-      producción de textos científicos como Latex. </p>
+      <p>Cuento con experiencia en el sector hospitalario, farmacovigilancia, programas de uso prudente de antibióticos, 
+        centrales de preparación de estériles, y asuntos regulatorios. </p>
+  
+      <p>Tengo conocimientos en programación en R, Python, C++, Stan. Cuento con conocimientos en Ciencia de Datos con manejo cómodo 
+        de librerías (frameworks) como Tidyverse, Pandas, TidyModels, sklearn, NLTK, Shiny, y Dash. También tengo conocimientos en Git, 
+        SQL, y Docker. Además manejo lenguajes de marcado (p.ej. HTML y Markdown) y producción de textos científicos como Latex. </p>
+      <br>
+    </div>
   </div>
+  
   <hr>
+
   <div class="container-fluid bg-cv-1 p-4 text-justify">
     <h2>Experiencia</h2>
-    <p>
-      <p>Jul 2019 - Nov 2019, <i>Contratista</i>, Fondo Nacional de Estupefacientes</p>
-      <p>Referente de Programa de Farmacovigilancia.</p>
-      <b>Tareas</b>
-      <ul>
-        <li>Identificación y análisis de eventos adversos relacionados con medicamentos.</li>
-        <li>Estudios de consumo y seguridad de productos.</li>
-        <li>Revisión, seguimiento, y análisis de alertas a medicamentos.</li>
-        <li>Implementación de plan documental de programa de farmacovigilancia.</li>
-        <li>Gestión pre-contractual, y supervisión de contratos.</li>
-      </ul>
-    </p>
-
-    <p>
-      <p>Oct 2014 - Dic 2017, <i>Químico Farmacéutico</i>, Fundación Hospital de la Misericordia</p>
-      <p>Responsable por la elaboración de dosis unitarias por parte de la central de mezclas. Líder del área de
-      farmacovigilancia y uso seguro de medicamentos.</p>
-      <b>Tareas</b>
-    <ul>
-      <li>Elaboración y control de calidad de magistrales estériles y no estériles.</li>
-      <li>Identificación y análisis de eventos adversos relacionados con medicamentos.</li>
-      <li>Responsable por la provisión de medicamentos de salud pública.</li>
-      <li>Responsable por el convenio de docencia-servicio con el departamento de farmacia.</li>
-      <li>Control de calidad de buenas prácticas de manufactura de sistema de aire medicinal.</li>
-    </ul>
-    </p>
-
-    <p>
-    <p>Feb 2016 - Dic 2017, <i>Asistente Docente</i>, Universidad Nacional de Colombia</p>
-    <p>Responsable de actividades de seguimiento, asesoría, y evaluación a estudiantes en curso de farmacia hospitalaria I:
-      rotación Centro de Información de Medicamentos Universidad Nacional de Colombia</p>
-    <b>Tareas</b>
-    <ul>
-      <li> Coordinación de recibo y presentación de consultas a clientes externos del centro.</li>
-      <li>Participación en grupo editorial Sitio Web de CIMUN.</li>
-    </ul>
-    </p>
-
-    <p>
-    <p>Feb 2014 - May 2014, <i>Analista Regulatorio</i>, Aristizabal \& Jiménez Abogados</p>
-    <p>Responsable por asesoría regulatoria en dispositivos médicos y medicamentos a clientes.</p>
-    <b>Tareas</b>
-    <ul>
-      <li>Elaboración de solicitudes de registro sanitario y modificaciones, autorizaciones, y certificados.</li>
-      <li>Reporte de eventos adversos serios.</li>
-      <li>Revisión de proyectos publicitarios de acuerdo a requerimientos regulatorios.</li>
-      <li>Asesoría al cliente.</li>
-    </ul>
-    </p>
+    <br>
+    <div class="container" id="experiencia5"></div>
+    <div class="container" id="experiencia4"></div>
+    <div class="container" id="experiencia3"></div>
+    <div class="container" id="experiencia2"></div>
+    <div class="container" id="experiencia1"></div>
     
-    <p>
-    <p>Ene 2013 - Dic 2013, <i>Practicante de farmacia hospitalaria</i>, Fundación Hospital de la Misericordia</p>
-    <p>Responsable por cumplimiento de objetivos planteados en el programa de la asignatura e implementación de proceso de
-      reconciliación de medicamentos.</p>
-    <b>Tareas</b>
-    <ul>
-      <li>Implementación de plan piloto, capacitación de personal médico, reporte de errores durante interfaces de atención;
-        preparación y control de calidad de magistrales estériles y no estériles, confirmación de órdenes, reporte de EAM.
-      </li>
-      <li>Seguimiento farmacoterapéutico a pacientes pediátricos en clínica de epilepsia,reporte EAM y RAM, realización de
-        acondicionamiento y control de calidad en la central de mezclas. Revisión de inventarios en farmacia central y salas
-        de cirugía, elaboración de propuestas para optimizar almacenamiento.</li>
-    </ul>
-    </p>
   </div>
+  
+  <hr>
 
   <div class="container-fluid bg-cv-1 p-4 text-justify">
     <h2>Educación</h2>
-    <p> Maestría en Ciencias – Farmacología; Universidad Nacional de Colombia </p>
-    <p> Químico Farmacéutico; Universidad Nacional de Colombia</p>
+    <br>
+    <div class="container" id="educacion3"></div>
+    <div class="container" id="educacion2"></div>
+    <div class="container" id="educacion1"></div>
+  </div>
+
+  <hr>
+  <div class="container-fluid bg-cv-1 p-4 text-justify">
+    <h2>Educación No Formal </h2>
+    <br>
+    <div class="container" id="educacionNF8"></div>
+    <div class="container" id="educacionNF7"></div>
+    <div class="container" id="educacionNF6"></div>
+    <div class="container" id="educacionNF5"></div>
+    <div class="container" id="educacionNF4"></div>
+    <div class="container" id="educacionNF3"></div>
+    <div class="container" id="educacionNF2"></div>
+    <div class="container" id="educacionNF1"></div>
   </div>
 
   <hr>
@@ -132,9 +111,54 @@
       <abbr title="Modelamiento y Simulación">M&S</abbr> aplicado a la terapéutica. </p>
     <button type="button" class="btn btn-outline-primary" type="submit">Buscar</button>
   </div>
-
+  
   <!--Incluir Footer-->
   <div data-include="footer"></div>
+
+  <!-- Lectura de archivo JSON con experiencias - escritura -->
+  <script type="text/javascript" type="module" async>
+    
+    fetch("./resources/experience.json")
+      .then(response => response.json())
+      .then(data => {
+
+        for (let i = 0; i < 5; i++) {        
+          let idLS1 = "0" + (i+1);
+          crearExperiencia(data[idLS1]["divName"], data[idLS1]["tituloTrabajo"], data[idLS1]["cargo"],
+            data[idLS1]["periodo"],
+            data[idLS1]["descripcion"], data[idLS1]["responsabilidades"], data[idLS1]["Locacion"] );
+        }
+    })  
+  </script>
+  <!-- Lectura de archivo JSON con educación - escritura -->
+  <script type="text/javascript" type="module" async>
+  fetch("./resources/education.json")
+    .then(response => response.json())
+    .then(data => {
+      for (let i = 0; i < 3; i++) {
+        let idLS2 = "0" + (i+1);
+        crearTitulo(data[idLS2]["dv"], data[idLS2]["institucion"], data[idLS2]["titulo"], 
+          data[idLS2]["periodo"], data[idLS2]["locacion"]);
+      }
+    })
+  
+  fetch("./resources/educationNF.json")
+    .then(response => response.json())
+    .then(data => {
+      for (let i = 0; i < 8; i++) {
+        let idLS3 = "0" + (i+1);
+        crearTituloNF(
+          data[idLS3]["dv"], 
+          data[idLS3]["Institucion"], 
+          data[idLS3]["Descripcion"], 
+          data[idLS3]["Fecha"], 
+          data[idLS3]["Lugar"],
+          data[idLS3]["URL"]
+          );
+      }
+    })
+  </script>
+
 
 </body>
 
