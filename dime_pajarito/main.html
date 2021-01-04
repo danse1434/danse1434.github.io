@@ -29,14 +29,6 @@
             });
         });
     </script>
-
-    <!-- Lectura de archivo con equivalencia de palabras y colores -->
-    <script type="text/javascript">
-        let varlist;
-        $.getJSON("./00_general/data.json", function (data) {
-            varlist = data;
-        })
-    </script>
 </head>
 
 <body>
@@ -880,10 +872,31 @@
         }
     </script>
     
+    <script src="./00_general/color_change.js"></script>
+    
     <!-- Cambiar colores por categoría -->
     <!-- Al cargarlo de esta manera (module-async) permite que se cargen los módulos anteriores,
          se ejecute el código y continue con la formación de HTML -->
-    <script src="./00_general/color_change.js" type="module" async></script>
+         <!-- Lectura de archivo con equivalencia de palabras y colores -->
+    <script type="text/javascript" type="module" async>
+        let varlist;
+        $.getJSON("./00_general/data.json", function (data) {
+            varlist = data;
+            
+            // Ejecutar la función de lectura de readDataJSON
+            
+            let cobl_ls = document.getElementsByTagName('cobl');
+
+            for (let i = 0; i < cobl_ls.length; i++) {
+                let valTuple = selectbg(cobl_ls[i].innerText, varlist);
+                document.getElementsByTagName('cobl')[i].style['background'] = valTuple[0];
+                document.getElementsByTagName('cobl')[i].style['color'] = valTuple[1];
+
+                // console.log( cobl_ls[i].innerText );
+                // console.log( selectbg(cobl_ls[i].innerText, varlist) );
+            }
+        })
+    </script>
 
 </body>
 

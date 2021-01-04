@@ -20,17 +20,3 @@ function selectbg(name, refData) {
     }
     return [res_a, res_b];
 }
-
-// Ejecutar la función de lectura de readDataJSON
-//let varlist = readDataJSON("./00_general/data.json"); // Forzar su ejecución antes
-
-let cobl_ls = document.getElementsByTagName('cobl');
-
-for (let i = 0; i < cobl_ls.length; i++) {
-    let valTuple = selectbg(cobl_ls[i].innerText, varlist);
-    document.getElementsByTagName('cobl')[i].style['background'] = valTuple[0];
-    document.getElementsByTagName('cobl')[i].style['color'] = valTuple[1];
-
-    // console.log( cobl_ls[i].innerText );
-    // console.log( selectbg(cobl_ls[i].innerText, varlist) );
-}
