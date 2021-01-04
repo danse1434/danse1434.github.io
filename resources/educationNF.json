@@ -18,8 +18,9 @@
         "dv": "educacionNF3",
         "Institucion": "Society of Infectious Disease Pharmacists",
         "Fecha": 2016,
-        "Descripcion": "Curso SIDP Antimicrobial Stewardship - A Certificate Program for Pharmacists",
-        "Lugar": "Online"  
+        "Descripcion": "Curso SIDP Antimicrobial Stewardship - A Certificate Program for Pharmacists - Phases I and II",
+        "Lugar": "Online", 
+        "URL":{"Nombre": "Certificado", "URL": "./Modulos/Certificados/ASPM_Phase_II.pdf"}
     },
     "04":{
         "dv": "educacionNF4",
@@ -33,7 +34,8 @@
         "Institucion": "Asociación Colombiana de Nutrición Clínica",
         "Fecha": 2018,
         "Descripcion": "Asistencia a Congreso Colombiano de Metabolismo y Nutrición Clínica Versión 32",
-        "Lugar": "Bogotá D.C."  
+        "Lugar": "Bogotá D.C.",
+        "URL":{"Nombre": "Certificado", "URL": "./Modulos/Certificados/Certificado_congreso_Nutricion.pdf"} 
     },
     "06":{
         "dv": "educacionNF6",

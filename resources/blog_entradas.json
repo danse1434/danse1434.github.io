@@ -1,0 +1,31 @@
+{
+    "01":{
+        "div": "ada1",
+        "Imagen": "Modulos/Blog/blog-morfina.png",
+        "ImgDes": "Somnolencia de acuerdo a dosis de Morfina", 
+        "Titulo": "Modelamiento RAM de Morfina y Meperidina", 
+        "Descrp": "En este proyecto se muestra un ejemplo de modelamiento de toxicidad de morfina y meperidina de acuerdo a la dosis como un subrrogado de la exposición.", 
+        "Fecha" : "08-Nov-2019", 
+        "Link"  : "panel-Blog-Morfina.html"
+    },
+
+    "02":{
+        "div": "ada2",
+        "Imagen": "Modulos/Blog/BE_comparativo.png",
+        "ImgDes": "Comparativo de AUC entre modelos de 1cpmt", 
+        "Titulo": "Resultados BE-BD", 
+        "Descrp": "En este proyecto se muestran algunas consideraciones de estudios de bioequivalencia clínicos aplicados a un ejemplo propuesto en curso de BE-BD.", 
+        "Fecha" : "12-Nov-2019", 
+        "Link"  : "panel-Blog-BE-BD.html"
+    },
+
+    "03":{
+        "div": "ada3",
+        "Imagen": "Modulos/Blog/Coronavirus.png",
+        "ImgDes": "Esquema de SARS-CoV-II con proteínas virales", 
+        "Titulo": "Ivermectina y Coronavirus", 
+        "Descrp": "En este módulo se discuten análisis sobre el posible rol que tendría la invermectina en la terapia del Covid-19.", 
+        "Fecha" : "03-Mar-2020", 
+        "Link"  : "panel-Blog-Coronavirus.html"
+    }
+}

@@ -20,6 +20,7 @@
   <link rel="stylesheet" type="text/css" href=".\CSS\estilos_blog.css">
   <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg">
   
+  <script src="JS/blogScripts.js"></script>
   <script type="text/javascript">
     $(function () {
       var includes = $('[data-include]');
@@ -48,67 +49,16 @@
   
   <div class="container-fluid">
     <div class="row">
-      
-      <div class="col-md-4">
-        <div class="card mb-4 shadow sm">
-          <rect width="100%" height="100%">
-            <img src="Modulos/Blog/Coronavirus.png" class="img-thumbnail mx-auto d-block" alt="Esquema de SARS-CoV-II con proteínas virales">
-          </rect>
-          <div class="card-body">
-            <strong>Ivermectina y Coronavirus</strong>
-            <p>En este módulo se discuten análisis sobre la terapia de medicamentos</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group"><button class="btn btn-sm btn-outline-secondary" onclick="window.open('panel-Blog-Coronavirus.html','_blank')">Ver</button></div>
-              <small class="text-muted">03-Mar-2020</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card mb-4 shadow sm">
-          
-          <rect width="100%" height="100%">
-            <img src="Modulos/Blog/BE_comparativo.png" class="img-thumbnail mx-auto d-block" alt="Comparativo de AUC entre modelos de 1cpmt" width="100%">
-          </rect>
-          <div class="card-body">
-            <strong>Resultados BE-BD</strong>
-            <p>En este proyecto se muestran algunas consideraciones de estudios de bioequivalencia clínicos aplicados a un
-              ejemplo propuesto en curso de BE-BD.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group"><button class="btn btn-sm btn-outline-secondary" onclick="window.open('panel-Blog-BE-BD.html','_blank')">Ver</button></div>
-                <small class="text-muted">12-Nov-2019</small>
-              </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <rect width="100%" height="auto">
-            <img src="Modulos/Blog/blog-morfina.png" class="img-thumbnail mx-auto d-block" alt="Somnolencia de acuerdo a dosis de Morfina" max-width="100%" height="auto">
-          </rect>
-          
-          <div class="card-body">
-            <strong>Modelamiento RAM de Morfina</strong>
-            <p>En este proyecto se muestra un ejemplo de modelamiento de toxicidad de morfina y meperidina de acuerdo a la dosis
-              como un subrrogado de la exposición. </p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group"><button class="btn btn-sm btn-outline-secondary" onclick="window.open('panel-Blog-Morfina.html','_blank')">Ver</button></div>
-              <small class="text-muted">08-Nov-2019</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <div id="ada3"></div>
+      <div id="ada2"></div>
+      <div id="ada1"></div>
     </div>
   </div>
 
-  
+  <!-- div.container-fluid>div.row>div[id=ada_n] -->
   <!-- div.d-flex.justify-content-between.align-items-center>(div.btn-group>button.btn.btn-sm.btn-outline-secondary{Ver})+small.text-muted -->
-
   <!-- div.col-md-4>div.card.mb-4.shadow.sm>rect+div.card-body>h5+p -->
-    
+  
   <hr>
 
   <!--Cuerpo de Sitio Web-->
@@ -122,7 +72,17 @@
 
   <!--Incluir Footer-->
   <div data-include="footer"></div>
-
+  <script type="text/javascript">
+    fetch("./resources/blog_entradas.json")
+      .then(response => response.json())
+      .then(data => {
+        for (let i = 0; i < 3; i++) {
+          let idCard = "0" + (i+1);
+          crearEntrada(data[idCard]["div"], data[idCard]["Imagen"], data[idCard]["ImgDes"], 
+          data[idCard]["Titulo"], data[idCard]["Descrp"], data[idCard]["Fecha"], data[idCard]["Link"]);
+        }
+      })
+  </script>
 </body>
 
 </html>
