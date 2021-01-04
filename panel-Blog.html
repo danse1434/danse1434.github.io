@@ -47,7 +47,14 @@
   
   <hr>
   
+  
   <div class="container-fluid">
+    <div class="row">
+      <div id="ada4"></div>
+      <!-- <div id="ada_n"></div>
+      <div id="ada_n"></div> -->
+    </div>
+
     <div class="row">
       <div id="ada3"></div>
       <div id="ada2"></div>
@@ -55,7 +62,8 @@
     </div>
   </div>
 
-  <!-- div.container-fluid>div.row>div[id=ada_n] -->
+
+  <!-- div.container-fluid>div.row>div[id=ada_n]*3 -->
   <!-- div.d-flex.justify-content-between.align-items-center>(div.btn-group>button.btn.btn-sm.btn-outline-secondary{Ver})+small.text-muted -->
   <!-- div.col-md-4>div.card.mb-4.shadow.sm>rect+div.card-body>h5+p -->
   
@@ -76,11 +84,16 @@
     fetch("./resources/blog_entradas.json")
       .then(response => response.json())
       .then(data => {
-        for (let i = 0; i < 3; i++) {
+
+        let size1 = Object.keys(data).length;
+
+        for (let i = 0; i < size1; i++) {
           let idCard = "0" + (i+1);
           crearEntrada(data[idCard]["div"], data[idCard]["Imagen"], data[idCard]["ImgDes"], 
           data[idCard]["Titulo"], data[idCard]["Descrp"], data[idCard]["Fecha"], data[idCard]["Link"]);
         }
+        
+        
       })
   </script>
 </body>

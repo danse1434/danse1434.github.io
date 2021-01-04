@@ -1,6 +1,16 @@
 {
     "01":{
         "div": "ada1",
+        "Imagen": "Modulos/Blog/blog-consumo_AB.png",
+        "ImgDes": "Indicadores de Consumo AB", 
+        "Titulo": "Revisión de Medidas de Consumo de Antibióticos", 
+        "Descrp": "En esta entrada se muestra una revisión de diferentes medidas de consumo de antibióticos y su utilidad en pacientes pediátricos", 
+        "Fecha" : "07-Nov-2019", 
+        "Link"  : "panel-Blog-ConsumoAB.html"
+    },
+
+    "02":{
+        "div": "ada2",
         "Imagen": "Modulos/Blog/blog-morfina.png",
         "ImgDes": "Somnolencia de acuerdo a dosis de Morfina", 
         "Titulo": "Modelamiento RAM de Morfina y Meperidina", 
@@ -9,8 +19,8 @@
         "Link"  : "panel-Blog-Morfina.html"
     },
 
-    "02":{
-        "div": "ada2",
+    "03":{
+        "div": "ada3",
         "Imagen": "Modulos/Blog/BE_comparativo.png",
         "ImgDes": "Comparativo de AUC entre modelos de 1cpmt", 
         "Titulo": "Resultados BE-BD", 
@@ -19,8 +29,8 @@
         "Link"  : "panel-Blog-BE-BD.html"
     },
 
-    "03":{
-        "div": "ada3",
+    "04":{
+        "div": "ada4",
         "Imagen": "Modulos/Blog/Coronavirus.png",
         "ImgDes": "Esquema de SARS-CoV-II con proteínas virales", 
         "Titulo": "Ivermectina y Coronavirus", 
