@@ -1,7 +1,7 @@
 {
     "01":{
         "div": "ada1",
-        "Imagen": "Modulos/Blog/blog-consumo_AB.png",
+        "Imagen": "Modulos/Blog/blog_entrada_1.png",
         "ImgDes": "Indicadores de Consumo AB", 
         "Titulo": "Revisión de Medidas de Consumo de Antibióticos", 
         "Descrp": "En esta entrada se muestra una revisión de diferentes medidas de consumo de antibióticos y su utilidad en pacientes pediátricos", 
@@ -11,7 +11,7 @@
 
     "02":{
         "div": "ada2",
-        "Imagen": "Modulos/Blog/blog-morfina.png",
+        "Imagen": "Modulos/Blog/blog_entrada_2.png",
         "ImgDes": "Somnolencia de acuerdo a dosis de Morfina", 
         "Titulo": "Modelamiento RAM de Morfina y Meperidina", 
         "Descrp": "En este proyecto se muestra un ejemplo de modelamiento de toxicidad de morfina y meperidina de acuerdo a la dosis como un subrrogado de la exposición.", 
@@ -21,7 +21,7 @@
 
     "03":{
         "div": "ada3",
-        "Imagen": "Modulos/Blog/BE_comparativo.png",
+        "Imagen": "Modulos/Blog/blog_entrada_3.png",
         "ImgDes": "Comparativo de AUC entre modelos de 1cpmt", 
         "Titulo": "Resultados BE-BD", 
         "Descrp": "En este proyecto se muestran algunas consideraciones de estudios de bioequivalencia clínicos aplicados a un ejemplo propuesto en curso de BE-BD.", 
@@ -31,11 +31,20 @@
 
     "04":{
         "div": "ada4",
-        "Imagen": "Modulos/Blog/Coronavirus.png",
+        "Imagen": "Modulos/Blog/blog_entrada_4.png",
         "ImgDes": "Esquema de SARS-CoV-II con proteínas virales", 
         "Titulo": "Ivermectina y Coronavirus", 
         "Descrp": "En este módulo se discuten análisis sobre el posible rol que tendría la invermectina en la terapia del Covid-19.", 
         "Fecha" : "03-Mar-2020", 
         "Link"  : "panel-Blog-Coronavirus.html"
-    }
+    },
+    "05":{
+        "div": "ada5",
+        "Imagen": "Modulos/Blog/blog_entrada_5.png",
+        "ImgDes": "Diagrama Dispersión Metanalítico", 
+        "Titulo": "PK de Cefepime en diversas poblaciones adultas: Revisión y MA", 
+        "Descrp": "Se muestran los resultados de una búsqueda de la literatura sobre diferentes estudios de PK de cefepime en poblaciones adultas.", 
+        "Fecha" : "08-May-2020", 
+        "Link"  : "panel-Blog-Rev_PK_Cefepim.html"
+    }  
 }
