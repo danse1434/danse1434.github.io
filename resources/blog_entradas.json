@@ -46,5 +46,14 @@
         "Descrp": "Se muestran los resultados de una búsqueda de la literatura sobre diferentes estudios de PK de cefepime en poblaciones adultas.", 
         "Fecha" : "08-May-2020", 
         "Link"  : "panel-Blog-Rev_PK_Cefepim.html"
-    }  
+    }, 
+    "06":{
+        "div": "ada6",
+        "Imagen": "Modulos/Blog/blog_entrada_6.png",
+        "ImgDes": "Diagrama de MDP", 
+        "Titulo": "Formulación de procesos de decisión de Markov", 
+        "Descrp": "Se muestran aspectos matemáticos de la formulación de procesos de decisión de Markov.", 
+        "Fecha" : "24-Dic-2020", 
+        "Link"  : "panel-Blog-MDP_1.html"
+    }
 }

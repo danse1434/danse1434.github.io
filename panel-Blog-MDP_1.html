@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Modelamiento aplicado a la RAM de dos opioides</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" type="text/css" href=".\CSS\original.css">
+  <link rel="stylesheet" type="text/css" href=".\CSS\cv.css">
+  <link rel="stylesheet" type="text/css" href=".\CSS\estilos_blog.css">
+
+  <script type="text/javascript">
+    $(function () {
+      var includes = $('[data-include]');
+      jQuery.each(includes, function () {
+        var file = 'components/' + $(this).data('include') + '.html';
+        $(this).load(file);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <!--Incluir barra de navegación-->
+  <div data-include="navbar"></div>
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1>Modelos de Decisión Markovianos</h1>
+    </div>
+  </div>
+  <div class="container bg-blog-0">
+    <p>
+      Los procesos de decisión Markovianos MDP (<i>Markov Decission Processes</i>) son procesos de control estocástico en
+      tiempo discreto. Estos se basan en la idea de los procesos de Markov que se constituyen de varios estados y diversas
+      probabilidades de transición entre los mismos. Los MDP a diferencia de los procesos de Markov también tienen en cuenta
+      diversas acciones a tomar a partir de un estado y recompensas asociadas a la eleccion de una acción dado un estado. Los
+      MDP son útiles para la formulación de problemas de aprendizaje por refuerzo (<i>Reinforcement Learning</i>). 
+    </p>
+    <br>
+    <p>
+      La <b>función dinámica</b> es uno de los conceptos más importantes para entender la formulación de procesos MDP, 
+      esta se trata de la probabilidad de tener un estado y una recompensada, dada la elección de una acción dado un 
+      estado \(p(s',r|s,a)\). Así mismo se pueden describir otras probabilidades relacionadas a partir de la expectación.
+    </p>
+    <br>
+    <p>
+      El <b>retorno esperado</b> (\(G_t\)) es la suma de las recompensas esperadas al tomar la acción y el estado para 
+      todos los episodios del proceso. Con esta magnitud se pueden formular <b>funciones de valor</b> para <i>estados</i> (\(v_\pi\)) y 
+      para pares <i>acción-estado</i> (\(q_\pi\)). Mediante las ecuaciones de Bellman se pueden obtener relaciones 
+      recursivas para facilitar su cálculo. Se debe tener en cuenta que existen políticas (es decir reglas de decisión de 
+      acciones dado un estado) que maximizan las funciones de valor, y estas generan valores óptimos de las funciones de 
+      estado.
+    </p>
+    <br>
+    <p>En muchos casos, el objetivo de los problemas de RL es encontrar cuales son las políticas óptimas que maximizan las
+      funciones de valor.</p>
+  </div>  
+  <br>
+  <div class="container bg-blog-0">
+      A continuación se muestra una presentación con aspecto matemáticos de los procesos de decisión Markovianos. 
+  
+      <object data="./Modulos/Blog/06_Markov_Decission_Process/MDP.pdf" type="application/pdf" width="90%" height="500px"
+        class="container-fluid text-center">
+        <p>Su navegador web no tiene un plugin para PDF.
+          Usted puede <a href="./Modulos/Blog/06_Markov_Decission_Process/MDP.pdf"> hacer click aquí para descargar
+            el archivo PDF.</a></p>
+      </object>
+    </div>
+    <hr>
+    <!--Incluir Footer-->
+    <div data-include="footer"></div>
+    <script type="text/JavaScript">
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+      </script>
+</body>
