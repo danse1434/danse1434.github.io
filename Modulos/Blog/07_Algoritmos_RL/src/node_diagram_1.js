@@ -20,9 +20,8 @@ var nodePlot = d3.select('#mi_grafico_nodos').append('svg')
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
 // Por alguna razon no sirve la ruta relativa al json
-// var dataUrl = "../data/redDatos.json"
-
-let dataUrl = "./Modulos/Blog/07_Algoritmos_RL/data/redDatos.json"
+var dataUrl = "../data/redDatos.json"
+// let dataUrl = "./Modulos/Blog/07_Algoritmos_RL/data/redDatos.json"
 
 d3.json(dataUrl, function(err, data) {
     alert(err);
