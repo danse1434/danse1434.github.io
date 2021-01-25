@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Algoritmos RL</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  
+  <!-- Cargar D3 -->
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <!-- <script src="./node_modules/d3/index.js"></script> -->
+  
+  <link rel="stylesheet" type="text/css" href=".\CSS\original.css">
+  <link rel="stylesheet" type="text/css" href=".\CSS\cv.css">
+  <link rel="stylesheet" type="text/css" href=".\CSS\estilos_blog.css">
+  
+  <!-- Estilos para gráfico -->
+  <link rel="stylesheet" type="text/css" href="./Modulos/Blog/07_Algoritmos_RL/css/styles.css">
+
+  <script type="text/javascript">
+    $(function () {
+      var includes = $('[data-include]');
+      jQuery.each(includes, function () {
+        var file = 'components/' + $(this).data('include') + '.html';
+        $(this).load(file);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <!--Incluir barra de navegación-->
+  <div data-include="navbar"></div>
+  <!--Caso de la Ivermectina-->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1>Algoritmos de Reinforcement Learning</h1>
+    </div>
+  </div>
+
+  <!-- Contenedor -->
+    
+  <center>
+    <div id="mi_grafico_nodos" class="fluid-container"></div>
+  </center>
+  <script src="./Modulos/Blog/07_Algoritmos_RL/src/node_diagram_1.js" type="module"></script>
+
+  <hr>
+  <!--Incluir Footer-->
+  <div data-include="footer"></div>
+  <script type="text/JavaScript">
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</body>
+
+</html>

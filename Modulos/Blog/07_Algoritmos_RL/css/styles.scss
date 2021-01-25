@@ -1,0 +1,35 @@
+
+// Dimensiones de contenedor de gráfico
+
+$main_width: 80%;
+$device_sizes : 320, 480, 768, 1024;
+
+#mi_grafico_nodos{
+    width: $main_width;
+    height: $main_width*600/400;
+
+    $adapted_size: 100, 90, 90, 70;
+    
+    @for $i from 1 to 5 {
+        @media (max-width: nth($device_sizes, $i)) {
+            width: nth($adapted_size, $i);
+        }
+    }
+}
+
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.svg-content-responsive {
+    display: inline-block;
+    position: relative;
+    // top: ;
+    // left: 0;
+}

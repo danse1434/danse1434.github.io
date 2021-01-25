@@ -1,0 +1,66 @@
+{
+    "nodes": [
+        { "id": 1, "name": "Reinforcement Learning", 
+            "color":"blue"},
+        { "id": 2, "name": "K-armed bandits", 
+            "color": "#15630f"},
+        { "id": 3, "name": "Dynamic Programming", 
+            "color": "#15630f"},
+        { "id": 4, "name": "MonteCarlo Methods", 
+            "color": "#15630f"},
+
+        { "id": 10, "name": "Greedy bandit algorithm", 
+            "color": "#52ed47"},
+        { "id": 11, "name": "\\epsilon greedy bandit", 
+            "color": "#52ed47"},
+        { "id": 12, "name": "Optimistic initial value", 
+            "color": "#52ed47"},
+        { "id": 13, "name": "UCB implementation", 
+            "color": "#52ed47"},
+        { "id": 14, "name": "Gradient bandit algorithms", 
+            "color": "#52ed47"},
+
+        { "id": 20, "name": "Matricial solution of MDP problem", 
+            "color": "#52ed47"},
+        { "id": 21, "name": "Iterative policy evaluation", 
+            "color": "#52ed47"},
+        { "id": 22, "name": "Policy iteration - iterative policy evaluation", 
+            "color": "#52ed47"},
+        { "id": 23, "name": "Value iteration", 
+            "color": "#52ed47"},
+        { "id": 24, "name": "Asynchronous DP", 
+            "color": "#52ed47"},
+
+        { "id": 30, "name": "First-visit MC prediction, for estimating V $\\sim$ v_pi", 
+            "color": "#52ed47"},
+        { "id": 31, "name": "MC with exploring starts", 
+            "color": "#52ed47"},
+        { "id": 32, "name": "On-policy first-visit MC control (for \\epsilon-soft policies)", 
+            "color": "#52ed47"},
+        { "id": 33, "name": "Off-policy MC prediction (policy evaluation) for estimating Q=q", 
+            "color": "#52ed47"}
+        
+    ],
+    "links": [
+        { "source": 1, "target": 2},
+        { "source": 1, "target": 3},
+        { "source": 1, "target": 4},
+        
+        { "source": 2, "target": 10},
+        { "source": 2, "target": 11},
+        { "source": 2, "target": 12},
+        { "source": 2, "target": 13},
+        { "source": 2, "target": 14},
+
+        { "source": 1, "target": 20},
+        { "source": 3, "target": 21},
+        { "source": 3, "target": 22},
+        { "source": 3, "target": 23},
+        { "source": 3, "target": 24},
+
+        { "source": 4, "target": 30},
+        { "source": 4, "target": 31},
+        { "source": 4, "target": 32},
+        { "source": 4, "target": 33}
+    ]
+}

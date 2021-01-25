@@ -1,0 +1,28 @@
+#mi_grafico_nodos {
+  width: 80%;
+  height: 120%; }
+  @media (max-width: 320) {
+    #mi_grafico_nodos {
+      width: 100; } }
+  @media (max-width: 480) {
+    #mi_grafico_nodos {
+      width: 90; } }
+  @media (max-width: 768) {
+    #mi_grafico_nodos {
+      width: 90; } }
+  @media (max-width: 1024) {
+    #mi_grafico_nodos {
+      width: 70; } }
+
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  /* aspect ratio */
+  vertical-align: top;
+  overflow: hidden; }
+
+.svg-content-responsive {
+  display: inline-block;
+  position: relative; }
