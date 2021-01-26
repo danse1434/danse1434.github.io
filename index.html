@@ -1,188 +1,269 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <title>Página Web de Daniel</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta
+      name="description"
+      content="Sitio Web Oficial de Daniel Sebastian Parra González"
+    />
+    <meta
+      name="keywords"
+      content="Daniel, Sebastian, Parra, González, Daniel Sebastian Parra González, Farmacéutico, Farmacia, Farmacocinética, QSP,quimico farmaceutico"
+    />
+    <meta name="author" content="Daniel Parra G." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href=".\CSS\original.css?20120125" />
+    <!--Por el caché-->
+    <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg" />
 
-<head>
-  <title>Página Web de Daniel</title>
-  <meta charset="UTF-8">
-  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-  <meta name="description" content="Sitio Web Oficial de Daniel Sebastian Parra González">
-  <meta name="keywords"
-    content="Daniel, Sebastian, Parra, González, Daniel Sebastian Parra González, Farmacéutico, Farmacia, Farmacocinética, QSP,quimico farmaceutico">
-  <meta name="author" content="Daniel Parra G.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href=".\CSS\original.css?20120125"> <!--Por el caché-->
-  <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg">
-  
-  <script type="text/javascript">
-    $(function () {
-      var includes = $('[data-include]');
-      jQuery.each(includes, function () {
-        var file = './components/' + $(this).data('include') + '.html?20210625';
-        $(this).load(file);
+    <script type="text/javascript">
+      $(function () {
+        var includes = $("[data-include]");
+        jQuery.each(includes, function () {
+          var file =
+            "./components/" + $(this).data("include") + ".html?20210625";
+          $(this).load(file);
+        });
       });
-    });
-  </script>
-    
-</head>
+    </script>
+  </head>
 
-<!-- Body -->
+  <!-- Body -->
 
-<body>
-  <!--Incluir barra de navegación-->
-  <div data-include="navbar"></div>
+  <body>
+    <!--Incluir barra de navegación-->
+    <div data-include="navbar"></div>
 
-  <!--Jumbotron-->
-  <div class="jumbotron jumbotron-fluid">
-    <div class="jumbotron__container">
-      <h1>Hola Soy Daniel!</h1>
-      <p>Mi nombre es Daniel y soy Farmacéutico</p>
-    </div>
-  </div>
-
-  <div class="container-sm text-center">
-    <div id="demo" class="carousel slide" data-ride="carousel">
-
-      <!-- Indicators -->
-      <ul class="carousel-indicators">
-        <li data-target="#demo" data-slide-to="0" class="active"></li>
-        <li data-target="#demo" data-slide-to="1"></li>
-        <li data-target="#demo" data-slide-to="2"></li>
-        <li data-target="#demo" data-slide-to="3"></li>
-        <li data-target="#demo" data-slide-to="4"></li>
-      </ul>
-
-      <!-- The slideshow -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="figures/foto1.jpg" alt="Con la familia.">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Bogotá D.C.</h3>
-            <p>Con mis hermanos.</p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <img src="figures/foto2.jpg" alt="Hola Saludos desde Barranquilla.">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Barranquilla</h3>
-            <p>Con mi novia.</p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <img src="figures/foto3.jpeg" alt="Grado.">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Bogotá D.C.</h3>
-            <p>Durante mi graduación, con mis seres queridos.</p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <img src="figures/foto4.jpg" alt="En Egipto.">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Giza, Egipto</h3>
-            <p>Durante el congreso de IPSF - Asociación de Estudiantes de Farmacia.</p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <img src="figures/foto5.jpg" alt="Durante el confinamiento 2020!.">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Bogotá</h3>
-            <p>2020!.</p>
-          </div>
-        </div>
-
+    <!--Jumbotron-->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="jumbotron__container">
+        <h1>Hola Soy Daniel!</h1>
+        <p>Mi nombre es Daniel y soy Farmacéutico</p>
       </div>
-
-      <!-- Left and right controls -->
-      <a class="carousel-control-prev" href="#demo" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-      <a class="carousel-control-next" href="#demo" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
-
     </div>
 
-  </div>
-  
-  <hr>
-  <!--Cuerpo de Sitio Web-->
-  <div class="container-fluid bg-2 text-center">
-    <img src="./figures/CV0.png" class="img-thumbnail" alt="Cinque Terre" width="33%" height="45%">
-    <h2>¿Quién soy yo?</h2>
-    <p> Soy Químico Farmacéutico de la <abbr title="Universidad Nacional de Colombia">UNAL</abbr> con interés especial en
-      <abbr title="Modelamiento y Simulación">M&S</abbr> aplicado a la terapéutica. </p>
-    <p><img src="./CSS/icons/mortar-board-16.svg"><a href="./Modulos/es_CV_DANIEL.pdf"> Hoja de Vida </a> </p>
-    <button type="button" class="btn btn-outline-primary" type="submit">
-      <a
-        href="https://www.google.com/search?q=%22Daniel+Sebastian+parra+gonzalez%22">Buscar</a>
-    </button>
-  </div>
+    <div class="container-sm text-center">
+      <div id="demo" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+          <li data-target="#demo" data-slide-to="3"></li>
+          <li data-target="#demo" data-slide-to="4"></li>
+        </ul>
 
-  <hr>
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="figures/foto1.jpg" alt="Con la familia." />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Bogotá D.C.</h3>
+              <p>Con mis hermanos.</p>
+            </div>
+          </div>
 
-<!--Contenedor de contacto-->
-<div class="container-fluid bg-grey">
-  <h2 class="text-left">Contacto</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <br>
-      <p>Estaré en contacto con usted lo más pronto posible.</p>
-      <p><img src="./CSS/icons/location-16.svg"> Bogotá, CO</p>
-      <p><img src="./CSS/icons/unmute-16.svg"> +51 316 751 44 84</p>
-      <p><img src="./CSS/icons/mail-16.svg"> <a href="mailto:danse1434@hotmail.com?
+          <div class="carousel-item">
+            <img
+              src="figures/foto2.jpg"
+              alt="Hola Saludos desde Barranquilla."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Barranquilla</h3>
+              <p>Con mi novia.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="figures/foto3.jpeg" alt="Grado." />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Bogotá D.C.</h3>
+              <p>Durante mi graduación, con mis seres queridos.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="figures/foto4.jpg" alt="En Egipto." />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Giza, Egipto</h3>
+              <p>
+                Durante el congreso de IPSF - Asociación de Estudiantes de
+                Farmacia.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="figures/foto5.jpg"
+              alt="Durante el confinamiento 2020!."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Bogotá</h3>
+              <p>2020!.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+
+    <hr />
+    <!--Cuerpo de Sitio Web-->
+    <div class="container-fluid bg-2 text-center">
+      <img
+        src="./figures/CV0.png"
+        class="img-thumbnail"
+        alt="Cinque Terre"
+        width="33%"
+        height="45%"
+      />
+      <h2>¿Quién soy yo?</h2>
+      <p>
+        Soy Químico Farmacéutico de la
+        <abbr title="Universidad Nacional de Colombia">UNAL</abbr> con interés
+        especial en <abbr title="Modelamiento y Simulación">M&S</abbr> aplicado
+        a la terapéutica.
+      </p>
+      <p>
+        <img src="./CSS/icons/mortar-board-16.svg" /><a
+          href="./Modulos/es_CV_DANIEL.pdf"
+        >
+          Hoja de Vida
+        </a>
+      </p>
+      <button type="button" class="btn btn-outline-primary" type="submit">
+        <a
+          href="https://www.google.com/search?q=%22Daniel+Sebastian+parra+gonzalez%22"
+          >Buscar</a
+        >
+      </button>
+    </div>
+
+    <hr />
+
+    <!--Contenedor de contacto-->
+    <div class="container-fluid bg-grey">
+      <h2 class="text-left">Contacto</h2>
+      <div class="row">
+        <div class="col-sm-5">
+          <br />
+          <p>Estaré en contacto con usted lo más pronto posible.</p>
+          <p><img src="./CSS/icons/location-16.svg" /> Bogotá, CO</p>
+          <p><img src="./CSS/icons/unmute-16.svg" /> +51 316 751 44 84</p>
+          <p>
+            <img src="./CSS/icons/mail-16.svg" />
+            <a
+              href="mailto:danse1434@hotmail.com?
               &subject=Solicitud
-              &body=Solicitud%20a%20través%20de%20página%20web">danse1434@hotmail.com</a></p>
-      <p><img src="./CSS/icons/mark-github-16.svg"> <a href="https://github.com/danse1434" target="_blank">github.com/danse1434</a></p>
-      <p><img src="./CSS/icons/twitter-64.svg" style="max-width: 18px;"> <a href="https://twitter.com/danse1434" target="_blank">@danse1434</a></p>
+              &body=Solicitud%20a%20través%20de%20página%20web"
+              >danse1434@hotmail.com</a
+            >
+          </p>
+          <p>
+            <img src="./CSS/icons/mark-github-16.svg" />
+            <a href="https://github.com/danse1434" target="_blank"
+              >github.com/danse1434</a
+            >
+          </p>
+          <p>
+            <img src="./CSS/icons/twitter-64.svg" style="max-width: 18px" />
+            <a href="https://twitter.com/danse1434" target="_blank"
+              >@danse1434</a
+            >
+          </p>
+        </div>
+        <form id="testForm" action="" class="col-sm-7">
+          <br />
+          <div class="row">
+            <div class="col-sm-6 form-group">
+              <input
+                class="form-control name"
+                id="name"
+                name="name"
+                placeholder="Nombre"
+                type="text"
+                required
+              />
+            </div>
+            <div class="col-sm-6 form-group">
+              <input
+                class="form-control email"
+                id="email"
+                name="email"
+                placeholder="Correo electrónico"
+                type="email"
+                required
+              />
+            </div>
+          </div>
+          <textarea
+            class="form-control comments"
+            id="comments"
+            name="comments"
+            placeholder="Comentario"
+            rows="5"
+          ></textarea
+          ><br />
+
+          <div class="row">
+            <div class="col-sm-12 form-group">
+              <button
+                id="submit-form"
+                class="btn btn-outline-primary"
+                type="submit"
+              >
+                Enviar
+              </button>
+            </div>
+          </div>
+          <!--Mensaje de Alerta Conectado a JS-->
+          <div
+            class="alert alert-success success-message"
+            style="display: none"
+          >
+            Información subida de forma satisfactoria.
+          </div>
+        </form>
+      </div>
     </div>
-    <form id="testForm" action="" class="col-sm-7">
-      <br>
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control name" id="name" name="name" placeholder="Nombre" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control email" id="email" name="email" placeholder="Correo electrónico" type="email"
-            required>
-        </div>
-      </div>
-      <textarea class="form-control comments" id="comments" name="comments" placeholder="Comentario"
-        rows="5"></textarea><br>
+    <hr />
+    <!--Incluir Footer-->
+    <div data-include="footer"></div>
 
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button id="submit-form" class="btn btn-outline-primary" type="submit">Enviar</button>
-        </div>
-      </div>
-    <!--Mensaje de Alerta Conectado a JS-->
-    <div class="alert alert-success success-message" style="display:none;">Información subida de forma satisfactoria.</div>    
-    </form>
-  </div>
-</div>
-<hr>
-  <!--Incluir Footer-->
-  <div data-include="footer"></div>
-
-  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
-  <script src="./JS/include-html.js"></script>
-
-</body>
-
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+    <script src="./JS/include-html.js"></script>
+  </body>
 </html>

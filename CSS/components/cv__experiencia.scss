@@ -1,0 +1,98 @@
+// Tamaño de dispositivo
+$device_sizes: 320, 480, 768, 1024;
+
+.experiencia {
+  background-color: rgb(243, 239, 224);
+  border-radius: 1%;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  $adapted_width: 100, 100, 100, 90;
+  $adapted_border-radius: 1, 1, 0, 0;
+  $adapted_description_font-size: smaller, smaller, smaller, small;
+
+  @for $i from 4 to 0 {
+    @media screen and (max-width: nth($device_sizes, $i) + "px") {
+      width: #{nth($adapted_width, $i) + "%"};
+      border-radius: #{nth($adapted_border-radius, $i) + "%"};
+    }
+  }
+
+  .experiencia__titulo {
+    font-family: "Open Sans", sans-serif !important;
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: auto;
+
+    @media (max-width: 768px) {
+      padding-bottom: 0%;
+      padding-top: 0%;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+  }
+
+  .experiencia__periodo {
+    margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+      padding-bottom: 0%;
+      padding-top: 0%;
+      margin-bottom: 0%;
+    }
+  }
+
+  .experiencia__cargoTitulo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-style: italic;
+
+    @media (max-width: 768px) {
+      padding-bottom: 0%;
+      padding-top: 0%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .experiencia__cajaDescripcion {
+    width: auto;
+    font-size: small;
+
+    @for $i from 4 to 0 {
+      @media screen and (max-width: nth($device_sizes, $i) + "px") {
+        font-size: #{nth($adapted_description_font-size, $i)};
+      }
+    }
+
+    div {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    ul > li {
+      width: fit-content;
+    }
+  }
+
+  .experiencia__locacion {
+    color: #22a39f;
+    padding-bottom: 1%;
+    width: 90%;
+    img > path {
+      fill: #22a39f;
+      color: #22a39f;
+    }
+    a {
+      color: #22a39f;
+      padding-bottom: 1%;
+      width: 90%;
+    }
+  }
+}

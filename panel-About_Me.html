@@ -25,7 +25,7 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" type="text/css" href=".\CSS\estilos_cv.css" />
+    <link rel="stylesheet" type="text/css" href=".\CSS\estilos_cv.css?20210126" />
     <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg" />
     <script src="JS/aboutMeScripts.js"></script>
 
@@ -60,7 +60,7 @@
     <div class="container-fluid bg-cv-1 p-4 text-justify">
       <h2>Sobre mí</h2>
       <br />
-      <div class="container Experiencia" id="about_me">
+      <div class="container experiencia" id="about_me">
         <br />
         <p>
           Soy Químico Farmacéutico de la Universidad Nacional de Colombia,
@@ -149,58 +149,7 @@
 
     <!--Incluir Footer-->
     <div data-include="footer"></div>
-
-    <!-- Lectura de archivo JSON con experiencias - escritura -->
-    <script type="text/javascript" type="module" async>
-      fetch("./resources/experience.json")
-        .then((response) => response.json())
-        .then((data) => {
-          for (let i = 0; i < 5; i++) {
-            let idLS1 = "0" + (i + 1);
-            crearExperiencia(
-              data[idLS1]["divName"],
-              data[idLS1]["tituloTrabajo"],
-              data[idLS1]["cargo"],
-              data[idLS1]["periodo"],
-              data[idLS1]["descripcion"],
-              data[idLS1]["responsabilidades"],
-              data[idLS1]["Locacion"]
-            );
-          }
-        });
-    </script>
-    <!-- Lectura de archivo JSON con educación - escritura -->
-    <script type="text/javascript" type="module" async>
-      fetch("./resources/education.json")
-        .then((response) => response.json())
-        .then((data) => {
-          for (let i = 0; i < 3; i++) {
-            let idLS2 = "0" + (i + 1);
-            crearTitulo(
-              data[idLS2]["dv"],
-              data[idLS2]["institucion"],
-              data[idLS2]["titulo"],
-              data[idLS2]["periodo"],
-              data[idLS2]["locacion"]
-            );
-          }
-        });
-
-      fetch("./resources/educationNF.json")
-        .then((response) => response.json())
-        .then((data) => {
-          for (let i = 0; i < 8; i++) {
-            let idLS3 = "0" + (i + 1);
-            crearTituloNF(
-              data[idLS3]["dv"],
-              data[idLS3]["Institucion"],
-              data[idLS3]["Descripcion"],
-              data[idLS3]["Fecha"],
-              data[idLS3]["Lugar"],
-              data[idLS3]["URL"]
-            );
-          }
-        });
-    </script>
+    <!-- Lectura de Archivo -->
+    <script type="module" src="./JS/aboutMeScripts.js?20210106"></script>    
   </body>
 </html>

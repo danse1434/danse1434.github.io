@@ -1,6 +1,8 @@
 // Carga de hoja de estilo tema principal
 @import "original.scss"; //
-@import "components/cv__educacion.scss"; //
+@import "components/cv__experiencia.scss"; //
+@import "components/cv__educacionFormal.scss"; //
+@import "components/cv__educacionNoFormal.scss"; //
 
 .bg-cv-0 {
   background-color: rgb(241, 238, 230); /* Leche de Coco PANTONE 11-0608-TCX */
@@ -23,81 +25,12 @@
   }
 }
 
-.Experiencia {
-  background-color: rgb(243, 239, 224);
-  border-radius: 1%;
-  margin: auto;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-div.h4 {
-  font-family: "Open Sans", sans-serif !important;
-  font-size: 18px;
-  font-weight: 700;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: auto;
-}
-.experience-period {
-  margin-bottom: 10px;
-}
-p.cargoTitulo {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-style: italic;
-}
-
-p.cajaDescrip {
-  width: auto;
-  font-size: small;
-
-  div {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  ul > li {
-    width: fit-content;
-  }
-}
-
-.Locacion {
-  color: #22a39f;
-  padding-bottom: 1%;
-  width: 90%;
-  img > path {
-    fill: #22a39f;
-    color: #22a39f;
-  }
-  a {
-    color: #22a39f;
-    padding-bottom: 1%;
-    width: 90%;
-  }
-}
-
-p.tituloEducativo {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-style: italic;
-}
-
 @media (max-width: 1200px) {
   .bg-cv-0 {
     width: 90%;
   }
   .bg-cv-1 {
     width: 90%;
-  }
-  .Experiencia {
-    width: 90%;
-    border-radius: 0%;
   }
 }
 
@@ -108,39 +41,7 @@ p.tituloEducativo {
   .bg-cv-1 {
     width: 100%;
   }
-  .Experiencia {
-    width: 100%;
-    border-radius: 1%;
-  }
   #about_me > p {
     font-size: smaller;
-  }
-  p.cajaDescrip {
-    font-size: smaller;
-  }
-  /* Comportamiento móvil títulos */
-  p.cargoTitulo {
-    padding-bottom: 0%;
-    padding-top: 0%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  div.h4 {
-    padding-bottom: 0%;
-    padding-top: 0%;
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-  
-  p.experience-period {
-    padding-bottom: 0%;
-    padding-top: 0%;
-    margin-bottom: 0%;
-  }
-  p.tituloEducativo {
-    padding-bottom: 0%;
-    padding-top: 0%;
-    margin-top: 5px;
-    margin-bottom: 5px;
   }
 }
