@@ -1,0 +1,21 @@
+
+// Tamaños de dispositivo
+$device_sizes: 320, 480, 768, 1024;
+
+/*
+La barra de navegación sobrelapa los otros componentes por esta en
+posición "fixed-top" (es decir siempre aparece arriba), se debe
+agregar un padding en el body para evitar esto.
+*/
+
+body {
+  padding-top: 56px; // Altura de NavBar
+
+  $adapted_padding: 56, 56, 56, 56;
+
+  @for $i from 4 to 0 {
+    @media screen and (max-width: #{nth($device_sizes, $i) + "px"}) {
+      padding-top: #{nth($adapted_padding, $i) + "px"};
+    }
+  }
+}

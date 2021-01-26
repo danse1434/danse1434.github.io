@@ -1,0 +1,72 @@
+// Tema de Jumbotron
+$gColor1: rgba(002, 000, 036, 1);
+$gColor2: rgba(076, 064, 138, 1);
+$gColor3: rgba(000, 179, 255, 1);
+$gColor4: rgba(000, 196, 255, 1);
+$gColor5: rgba(000, 255, 246, 1);
+
+// Tamaño de dispositivo
+$device_sizes: 320, 480, 768, 1024;
+
+// Jumbotron
+
+.jumbotron {
+  // Variables
+  $adapted_size_1: 20px, 30px, 30px, 40px; // Tamaño de fuente H1
+  $adapted_size_2: 08px, 12px, 16px, 16px; // Tamaño de fuente para p
+  $adapted_padding: 5px, 08px, 10px, 25px; // Padding de Jumbotron
+  $adapted_margin: 10, 15, 20, 30; // Márgenes horizontales
+
+  background: $gColor1;
+  background: linear-gradient(
+    133deg,
+    $gColor1 1%,
+    $gColor2 19%,
+    $gColor3 43%,
+    $gColor4 72%,
+    $gColor5 91%
+  );
+  color: white;
+  padding: 25px 0px;
+  position: relative;
+
+  @for $i from 4 to 0 {
+    @media screen and (max-width: nth($device_sizes, $i) + "px") {
+      padding-top: nth($adapted_padding, $i);
+      padding-bottom: nth($adapted_padding, $i);
+    }
+  }
+
+  h1 {
+    font: bold;
+    font-size: 50px;
+    // Tiene que ser en sentido contrario para respetar la cascada
+    @for $i from 4 to 0 {
+      @media screen and (max-width: nth($device_sizes, $i) + "px") {
+        font-size: nth($adapted_size_1, $i);
+      }
+    }
+  }
+
+  p {
+    @for $i from 4 to 0 {
+      @media screen and (max-width: nth($device_sizes, $i) + "px") {
+        font-size: nth($adapted_size_2, $i);
+      }
+    }
+  }
+
+  .jumbotron__container {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+
+    @for $i from 4 to 0 {
+      @media screen and (max-width: nth($device_sizes, $i) + "px") {
+        margin-left: #{nth($adapted_margin, $i) + "px"};
+        margin-right: #{nth($adapted_margin, $i) + "px"};
+      }
+    }
+  }
+}

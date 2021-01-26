@@ -1,0 +1,17 @@
+// Tema de bg-2
+
+.bg-2 {
+    background-color: #0f4c81; /* Color del año 2020 */
+    color: #ffffff;
+  
+    a {
+      color: white;
+    }
+    // 992
+    @media (max-width: 768px){
+        width: 100%;
+    }
+    @media (max-width: 1024px){
+        width: 95%;
+    }
+  }

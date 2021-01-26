@@ -1,41 +1,52 @@
-.img-thumbnail{
-  width: 50%;
-}
+@charset "UTF-8";
+h1 {
+  font-size: small; }
 
-.bg-blog-0{
-    background-color: white; /* Color del año 2020 */
-  }
+div.bg-blog-jumbotron div.container h1 {
+  font-size: 50px; }
+  @media (max-width: 320) {
+    div.bg-blog-jumbotron div.container h1 {
+      font-size: 20px; } }
+  @media (max-width: 480) {
+    div.bg-blog-jumbotron div.container h1 {
+      font-size: 30px; } }
+  @media (max-width: 768) {
+    div.bg-blog-jumbotron div.container h1 {
+      font-size: 50px; } }
+  @media (max-width: 1024) {
+    div.bg-blog-jumbotron div.container h1 {
+      font-size: 50px; } }
 
-.bg-blog-0 p{
-  color: black;
-  text-align: justify;
-}
-.bg-blog-0 h2{
-  text-align: justify;
-}
+.bg-blog-0 {
+  /* Color del año 2020 */
+  background-color: white; }
+  .bg-blog-0 p {
+    color: black;
+    text-align: justify; }
+  .bg-blog-0 h2 {
+    text-align: justify; }
+  @media (max-width: 1200px) {
+    .bg-blog-0 {
+      width: 90%; }
+      .bg-blog-0 p {
+        width: 90%; }
+      .bg-blog-0 h2 {
+        width: 90%; } }
+  @media (max-width: 768px) {
+    .bg-blog-0 {
+      width: 100%; }
+      .bg-blog-0 p {
+        width: 98%; }
+      .bg-blog-0 h2 {
+        width: 100%;
+        text-align: left; } }
 
-div.card-body > p{
-  font-size: small;
-}
+div.card-body > p {
+  font-size: small; }
 
-@media (max-width: 1200px) {
-  .bg-blog-0{width:90%;}
-  .bg-blog-0 p{width:90%;}
-  .bg-blog-0 h2{width:90%;}
-  
-}
-@media (max-width: 768px) {
-  .bg-blog-0{width: 100%;}
-  
-  .bg-blog-0 p{width: 98%;}
-
-  .bg-blog-0 h2{
-    width: 100%;
-    text-align: left;
-  }
-  .img-thumbnail{
-    width: 95%;
-  }
-}
 /* Contenedores Proyectos */
-
+.img-thumbnail {
+  width: 50%; }
+  @media (max-width: 768px) {
+    .img-thumbnail {
+      width: 95%; } }
