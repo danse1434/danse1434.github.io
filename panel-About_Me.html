@@ -1,168 +1,204 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <title>Sobre mí</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href=".\CSS\estilos_cv.css" />
+    <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg" />
+    <script src="JS/aboutMeScripts.js"></script>
 
-<head>
-  <title>Sobre mí</title>
-  <meta charset="UTF-8">
-  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href=".\CSS\original.css">
-  <link rel="stylesheet" type="text/css" href=".\CSS\cv.css">
-  <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg">
-  <script src="JS/aboutMeScripts.js"></script>
-
-  <!-- Cargar archivos HTML adicionales -->
-  <script type="text/javascript">
-    $(function () {
-      var includes = $('[data-include]');
-      jQuery.each(includes, function () {
-        var file = 'components/' + $(this).data('include') + '.html';
-        $(this).load(file);
+    <!-- Cargar archivos HTML adicionales -->
+    <script type="text/javascript">
+      $(function () {
+        var includes = $("[data-include]");
+        jQuery.each(includes, function () {
+          var file = "components/" + $(this).data("include") + ".html";
+          $(this).load(file);
+        });
       });
-    });
-  </script>
-</head>
+    </script>
+  </head>
 
-
-<body>
-  <!--Incluir barra de navegación-->
-  <div data-include="navbar"></div>
-  <!--Jumbotron-->
-  <div class="jumbotron jumbotron-fluid">
-    <div class="jumbotron__container">
-      <h1>Experiencias</h1>
-      <p style="text-justify: auto;"> “The dreamers are the saviors of the world. As the visible world is sustained 
-        by the invisible, so men, through all their trials and sins and sordid vocations, are nourished by the 
-        beautiful visions of their solitary dreamers.”</p>
-      <p>– James Allen (As a Man Thinketh)</p>
+  <body>
+    <!--Incluir barra de navegación-->
+    <div data-include="navbar"></div>
+    <!--Jumbotron-->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="jumbotron__container">
+        <h1>Experiencias</h1>
+        <p style="text-justify: auto">
+          “The dreamers are the saviors of the world. As the visible world is
+          sustained by the invisible, so men, through all their trials and sins
+          and sordid vocations, are nourished by the beautiful visions of their
+          solitary dreamers.” <br>
+          – James Allen (As a Man Thinketh)</p>
+      </div>
     </div>
-  </div>
-  
-  <div class="container-fluid bg-cv-1 p-4 text-justify">
-    <h2>Sobre mí</h2>
-    <br>
-    <div class="container Experiencia" id="about_me">
-      <br>
-      <p>Soy Químico Farmacéutico de la Universidad Nacional de Colombia, candidato a Maestría en Ciencias Farmacología. Tengo
-        especial interés en Modelamiento y Simulación aplicado a la terapéutica, con conocimientos y experiencia en farmacocinética
-        poblacional, farmacodinamia (PK-PD), y modelos de farmacología cuantitativa de sistemas (QSP). </p>
 
-      <p>Cuento con experiencia en el sector hospitalario, <code>farmacovigilancia</code>, <code>programas de uso prudente de antibióticos</code>, 
-        centrales de preparación de estériles, y asuntos regulatorios. </p>
-  
-      <p>Tengo conocimientos en programación en <code>R</code>, <code>Python</code>, <code>C++</code>, y <code>Stan</code>. 
-        Además cuento con conocimientos en Ciencia de Datos con manejo 
-        de librerías (frameworks) como <code>Tidyverse</code>, <code>Pandas</code>, <code>TidyModels</code>, <code>sklearn</code>, 
-        <code>NLTK</code>, <code>Shiny</code>, y <code>Dash</code>. También tengo conocimientos en <code>Git</code>, 
-        <code>SQL</code>, y <code>Docker</code>. Además manejo lenguajes de marcado (p.ej. <code>HTML</code> y <code>Markdown</code>) 
-        y producción de textos científicos como <code>Latex</code>. </p>
-      <br>
+    <div class="container-fluid bg-cv-1 p-4 text-justify">
+      <h2>Sobre mí</h2>
+      <br />
+      <div class="container Experiencia" id="about_me">
+        <br />
+        <p>
+          Soy Químico Farmacéutico de la Universidad Nacional de Colombia,
+          candidato a Maestría en Ciencias Farmacología. Tengo especial interés
+          en Modelamiento y Simulación aplicado a la terapéutica, con
+          conocimientos y experiencia en farmacocinética poblacional,
+          farmacodinamia (PK-PD), y modelos de farmacología cuantitativa de
+          sistemas (QSP).
+        </p>
+
+        <p>
+          Cuento con experiencia en el sector hospitalario,
+          <code>farmacovigilancia</code>,
+          <code>programas de uso prudente de antibióticos</code>, centrales de
+          preparación de estériles, y asuntos regulatorios.
+        </p>
+
+        <p>
+          Tengo conocimientos en programación en <code>R</code>,
+          <code>Python</code>, <code>C++</code>, y <code>Stan</code>. Además
+          cuento con conocimientos en Ciencia de Datos con manejo de librerías
+          (frameworks) como <code>Tidyverse</code>, <code>Pandas</code>,
+          <code>TidyModels</code>, <code>sklearn</code>, <code>NLTK</code>,
+          <code>Shiny</code>, y <code>Dash</code>. También tengo conocimientos
+          en <code>Git</code>, <code>SQL</code>, y <code>Docker</code>. Además
+          manejo lenguajes de marcado (p.ej. <code>HTML</code> y
+          <code>Markdown</code>) y producción de textos científicos como
+          <code>Latex</code>.
+        </p>
+        <br />
+      </div>
     </div>
-  </div>
-  
-  <hr>
 
-  <div class="container-fluid bg-cv-1 p-4 text-justify">
-    <h2>Experiencia</h2>
-    <br>
-    <div class="container" id="experiencia5"></div>
-    <div class="container" id="experiencia4"></div>
-    <div class="container" id="experiencia3"></div>
-    <div class="container" id="experiencia2"></div>
-    <div class="container" id="experiencia1"></div>
-    
-  </div>
-  
-  <hr>
+    <hr />
 
-  <div class="container-fluid bg-cv-1 p-4 text-justify">
-    <h2>Educación</h2>
-    <br>
-    <div class="container" id="educacion3"></div>
-    <div class="container" id="educacion2"></div>
-    <div class="container" id="educacion1"></div>
-  </div>
+    <div class="container-fluid bg-cv-1 p-4 text-justify">
+      <h2>Experiencia</h2>
+      <br />
+      <div class="container" id="experiencia5"></div>
+      <div class="container" id="experiencia4"></div>
+      <div class="container" id="experiencia3"></div>
+      <div class="container" id="experiencia2"></div>
+      <div class="container" id="experiencia1"></div>
+    </div>
 
-  <hr>
-  <div class="container-fluid bg-cv-1 p-4 text-justify">
-    <h2>Educación No Formal </h2>
-    <br>
-    <div class="container" id="educacionNF8"></div>
-    <div class="container" id="educacionNF7"></div>
-    <div class="container" id="educacionNF6"></div>
-    <div class="container" id="educacionNF5"></div>
-    <div class="container" id="educacionNF4"></div>
-    <div class="container" id="educacionNF3"></div>
-    <div class="container" id="educacionNF2"></div>
-    <div class="container" id="educacionNF1"></div>
-  </div>
+    <hr />
 
-  <hr>
-  <!--Cuerpo de Sitio Web-->
-  <div class="container-fluid bg-2 text-center">
-    <h2>Quién soy yo?</h2>
-    <p>Soy Químico Farmacéutico de la <abbr title="Universidad Nacional de Colombia">UNAL</abbr> con interés especial en
-      <abbr title="Modelamiento y Simulación">M&S</abbr> aplicado a la terapéutica. </p>
-    <button type="button" class="btn btn-outline-primary" type="submit">Buscar</button>
-  </div>
-  
-  <!--Incluir Footer-->
-  <div data-include="footer"></div>
+    <div class="container-fluid bg-cv-1 p-4 text-justify">
+      <h2>Educación</h2>
+      <br />
+      <div class="container" id="educacion3"></div>
+      <div class="container" id="educacion2"></div>
+      <div class="container" id="educacion1"></div>
+    </div>
 
-  <!-- Lectura de archivo JSON con experiencias - escritura -->
-  <script type="text/javascript" type="module" async>
-    
-    fetch("./resources/experience.json")
-      .then(response => response.json())
-      .then(data => {
+    <hr />
+    <div class="container-fluid bg-cv-1 p-4 text-justify">
+      <h2>Educación No Formal</h2>
+      <br />
+      <div class="container" id="educacionNF8"></div>
+      <div class="container" id="educacionNF7"></div>
+      <div class="container" id="educacionNF6"></div>
+      <div class="container" id="educacionNF5"></div>
+      <div class="container" id="educacionNF4"></div>
+      <div class="container" id="educacionNF3"></div>
+      <div class="container" id="educacionNF2"></div>
+      <div class="container" id="educacionNF1"></div>
+    </div>
 
-        for (let i = 0; i < 5; i++) {        
-          let idLS1 = "0" + (i+1);
-          crearExperiencia(data[idLS1]["divName"], data[idLS1]["tituloTrabajo"], data[idLS1]["cargo"],
-            data[idLS1]["periodo"],
-            data[idLS1]["descripcion"], data[idLS1]["responsabilidades"], data[idLS1]["Locacion"] );
-        }
-    })  
-  </script>
-  <!-- Lectura de archivo JSON con educación - escritura -->
-  <script type="text/javascript" type="module" async>
-  fetch("./resources/education.json")
-    .then(response => response.json())
-    .then(data => {
-      for (let i = 0; i < 3; i++) {
-        let idLS2 = "0" + (i+1);
-        crearTitulo(data[idLS2]["dv"], data[idLS2]["institucion"], data[idLS2]["titulo"], 
-          data[idLS2]["periodo"], data[idLS2]["locacion"]);
-      }
-    })
-  
-  fetch("./resources/educationNF.json")
-    .then(response => response.json())
-    .then(data => {
-      for (let i = 0; i < 8; i++) {
-        let idLS3 = "0" + (i+1);
-        crearTituloNF(
-          data[idLS3]["dv"], 
-          data[idLS3]["Institucion"], 
-          data[idLS3]["Descripcion"], 
-          data[idLS3]["Fecha"], 
-          data[idLS3]["Lugar"],
-          data[idLS3]["URL"]
-          );
-      }
-    })
-  </script>
+    <hr />
+    <!--Cuerpo de Sitio Web-->
+    <div class="container-fluid bg-2 text-center">
+      <h2>¿Quién soy yo?</h2>
+      <p>
+        Soy Químico Farmacéutico de la
+        <abbr title="Universidad Nacional de Colombia">UNAL</abbr> con interés
+        especial en <abbr title="Modelamiento y Simulación">M&S</abbr> aplicado
+        a la terapéutica.
+      </p>
+      <button type="button" class="btn btn-outline-primary" type="submit">
+        Buscar
+      </button>
+    </div>
 
+    <!--Incluir Footer-->
+    <div data-include="footer"></div>
 
-</body>
+    <!-- Lectura de archivo JSON con experiencias - escritura -->
+    <script type="text/javascript" type="module" async>
+      fetch("./resources/experience.json")
+        .then((response) => response.json())
+        .then((data) => {
+          for (let i = 0; i < 5; i++) {
+            let idLS1 = "0" + (i + 1);
+            crearExperiencia(
+              data[idLS1]["divName"],
+              data[idLS1]["tituloTrabajo"],
+              data[idLS1]["cargo"],
+              data[idLS1]["periodo"],
+              data[idLS1]["descripcion"],
+              data[idLS1]["responsabilidades"],
+              data[idLS1]["Locacion"]
+            );
+          }
+        });
+    </script>
+    <!-- Lectura de archivo JSON con educación - escritura -->
+    <script type="text/javascript" type="module" async>
+      fetch("./resources/education.json")
+        .then((response) => response.json())
+        .then((data) => {
+          for (let i = 0; i < 3; i++) {
+            let idLS2 = "0" + (i + 1);
+            crearTitulo(
+              data[idLS2]["dv"],
+              data[idLS2]["institucion"],
+              data[idLS2]["titulo"],
+              data[idLS2]["periodo"],
+              data[idLS2]["locacion"]
+            );
+          }
+        });
 
+      fetch("./resources/educationNF.json")
+        .then((response) => response.json())
+        .then((data) => {
+          for (let i = 0; i < 8; i++) {
+            let idLS3 = "0" + (i + 1);
+            crearTituloNF(
+              data[idLS3]["dv"],
+              data[idLS3]["Institucion"],
+              data[idLS3]["Descripcion"],
+              data[idLS3]["Fecha"],
+              data[idLS3]["Lugar"],
+              data[idLS3]["URL"]
+            );
+          }
+        });
+    </script>
+  </body>
 </html>

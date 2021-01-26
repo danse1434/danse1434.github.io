@@ -1,20 +1,24 @@
-/* Contenedor de ¿Quién Soy Yo? (Tema bg-2)*/
+/* Colores de Footer */
 
 // Tamaños de dispositivo
 
 $device_sizes: 320, 480, 768, 1024;
 
-.bg-2 {
-  $adapted_width: 100, 100, 95, 95; // W adaptado
-  $adapted_size_1: 15, 20, 25, 32; // Tamaño de fuente H2
+.bg-4 {
+  $adapted_width: 100, 100, 100, 100; // W adaptado
+  $adapted_size_1: 20, 20, 25, 32; // Tamaño de fuente H2
   $adapted_size_2: 12, 14, 14, 16; // Tamaño de fuente para p
   $padding_h: 20, 30, 40, 60;
   $padding_v: 10, 20, 30, 50;
 
-  /* Color del año 2020 - Contenedor */
-  background-color: #0f4c81;
+  // Configuraciones
+  background-color: #2f2f2f;
   color: #ffffff;
-  padding: 60px 50px;
+  height: 66px;
+  padding: 15px 0px;
+  position: relative;
+  vertical-align: middle;
+  // padding: 60px 50px;
 
   @for $i from 4 to 0 {
     @media screen and (max-width: #{nth($device_sizes, $i) + "px"}) {
@@ -23,20 +27,12 @@ $device_sizes: 320, 480, 768, 1024;
     }
   }
 
-  h2 {
-    font-size: 32px;
-
-    @for $i from 4 to 0 {
-      @media screen and (max-width: #{nth($device_sizes, $i) + "px"}) {
-        font-size: #{nth($adapted_size_1, $i) + "px"};
-      }
-    }
-  }
-
-  p,
-  a {
-    font-size: 16px;
+  p {
     color: white;
+    line-height: 36px;
+    font-size: 16px;
+    margin: auto;
+    // vertical-align: middle;
 
     @for $i from 4 to 0 {
       @media screen and (max-width: #{nth($device_sizes, $i) + "px"}) {
@@ -45,8 +41,9 @@ $device_sizes: 320, 480, 768, 1024;
     }
   }
 
-  img {
-    max-width: 230px;
-    max-height: 300px;
+  a {
+    @extend p;
+    color: rgb(0, 86, 179);
+    text-decoration: solid;
   }
 }

@@ -1,20 +1,20 @@
-/* Contenedor de ¿Quién Soy Yo? (Tema bg-2)*/
+/* Contenedor Gris de Contacto*/
 
 // Tamaños de dispositivo
 
 $device_sizes: 320, 480, 768, 1024;
 
-.bg-2 {
-  $adapted_width: 100, 100, 95, 95; // W adaptado
-  $adapted_size_1: 15, 20, 25, 32; // Tamaño de fuente H2
+.bg-grey {
+  $adapted_width: 100, 100, 100, 100; // W adaptado
+  $adapted_size_1: 20, 20, 25, 32; // Tamaño de fuente H2
   $adapted_size_2: 12, 14, 14, 16; // Tamaño de fuente para p
   $padding_h: 20, 30, 40, 60;
   $padding_v: 10, 20, 30, 50;
 
-  /* Color del año 2020 - Contenedor */
-  background-color: #0f4c81;
+  /* Color del año 2020, contrario */
+  background-color: #f6f6f6;
   color: #ffffff;
-  padding: 60px 50px;
+  // padding: 60px 50px;
 
   @for $i from 4 to 0 {
     @media screen and (max-width: #{nth($device_sizes, $i) + "px"}) {
@@ -25,6 +25,9 @@ $device_sizes: 320, 480, 768, 1024;
 
   h2 {
     font-size: 32px;
+    color: #658dc6;
+    padding-top: 10px;
+    margin-bottom: 5px;
 
     @for $i from 4 to 0 {
       @media screen and (max-width: #{nth($device_sizes, $i) + "px"}) {
@@ -33,20 +36,14 @@ $device_sizes: 320, 480, 768, 1024;
     }
   }
 
-  p,
-  a {
+  p, a {
     font-size: 16px;
-    color: white;
+    color: black;
 
     @for $i from 4 to 0 {
       @media screen and (max-width: #{nth($device_sizes, $i) + "px"}) {
         font-size: #{nth($adapted_size_2, $i) + "px"};
       }
     }
-  }
-
-  img {
-    max-width: 230px;
-    max-height: 300px;
   }
 }

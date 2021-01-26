@@ -12,10 +12,10 @@ $device_sizes: 320, 480, 768, 1024;
 
 .jumbotron {
   // Variables
-  $adapted_size_1: 20px, 30px, 30px, 40px; // Tamaño de fuente H1
-  $adapted_size_2: 08px, 12px, 16px, 16px; // Tamaño de fuente para p
-  $adapted_padding: 5px, 08px, 10px, 25px; // Padding de Jumbotron
-  $adapted_margin: 10, 15, 20, 30; // Márgenes horizontales
+  $adapted_size_1: 20px, 30px, 30px, 40px;  // Tamaño de fuente H1
+  $adapted_size_2: 12, 14, 14, 16;          // Tamaño de fuente para p
+  $adapted_padding: 5px, 08px, 10px, 25px;  // Padding de Jumbotron
+  $adapted_margin: 10, 15, 20, 30;          // Márgenes horizontales
 
   background: $gColor1;
   background: linear-gradient(
@@ -51,7 +51,7 @@ $device_sizes: 320, 480, 768, 1024;
   p {
     @for $i from 4 to 0 {
       @media screen and (max-width: nth($device_sizes, $i) + "px") {
-        font-size: nth($adapted_size_2, $i);
+        font-size: #{nth($adapted_size_2, $i) + "px"};
       }
     }
   }
