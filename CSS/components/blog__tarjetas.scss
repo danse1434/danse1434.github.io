@@ -1,0 +1,48 @@
+$device_sizes: 320, 480, 768, 1024;
+
+div.col-md-4 {
+  $adapted_width: 100, 95, 48, 32;
+  $adapted_size_1: 13, 15, 16, 20; // Tamaño de fuente H4
+  $adapted_size_2: 12, 14, 14, 14; // Tamaño de fuente para p
+  width: 48%;
+  min-width: 32%;
+
+  @media screen and (min-width: 1400px) and (max-width: 3000px) {
+    width: 24%;
+    min-width: 20%;
+    max-width: 25%;
+  }
+
+  @for $i from 4 to 0 {
+    @media screen and (max-width: nth($device_sizes, $i) + "px") {
+      width: #{nth($adapted_width, $i) + "%"};
+    }
+  }
+  
+  /* Contenedores Proyectos */
+  div.card > rect > .img-thumbnail {
+    width: 50%;
+
+    @media (max-width: 768px) {
+      width: 95%;
+    }
+  }
+  p {
+    font-size: 14px;
+
+    @for $i from 4 to 0 {
+      @media screen and (max-width: nth($device_sizes, $i) + "px") {
+        font-size: #{nth($adapted_size_2, $i) + "px"};
+      }
+    } 
+  }
+  strong {
+    font-size: large;
+
+    @for $i from 4 to 0 {
+      @media screen and (max-width: nth($device_sizes, $i) + "px") {
+        font-size: #{nth($adapted_size_1, $i) + "px"};
+      }
+    } 
+  }
+}

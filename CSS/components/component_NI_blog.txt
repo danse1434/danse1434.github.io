@@ -1,0 +1,35 @@
+// Barra de ¿Quién Soy yo?
+// .bg-blog-0 {
+//   /* Color del año 2020 */
+//   background-color: white;
+
+//   p {
+//     color: black;
+//     text-align: justify;
+//   }
+
+//   h2 {
+//     text-align: justify;
+//   }
+
+//   @media (max-width: 1200px) {
+//     width: 90%;
+//     p {
+//       width: 90%;
+//     }
+//     h2 {
+//       width: 90%;
+//     }
+//   }
+
+//   @media (max-width: 768px) {
+//     width: 100%;
+//     p {
+//       width: 98%;
+//     }
+//     h2 {
+//       width: 100%;
+//       text-align: left;
+//     }
+//   }
+// }

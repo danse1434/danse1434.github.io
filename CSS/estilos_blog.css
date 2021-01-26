@@ -1,52 +1,342 @@
 @charset "UTF-8";
-h1 {
-  font-size: small; }
+/* Carga de componentes */
+/*
+La barra de navegación sobrelapa los otros componentes por esta en
+posición "fixed-top" (es decir siempre aparece arriba), se debe
+agregar un padding en el body para evitar esto.
+*/
+body {
+  padding-top: 56px; }
+  @media screen and (max-width: 1024px) {
+    body {
+      padding-top: 56px; } }
+  @media screen and (max-width: 768px) {
+    body {
+      padding-top: 56px; } }
+  @media screen and (max-width: 480px) {
+    body {
+      padding-top: 56px; } }
+  @media screen and (max-width: 320px) {
+    body {
+      padding-top: 56px; } }
 
-div.bg-blog-jumbotron div.container h1 {
-  font-size: 50px; }
-  @media (max-width: 320) {
-    div.bg-blog-jumbotron div.container h1 {
-      font-size: 20px; } }
-  @media (max-width: 480) {
-    div.bg-blog-jumbotron div.container h1 {
-      font-size: 30px; } }
-  @media (max-width: 768) {
-    div.bg-blog-jumbotron div.container h1 {
-      font-size: 50px; } }
-  @media (max-width: 1024) {
-    div.bg-blog-jumbotron div.container h1 {
-      font-size: 50px; } }
+.jumbotron {
+  background: #020024;
+  background: linear-gradient(133deg, #020024 1%, #4c408a 19%, #00b3ff 43%, #00c4ff 72%, #00fff6 91%);
+  color: white;
+  padding: 25px 0px;
+  position: relative; }
+  @media screen and (max-width: 1024px) {
+    .jumbotron {
+      padding-top: 25px;
+      padding-bottom: 25px; } }
+  @media screen and (max-width: 768px) {
+    .jumbotron {
+      padding-top: 10px;
+      padding-bottom: 10px; } }
+  @media screen and (max-width: 480px) {
+    .jumbotron {
+      padding-top: 8px;
+      padding-bottom: 8px; } }
+  @media screen and (max-width: 320px) {
+    .jumbotron {
+      padding-top: 5px;
+      padding-bottom: 5px; } }
+  .jumbotron h1 {
+    font: bold;
+    font-size: 50px; }
+    @media screen and (max-width: 1024px) {
+      .jumbotron h1 {
+        font-size: 40px; } }
+    @media screen and (max-width: 768px) {
+      .jumbotron h1 {
+        font-size: 30px; } }
+    @media screen and (max-width: 480px) {
+      .jumbotron h1 {
+        font-size: 30px; } }
+    @media screen and (max-width: 320px) {
+      .jumbotron h1 {
+        font-size: 20px; } }
+  @media screen and (max-width: 1024px) {
+    .jumbotron p, .jumbotron .bg-4 a, .bg-4 .jumbotron a {
+      font-size: 16px; } }
+  @media screen and (max-width: 768px) {
+    .jumbotron p, .jumbotron .bg-4 a, .bg-4 .jumbotron a {
+      font-size: 14px; } }
+  @media screen and (max-width: 480px) {
+    .jumbotron p, .jumbotron .bg-4 a, .bg-4 .jumbotron a {
+      font-size: 14px; } }
+  @media screen and (max-width: 320px) {
+    .jumbotron p, .jumbotron .bg-4 a, .bg-4 .jumbotron a {
+      font-size: 12px; } }
+  .jumbotron .jumbotron__container {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px; }
+    @media screen and (max-width: 1024px) {
+      .jumbotron .jumbotron__container {
+        margin-left: 30px;
+        margin-right: 30px; } }
+    @media screen and (max-width: 768px) {
+      .jumbotron .jumbotron__container {
+        margin-left: 20px;
+        margin-right: 20px; } }
+    @media screen and (max-width: 480px) {
+      .jumbotron .jumbotron__container {
+        margin-left: 15px;
+        margin-right: 15px; } }
+    @media screen and (max-width: 320px) {
+      .jumbotron .jumbotron__container {
+        margin-left: 10px;
+        margin-right: 10px; } }
 
-.bg-blog-0 {
-  /* Color del año 2020 */
-  background-color: white; }
-  .bg-blog-0 p {
-    color: black;
-    text-align: justify; }
-  .bg-blog-0 h2 {
-    text-align: justify; }
+/* Configuraciones del Carrusel */
+.carousel-inner img {
+  -webkit-filter: grayscale(90%);
+  filter: grayscale(90%);
+  /* make all photos black and white */
+  margin: auto;
+  height: auto;
+  max-height: 600px;
+  /*Breakpoints para Sitio Web con responsibidad en el carrusel*/ }
+  @media (max-width: 575px) {
+    .carousel-inner img {
+      filter: none;
+      /* Color normal */
+      -webkit-filter: none;
+      max-height: 300px; } }
+  @media (max-width: 768px) {
+    .carousel-inner img {
+      max-height: 400px; } }
+  @media (max-width: 992px) {
+    .carousel-inner img {
+      width: 60%; } }
   @media (max-width: 1200px) {
-    .bg-blog-0 {
-      width: 90%; }
-      .bg-blog-0 p {
-        width: 90%; }
-      .bg-blog-0 h2 {
-        width: 90%; } }
-  @media (max-width: 768px) {
-    .bg-blog-0 {
-      width: 100%; }
-      .bg-blog-0 p {
-        width: 98%; }
-      .bg-blog-0 h2 {
-        width: 100%;
-        text-align: left; } }
+    .carousel-inner img {
+      width: 50%; } }
 
-div.card-body > p {
-  font-size: small; }
+.carousel-caption h3 {
+  color: #fff !important; }
 
-/* Contenedores Proyectos */
-.img-thumbnail {
-  width: 50%; }
-  @media (max-width: 768px) {
-    .img-thumbnail {
+@media (max-width: 575px) {
+  .carousel-caption {
+    display: none;
+    /* Esconder el texto de carrusel cuando la pantalla es menor de W = 600px*/ } }
+
+/* Contenedor de ¿Quién Soy Yo? (Tema bg-2)*/
+.bg-2 {
+  /* Color del año 2020 - Contenedor */
+  background-color: #0f4c81;
+  color: #ffffff;
+  padding: 60px 50px; }
+  @media screen and (max-width: 1024px) {
+    .bg-2 {
+      width: 95%;
+      padding: 50px 60px; } }
+  @media screen and (max-width: 768px) {
+    .bg-2 {
+      width: 95%;
+      padding: 30px 40px; } }
+  @media screen and (max-width: 480px) {
+    .bg-2 {
+      width: 100%;
+      padding: 20px 30px; } }
+  @media screen and (max-width: 320px) {
+    .bg-2 {
+      width: 100%;
+      padding: 10px 20px; } }
+  .bg-2 h2 {
+    font-size: 32px; }
+    @media screen and (max-width: 1024px) {
+      .bg-2 h2 {
+        font-size: 32px; } }
+    @media screen and (max-width: 768px) {
+      .bg-2 h2 {
+        font-size: 25px; } }
+    @media screen and (max-width: 480px) {
+      .bg-2 h2 {
+        font-size: 20px; } }
+    @media screen and (max-width: 320px) {
+      .bg-2 h2 {
+        font-size: 15px; } }
+  .bg-2 p, .bg-2 .bg-4 a, .bg-4 .bg-2 a,
+  .bg-2 a {
+    font-size: 16px;
+    color: white; }
+    @media screen and (max-width: 1024px) {
+      .bg-2 p, .bg-2 .bg-4 a, .bg-4 .bg-2 a,
+      .bg-2 a {
+        font-size: 16px; } }
+    @media screen and (max-width: 768px) {
+      .bg-2 p, .bg-2 .bg-4 a, .bg-4 .bg-2 a,
+      .bg-2 a {
+        font-size: 14px; } }
+    @media screen and (max-width: 480px) {
+      .bg-2 p, .bg-2 .bg-4 a, .bg-4 .bg-2 a,
+      .bg-2 a {
+        font-size: 14px; } }
+    @media screen and (max-width: 320px) {
+      .bg-2 p, .bg-2 .bg-4 a, .bg-4 .bg-2 a,
+      .bg-2 a {
+        font-size: 12px; } }
+  .bg-2 img {
+    max-width: 230px;
+    max-height: 300px; }
+
+/* Contenedor Gris de Contacto*/
+.bg-grey {
+  /* Color del año 2020, contrario */
+  background-color: #f6f6f6;
+  color: #ffffff; }
+  @media screen and (max-width: 1024px) {
+    .bg-grey {
+      width: 100%;
+      padding: 50px 60px; } }
+  @media screen and (max-width: 768px) {
+    .bg-grey {
+      width: 100%;
+      padding: 30px 40px; } }
+  @media screen and (max-width: 480px) {
+    .bg-grey {
+      width: 100%;
+      padding: 20px 30px; } }
+  @media screen and (max-width: 320px) {
+    .bg-grey {
+      width: 100%;
+      padding: 10px 20px; } }
+  .bg-grey h2 {
+    font-size: 32px;
+    color: #658dc6;
+    padding-top: 10px;
+    margin-bottom: 5px; }
+    @media screen and (max-width: 1024px) {
+      .bg-grey h2 {
+        font-size: 32px; } }
+    @media screen and (max-width: 768px) {
+      .bg-grey h2 {
+        font-size: 25px; } }
+    @media screen and (max-width: 480px) {
+      .bg-grey h2 {
+        font-size: 20px; } }
+    @media screen and (max-width: 320px) {
+      .bg-grey h2 {
+        font-size: 20px; } }
+  .bg-grey p, .bg-grey .bg-4 a, .bg-4 .bg-grey a, .bg-grey a {
+    font-size: 16px;
+    color: black; }
+    @media screen and (max-width: 1024px) {
+      .bg-grey p, .bg-grey .bg-4 a, .bg-4 .bg-grey a, .bg-grey a {
+        font-size: 16px; } }
+    @media screen and (max-width: 768px) {
+      .bg-grey p, .bg-grey .bg-4 a, .bg-4 .bg-grey a, .bg-grey a {
+        font-size: 14px; } }
+    @media screen and (max-width: 480px) {
+      .bg-grey p, .bg-grey .bg-4 a, .bg-4 .bg-grey a, .bg-grey a {
+        font-size: 14px; } }
+    @media screen and (max-width: 320px) {
+      .bg-grey p, .bg-grey .bg-4 a, .bg-4 .bg-grey a, .bg-grey a {
+        font-size: 12px; } }
+
+/* Colores de Footer */
+.bg-4 {
+  background-color: #2f2f2f;
+  color: #ffffff;
+  height: 66px;
+  padding: 15px 0px;
+  position: relative;
+  vertical-align: middle; }
+  @media screen and (max-width: 1024px) {
+    .bg-4 {
+      width: 100%;
+      padding: 50px 60px; } }
+  @media screen and (max-width: 768px) {
+    .bg-4 {
+      width: 100%;
+      padding: 30px 40px; } }
+  @media screen and (max-width: 480px) {
+    .bg-4 {
+      width: 100%;
+      padding: 20px 30px; } }
+  @media screen and (max-width: 320px) {
+    .bg-4 {
+      width: 100%;
+      padding: 10px 20px; } }
+  .bg-4 p, .bg-4 a {
+    color: white;
+    line-height: 36px;
+    font-size: 16px;
+    margin: auto; }
+    @media screen and (max-width: 1024px) {
+      .bg-4 p, .bg-4 a {
+        font-size: 16px; } }
+    @media screen and (max-width: 768px) {
+      .bg-4 p, .bg-4 a {
+        font-size: 14px; } }
+    @media screen and (max-width: 480px) {
+      .bg-4 p, .bg-4 a {
+        font-size: 14px; } }
+    @media screen and (max-width: 320px) {
+      .bg-4 p, .bg-4 a {
+        font-size: 12px; } }
+  .bg-4 a {
+    color: #0056b3;
+    text-decoration: solid; }
+
+.navbar {
+  margin-bottom: 0; }
+
+div.col-md-4 {
+  width: 48%;
+  min-width: 32%;
+  /* Contenedores Proyectos */ }
+  @media screen and (min-width: 1400px) and (max-width: 3000px) {
+    div.col-md-4 {
+      width: 24%;
+      min-width: 20%;
+      max-width: 25%; } }
+  @media screen and (max-width: 1024px) {
+    div.col-md-4 {
+      width: 32%; } }
+  @media screen and (max-width: 768px) {
+    div.col-md-4 {
+      width: 48%; } }
+  @media screen and (max-width: 480px) {
+    div.col-md-4 {
       width: 95%; } }
+  @media screen and (max-width: 320px) {
+    div.col-md-4 {
+      width: 100%; } }
+  div.col-md-4 div.card > rect > .img-thumbnail {
+    width: 50%; }
+    @media (max-width: 768px) {
+      div.col-md-4 div.card > rect > .img-thumbnail {
+        width: 95%; } }
+  div.col-md-4 p, div.col-md-4 .bg-4 a, .bg-4 div.col-md-4 a {
+    font-size: 14px; }
+    @media screen and (max-width: 1024px) {
+      div.col-md-4 p, div.col-md-4 .bg-4 a, .bg-4 div.col-md-4 a {
+        font-size: 14px; } }
+    @media screen and (max-width: 768px) {
+      div.col-md-4 p, div.col-md-4 .bg-4 a, .bg-4 div.col-md-4 a {
+        font-size: 14px; } }
+    @media screen and (max-width: 480px) {
+      div.col-md-4 p, div.col-md-4 .bg-4 a, .bg-4 div.col-md-4 a {
+        font-size: 14px; } }
+    @media screen and (max-width: 320px) {
+      div.col-md-4 p, div.col-md-4 .bg-4 a, .bg-4 div.col-md-4 a {
+        font-size: 12px; } }
+  div.col-md-4 strong {
+    font-size: large; }
+    @media screen and (max-width: 1024px) {
+      div.col-md-4 strong {
+        font-size: 20px; } }
+    @media screen and (max-width: 768px) {
+      div.col-md-4 strong {
+        font-size: 16px; } }
+    @media screen and (max-width: 480px) {
+      div.col-md-4 strong {
+        font-size: 15px; } }
+    @media screen and (max-width: 320px) {
+      div.col-md-4 strong {
+        font-size: 13px; } }
