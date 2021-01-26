@@ -250,15 +250,15 @@ body {
   @media screen and (max-width: 1024px) {
     .bg-4 {
       width: 100%;
-      padding: 50px 60px; } }
+      padding: 40px 40px; } }
   @media screen and (max-width: 768px) {
     .bg-4 {
       width: 100%;
-      padding: 30px 40px; } }
+      padding: 30px 20px; } }
   @media screen and (max-width: 480px) {
     .bg-4 {
       width: 100%;
-      padding: 20px 30px; } }
+      padding: 20px 20px; } }
   @media screen and (max-width: 320px) {
     .bg-4 {
       width: 100%;
@@ -286,159 +286,3 @@ body {
 
 .navbar {
   margin-bottom: 0; }
-
-/* Educación No Formal */
-.EducacionNF {
-  background-color: #f3efe0;
-  border-radius: 1%;
-  margin: auto;
-  margin-bottom: 4px;
-  margin-top: 4px; }
-  @media (max-width: 768px) {
-    .EducacionNF {
-      margin-top: 0px;
-      margin-bottom: 0px; } }
-
-div.h5 {
-  font-family: "Open Sans", sans-serif !important;
-  font-size: 14px;
-  font-weight: 700;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: auto; }
-  @media (max-width: 768px) {
-    div.h5 {
-      padding-bottom: 0%;
-      padding-top: 0%;
-      margin-bottom: 5px;
-      margin-top: 5px; } }
-
-p.tituloEducativoNF, .bg-4 a.tituloEducativoNF {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: small; }
-  @media (max-width: 768px) {
-    p.tituloEducativoNF, .bg-4 a.tituloEducativoNF {
-      padding-bottom: 0%;
-      padding-top: 0%;
-      margin-top: 5px;
-      margin-bottom: 5px; } }
-
-.bg-cv-0 {
-  background-color: #f1eee6;
-  /* Leche de Coco PANTONE 11-0608-TCX */
-  color: black;
-  width: 90%; }
-
-.bg-cv-1 {
-  background-color: #ffffff;
-  /* Color del año 2020 */
-  color: black;
-  width: 90%; }
-
-/* Experiencias */
-#about_me > p, .bg-4 #about_me > a {
-  font-size: small; }
-  #about_me > p code, .bg-4 #about_me > a code {
-    font-size: small; }
-
-.Experiencia {
-  background-color: #f3efe0;
-  border-radius: 1%;
-  margin: auto;
-  margin-bottom: 10px;
-  margin-top: 10px; }
-
-div.h4 {
-  font-family: "Open Sans", sans-serif !important;
-  font-size: 18px;
-  font-weight: 700;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: auto; }
-
-.experience-period {
-  margin-bottom: 10px; }
-
-p.cargoTitulo, .bg-4 a.cargoTitulo {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-style: italic; }
-
-p.cajaDescrip, .bg-4 a.cajaDescrip {
-  width: auto;
-  font-size: small; }
-  p.cajaDescrip div, .bg-4 a.cajaDescrip div {
-    margin-top: 10px;
-    margin-bottom: 10px; }
-  p.cajaDescrip ul > li, .bg-4 a.cajaDescrip ul > li {
-    width: fit-content; }
-
-.Locacion {
-  color: #22a39f;
-  padding-bottom: 1%;
-  width: 90%; }
-  .Locacion img > path {
-    fill: #22a39f;
-    color: #22a39f; }
-  .Locacion a {
-    color: #22a39f;
-    padding-bottom: 1%;
-    width: 90%; }
-
-p.tituloEducativo, .bg-4 a.tituloEducativo {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-style: italic; }
-
-@media (max-width: 1200px) {
-  .bg-cv-0 {
-    width: 90%; }
-  .bg-cv-1 {
-    width: 90%; }
-  .Experiencia {
-    width: 90%;
-    border-radius: 0%; } }
-
-@media (max-width: 768px) {
-  .bg-cv-0 {
-    width: 100%; }
-  .bg-cv-1 {
-    width: 100%; }
-  .Experiencia {
-    width: 100%;
-    border-radius: 1%; }
-  #about_me > p, .bg-4 #about_me > a {
-    font-size: smaller; }
-  p.cajaDescrip, .bg-4 a.cajaDescrip {
-    font-size: smaller; }
-  /* Comportamiento móvil títulos */
-  p.cargoTitulo, .bg-4 a.cargoTitulo {
-    padding-bottom: 0%;
-    padding-top: 0%;
-    margin-top: 5px;
-    margin-bottom: 5px; }
-  div.h4 {
-    padding-bottom: 0%;
-    padding-top: 0%;
-    margin-bottom: 5px;
-    margin-top: 5px; }
-  p.experience-period, .bg-4 a.experience-period {
-    padding-bottom: 0%;
-    padding-top: 0%;
-    margin-bottom: 0%; }
-  p.tituloEducativo, .bg-4 a.tituloEducativo {
-    padding-bottom: 0%;
-    padding-top: 0%;
-    margin-top: 5px;
-    margin-bottom: 5px; } }
