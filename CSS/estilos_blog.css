@@ -343,3 +343,49 @@ div.col-md-4 {
     @media screen and (max-width: 320px) {
       div.col-md-4 strong {
         font-size: 13px; } }
+
+/* CONTENEDORES PARA BLOGS */
+.bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a {
+  font-size: medium; }
+  @media screen and (max-width: 1024px) {
+    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a {
+      font-size: small; } }
+  @media screen and (max-width: 768px) {
+    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a {
+      font-size: small; } }
+  @media screen and (max-width: 480px) {
+    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a {
+      font-size: smaller; } }
+  @media screen and (max-width: 320px) {
+    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a {
+      font-size: smaller; } }
+
+.bg-blog-0 h2 {
+  font-size: larger; }
+  @media screen and (max-width: 1024px) {
+    .bg-blog-0 h2 {
+      font-size: larger; } }
+  @media screen and (max-width: 768px) {
+    .bg-blog-0 h2 {
+      font-size: large; } }
+  @media screen and (max-width: 480px) {
+    .bg-blog-0 h2 {
+      font-size: large; } }
+  @media screen and (max-width: 320px) {
+    .bg-blog-0 h2 {
+      font-size: medium; } }
+
+.bg-blog-0 h3 {
+  font-size: large; }
+  @media screen and (max-width: 1024px) {
+    .bg-blog-0 h3 {
+      font-size: large; } }
+  @media screen and (max-width: 768px) {
+    .bg-blog-0 h3 {
+      font-size: medium; } }
+  @media screen and (max-width: 480px) {
+    .bg-blog-0 h3 {
+      font-size: medium; } }
+  @media screen and (max-width: 320px) {
+    .bg-blog-0 h3 {
+      font-size: medium; } }

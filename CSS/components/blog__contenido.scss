@@ -1,0 +1,39 @@
+/* CONTENEDORES PARA BLOGS */
+
+// Tamaños de los Dispositivos
+$device_sizes: 320, 480, 768, 1024;
+
+// Contenedores de Texto Estándar para Blogs
+.bg-blog-0 {
+  $adapted_font_2: medium, large, large, larger;    // Tamaño de fuente H2
+  $adapted_font_3: medium, medium, medium, large;   // Tamaño de fuente H3
+  $adapted_font_6: smaller, smaller, small, small;  // Tamaño de fuente normal
+
+  p {
+    font-size: medium;
+
+    @for $i from 4 to 0 {
+      @media screen and (max-width: nth($device_sizes, $i) + "px") {
+        font-size: #{nth($adapted_font_6, $i)};
+      }
+    }
+  }
+
+  h2 {
+    font-size: larger;
+    @for $i from 4 to 0 {
+      @media screen and (max-width: nth($device_sizes, $i) + "px") {
+        font-size: #{nth($adapted_font_2, $i)};
+      }
+    }
+  }
+
+  h3 {
+    font-size: large;
+    @for $i from 4 to 0 {
+      @media screen and (max-width: nth($device_sizes, $i) + "px") {
+        font-size: #{nth($adapted_font_3, $i)};
+      }
+    }
+  }
+}
