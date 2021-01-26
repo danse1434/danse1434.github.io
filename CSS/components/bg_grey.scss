@@ -14,7 +14,7 @@ $device_sizes: 320, 480, 768, 1024;
   /* Color del año 2020, contrario */
   background-color: #f6f6f6;
   color: #ffffff;
-  // padding: 60px 50px;
+  padding: 60px 50px;
 
   @for $i from 4 to 0 {
     @media screen and (max-width: #{nth($device_sizes, $i) + "px"}) {

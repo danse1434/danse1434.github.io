@@ -29,7 +29,7 @@
     $(function () {
       var includes = $('[data-include]');
       jQuery.each(includes, function () {
-        var file = 'components/' + $(this).data('include') + '.html';
+        var file = './components/' + $(this).data('include') + '.html?20210625';
         $(this).load(file);
       });
     });
@@ -174,7 +174,7 @@
     </form>
   </div>
 </div>
-
+<hr>
   <!--Incluir Footer-->
   <div data-include="footer"></div>
 

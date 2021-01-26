@@ -1,105 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <title>Blog</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <title>Blog</title>
-  <meta charset="UTF-8">
-  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <link rel="stylesheet" type="text/css" href=".\CSS\original.css?20212601"> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href=".\CSS\estilos_blog.css?20212602"
+    />
+    <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg" />
 
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <!-- <link rel="stylesheet" type="text/css" href=".\CSS\original.css?20212601"> -->
-  <link rel="stylesheet" type="text/css" href=".\CSS\estilos_blog.css?20212602">
-  <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg">
-  
-  <script src="JS/blogScripts.js"></script>
-  <script type="text/javascript">
-    $(function () {
-      var includes = $('[data-include]');
-      jQuery.each(includes, function () {
-        var file = 'components/' + $(this).data('include') + '.html';
-        $(this).load(file);
+    <script src="JS/blogScripts.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        var includes = $("[data-include]");
+        jQuery.each(includes, function () {
+          var file = "components/" + $(this).data("include") + ".html";
+          $(this).load(file);
+        });
       });
-    });
-  </script>
-</head>
+    </script>
+  </head>
 
-<body>
-  <!--Incluir barra de navegación-->
-  <div data-include="navbar"></div>
+  <body>
+    <!--Incluir barra de navegación-->
+    <div data-include="navbar"></div>
 
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1>Blog</h1>
-      <p>“Energy and persistence conquer all things.” <br>
-      - Benjamin Franklin</p>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1>Blog</h1>
+        <p>
+          “Energy and persistence conquer all things.” <br />
+          - Benjamin Franklin
+        </p>
+      </div>
     </div>
-  </div>
-  
-  <hr>
-  
-  <!-- <div id="ada_n"></div>
+
+    <hr />
+
+    <!-- <div id="ada_n"></div>
   <div id="ada_n"></div> -->
-  
-  <div class="container-fluid">
-    <div class="row">
-      <div id="ada6"></div>
-      <div id="ada5"></div>
-      <div id="ada4"></div>
-    <!-- </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="ada6"></div>
+        <div id="ada5"></div>
+        <div id="ada4"></div>
+        <!-- </div>
     <div class="row"> -->
-      <div id="ada3"></div>
-      <div id="ada2"></div>
-      <div id="ada1"></div>
+        <div id="ada3"></div>
+        <div id="ada2"></div>
+        <div id="ada1"></div>
+      </div>
     </div>
-  </div>
 
+    <!-- div.container-fluid>div.row>div[id=ada_n]*3 -->
+    <!-- div.d-flex.justify-content-between.align-items-center>(div.btn-group>button.btn.btn-sm.btn-outline-secondary{Ver})+small.text-muted -->
+    <!-- div.col-md-4>div.card.mb-4.shadow.sm>rect+div.card-body>h5+p -->
 
-  <!-- div.container-fluid>div.row>div[id=ada_n]*3 -->
-  <!-- div.d-flex.justify-content-between.align-items-center>(div.btn-group>button.btn.btn-sm.btn-outline-secondary{Ver})+small.text-muted -->
-  <!-- div.col-md-4>div.card.mb-4.shadow.sm>rect+div.card-body>h5+p -->
-  
-  <hr>
+    <hr />
 
-  <!--Cuerpo de Sitio Web-->
-  <div class="container-fluid bg-2 text-center">
+    <!--Cuerpo de Sitio Web-->
+    <div class="container-fluid bg-2 text-center">
+      <h2>Quién soy yo?</h2>
+      <p>
+        Soy Químico Farmacéutico de la
+        <abbr title="Universidad Nacional de Colombia">UNAL</abbr> con interés
+        especial en <abbr title="Modelamiento y Simulación">M&S</abbr> aplicado
+        a la terapéutica.
+      </p>
+      <button type="button" class="btn btn-outline-primary" type="submit">
+        Buscar
+      </button>
+    </div>
+    
+    <hr>
+    <!--Incluir Footer-->
+    <div data-include="footer"></div>
 
-    <h2>Quién soy yo?</h2>
-    <p>Soy Químico Farmacéutico de la <abbr title="Universidad Nacional de Colombia">UNAL</abbr> con interés especial en
-      <abbr title="Modelamiento y Simulación">M&S</abbr> aplicado a la terapéutica. </p>
-    <button type="button" class="btn btn-outline-primary" type="submit">Buscar</button>
-  </div>
+    <!-- Lectura como tarjetas -->
+    <script type="text/javascript">
+      fetch("./resources/blog_entradas.json")
+        .then((response) => response.json())
+        .then((data) => {
+          let size1 = Object.keys(data).length;
 
-  <hr><br><br>
-  
-  <!--Incluir Footer-->
-  <div data-include="footer"></div>
-  
-  <!-- Lectura como tarjetas -->
-  <script type="text/javascript">
-    fetch("./resources/blog_entradas.json")
-      .then(response => response.json())
-      .then(data => {
-
-        let size1 = Object.keys(data).length;
-
-        for (let i = 0; i < size1; i++) {
-          let idCard = "0" + (i+1);
-          crearEntrada(data[idCard]["div"], data[idCard]["Imagen"], data[idCard]["ImgDes"], 
-          data[idCard]["Titulo"], data[idCard]["Descrp"], data[idCard]["Fecha"], data[idCard]["Link"]);
-        }
-        
-        
-      })
-  </script>
-</body>
-
+          for (let i = 0; i < size1; i++) {
+            let idCard = "0" + (i + 1);
+            crearEntrada(
+              data[idCard]["div"],
+              data[idCard]["Imagen"],
+              data[idCard]["ImgDes"],
+              data[idCard]["Titulo"],
+              data[idCard]["Descrp"],
+              data[idCard]["Fecha"],
+              data[idCard]["Link"]
+            );
+          }
+        });
+    </script>
+  </body>
 </html>

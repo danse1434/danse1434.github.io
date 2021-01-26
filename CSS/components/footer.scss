@@ -18,9 +18,8 @@ $device_sizes: 320, 480, 768, 1024;
   padding: 15px 0px;
   vertical-align: middle;
   // Posición de Footer al fondo
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  position: relative;
+  
   // padding: 60px 50px;
 
   @for $i from 4 to 0 {

@@ -188,7 +188,8 @@ body {
 .bg-grey {
   /* Color del año 2020, contrario */
   background-color: #f6f6f6;
-  color: #ffffff; }
+  color: #ffffff;
+  padding: 60px 50px; }
   @media screen and (max-width: 1024px) {
     .bg-grey {
       width: 100%;
@@ -245,9 +246,7 @@ body {
   height: 66px;
   padding: 15px 0px;
   vertical-align: middle;
-  position: fixed;
-  bottom: 0;
-  left: 0; }
+  position: relative; }
   @media screen and (max-width: 1024px) {
     .bg-4 {
       width: 100%;
