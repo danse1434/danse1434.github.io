@@ -53,11 +53,11 @@
     <div data-include="navbar"></div>
     <br /><br />
     <div class="container-fluid"></div>
-
+    <br />
     <div class="text-center mb-4">
       <h1>Verificación de Usuario</h1>
     </div>
-
+    <br />
     <div class="container-lg mx-auto" style="width: 60%">
       <div class="form-label-group pb-4">
         <input
@@ -99,27 +99,64 @@
     </div>
     <div id="alert_placeholder"></div>
     <div class="container-fluid"></div>
-    <br>    
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <!--Incluir Footer-->
     <div data-include="footer"></div>
 
-    <script src="./JS/index1.js"></script>
+    <!-- Configuración de Firebase -->
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>
+    <!--  -->
 
     <script>
-      function getUrlParameter(sParam) {
-        var sPageURL = window.location.search.substring(1);
-        var sURLVariables = sPageURL.split("&");
-        for (var i = 0; i < sURLVariables.length; i++) {
-          var sParameterName = sURLVariables[i].split("=");
-          if (sParameterName[0] == sParam) {
-            return sParameterName[1];
-          }
-        }
-      }
+      // TODO: Replace the following with your app's Firebase project configuration
+      // For Firebase JavaScript SDK v7.20.0 and later, `measurementId` is an optional field
+      // https://firebase.google.com/docs/web/setup#from-the-cdn
+      // var firebaseConfig = {
+      //   apiKey: "AIzaSyA8l5a9no3KVk6_RDh9B3wYheaocNvjmHA",
+      //   authDomain: "danse1434-1595134916454.firebaseapp.com",
+      //   projectId: "danse1434-1595134916454",
+      //   storageBucket: "danse1434-1595134916454.appspot.com",
+      //   messagingSenderId: "701580976119",
+      //   appId: "1:701580976119:web:e35b635bbe74558558d8f2",
+      //   measurementId: "G-NDCBFCN2EX",
+      // };
 
-      var name = getUrlParameter("nombre");
-      console.log(name);
-    //   document.getElementById("header").innerHTML = header;
+      // Initialize Firebase
+      // firebase.initializeApp(firebaseConfig);
+
+      // firebase
+      //   .auth()
+      //   .signInWithCustomToken(token)
+      //   .then((userCredential) => {
+      //     // Signed in
+      //     var user = userCredential.user;
+      //     // ...
+      //   })
+      //   .catch((error) => {
+      //     var errorCode = error.code;
+      //     var errorMessage = error.message;
+      //     // ...
+      //   });
     </script>
+
+    <!-- Genius4356 -->
+    <script src="./JS/indiceAutenticacion.js?202102"></script>
+    <script src="./JS/modulos/getUrlParameter.js?202102"></script>
   </body>
 </html>

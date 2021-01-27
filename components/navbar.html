@@ -1,38 +1,68 @@
 <!--Panel de Navegación-->
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-<!---Marca-->
-<div class="navbar-header">
-    <button type="button" class="navbar-toggle d-sm-none" data-toggle="collapse" data-target="#navCollapse"
-        aria-controls="navCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <img src="./CSS/icons/three-bars-16.svg">
+  <!---Marca-->
+  <div class="navbar-header">
+    <button
+      type="button"
+      class="navbar-toggle d-sm-none"
+      data-toggle="collapse"
+      data-target="#navCollapse"
+      aria-controls="navCollapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <img src="./CSS/icons/three-bars-16.svg" />
     </button>
     <a class="navbar-brand" href="index.html">Inicio</a>
-</div>
-  
-<!--Colapsable en pantallas pequeñas-->
-<div class="collapse navbar-collapse" id="navCollapse">
-<!--Botones--->
-  <ul class="navbar-nav ml-auto">
-    <!--Botón 1-->
-    <li class="nav-item">
-      <a class="nav-link" href="panel-About_Me.html">Acerca de mí</a>
-    </li>
-    <!--Botón 2-->
-    <li class="nav-item">
-      <a class="nav-link" href="panel-Blog.html">Blog</a>
-    </li>
-    <!--Lista Desplegable-->
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Proyectos
-      </a>
-      <div class="dropdown-menu dropdown-menu-right">
-        <a class="dropdown-item" href="panel-proyecto-PIP.html">PK-POP de piperacilina en UCI</a>
-        <a class="dropdown-item" href="#">PK-POP de antibióticos en NF</a>
-        <a class="dropdown-item" href="#">Coronavirus</a>
-        <a class="dropdown-item" href="panel-Autenticacion.html?nombre=CienciaDatos"> Ciencia de Datos</a>
-      </div>
-    </li>
-  </ul>
+  </div>
+
+  <!--Colapsable en pantallas pequeñas-->
+  <div class="collapse navbar-collapse" id="navCollapse">
+    <!--Botones--->
+    <ul class="navbar-nav ml-auto">
+      <!--Botón 1-->
+      <li class="nav-item">
+        <a class="nav-link" href="panel-About_Me.html">Acerca de mí</a>
+      </li>
+      <!--Botón 2-->
+      <li class="nav-item">
+        <a class="nav-link" href="panel-Blog.html">Blog</a>
+      </li>
+      <!--Lista Desplegable-->
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbardrop"
+          data-toggle="dropdown"
+        >
+          Proyectos
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a
+            class="dropdown-item"
+            href="panel-Autenticacion.html?nombre=PKPiperacilina"
+          >
+            PK-POP de piperacilina en UCI</a
+          >
+          <a
+            class="dropdown-item"
+            href="panel-Autenticacion.html?nombre=PKAntibioticos"
+            >PK-POP de antibióticos en NF</a
+          >
+          <a
+            class="dropdown-item"
+            href="panel-Autenticacion.html?nombre=Coronavirus"
+            >Coronavirus</a
+          >
+          <a
+            class="dropdown-item"
+            href="panel-Autenticacion.html?nombre=CienciaDatos"
+          >
+            Ciencia de Datos</a
+          >
+        </div>
+      </li>
+    </ul>
   </div>
 </nav>
