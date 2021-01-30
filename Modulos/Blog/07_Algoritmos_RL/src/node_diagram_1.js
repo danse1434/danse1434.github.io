@@ -6,11 +6,11 @@ var margin = { top: 5, right: 5, bottom: 5, left: 5 },
 
 var nodePlot = d3.select('#mi_grafico_nodos').append('svg')
     .classed("svg-content-responsive", true)
-    .attr('viewBox', '0 0 ' + width + ' ' + height)
+    .attr('viewBox', [0, 0, width, height])
     .attr('preserveAspectRatio', "xMinYMin meet")
     .append('g')
-    .attr('width', width + margin.left + margin.right)
-    .attr('height', height + margin.top + margin.bottom)
+    // .attr('width', width + margin.left + margin.right)
+    // .attr('height', height + margin.top + margin.bottom)
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
 var dataUrl = "./Modulos/Blog/07_Algoritmos_RL/data/redDatos.json" // Esta dirección es relativa a index.html

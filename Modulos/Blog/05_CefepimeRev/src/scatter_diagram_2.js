@@ -11,13 +11,15 @@ var margin = { top: 20, right: 20, bottom: 50, left: 50 },
 
 var svg = d3.select("#contenedorGrafico")
   .append("svg")
-  .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom)
-  .attr('viewbox', '`0 0 ' + (height + margin.top + margin.bottom) + (width + margin.left + margin.right) + '`')
+  // .attr("width", width + margin.left + margin.right)
+  // .attr("height", height + margin.top + margin.bottom)
+  .attr('viewBox', [0, 0, (width + margin.left + margin.right), (height + margin.top + margin.bottom) ])
+  .style('overflow', 'visible')
+  .attr('preserveAspectRatio', 'xMidYMid meet')
   .append("g")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-  // Definición de escalas
+  
+// Definición de escalas
 var scale_x = d3.scaleLinear()
     // .domain([-0.5, d3.max(dataReg, d => { return d['CL']; })])
     .domain([-0.5, 8])
