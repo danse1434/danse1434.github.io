@@ -26,7 +26,8 @@ export function wrap(text, width) {
                 tspan.text(line.join(" "));
                 line = [word];
                 ++lineNumber;
-                tspan = text.append("tspan").attr("x", function(d) { return d.children || d._children ? -10 : 10; }).attr("y", 0).attr("dy", lineNumber * lineHeight + dy + "em").text(word);
+                tspan = text.append("tspan")
+                    .attr("x", function(d) { return d.children || d._children ? -10 : 10; }).attr("y", 0).attr("dy", lineNumber * lineHeight + dy + "em").text(word);
             }
         }
     });
