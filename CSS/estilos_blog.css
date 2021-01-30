@@ -345,19 +345,20 @@ div.col-md-4 {
         font-size: 13px; } }
 
 /* CONTENEDORES PARA BLOGS */
-.bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a {
-  font-size: medium; }
+.bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a, .bg-blog-0 ul {
+  font-size: medium;
+  text-align: justify; }
   @media screen and (max-width: 1024px) {
-    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a {
+    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a, .bg-blog-0 ul {
       font-size: small; } }
   @media screen and (max-width: 768px) {
-    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a {
+    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a, .bg-blog-0 ul {
       font-size: small; } }
   @media screen and (max-width: 480px) {
-    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a {
+    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a, .bg-blog-0 ul {
       font-size: smaller; } }
   @media screen and (max-width: 320px) {
-    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a {
+    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a, .bg-blog-0 ul {
       font-size: smaller; } }
 
 .bg-blog-0 h2 {
@@ -389,3 +390,18 @@ div.col-md-4 {
   @media screen and (max-width: 320px) {
     .bg-blog-0 h3 {
       font-size: medium; } }
+
+.bg-blog-0 h4 {
+  font-size: large; }
+  @media screen and (max-width: 1024px) {
+    .bg-blog-0 h4 {
+      font-size: medium; } }
+  @media screen and (max-width: 768px) {
+    .bg-blog-0 h4 {
+      font-size: medium; } }
+  @media screen and (max-width: 480px) {
+    .bg-blog-0 h4 {
+      font-size: small; } }
+  @media screen and (max-width: 320px) {
+    .bg-blog-0 h4 {
+      font-size: small; } }

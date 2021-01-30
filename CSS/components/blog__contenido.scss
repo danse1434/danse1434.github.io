@@ -7,10 +7,12 @@ $device_sizes: 320, 480, 768, 1024;
 .bg-blog-0 {
   $adapted_font_2: medium, large, large, larger;    // Tamaño de fuente H2
   $adapted_font_3: medium, medium, medium, large;   // Tamaño de fuente H3
+  $adapted_font_4: small, small, medium, medium;   // Tamaño de fuente H3
   $adapted_font_6: smaller, smaller, small, small;  // Tamaño de fuente normal
 
-  p {
+  p, ul {
     font-size: medium;
+    text-align: justify;
 
     @for $i from 4 to 0 {
       @media screen and (max-width: nth($device_sizes, $i) + "px") {
@@ -33,6 +35,15 @@ $device_sizes: 320, 480, 768, 1024;
     @for $i from 4 to 0 {
       @media screen and (max-width: nth($device_sizes, $i) + "px") {
         font-size: #{nth($adapted_font_3, $i)};
+      }
+    }
+  }
+
+  h4 {
+    font-size: large;
+    @for $i from 4 to 0 {
+      @media screen and (max-width: nth($device_sizes, $i) + "px") {
+        font-size: #{nth($adapted_font_4, $i)};
       }
     }
   }

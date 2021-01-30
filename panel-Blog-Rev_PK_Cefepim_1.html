@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>PK de FEP en diversas poblaciones adultas: Revisión y Meta-análisis</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Ecuaciones -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <link rel="stylesheet" type="text/css" href=".\CSS\estilos_blog.css?20210129">
+
+  <style>
+    div.tooltip {
+      position: absolute;
+      text-align: center;
+      width: 200px;
+      height: 42px;
+      padding: 2px;
+      font: 12px sans-serif;
+      background: lightsteelblue;
+      border: 0px;
+      border-radius: 8px;
+      pointer-events: none;
+    }
+  </style>
+
+  <script type="text/javascript">
+    $(function () {
+      var includes = $('[data-include]');
+      jQuery.each(includes, function () {
+        var file = 'components/' + $(this).data('include') + '.html';
+        $(this).load(file);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <!--Incluir barra de navegación-->
+  <div data-include="navbar"></div>
+  <!--Caso de la Ivermectina-->
+  <div class="jumbotron jumbotron-fluid bg-blog-jumbotron">
+    <div class="jumbotron__container">
+      <h1>Farmacocinética de cefepime en diversas poblaciones adultas: Revisión y Meta-análisis</h1>
+    </div>
+  </div>
+  <div class="container bg-blog-0">
+    <h2>Introducción</h2>
+    <p>
+      El cefepime es un antibiótico \(\beta\)-lactámico del grupo de las cefalosporinas de cuarta 
+      generación. Este cuenta con una amplia actividad contra bacterias Gram-negativas como 
+      Enterobacterias, <i>P. aeruginosa</i>, <i>Acinetobacter spp </i>, o <i>Haemophilus influenzae</i>. 
+      El cefepime puede ser utilizado en infecciones por <i>Streptococcus pneumoniae</i>, 
+      <i>Staphylococcus aureus</i> susceptible a la oxacilina, estreptococos \(\beta\)-hemolíticos, 
+      y aquellos del grupo viridians <cite>[Endimiani2008]</cite>.
+    </p>
+    <p>
+      En pacientes pediátricos, el cefepime tiene usos en el tratamiento de infecciones en diferentes 
+      tejidos y órganos, como <cite>[INVIMA2016a]</cite>
+    </p>    
+    <p>
+      <ul>
+        <li>infecciones de las vías respiratorias bajas, incluyendo neumonía y bronquitis.</li>
+        <li>infecciones de las vías urinarias, complicadas (incluyendo pielonefritis) como no complicadas. </li>
+        <li>infecciones de la piel y estructuras cutáneas. </li>
+        <li>septicemia. </li>
+        <li>terapia empírica para pacientes con neutropenia febril. </li>
+        <li>meningitis bacteriana.</li>
+      </ul>
+    </p>
+  
+	<p>En adultos, el cefepime tiene indicaciones adicionales en el tratamiento de:</p>
+    <p>
+      <ul>
+        <li>infecciones intra-abdominales, incluyendo peritonitis e infecciones de las vías biliares. </li>
+        <li>infecciones ginecológicas. </li>
+      </ul>
+    </p>
+
+	<p>
+    La acción antibiótica de cefepime depende de la penetración del mismo en estos órganos, y por esto 
+	  es relevante conocer su farmacocinética. En diversas sub-poblaciones de pacientes, la farmacocinética 
+    de cefepime puede encontrarse alterada por diversas condiciones fisiopatológicas. En este documento, 
+    se presenta una revisión de la farmacocinética de cefepime en diversas poblaciones y condiciones 
+    fisiopatológicas, con énfasis en neutropenia febril y paciente crítico. 
+  </p>
+  </div>
+  
+  <div class="container bg-blog-0">
+    <h2>Métodos</h2>
+  
+    <h3>Criterios de inclusión</h3>
+    
+    <p>
+      Se incluyeron estudios observacionales con reporte de parámetros farmacocinéticos estimados mediante 
+      métodos compartimentales, no compartimentales o poblacionales. Se aceptaron artículos que tuvieran 
+      los siguientes criterios de inclusión: (i) estudios en seres humanos; (ii) tratamiento con cefepime 
+      en administración parenteral (IM, IV, o SC); y (iii) reporte de parámetros farmacocinéticos y la 
+      desviación estándar en su estimación. De manera adicional, se hizo una revisión cualitativa de 
+      estudios que evaluaron la penetración en tejidos del cefepime.
+    </p>
+    
+    <h3>Criterios de exclusión</h3>
+    <p>
+      Se excluyeron estudios en donde no se reportaron los parámetros farmacocinéticos, así como aquellos 
+      estudios provenientes de pacientes pediátricos o pacientes adultos con terapias de reemplazo renal. 
+    </p>
+
+    <h3>Estrategia de búsqueda</h3>
+    <p>
+      Se realizó una búsqueda en la base de datos de MEDLINE con el buscador Pubmed, así como en la base de datos de LILACS 
+      (<i>Latino‑Americana e do Caribe em Ciências da Saúde</i>) y en el buscador Google Académico. Se buscaron estudios en 
+      humanos con los términos "farmacocinética" y "cefepime".
+    </p>
+    
+    <p>
+      Para Pubmed se utilizó la siguiente estrategia de búsqueda: (``Pharmacokinetic''[Mesh] OR ``pharmacokinetics'' [Subheading]) 
+      AND ``Cefepime''[Mesh] AND ``Humans''[Mesh], para Google Académico se utilizó: ``pharmacokinetics'' AND ``cefepime'', 
+      y para la base LILACS se utilizó: ``Farmacocinética'' AND ``cefepime''. Para Google Académico se realizó la extracción 
+      de los datos mediante la herramienta Harzing's Publish or Perish, y en los otros buscadores se utilizaron las herramientas 
+      incorporadas en los buscadores.
+    </p>
+    <h3>Extracción de datos</h3>
+    <p>
+      El tamizaje de estudios y selección final de los mismos se realizó mediante la herramienta Rayyan &reg; 
+      <cite>[MouradOuzzani2016]</cite>. En los artículos elegidos, se extrajeron los tamaños muestrales, parámetros farmacocinéticos como 
+        \(\mathrm{V_1}\), \(\mathrm{V_2}\), \(\mathrm{Cl}\), \(\mathrm{Q}\), y \(\mathrm{Cl_{Renal}}\) (aclaramiento por la ruta renal), 
+        así como la dosificación de cefepime u otras condiciones demográficas o clínicas relacionadas con los datos tomados.
+    </p>
+    <p>
+      Se extrajo el valor típico de los parámetros PK, así como su error estándar en la estimación, coeficiente de variación 
+      e intervalos de confianza del 95%. Los parámetros relacionados con aclaramiento fueron extraídos en unidades de 
+      L/h, mientras que los relacionados con volumen de distribución mediante L. En los casos en que fue 
+      necesario, se realizó el recalculo del parámetro PK para un peso estándar de 70 L/h.
+    </p>
+    <h3>Síntesis de datos y meta-análisis</h3>
+    <p>
+      Se realizó un metanálisis de efectos aleatorios teniendo en cuenta el valor medio y desviación estándar reportado en 
+      cada estudio. Para esto se utilizó el paquete <code>metafor</code> del lenguaje de programación <code>R</code>. Se reportaron los 
+      valores de los parámetros agregados para estudios en voluntarios sanos y estudios en pacientes, y para estos últimos se realizó 
+      el reporte de valores agregados por subgrupos como hospitalizados/quirúrgicos, críticos (UCI), neutropenia febril, obesos, 
+      ancianos, quemados, y pacientes con fibrosis quística. Se realizó el cálculo de \(\mathrm{I}^2\) para evaluar la heterogenidad en la 
+      agregación de los estudios, se consideró que si \( \mathrm{I}^2 \) era mayor de 50% existía una variabilidad 
+      significativa en la evaluación.
+    </p>
+    
+    <p style="text-align: center;">
+      <object data="/Modulos/Blog/05_CefepimeRev/PRISMA_cefepime-1.svg" alt="Diagrama de flujo PRISMA para la selección de estudios" width="70%" > </object>
+
+      <!-- <img src="/Modulos/Blog/05_CefepimeRev/PRISMA_cefepime-.png" alt="Diagrama de flujo PRISMA para la selección de estudios" width="70%"> -->
+      <p>Figura 1. Diagrama de flujo PRISMA  para la selección de estudios</p>
+    </p>
+
+    <h2>Resultados</h2>
+    <h3>Identificación de estudios</h3>
+    
+    <p>
+      Como se muestra en la Figura 1, se identificaron 296 estudios con los criterios de búsqueda en las 
+      bases de datos PUBMED (\(n=170\)), Google Académico (\(n=119\)), y LILACS (\(n=7\)). Se encontraron 241 estudios duplicados, 
+      durante la evaluación de títulos y abstracts se excluyeron (\(n=117\)) estudios, y se excluyeron (\(n=24\)) estudios adicionales 
+      durante la evaluación del texto completo de los mismos. 
+    </p>
+
+    <p>
+      La razón de exclusión de estudios fue población no relevante (\(n=66\)), diseño no relevante (\(n=41\)), desenlace no relevante 
+      (\(n=35\)), tratamiento no relevante (\(n=12\)), sólo se encontró el abstract (\(n=7\)), y artículo en lenguaje extranjero (\(n=3\)). 
+      Entre los artículos excluidos por población no relevante se tenían 39 artículos en animales o <i>in vitro</i>, 14 en pacientes 
+      con terapia de reemplazo renal, y 13 en pacientes pediátricos. 
+    </p>
+
+    <h3>Características de los estudios</h3>
+    <p>
+      Se encontraron 20 estudios sobre disposición de cefepime en tejidos para evaluación cualitativa, y 49 estudios con parámetros PK 
+      reportados para evaluación cuantitativa con meta-análisis. Entre los estudios con parámetros PK reportados para evaluación 
+      cuantitativa se encontraron estudios realizados en: voluntarios sanos (\(n=9\)), hospitalizados/quirúrgicos (\(n=4\)), obesos (\(n=1\)), 
+      quemados (\(n=4\)), críticos/estancia en UCI (\(n=15\)), pacientes con disfunción renal, sin terapias de reemplazo renal (\(n=5\)), 
+      fibrosis quística (\(n=5\)), y neutropenia febril (\(n=5\)).
+    </p>
+
+    <h3>Metabolismo y penetración celular</h3>
+    <p>
+      El cefepime es eliminado de manera primaria (80%) por el riñón sin cambios, y es metabolizado principalmente como <i>N</i>-metilpirrolidina 
+      (NMP) que se convierte rápidamente a <i>N</i>-óxido, y una proporción aún menor como el 5,7-epímero de cefepime <cite>[Endimiani2008]</cite>.
+    </p>
+
+    <p>
+      En un estudio <i>in vitro</i> con células polimorfonucleares se ha mostrado que el cefepime tiene la capacidad de ingresar en 
+      células fagocíticas, lo que potencia la actividad intracelular frente a <i>E coli</i> pero no frente a <i>S aureus</i> 
+      <cite>[Pruul1996]</cite>.
+    </p>
+
+    <h3>Penetración en tejidos</h3>
+    <p>
+      Se ha estudiado la penetración del cefepime en una serie de tejidos con el fin de determinar si tiene utilidad en 
+      diversos tipos de infecciones.
+    </p>
+    <p>
+      Se han realizado estudios de penetración en ampollas para estimar la cinética del cefepime durante infecciones de tejidos 
+      blandos y abscesos pequeños <cite>[Kalman1992]</cite>. Un estudio con la formación de una ampolla inflamatoria (por aplicación 
+      de cantarida) ha mostrado que el cefepime tiene una penetración del 80.4% <cite>[Nye1989]</cite>, mientras que otro con una 
+      ampolla formada de manera mecánica "no inflamatoria" ha mostrado una penetración de 79.3% <cite>[Kalman1992]</cite>. 
+    </p>
+
+    <p>
+      Se considera que el pulmón es un órgano que cuenta con un equilibrio rápido con el compartimento central. El porcentaje 
+      de penetración media de cefepime en la mucosa bronquial es 59.8% (RSD 20.9%) tras la administración de una dosis de 
+      2000mg en 20 pacientes que se sometían a una broncoscopia con fibra óptica <cite>[Chadha1990]</cite>. Un estudio PKPOP 
+      con 16 pacientes que se sometían a una cirugía pulmonar por epitelioma bronquial encontró que el ratio de concentraciones 
+      entre pulmón y plasma se encontraba entre 0.94 a 1.12 <cite>[Breilh2001]</cite>.
+    </p>
+    
+    <p>
+      Un estudio en 20 pacientes adultos con neumonía bacteriana severa e intubados en UCI fue realizado para conocer las 
+      concentraciones de cefepime en el pulmón. A estos pacientes se les administró una dosis de 2g seguido de una infusión 
+      continua de 4g en 24 horas, y se les determinó la concentración de cefepime en plasma y fluido alveolar (BAL). Se 
+      observó que la penetración en el fluido que bordea el epitelio es cercana al 100%, y se alcanzan concentraciones 
+      apropiadas para el tratamiento de Enterobacterias, que pueden ser insuficientes para el tratamiento de <i>P aeruginosa</i> 
+      <cite>[Boselli2003]</cite>.\\
+    </p>
+    
+    <p>
+      La penetración en el SNC es moderada, en un estudio con 7 pacientes con drenajes ventriculares externos <cite>[Rhoney2003]</cite> 
+      se observó que la penetración en el SNC fue \(\sim\) 8.0% (4-34%) medido por \(\mathrm{AUC}\), o 23% (5-58%) medido por 
+      \(\mathrm{C_{min}}\) en plasma y fluido cerebroespinal. 
+    </p>
+    
+    <p>
+      En un grupo de pacientes que recibían una colecistectomía se realizó una medición de la concentración de cefepime en 
+      sitios como plasma, fluido peritoneal, fluido biliar y tejido apendicular <cite>[Okamoto1992]</cite>. Se determinaron ratios 
+      entre fluido peritoneal/plasma de 2.10 \(\pm\) 2.33, fluido biliar/plasma de 14.44 \(\pm\) 31.99, y tejido vesicular/plasma 
+      de 1.44 \(\pm\) 1.82. Los autores concluyeron que el cefepime puede ser utilizado para el tratamiento de infecciones en el 
+      tracto biliar ya que alcanza concentraciones apropiadas en este sitio <cite>[Okamoto1992]</cite>. Otro estudio con 30 pacientes 
+      sometidos a cirugía en vías biliares, observó que el ratio entre plasma y tejido de vesiculobiliar era 2.6 \(\pm\) 2.4 
+      <cite>[Petrikkos2006]</cite>. Otro estudio en 4 pacientes muestra concentraciones adecuadas en fluidos pancreáticos 
+      <cite>[Delcenserie2001]</cite>, con un grado de penetración de \(\sim 37\%\).
+    </p>
+
+    <p>
+      El cefepime cuenta con buena penetración en el tejido prostático (51% - 1h, 42.8% - 9h, 138.4% - 18h) la cual puede aumentar 
+      con el tiempo (acumulación) <cite>[Arkell1992]</cite>. 
+    </p>
+      
+    <p>
+      En un estudio con 10 pacientes que se sometían a una cirugía de reemplazo de cadera, se realizó una medición de cefepime 
+      en plasma, hueso esponjoso, y hueso cortical. Se encontró una penetración excelente en el hueso esponjoso 1.06 \(\pm\) 0.23, 
+      y el hueso cortical 0.87 \(\pm\) 0.37 <cite>[Breilh2003]</cite>.
+    </p>
+    
+    <p>
+      Un estudio que comparaba la penetración de cefepime y ácido fusídico en diversos tejidos del corazón (válvulas, miocardio, 
+      pericardio, mediastino, y esternón) encontró una penetración adecuada en estos tejidos por parte del cefepime 
+      <cite>[Kanellakopoulou2008]</cite>.
+    </p>
+    <p>
+      Un estudio en pacientes que se sometían a una cirugía vítrea, mostró que la penetración en el humor vítreo para cefepime 
+      es 2%. Las concentraciones alcanzadas son útiles para el tratamiento de endoftalmitis causadas por Enterobacterias pero 
+      no para las causada por otros microorganismos más frecuentes (p.ej. Gram-positivos).
+    </p>
+    <p>
+      Un estudio en pacientes con infecciones de pie diabético mostró que la penetración en el tejido es casi completa 0.9 
+      (0.6 - 1.1) <cite>[So2016]</cite>.
+    </p>
+
+    <h2>Modelos farmacocinéticos</h2>
+    <h3>Aclaramiento \(\mathrm{CL}\)</h3>
+    
+    <p>
+      En el parámetro de aclaramiento de cefepime \(\mathrm{CL}\) se observa una heterogeneidad importante (\(\mathrm{I}^2 = 89.2\%\)) 
+      en los estudios para los voluntarios sanos (ver Figura 2). En esta población se tiene un \(\mathrm{CL}\) 
+      agregado de 7.66 (IC95% 7.66-8.04) L/h. Los estudios en voluntarios sanos muestran una similitud importante con diferencia 
+      particular en el caso del estudio de <cite>[Burgess2002a]</cite>, el cual presentó una estimación alta en este parámetro. 
+      Por otra parte, en estudios con pacientes se encontró un \(\mathrm{CL}\) agregado de 7.53 (IC95% 6.91-8.16) L/h, el cual no 
+      difiere de manera significativa con la estimación en voluntarios sanos.
+    </p>
+
+    <p style="text-align: center;">
+      
+      <img src="/Modulos/Blog/05_CefepimeRev/MA_Cl_Sanos-.png" alt="Aclaramiento de FEP en voluntarios sanos" width="70%">
+      <p>Figura 2. Aclaramiento de FEP en voluntarios sanos</p>
+    </p>
+
+    <p>
+      Una comparación de pacientes con neutropenia febril 8.03 (IC95% 6.05-10.02) L/h y pacientes críticos en UCI 7.04 (IC95% 6.29-8.16) L/h, 
+      no muestra una diferencia significativa entre estas poblaciones (ver Figura 3). En ambas subpoblaciones, 
+      se puede observar una alta variabilidad en la estimación de los parámetros, al comparar frente estudios de voluntarios sanos. 
+      La presencia de altos niveles de \(\mathrm{CL}\) en algunos estudios podría deberse a la presencia de individuos con aclaramiento 
+      renal elevado <cite>[Udy2018]</cite>. En el análisis de estudios en pacientes con disfunción renal se observa una disminución 
+      consistente y progresiva de \(\mathrm{CL}\) con la disminución del aclaramiento renal de creatinina \(\mathrm{CrCL}\). 
+      Este comportamiento se debe a que el cefepime se elimina principalmente a través de los riñones sin modificaciones y por medio de 
+      filtración glomerular <cite>[Endimiani2008]</cite>.
+    </p>
+
+    <p style="text-align: center;">
+      
+      <img src="/Modulos/Blog/05_CefepimeRev/MA_Cl_UCI-NF-.png" alt="Aclaramiento de FEP en pacientes UCI o NF" width="70%">
+      <p>Figura 3. Aclaramiento de FEP en pacientes de UCI o neutropenia febril</p>
+    </p>
+
+    <p>
+      Un análisis de metaregresión muestra una relación directamente proporcional entre \(\mathrm{CrCL}\) de creatinina y \(\mathrm{CL}\) 
+      de cefepime, con una pendiente de \(0.865\pm 0.084\), e intercepto de \(0.463\pm 0.298\) \(\mathrm{L/h}\)
+      <footnote>El \(\mathrm{CrCL}\) estimado para subgrupo fue tomado como el valor medio reportado en la mayoría de los estudios, en el caso de no estar reportado se tomo como valor medio el promedio entre los límites del rango promedio, y para pacientes anúricos se tomo como 0 a \(\mathrm{CrCL}\)</footnote> 
+      (ver Figura 4). Estos resultados muestran que \(\mathrm{CrCL}\) debe ser escogida como un covariable 
+      de ajuste de \(\mathrm{CL}\) en las fase tempranas de modelamiento de la farmacocinética poblacional de cefepime. Este resultado 
+      fue confirmado por el estudio de <cite>[Jonckheere2016a]</cite> en donde se probaron diversos métodos de evaluación de la función renal 
+      como factores predictivos de \( \mathrm{CL} \) de cefepime.
+    </p>
+
+    <p style="text-align: center;">
+      <img src="/Modulos/Blog/05_CefepimeRev/MA_Cl_Renal-.png" alt="Aclaramiento de FEP en pacientes con disfunción renal" width="70%">
+      <p>Figura 4. Aclaramiento de FEP en pacientes con disfunción renal</p>
+    </p>
+
+    <p style="text-align: center;">
+      <img src="/Modulos/Blog/05_CefepimeRev/MA_Cl_NR_otros-.png" alt="Aclaramiento de FEP en pacientes con otras poblaciones" width="70%">
+      <p>Figura 5. Aclaramiento de FEP en estudios con otras poblacionales</p>
+    </p>
+
+    <p>
+      Un estudio en pacientes ancianos <cite>[Barbhaiya1990b]</cite> de ambos sexos con edades entre \(67 \pm 2\) años (hombres) y \(69 \pm 5\) 
+      años (mujeres) muestra que el valor de \(\mathrm{CL}\) en este grupo es menor 7.04 (IC95% 6.29-8.16) L/h que el promedio en estudios 
+      de voluntarios sanos, y esto puede deberse a un menor \(\mathrm{CrCL}\) en esta población. Los pacientes con fibrosis quística tienen 
+      la tendencia a valores altos de \(\mathrm{CL}\) en comparación con voluntarios sanos 9.09 (IC95% 7.60-10.59) L/h. 
+      Los estudios en pacientes hospitalizados y quirúrgicos muestran valores menores de \(\mathrm{CL}\) 5.69 (IC95% 4.55-6.83) L/h. 
+      Un estudio en pacientes obesos muestra una tendencia a valores altos de \(\mathrm{CL}\) <cite>[Rich2012]</cite>. Los estudios en pacientes 
+      quemados muestra que los mismos presentan niveles similares 8.08 (IC95% 7.18-8.99) L/h a los presentados por voluntarios sanos.
+    </p>
+
+    <h3>Volumen de distribución de compartimento central \(\mathrm{V_{1}}\)</h3>	
+
+    <p>
+      En estudios con voluntarios sanos se observaron valores agregados de \(\mathrm{V}_{1}\) de 17.52 (IC95% 16.45-18.60) L. 
+      Mientras que en estudios con pacientes se encontraron valores mayores de 20.08 (IC95% 18.24-21.92) L (ver Figura 6). 
+      En estudios en pacientes críticos (UCI) se observó una mayor variabilidad en los valores de \(\mathrm{V_1}\) estimados 21.08 (IC95% 17.06-26.54) L, 
+      y en muchos de los estudios se encontró una tendencia a valores altos de \(\mathrm{V_1}\). De manera similar al caso anterior, se mostró un 
+      aumento en el valor de \( \mathrm{V_1} \) para pacientes con neutropenia febril (ver Figura 3).
+    </p>
+
+    <p style="text-align: center;">
+      <img src="/Modulos/Blog/05_CefepimeRev/MA_V1_Sanos-.png" alt="Volumen de distribución de FEP en estudios con voluntarios sanos" width="70%">
+      <p>Figura 6. Volumen de distribución de FEP en estudios con voluntarios sanos</p>
+    </p>
+
+    <p>
+      A diferencia de \( \mathrm{CL} \), no se encontró una relación significativa de \( \mathrm{V_1} \) con el grado de función renal estimada por 
+      \(\mathrm{CrCL}\), en pacientes con disfunción renal, pero si se encuentra un mayor grado de variabilidad en la estimación en comparación con 
+      individuos sanos, sobretodo en el estudio de <cite>[Tam2003]</cite>. En el análisis de subpoblaciones se muestra que los pacientes con obesidad 
+      24.59 (IC95% 20.38-28.80) L <cite>[Rich2012]</cite> o quemaduras 23.69 (IC95% 19.13-28.25) L muestran valores altos de \(\mathrm{V_1}\) en 
+      comparación con individuos sanos. Los pacientes con edad avanzada, fibrosis quística u hospitalización no muestran diferencias importantes 
+      en \(\mathrm{V_1}\), en comparación con voluntarios sanos. 
+    </p>
+
+    <p style="text-align: center;">
+      <img src="/Modulos/Blog/05_CefepimeRev/MA_V1_Renal-.png" alt="Volumen de distribución de FEP en estudios con pacientes con disfunción renal" width="70%">
+      <p>Figura 7. Volumen de distribución de FEP en estudios con pacientes con disfunción renal</p>
+    </p>
+
+    <p style="text-align: center;">
+      <img src="/Modulos/Blog/05_CefepimeRev/MA_V1_UCI-NF-.png" alt="Volumen de distribución de FEP en estudios con pacientes de UCI o NF" width="70%">
+      <p>Figura 8. Volumen de distribución de FEP en estudios con pacientes de UCI o NF</p>
+    </p>
+
+    <p style="text-align: center;">
+      <img src="/Modulos/Blog/05_CefepimeRev/MA_V1_NR_otros-.png" alt="Volumen de distribución de FEP en otras poblaciones" width="70%">
+      <p>Figura 9. Volumen de distribución de FEP en estudios en otras poblaciones</p>
+    </p>
+
+    <h3> Aclaramiento intercompartimental \(\mathrm{Q}\) y volumen de distribución periférico \(\mathrm{V_2}\)</h3>
+    <p>
+      Los parámetros \(\mathrm{Q}\) y \( \mathrm{V_2} \) son específicos de modelos de varios compartimentos, y estos no fueron obtenidos en 
+      voluntarios sanos debido a la metodología de estimación en esos estudios se basaba en análisis no compartimentales. El aclaramiento 
+      intercompartimental \( \mathrm{Q} \) tiene un valor agregado de 11.84 (IC95% 3.10-20.57) L/h en los estudios en los que se reportó 
+      (ver Figura 10). Este valor agregado que se observa es influenciado por el estudio de <cite>[Roos2006]</cite> realizado en
+      pacientes en UCI, que tiene un valor de \( \mathrm{Q} \) alto, el resto de los estudios tiene un valor concordante.
+    </p>
+
+    <p>
+      Los valores de \(\mathrm{V_2}\) reportados por los estudios fueron concordantes, y en muchos casos menores a los reportados para 
+      \(\mathrm{V_1}\). El valor agregado para \(\mathrm{V_2}\) en los estudios fue 11.12 (IC95% 9.47-12.76) L (ver Figura 11). 
+      Sólo en el estudio de <cite>[Sprauten2002]</cite> se reportaron valores de \(\mathrm{V_2}\) mayores al resto de los estudios.
+    </p>
+
+    <p style="text-align: center;">
+      <img src="/Modulos/Blog/05_CefepimeRev/MA_Q-.png" alt="Aclaramiento intercompartimental de FEP" width="70%">
+      <p>Figura 10. Aclaramiento intercompartimental de FEP</p>
+    </p>
+
+    <p style="text-align: center;">
+      <img src="/Modulos/Blog/05_CefepimeRev/MA_V2-.png" alt="Volumen de distribución periférica de FEP" width="70%">
+      <p>Figura 11. Volumen de distribución periférica de FEP</p>
+    </p>
+
+    <h2>Discusión</h2>
+    <p>
+      Se identificaron 69 estudios con resultados de farmacocinética reportada en las poblaciones de interés. De estos, se encontraron 20 
+      estudios que reportaban aspectos sobre la distribución de cefepime en varios tejidos, y 49 estudios con parámetros PK reportados para 
+      cefepime mediante estrategias de modelamiento. Los resultados permiten conocer estimaciones a <i>priori</i> de los parámetros 
+      farmacocinéticos de cefepime en diversas subpoblaciones, lo cual es útil en el trabajo de modelamiento actual. Para estudios en 
+      pacientes se encontraron valores agregados de \(\mathrm{V_1}\) y \(\mathrm{V_2}\) de 20.08 (IC95% 18.24-21.92) L y 
+      11.12 (IC95% 9.47-12.76) L de manera respectiva.
+    </p>
+
+    <p>
+      Para \(\mathrm{CL}\) y \(\mathrm{Q}\) se encontraron valores agregados de 7.53 (IC95% 6.91-8.16) L/h y 11.84 (IC95% 3-10-20.57) L/h de 
+      manera respectiva, en estudios en pacientes. Este estudio permite confirmar la relación que existe entre el aclaramiento de 
+      creatinina (que mide el estado de filtración glomerular) con el aclaramiento \(\mathrm{CL}\) de cefepime, y esto permite considerarla 
+      como una covariable relevante en su modelamiento. Este hallazgo es similar al encontrado en estudios con determinación simultánea en 
+      plasma y orina para cefepime, donde se ha encontrado que el aclaramiento no renal es muy bajo para este fármaco <cite>[Barbhaiya1990]</cite>, 
+      <cite>[Barbhaiya1990a]</cite>, <cite>[Barbhaiya1990b]</cite>, <cite>[Barbhaiya1992b]</cite>, <cite>[Barbhaiya1992d]</cite>.
+    </p>
+
+    <p>
+      Esta revisión tiene como fortaleza que utilizó una estrategia de búsqueda sistemática, aunque no se pudo acceder a otras bases como 
+      EMBASE y Cochrane Database que se utilizan de manera amplia, en análisis secundarios de literatura. Otra fortaleza radica en la gran 
+      cantidad de estudios encontrados en las poblaciones de interés (\(n = 49 \)) lo que permite obtener un panorama sobre la 
+      farmacocinética de cefepime en seres humanos y en varias subpoblaciones.
+    </p>
+    
+    <p>
+      La principal limitación de este estudio es que no se pudo evaluar la calidad de cada estudio, debido a que no existen estrategias 
+      para ello en el campo farmacocinético. Otra limitación importante es que en algunos estudios no se tenía un reporte en el error 
+      estándar de estimación de los parámetros, por lo cual fue necesario obtenerlo a partir de los intervalos de confianza reportados 
+      en cada estudio. Otra limitación es que los estudios reportados no fueron reportados mediante farmacocinética poblacional con un 
+      método estándar y en algunos casos se utilizaron métodos no compartimentales (NCA). El análisis NCA puede generar un sesgo en la 
+      estimación del valor medio de los parámetros y su error estándar de estimación. Los pacientes en los diversos estudios pudieron 
+      contener covariables que alteraran o explicaran a los parámetros y esto pudo generar una variabilidad alta en algunos estudios. 
+    </p>
+
+    <p>
+      Se identificó que en algunas poblaciones (p.ej. pacientes obesos y edad avanzada) no existe suficiente documentación de la 
+      farmacocinética de cefepime, por lo cual sigue siendo un campo de investigación abierto para la obtención de modelos de 
+      farmacocinética poblacional bien validados, y posteriores estudios farmacodinámicos para conocer si se requiere ajustes de dosis.
+    </p>
+
+    <p>
+      En conclusión, se muestra que los parámetros farmacocinéticos son similares en estudios en voluntarios sanos, y en algunas 
+      subpoblaciones se observan diferencias significativas en este comportamiento que podrían requerir ajustes de dosificación. 
+      Se confirma la presencia de una relación intrínseca entre el aclaramiento de creatinina y el aclaramiento de cefepime, lo 
+      cual hace a \(\mathrm{CrCL}\) una covariable importante en los modelos PK de cefepime. 
+    </p>
+
+    <div class="container container-fluid">
+      <div id="contenedorGrafico" class="container" style="width: 100%;"></div>
+        <p>Figura 12. Diagrama de metaregresión de aclaramiento de FEP frente a aclaramiento renal</p>
+        <script src="./Modulos/Blog/05_CefepimeRev/src/scatter_diagram_2.js?20210131" type="module"></script>
+    </div>
+  </div>
+
+  <div class='thebibliography container bg-blog-0'>
+    <h2>Bibliografía</h2>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XEndimiani2008'></a>[1] <span class='bibsp'>   </span></span>Andrea Endimiani, Federico
+         Perez, and Robert A. Bonomo. Cefepime: A reappraisal in an era of
+         increasing antimicrobial resistance. <span class='XCharter-Italic-tlf-t1-'>Expert Rev. Anti. Infect.
+              Ther.</span>, 6(6):805–824, 2008.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XINVIMA2016a'></a>[2] <span class='bibsp'>   </span></span>Instituto Nacional de Vigilancia
+         de Medicamentos y Alimentos (INVIMA).
+         Sistema de Trámites en Línea - Consulta Datos de Productos, 2016. URL
+         <span
+              class='ectt-1000'>http://consultaregistro.invima.gov.co:8082/Consultas/consultas/consreg_encabcum.jsp</span>.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XMouradOuzzani2016'></a>[3] <span class='bibsp'>   </span></span>Mourad Ouzzani, Hossam
+         Hammady, Zbys Fedorowicz, and Ahmed Elmagarmid. Rayyan-a web
+         and mobile app for systematic reviews. <span class='XCharter-Italic-tlf-t1-'>Syst. Rev.</span>,
+         5(1):5:210, 2016.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XPruul1996'></a>[4] <span class='bibsp'>   </span></span>H. Pruul and P. J. Mcdonald. Uptake
+         of cefepime by phagocytosing polymorphonuclear
+         neutrophils and subsequent intracellular killing. <span class='XCharter-Italic-tlf-t1-'>Antimicrob.
+              Agents Chemother.</span>, 40(8):1870–1874,
+         1996.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XKalman1992'></a>[5] <span class='bibsp'>   </span></span>D. Kalman, S. L. Barriere, and
+         B. L. Johnson. Pharmacokinetic disposition and bactericidal
+         activities of cefepime, ceftazidime, and cefoperazone in serum and blister fluid. <span
+              class='XCharter-Italic-tlf-t1-'>Antimicrob. Agents
+         </span><span class='XCharter-Italic-tlf-t1-'>Chemother.</span>, 36(2):453–457, 1992.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XNye1989'></a>[6] <span class='bibsp'>   </span></span>K. J. Nye, Y. G. Shi, J. M. Andrews,
+         and R. Wise. Pharmacokinetics and tissue penetration of
+         cefepime. <span class='XCharter-Italic-tlf-t1-'>J. Antimicrob. Chemother.</span>, 24(1):23–28, 1989.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XChadha1990'></a>[7] <span class='bibsp'>   </span></span>D. Chadha, R. Wise, D. R. Baldwin,
+         J. M. Andrews, J. P. Ashby, and D. Honeybonrne. Cefepime
+         concentrations in bronchial mucosa and serum following a single 2 gram intravenous dose. <span
+              class='XCharter-Italic-tlf-t1-'>J.
+         </span><span class='XCharter-Italic-tlf-t1-'>Antimicrob. Chemother.</span>, 25(6):959–963, 1990.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XBreilh2001'></a>[8] <span class='bibsp'>   </span></span>D. Breilh, M. C. Saux,
+         C. Delaisement, A. Fratta, D. Ducint, J. F. Velly, and L. Couraud.
+         Pharmacokinetic population study to describe cefepime lung concentrations. <span
+              class='XCharter-Italic-tlf-t1-'>Pulm. Pharmacol. Ther.</span>,
+         14(2):69–74, 2001.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XBoselli2003'></a>[9] <span class='bibsp'>   </span></span>Emmanuel Boselli, Dominique
+         Breilh, Frédéric Duflo, Marie Claude Saux, Richard Debon,
+         Dominique Chassard, and Bernard Allaouchiche. Steady-state plasma and intrapulmonary
+         concentrations of cefepime administered in continuous infusion in critically ill patients with severe
+         nosocomial pneumonia. <span class='XCharter-Italic-tlf-t1-'>Crit. Care Med.</span>, 31(8):2102–2106,
+         2003.
+
+
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XRhoney2003'></a>[10] <span class='bibsp'>   </span></span>Denise H. Rhoney, Vincent H. Tam,
+         Dennis Parker, Peggy S. McKinnon, and William M. Coplin.
+         Disposition of cefepime in the central nervous system of patients with external ventricular drains.
+         <span class='XCharter-Italic-tlf-t1-'>Pharmacotherapy</span>, 23(3):310–314, 2003.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XOkamoto1992'></a>[11] <span class='bibsp'>   </span></span>Mark P. Okamoto, Mark A. Gill,
+         Randall K. Nakahiro, Alfred Chin, Albert E. Yellin, Thomas V.
+         Berne, David A. Sclar, Catherine A. Knupp, Peter N.R. Heseltine, and Maria D. Appleman. Tissue
+         concentrations of cefepime in acute cholecystitis patients. <span class='XCharter-Italic-tlf-t1-'>Ther.
+              Drug Monit.</span>, 14(3):220–225, 1992.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XPetrikkos2006'></a>[12] <span class='bibsp'>   </span></span>George Petrikkos, Miltiadis
+         Kastanakis, Antonios Markogiannakis, Seraphim Kastanakis,
+         Elias Bastounis, Papachristodoulou Antonios, George L. Daikos, and Nicholaos Katsilambros.
+         Pharmacokinetics of cefepime in bile and gall bladder tissue after prophylactic administration in
+         patients with extrahepatic biliary diseases. <span class='XCharter-Italic-tlf-t1-'>Int. J. Antimicrob.
+              Agents</span>, 27(4):331–334, 2006.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XDelcenserie2001'></a>[13] <span class='bibsp'>   </span></span>R. Delcenserie, M. P.
+         Dellion-Lozinguez, T. Yzet, B. Lepointe, L. Hary, R. Badoui,
+         P. Verhaeghe, M. Andrejak, and J. L. Dupas. Pancreatic concentrations of cefepime. <span
+              class='XCharter-Italic-tlf-t1-'>J. Antimicrob.
+         </span><span class='XCharter-Italic-tlf-t1-'>Chemother.</span>, 47(5):711–713, 2001.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XArkell1992'></a>[14] <span class='bibsp'>   </span></span>D. Arkell, M. Ashrap, J. M.
+         Andrews, and R. Wise. An evaluation of the penetration of cefepime
+         into prostate tissue in patients undergoing elective prostatectomy. <span
+              class='XCharter-Italic-tlf-t1-'>J. Antimicrob. Chemother.</span>, 29(4):
+         473–474, 1992.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XBreilh2003'></a>[15] <span class='bibsp'>   </span></span>Dominique Breilh, E. Boselli,
+         J. C. Bel, D. Chassard, M. C. Saux, and B. Allaouchiche. Diflusion
+         of cefepime into cancellous and cortical bone tissue. <span class='XCharter-Italic-tlf-t1-'>J.
+              Chemother.</span>, 15(2):134–138, 2003.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XKanellakopoulou2008'></a>[16] <span class='bibsp'>   </span></span>K. Kanellakopoulou,
+         D. Tselikos, E. Giannitsioti, E. J. Giamarellos-Bourboulis, E. Apostolakis,
+         C. Lolas, and H. Giamarellou. Pharmacokinetics of fusidic acid and cefepime in heart tissues:
+         Implications for a role in surgical prophylaxis. <span class='XCharter-Italic-tlf-t1-'>J.
+              Chemother.</span>, 20(4):468–471, 2008.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XSo2016'></a>[17] <span class='bibsp'>   </span></span>Wonhee So, Joseph L. Kuti, Ashley
+         Shepard, James Nugent, and David P. Nicolau. Tissue
+         penetration and exposure of cefepime in patients with diabetic foot infections. <span
+              class='XCharter-Italic-tlf-t1-'>Int. J. Antimicrob.
+         </span><span class='XCharter-Italic-tlf-t1-'>Agents</span>, 47(3):247–248, 2016.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XBurgess2002a'></a>[18] <span class='bibsp'>   </span></span>David S. Burgess and Travis
+         Waldrep. Pharmacokinetics and pharmacodynamics of
+         piperacillin/tazobactam when administered by continuous infusion and intermittent dosing. <span
+              class='XCharter-Italic-tlf-t1-'>Clin.
+         </span><span class='XCharter-Italic-tlf-t1-'>Ther.</span>, 24(7):1090–1104, 2002.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XUdy2018'></a>[19] <span class='bibsp'>   </span></span>Andrew A. Udy, Jason A. Roberts, and
+         Jeflrey Lipman. <span class='XCharter-Italic-tlf-t1-'>Antibiotic Pharmacokinetic/
+         </span><span class='XCharter-Italic-tlf-t1-'>Pharmacodynamic Considerations in the Critically Ill</span>.
+         Springer Nature Singapore, Melbourne,
+         Australia, 1 edition, 2018.
+
+
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XBarbhaiya1990a'></a>[20] <span class='bibsp'>   </span></span>R. H. Barbhaiya, S. T. Forgue,
+         C. R. Gleason, C. A. Knupp, K. A. Pittman, D. J. Weidler, and
+         R. R. Martin. Safety, tolerance, and pharmacokinetic evaluation of cefepime after administration of
+         single intravenous doses. <span class='XCharter-Italic-tlf-t1-'>Antimicrob. Agents Chemother.</span>,
+         34(6):1118–1122, 1990.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XBarbhaiya1992b'></a>[21] <span class='bibsp'>   </span></span>R. H. Barbhaiya, S. T. Forgue,
+         C. R. Gleason, C. A. Knupp, K. A. Pittman, D. J. Weidler,
+         H. Movahhed, J. Tenney, and R. R. Martin. Pharmacokinetics of cefepime after single and multiple
+         intravenous administrations in healthy subjects. <span class='XCharter-Italic-tlf-t1-'>Antimicrob. Agents
+              Chemother.</span>, 36(3):552–557,
+         1992.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XBarbhaiya1992d'></a>[22] <span class='bibsp'>   </span></span>R. H. Barbhaiya, C. A. Knupp,
+         and K. A. Pittman. Eflects of age and gender on pharmacokinetics
+         of cefepime. <span class='XCharter-Italic-tlf-t1-'>Antimicrob. Agents Chemother.</span>, 36(6):1181–1185,
+         1992.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XGarrelts1999'></a>[23] <span class='bibsp'>   </span></span>James C. Garrelts and David J.
+         Wagner. The pharmacokinetics, safety, and tolerance of cefepime
+         administered as an intravenous bolus or as a rapid infusion. <span class='XCharter-Italic-tlf-t1-'>Ann.
+              Pharmacother.</span>, 33(12):1258–1261,
+         1999.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XWalker2005'></a>[24] <span class='bibsp'>   </span></span>Paul Walker, Melinda N. Neuhauser,
+         Vincent H. Tam, Jie S. Willey, J. Lynn Palmer, Eduardo
+         Bruera, and Randall A. Prince. Subcutaneous administration of cefepime. <span
+              class='XCharter-Italic-tlf-t1-'>J. Pain Symptom Manage.</span>,
+         30(2):170–174, 2005.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XBacher1992'></a>[25] <span class='bibsp'>   </span></span>K. Bächer, M. Schaefler, H. Lode,
+         C. E. Nord, K. Borner, and P. Koeppe. Multiple dose
+         pharmacokinetics, safety, and eflects on faecal microflora, of cefepime in healthy volunteers. <span
+              class='XCharter-Italic-tlf-t1-'>J.
+         </span><span class='XCharter-Italic-tlf-t1-'>Antimicrob. Chemother.</span>, 30(3):365–375, 1992.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XNawakitrangsan2018'></a>[26] <span class='bibsp'>   </span></span>Monchana Nawakitrangsan,
+         Sutep Jaruratanasirikul, Athiphat Banjongjit, Wibul Wongpoowarak,
+         and Maseetoh Samaeng. Population pharmacokinetics and pharmacodynamics analysis to optimize
+         dosing regimens of cefepime. <span class='XCharter-Italic-tlf-t1-'>Lat. Am. J. Pharm.</span>,
+         37(4):753–758, 2018.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XBarbhaiya1990b'></a>[27] <span class='bibsp'>   </span></span>Rashmi H. Barbhaiya,
+         Catherine A. Knupp, James Tenney, R. Russell Martin, Donald J. Weidler,
+         and Kenneth A. Pittman. Safety, Tolerance, and Pharmacokinetics of Cefepime Administered
+         Intramuscularly to Healthy Subjects. <span class='XCharter-Italic-tlf-t1-'>J. Clin. Pharmacol.</span>,
+         30(10):900–910, 1990.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XLodise2006'></a>[28] <span class='bibsp'>   </span></span>Thomas P. Lodise, Denise H.
+         Rhoney, Vincent H. Tam, Peggy S. McKinnon, and George L.
+         Drusano. Pharmacodynamic profiling of cefepime in plasma and cerebrospinal fluid of hospitalized
+         patients with external ventriculostomies. <span class='XCharter-Italic-tlf-t1-'>Diagn. Microbiol. Infect.
+              Dis.</span>, 54(3):223–230, 2006.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XCheatham2011'></a>[29] <span class='bibsp'>   </span></span>S. Christian Cheatham,
+         Katherine M. Shea, Daniel P. Healy, Melissa L. Humphrey, Megan R.
+         Fleming, Matthew F. Wack, David W. Smith, Kevin M. Sowinski, and Michael B. Kays. Steady-state
+         pharmacokinetics and pharmacodynamics of cefepime administered by prolonged infusion in
+         hospitalised patients. <span class='XCharter-Italic-tlf-t1-'>Int. J. Antimicrob. Agents</span>,
+         37(1):46–50, 2011.
+
+
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XHiguchi2008'></a>[30] <span class='bibsp'>   </span></span>Kazuko Higuchi, Kazuro Ikawa,
+         Kayo Ikeda, Hiroki Ohge, Taijiro Sueda, Hitoshi Houchi,
+         and Norifumi Morikawa. Peritoneal pharmacokinetics of cefepime in laparotomy patients with
+         inflammatory bowel disease, and dosage considerations for surgical intra-abdominal infections based
+         on pharmacodynamic assessment. <span class='XCharter-Italic-tlf-t1-'>J. Infect. Chemother.</span>,
+         14(2):110–116, 2008.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XKovarik1990'></a>[31] <span class='bibsp'>   </span></span>J M Kovarik, J C ter Maaten, C M
+         Rademaker, M Deenstra, I M Hoepelman, H C Hart, G R
+         Matzke, and J Verhoef. Pharmacokinetics of cefepime in patients with respiratory tract infections.
+         <span class='XCharter-Italic-tlf-t1-'>Antimicrob. Agents Chemother.</span>, 34(10):1885–1888, oct 1990.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XRich2012'></a>[32] <span class='bibsp'>   </span></span>Barrie S. Rich, Rebecca Keel,
+         Vanessa P. Ho, Harma Turbendian, Cheguevara I. Afaneh,
+         Gregory F. Dakin, Alfons Pomp, David P. Nicolau, and Philip S. Barie. Cefepime dosing in the
+         morbidly obese patient population. <span class='XCharter-Italic-tlf-t1-'>Obes. Surg.</span>,
+         22(3):465–471, 2012.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XSampol2000'></a>[33] <span class='bibsp'>   </span></span>E. Sampol, Alexis Jacquet, Marc
+         Viggiano, Victor Bernini, Jean-Claude Manelli, Bruno Lacarelle,
+         and Allain Durand. Plasma, urine and skin pharmacokinetics of cefepime in burns patients. <span
+              class='XCharter-Italic-tlf-t1-'>J.
+         </span><span class='XCharter-Italic-tlf-t1-'>Antimicrob. Chemother.</span>, 46(2):315–317, 2000.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XBonapace1999'></a>[34] <span class='bibsp'>   </span></span>Charles R. Bonapace, Roger L.
+         White, Lawrence V. Friedrich, E. Douglas Norcross, and John A.
+         Bosso. Pharmacokinetics of cefepime in patients with thermal burn injury. <span
+              class='XCharter-Italic-tlf-t1-'>Antimicrob. Agents
+         </span><span class='XCharter-Italic-tlf-t1-'>Chemother.</span>, 43(12):2848–2854, 1999.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XConil2007'></a>[35] <span class='bibsp'>   </span></span>J. M. Conil, B. Georges, M. Lavit,
+         T. Seguin, I. Tack, K. Samii, G. Chabanon, G. Houin, and
+         S. Saivin. Pharmacokinetics of ceftazidime and cefepime in burn patients: The importance of age
+         and creatinine clearance. <span class='XCharter-Italic-tlf-t1-'>Int. J. Clin. Pharmacol. Ther.</span>,
+         45(10):529–538, 2007.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XVeraLopez2009'></a>[36] <span class='bibsp'>   </span></span>Karin Vera López. <span
+              class='XCharter-Italic-tlf-t1-'>Monitoramento terapeutico e modelagem farmacocinetica de
+              antimicrobiano
+         </span><span class='XCharter-Italic-tlf-t1-'>em pacientes queimados da unidades de terapia
+              intensiva</span>. Thesis, Universidade de São Paulo, 2009.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XChapuis2010'></a>[37] <span class='bibsp'>   </span></span>Thomas M. Chapuis, Eric Giannoni,
+         Paul A. Majcherczyk, René Chioléro, Marie Denise
+         Schaller, Mette M. Berger, Saskia Bolay, Laurent A. Décosterd, Denis Bugnon, and Philippe
+         Moreillon. Prospective monitoring of cefepime in intensive care unit adult patients. <span
+              class='XCharter-Italic-tlf-t1-'>Crit. Care</span>, 14
+         (2):1–10, 2010.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XKieft1993'></a>[38] <span class='bibsp'>   </span></span>H. Kieft, A. I.M. Hoepelman,
+         A. Struyvenberg, A. I.M. Hoepelman, A. I.M. Hoepelman,
+         J. Verhoef, A. Van Dijk, C. A. Knupp, and J. M. Branger. Pharmacokinetics of cefepime in patients
+         with the sepsis syndrome. <span class='XCharter-Italic-tlf-t1-'>J. Antimicrob. Chemother.</span>,
+         32(1993):117–122, 1993.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XDelattre2012a'></a>[39] <span class='bibsp'>   </span></span>Isabelle K. Delattre, Flora T.
+         Musuamba, Philippe Jacqmin, Fabio S. Taccone, Pierre-François
+         Laterre, Roger K. Verbeeck, Frédérique Jacobs, and Pierre Wallemacq. Population
+         pharmacokinetics of four <span class='cmmi-10'>β</span>-lactams in critically ill septic patients
+         comedicated with amikacin. <span class='XCharter-Italic-tlf-t1-'>Clin.
+         </span><span class='XCharter-Italic-tlf-t1-'>Biochem.</span>, 45(10-11):780–786, 2012.
+
+
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XFrei2005'></a>[40] <span class='bibsp'>   </span></span>C.R. Frei and David S. Burgess.
+         Continuous infusion b-lactams for intensive care unit pulmonary
+         infections. <span class='XCharter-Italic-tlf-t1-'>Clin. Microbiol. Infect.</span>, 11(5):418, 2005.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XGeorges2005'></a>[41] <span class='bibsp'>   </span></span>B. Georges, J. M. Conil,
+         P. Cougot, J. F. Decun, M. Archambaud, T. Seguin, G. Chabanon,
+         C. Virenque, G. Houin, and S. Saivin. Cefepime in critically ill patients: Continuous infusion vs. an
+         intermittent dosing regimen. <span class='XCharter-Italic-tlf-t1-'>Int. J. Clin. Pharmacol. Ther.</span>,
+         43(8):360–369, 2005.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XKassel2018'></a>[42] <span class='bibsp'>   </span></span>Lynn E. Kassel, Edward T. Van
+         Matre, Charles J. Foster, Douglas N. Fish, Scott W. Mueller,
+         Deb S. Sherman, Michael F. Wempe, Robert MacLaren, Robert T. Neumann, and Tyree H. Kiser.
+         A Randomized Pharmacokinetic and Pharmacodynamic Evaluation of Every 8-Hour and 12-Hour
+         Dosing Strategies of Vancomycin and Cefepime in Neurocritically ill Patients. <span
+              class='XCharter-Italic-tlf-t1-'>Pharmacotherapy</span>, 38
+         (9):921–934, 2018.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XLipman1999'></a>[43] <span class='bibsp'>   </span></span>J. Lipman, S. C. Wallis, and
+         C. Rickard. Low plasma cefepime levels in critically ill septic
+         patients: Pharmacokinetic modeling indicates improved troughs with revised dosing. <span
+              class='XCharter-Italic-tlf-t1-'>Antimicrob.
+         </span><span class='XCharter-Italic-tlf-t1-'>Agents Chemother.</span>, 43(10):2559–2561, 1999.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XMalone2001'></a>[44] <span class='bibsp'>   </span></span>R. S. Malone, D. N. Fish,
+         E. Abraham, and I. Teitelbaum. Pharmacokinetics of cefepime during
+         continuous renal replacement therapy in critically ill patients. <span
+              class='XCharter-Italic-tlf-t1-'>Antimicrob. Agents Chemother.</span>, 45
+         (11):3148–3155, 2001.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XRoos2006'></a>[45] <span class='bibsp'>   </span></span>Juliana F. Roos, Jurgen Bulitta,
+         Jeflrey Lipman, and Carl M J Kirkpatrick.
+         Pharmacokinetic-pharmacodynamic rationale for cefepime dosing regimens in intensive care units.
+         <span class='XCharter-Italic-tlf-t1-'>J. Antimicrob. Chemother.</span>, 58(5):987–993, 2006.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XNicasio2009b'></a>[46] <span class='bibsp'>   </span></span>Anthony M. Nicasio, Robert E.
+         Ariano, Sheryl A. Zelenitsky, Aryun Kim, Jared L. Crandon,
+         Joseph L. Kuti, and David P. Nicolau. Population pharmacokinetics of high-dose, prolonged-infusion
+         cefepime in adult critically 111 patients with ventilator-associated pneumonia. <span
+              class='XCharter-Italic-tlf-t1-'>Antimicrob. Agents
+         </span><span class='XCharter-Italic-tlf-t1-'>Chemother.</span>, 53(4):1476–1481, 2009.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XRoberts2007'></a>[47] <span class='bibsp'>   </span></span>Jason A. Roberts, Steven A.R.
+         Webb, and Jeflrey Lipman. Cefepime versus ceftazidime:
+         considerations for empirical use in critically ill patients. <span class='XCharter-Italic-tlf-t1-'>Int.
+              J. Antimicrob. Agents</span>, 29(2):117–128,
+         2007.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XLipman2003'></a>[48] <span class='bibsp'>   </span></span>Jeflrey Lipman, Steven C. Wallis,
+         and Robert J. Boots. Cefepime versus cefpirome: The
+         importance of creatinine clearance. <span class='XCharter-Italic-tlf-t1-'>Anesth. Analg.</span>,
+         97(4):1149–1154, 2003.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XGeorges2008a'></a>[49] <span class='bibsp'>   </span></span>B. Georges, J.-M. Conil,
+         T. Seguin, E. Dieye, P. Cougot, J.-F. Decun, M. Lavit, K. Samii,
+         G. Houin, and S. Saivin. Cefepime in intensive care unit patients: Validation of a population
+         pharmacokinetic approach and influence of covariables. <span class='XCharter-Italic-tlf-t1-'>Int. J.
+              Clin. Pharmacol. Ther.</span>, 46(04):
+         157–164, apr 2008.
+
+
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XTaccone2010'></a>[50] <span class='bibsp'>   </span></span>Fabio Silvio Taccone,
+         Pierre-françois Laterre, Thierry Dugernier, Herbert Spapen, Isabelle
+         Delattre, Xavier Wittebole, Daniel De Backer, Brice Layeux, Pierre Wallemacq, Jean-louis Vincent,
+         and Frédérique Jacobs. Insuficient <span class='cmmi-10'>β</span>-lactam concentrations in the early
+         phase of severe sepsis
+         and septic shock. <span class='XCharter-Italic-tlf-t1-'>Crit. Care</span>, 14(R126):1–9, 2010.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XBarbhaiya1990'></a>[51] <span class='bibsp'>   </span></span>Rashmi H. Barbhaiya,
+         Catherine A. Knupp, S. Thomas Forgue, Gary R. Matzke, David R.P.
+         Guay, and Kenneth A. Pittman. Pharmacokinetics of cefepime in subjects with renal insuficiency.
+         <span class='XCharter-Italic-tlf-t1-'>Clin. Pharmacol. Ther.</span>, 48(3):268–276, 1990.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XZasowski2015'></a>[52] <span class='bibsp'>   </span></span>Evan Zasowski, Christopher M.
+         Bland, Vincent H. Tam, and Thomas P. Lodise. Identification
+         of optimal renal dosage adjustments for high-dose extended-infusion cefepime dosing regimens in
+         hospitalized patients. <span class='XCharter-Italic-tlf-t1-'>J. Antimicrob. Chemother.</span>,
+         70(3):877–881, 2015.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XJonckheere2016a'></a>[53] <span class='bibsp'>   </span></span>Stijn Jonckheere, Nikolaas De
+         Neve, Hans De Beenhouwer, Mario Berth, An Vermeulen, Jan Van
+         Bocxlaer, and Pieter Colin. A model-based analysis of the predictive performance of diflerent renal
+         function markers for cefepime clearance in the ICU. <span class='XCharter-Italic-tlf-t1-'>J. Antimicrob.
+              Chemother.</span>, 71(9):2538–2546,
+         2016.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XCronqvist1992'></a>[54] <span class='bibsp'>   </span></span>J. Cronqvist, I. Nilsson-Ehle,
+         B. Oqvist, and S. R. Norrby. Pharmacokinetics of cefepime
+         dihydrochloride arginine in subjects with renal impairment. <span
+              class='XCharter-Italic-tlf-t1-'>Antimicrob. Agents Chemother.</span>, 36(12):
+         2676–2680, 1992.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XTam2003'></a>[55] <span class='bibsp'>   </span></span>Vincent H Tam, Peggy S Mckinnon,
+         Ronda L Akins, George L Drusano, and Michael J Rybak.
+         Pharmacokinetics and Pharmacodynamics of Cefepime in Patients with Various Degrees of Renal
+         Function. <span class='XCharter-Italic-tlf-t1-'>Antimicrob Agents Chemother.</span>, 47(6):1853–1861,
+         2003.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XHamelin1993'></a>[56] <span class='bibsp'>   </span></span>Bettina A. Hamelin, Nathalie
+         Moore, Catherine A. Knupp, Michel Ruel, François Vallée, and
+         Marc LeBel. Cefepime Pharmacokinetics in Cystic Fibrosis. <span
+              class='XCharter-Italic-tlf-t1-'>Pharmacother. J. Hum. Pharmacol. Drug
+         </span><span class='XCharter-Italic-tlf-t1-'>Ther.</span>, 13(5):465–470, 1993.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XArguedas1992'></a>[57] <span class='bibsp'>   </span></span>Adriano G. Arguedas, Harris R.
+         Stutman, Margaret Zaleska, Catherine A. Knupp, Melvin I.
+         Marks, and Eliezer Nussbaum. Cefepime: Pharmacokinetics and Clinical Response in Patients With
+         Cystic Fibrosis. <span class='XCharter-Italic-tlf-t1-'>Am. J. Dis. Child.</span>, 146(7):797–802, 1992.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XHuls1993'></a>[58] <span class='bibsp'>   </span></span>C. E. Huls, R. A. Prince, D. K.
+         Seilheimer, and J. A. Bosso. Pharmacokinetics of cefepime in
+         cystic fibrosis patients. <span class='XCharter-Italic-tlf-t1-'>Antimicrob. Agents Chemother.</span>,
+         37(7):1414–1416, 1993.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XHan2006'></a>[59] <span class='bibsp'>   </span></span>Emily E. Han, Paul M. Beringer, Pål
+         Falch, Stan Louie, Purush Rao, Bertrand Shapiro, and Mark
+         Gill. Pilot study of continuous infusion cefepime in adult patients with cystic fibrosis. <span
+              class='XCharter-Italic-tlf-t1-'>J. Antimicrob.
+         </span><span class='XCharter-Italic-tlf-t1-'>Chemother.</span>, 57(5):1017–1019, 2006.
+
+
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XSprauten2002'></a>[60] <span class='bibsp'>   </span></span>Pål Falck Sprauten. <span
+              class='XCharter-Italic-tlf-t1-'>Pharmacokinetics and pharmacodynamics of continuous infusion of
+              cefepime in
+         </span><span class='XCharter-Italic-tlf-t1-'>cystic fibrosis patients , and stability of cefepime during
+              simulated continuous infusion administration</span>.
+         PhD thesis, University of Southern California USA, 2002.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XRhodes2017'></a>[61] <span class='bibsp'>   </span></span>Nathaniel J. Rhodes, Meagan E.
+         Grove, Patrick J. Kiel, J. Nicholas O’Donnell, Laura K. Whited,
+         Dusten T. Rose, David R. Jones, and Marc H. Scheetz. Population pharmacokinetics of cefepime
+         in febrile neutropenia: implications for dose-dependent susceptibility and contemporary dosing
+         regimens. <span class='XCharter-Italic-tlf-t1-'>Int. J. Antimicrob. Agents</span>, 50(3):482–486, 2017.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XWhited2016'></a>[62] <span class='bibsp'>   </span></span>Laura Whited, Meagan Grove, Dusten
+         Rose, Nathaniel J. Rhodes, Marc H. Scheetz, J. Nicholas
+         O’Donnell, Jessica Neeb, Kelli Thoele, David R. Jones, Christopher Lowe, Dawn Moore, and
+         Patrick J. Kiel. Pharmacokinetics of Cefepime in Patients with Cancer and Febrile Neutropenia in
+         the Setting of Hematologic Malignancies or Hematopoeitic Cell Transplantation. <span
+              class='XCharter-Italic-tlf-t1-'>Pharmacother. J.
+         </span><span class='XCharter-Italic-tlf-t1-'>Hum. Pharmacol. Drug Ther.</span>, 36(9):1003–1010, sep
+         2016.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XSime2015'></a>[63] <span class='bibsp'>   </span></span>Fekade Bruck Sime, Michael S.
+         Roberts, Ing Soo Tiong, Julia H. Gardner, Sheila Lehman,
+         Sandra L. Peake, Uwe Hahn, Morgyn S. Warner, and Jason A. Roberts. Adequacy of High-Dose
+         Cefepime Regimen in Febrile Neutropenic Patients with Hematological Malignancies. <span
+              class='XCharter-Italic-tlf-t1-'>Antimicrob.
+         </span><span class='XCharter-Italic-tlf-t1-'>Agents Chemother.</span>, 59(9):5463–5469, 2015.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XYamashita2016'></a>[64] <span class='bibsp'>   </span></span>Yoshiko Yamashita, Hidekazu
+         Kamiyama, Asuka Yamamoto, Hiroki Kanoh, Yoshimitsu Yuhki,
+         Akira Ueda, Yukari Kawamoto, Yoshikazu Gotoh, and Satoshi Yamamoto. Relationship between
+         PK/PD of Cefepime and Clinical Outcome in Febrile Neutropenic Patients with Normal Renal
+         Function. <span class='XCharter-Italic-tlf-t1-'>Yakugaku Zasshi</span>, 136(12):1641–1649, 2016.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XLee2003'></a>[65] <span class='bibsp'>   </span></span>Dong Gun Lee, Su Mi Choi, Jin Hong
+         Yoo, Dong Seok Yim, Kyun Seop Bae, Wan Shik Shin,
+         and Chun Choo Kim. Population pharmacokinetics of cefepime in febrile neutropenic patients. <span
+              class='XCharter-Italic-tlf-t1-'>J.
+         </span><span class='XCharter-Italic-tlf-t1-'>Korean Soc. Clin. Pharmacol. Ther.</span>, 11(1):23–29,
+         2003.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XOkamoto1991'></a>[66] <span class='bibsp'>   </span></span>Mark P. Okamoto, Alfred Chin,
+         Mark A. Gill, Albert E. Yellin, Thomas V. Berne, Peter N.R.
+         Heseltine, Maria D. Appleman, Catherine A. Knupp, and David A. Sclar. Analysis of Cefepime Tissue
+         Penetration Into Human Appendix. <span class='XCharter-Italic-tlf-t1-'>Pharmacother. J. Hum. Pharmacol.
+              Drug Ther.</span>, 11(5):353S–358S,
+         1991.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XZhu2019'></a>[67] <span class='bibsp'>   </span></span>Qiaoqiao Zhu, Xin Gao, Mark D. Brown,
+         Frank Eismont, and Weiyong Gu. Transport of
+         Vancomycin and Cefepime into Human Intervertebral Discs: Quantitative Analyses. <span
+              class='XCharter-Italic-tlf-t1-'>Spine (Phila. Pa.
+         </span><span class='XCharter-Italic-tlf-t1-'>1976).</span>, 44(17):E992–E999, 2019.
+    </p>
+    <p class='bibitem'><span class='biblabel'>
+              <a id='XAras2002'></a>[68] <span class='bibsp'>   </span></span>Cengiz Aras, Akif Ozdamar, Recep
+         Ozturk, Murat Karacorlu, and Sehirbay Ozkan. Intravitreal
+         penetration of cefepime after systemic administration to humans. <span
+              class='XCharter-Italic-tlf-t1-'>Ophthalmologica</span>, 216(4):261–264,
+         2002.
+    </p>
+</div>
+
+  <br><hr><br>
+     <center>
+          <object data="./Modulos/Blog/05_CefepimeRev/Rev_PK_Cefepim.pdf" type="application/pdf" width="90%" height="500px"
+               style="margin: auto;text-align: center; margin: 1%;">
+               <p>Su navegador web no tiene un plugin para PDF.
+                    Usted puede <a href="./Modulos/Blog/05_CefepimeRev/Rev_PK_Cefepim.pdf"> hacer click aquí para descargar
+                         el archivo PDF.</a></p>
+          </object>
+     </center>
+
+  <hr><br><br>
+  <!--Incluir Footer-->
+  <div data-include="footer"></div>
+  <script type="text/JavaScript">
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</body>
+
+</html>
