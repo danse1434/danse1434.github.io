@@ -5,12 +5,15 @@ $device_sizes: 320, 480, 768, 1024;
 
 // Contenedores de Texto Estándar para Blogs
 .bg-blog-0 {
-  $adapted_font_2: medium, large, large, larger;    // Tamaño de fuente H2
-  $adapted_font_3: medium, medium, medium, large;   // Tamaño de fuente H3
-  $adapted_font_4: small, small, medium, medium;   // Tamaño de fuente H3
-  $adapted_font_6: smaller, smaller, small, small;  // Tamaño de fuente normal
+  $adapted_font_2: medium, large, large, larger; // Tamaño de fuente H2
+  $adapted_font_3: medium, medium, medium, large; // Tamaño de fuente H3
+  $adapted_font_4: small, small, medium, medium; // Tamaño de fuente H3
+  $adapted_font_6: smaller, smaller, small, small; // Tamaño de fuente normal
 
-  p, ul {
+  p,
+  ul,
+  div.card-body,
+  button.btn-gray {
     font-size: medium;
     text-align: justify;
 
@@ -19,6 +22,17 @@ $device_sizes: 320, 480, 768, 1024;
         font-size: #{nth($adapted_font_6, $i)};
       }
     }
+  }
+
+  p.teorema {
+    background-color: dodgerblue;
+    border-color: dodgerblue;
+    color: white;
+    padding: 25px;
+    border-radius: 25px;
+    border-width: 3px;
+    border-style: solid;
+    margin-top: 20px;
   }
 
   h2 {

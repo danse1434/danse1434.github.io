@@ -345,21 +345,46 @@ div.col-md-4 {
         font-size: 13px; } }
 
 /* CONTENEDORES PARA BLOGS */
-.bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a, .bg-blog-0 ul {
+.bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a,
+.bg-blog-0 ul,
+.bg-blog-0 div.card-body,
+.bg-blog-0 button.btn-gray {
   font-size: medium;
   text-align: justify; }
   @media screen and (max-width: 1024px) {
-    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a, .bg-blog-0 ul {
+    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a,
+    .bg-blog-0 ul,
+    .bg-blog-0 div.card-body,
+    .bg-blog-0 button.btn-gray {
       font-size: small; } }
   @media screen and (max-width: 768px) {
-    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a, .bg-blog-0 ul {
+    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a,
+    .bg-blog-0 ul,
+    .bg-blog-0 div.card-body,
+    .bg-blog-0 button.btn-gray {
       font-size: small; } }
   @media screen and (max-width: 480px) {
-    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a, .bg-blog-0 ul {
+    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a,
+    .bg-blog-0 ul,
+    .bg-blog-0 div.card-body,
+    .bg-blog-0 button.btn-gray {
       font-size: smaller; } }
   @media screen and (max-width: 320px) {
-    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a, .bg-blog-0 ul {
+    .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a,
+    .bg-blog-0 ul,
+    .bg-blog-0 div.card-body,
+    .bg-blog-0 button.btn-gray {
       font-size: smaller; } }
+
+.bg-blog-0 p.teorema, .bg-blog-0 .bg-4 a.teorema, .bg-4 .bg-blog-0 a.teorema {
+  background-color: dodgerblue;
+  border-color: dodgerblue;
+  color: white;
+  padding: 25px;
+  border-radius: 25px;
+  border-width: 3px;
+  border-style: solid;
+  margin-top: 20px; }
 
 .bg-blog-0 h2 {
   font-size: larger; }
