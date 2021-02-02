@@ -1,5 +1,5 @@
 .slidecontainer {
-  width: 60%; /* Width of the outside container */
+  width: 100%; /* Width of the outside container */
 }
 /* The slider itself */
 .slider {
@@ -36,9 +36,8 @@
   cursor: pointer; /* Cursor on hover */
 }
 
+/* Estilo de matriz de inputación de datos */
 .cellMat {
-  height: 3rem;
-  width: 3rem;
   padding: 8px;
   position: relative;
   vertical-align: middle;
@@ -63,11 +62,41 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 .cellStat {
-  height: 3rem;
-  width: 3rem;
   position: relative;
   vertical-align: middle;
   text-align: center;
   font-family: arial, sans-serif;
-  font-size: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+  .cellMat,
+  .cellStat {
+    font-size: small;
+    height: 3rem;
+    width: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cellMat,
+  .cellStat {
+    font-size: small;
+    height: 3rem;
+    width: 3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cellMat,
+  .cellStat {
+    font-size: smaller;
+    height: 3rem;
+    width: 3rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .cellMat,
+  .cellStat {
+    font-size: smaller;
+    height: 2rem;
+    width: 2rem;
+  }
 }

@@ -350,7 +350,8 @@ div.col-md-4 {
 .bg-blog-0 div.card-body,
 .bg-blog-0 button.btn-gray {
   font-size: medium;
-  text-align: justify; }
+  text-align: justify;
+  overflow: auto; }
   @media screen and (max-width: 1024px) {
     .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a,
     .bg-blog-0 ul,

@@ -26,14 +26,12 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" ></script>
     
     <script src="https://d3js.org/d3.v4.min.js"></script>
 
     <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg" />
-    <link rel="stylesheet" href="/Modulos/Blog/06_Markov_Decission_Process/css/estilo.css?20210202">
-    <link rel="stylesheet" type="text/css" href=".\CSS\estilos_blog.css?20210202"/>
+    <link rel="stylesheet" href="/Modulos/Blog/06_Markov_Decission_Process/css/estilo.css?20210201">
+    <link rel="stylesheet" type="text/css" href=".\CSS\estilos_blog.css?20210201"/>
     <script type="text/javascript">
       $(function () {
         var includes = $("[data-include]");
@@ -42,7 +40,18 @@
           $(this).load(file);
         });
       });
-    </script>
+      </script>
+    <!--Configuración MathJax -->
+      <!-- <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          displayAlign: "right";
+          CommonHTML: { linebreaks: { automatic: true } },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }            
+      });
+    </script> -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" ></script>
   </head>
 
   <body>
@@ -98,6 +107,7 @@
         <br>
         <div class="row">
           <div class="col-md">
+            
             <table>
               <tr>
                 <td class="cellStat"></td>
@@ -146,7 +156,7 @@
             <button class="btn btn-gray" id="Configuracion">Reinicio</button>
           </div>
           <div class="col-md">
-            <div class="container container-fluid" style="width: 60%">
+            <div class="container container-fluid" style="width: 100%">
               <div id="graficoProcesoMarkov"></div>
             </div>
             <br>
