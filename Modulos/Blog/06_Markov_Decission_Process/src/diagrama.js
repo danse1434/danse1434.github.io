@@ -97,16 +97,35 @@ function simulacion(timeSteps, transitionMatrix) {
     .x((d, i) => {return x_scale(i + 1);})
     .y((d, i) => {return y_scale(d[2]);})
     );
-  
-  svg.append("line").datum(matVEC)
-    .attr('x1', (d,i) => {return x_scale( convertRange([0,1], [d3.min(i)+1, d3.max(i)+1 ], 0.5)   )})
-    .attr('y1', (d,i) => {return y_scale( convertRange([0,1], [d3.min(d[1]), d3.max(d[1])], 0.6)   )})
-    .attr('x2', (d,i) => {return x_scale( convertRange([0,1], [d3.min(i)+5, d3.max(i)+5 ], 0.5)   )})
-    .attr('y2', (d,i) => {return y_scale( convertRange([0,1], [d3.min(d[1]), d3.max(d[1])], 0.6)   )})
-    .attr('stroke', 'red').attr('stroke-width', 5);
+
+  let legendObject = [
+    {pos: 0, y: 0.20, xmin:0.7, xmax:0.8, color: 'steelblue', text: 'Sanos'},
+    {pos: 1, y: 0.15, xmin:0.7, xmax:0.8, color: 'green', text: 'Enfermos'},
+    {pos: 2, y: 0.10, xmin:0.7, xmax:0.8, color: 'red', text: 'Muertos'}
+  ]
+  for (let i = 0; i < legendObject.length; i++) {
+    const element = legendObject[i];
+    // console.log(element);
+
+    svg.append('line')
+      .attr('x1', (d,i) => {return x_scale( convertRange([0,1], [1, timeSteps+1 ], element['xmin'] ) )})
+      .attr('x2', (d,i) => {return x_scale( convertRange([0,1], [1, timeSteps+1 ], element['xmax'] ) )})
+      .attr('y1', (d,i) => {return y_scale( convertRange([0,1], [0, 1E7], element['y'] ))})
+      .attr('y2', (d,i) => {return y_scale( convertRange([0,1], [0, 1E7], element['y'] ))})
+      .attr('stroke', element['color']).attr('stroke-width', 5);
+
+    svg.append('text')
+      .attr('x', (d,i) => {return x_scale( convertRange([0,1], [1, timeSteps+1 ], element['xmax']+0.02 ) )} )
+      .attr('y', (d,i) => {return y_scale( convertRange([0,1], [0, 1E7], element['y'] ))} )
+      .text(element['text'])
+      .attr('color', "black")
+      .attr("font-family", "sans-serif")
+      .style("font-size", "16px")
+      .attr("alignment-baseline","middle");
+  }
 }
 
-console.log(convertRange([0,1], [0,30], 0.6));
+// console.log(convertRange([0,1], [0,30], 0.6));
 // console.log(convertRange({'old_values': [0,1], 'new_values': [0,30], 'value': 0.6}));
 
 simulacion(30, matA);
