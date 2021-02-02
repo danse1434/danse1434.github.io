@@ -26,12 +26,18 @@
       crossorigin="anonymous"
     ></script>
 
-    
     <script src="https://d3js.org/d3.v4.min.js"></script>
 
     <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg" />
-    <link rel="stylesheet" href="/Modulos/Blog/06_Markov_Decission_Process/css/estilo.css?20210201">
-    <link rel="stylesheet" type="text/css" href=".\CSS\estilos_blog.css?20210201"/>
+    <link
+      rel="stylesheet"
+      href="/Modulos/Blog/06_Markov_Decission_Process/css/estilo.css?20210201"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href=".\CSS\estilos_blog.css?20210201"
+    />
     <script type="text/javascript">
       $(function () {
         var includes = $("[data-include]");
@@ -40,9 +46,9 @@
           $(this).load(file);
         });
       });
-      </script>
+    </script>
     <!--Configuración MathJax -->
-      <!-- <script type="text/x-mathjax-config">
+    <!-- <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
           displayAlign: "right";
           CommonHTML: { linebreaks: { automatic: true } },
@@ -51,7 +57,11 @@
       });
     </script> -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" ></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
   </head>
 
   <body>
@@ -78,37 +88,37 @@
         >).
       </p>
     </div>
-    <br>
+    <br />
     <div class="container bg-blog-0">
-      <h2> 1. Introducción </h2>
+      <h2>1. Introducción</h2>
       <h3>Procesos de Markov</h3>
       <p>
-        Los procesos de Markov discretos constan de una serie finita de estados 
-        que pueden cambiar. La probabilidad del cambio de un estado \(s\) a 
-        un \(s'\) tras un paso de tiempo \(t\) se le conoce como 
-        probabilidad de transición \(p(s'|s)\). Estas probabilidades se pueden
-        representar en una matriz de transición para todos los estados. Por lo 
-        general los procesos de Markov convergen a un estado determinado, ya que 
-        siguen la propiedad de Markov.
+        Los procesos de Markov discretos constan de una serie finita de estados
+        que pueden cambiar. La probabilidad del cambio de un estado \(s\) a un
+        \(s'\) tras un paso de tiempo \(t\) se le conoce como probabilidad de
+        transición \(p(s'|s)\). Estas probabilidades se pueden representar en
+        una matriz de transición para todos los estados. Por lo general los
+        procesos de Markov convergen a un estado determinado, ya que siguen la
+        propiedad de Markov.
       </p>
       <p class="teorema">
-        La probabilidad depende sólo del estado precedente, el estado debe 
+        La probabilidad depende sólo del estado precedente, el estado debe
         incluir toda la información para realizar una predicción a futuro.
       </p>
       <div class="container container-fluid">
         <p>
-          A continuación, se muestra un ejemplo de una cadena de Markov que consiste en
-          tres estados, un paciente tiene diferentes probabilidades de encontrarse en un 
-          estado en la matriz en los nombres de fila y pasar a otro estado en los nombres
-          de las columnas. Los estados son sano, enfermo o muerto, en negro se muestran 
-          algunas probabilidades que son cero (p.ej. revivir) este tipo de estados se les 
-          conoce como absorbentes.
+          A continuación, se muestra un ejemplo de una cadena de Markov que
+          consiste en tres estados, un paciente tiene diferentes probabilidades
+          de encontrarse en un estado en la matriz en los nombres de fila y
+          pasar a otro estado en los nombres de las columnas. Los estados son
+          sano, enfermo o muerto, en negro se muestran algunas probabilidades
+          que son cero (p.ej. revivir) este tipo de estados se les conoce como
+          absorbentes.
         </p>
-        <br>
+        <br />
         <div class="row">
-          <div class="col-md">
-            
-            <table>
+          <div class="col-sm-5">
+            <table style="max-width: 100%; table-layout: fixed">
               <tr>
                 <td class="cellStat"></td>
                 <td class="cellStat">Sano</td>
@@ -142,41 +152,66 @@
               <tr>
                 <td class="cellStat">Muerto</td>
                 <td class="cellMat" style="background-color: black">
-                  <input type="number" class="cellMat" style="background-color: black" value="0.0" disabled=true/>
+                  <input
+                    type="number"
+                    class="cellMat"
+                    style="background-color: black"
+                    value="0.0"
+                    disabled="true"
+                  />
                 </td>
                 <td class="cellMat" style="background-color: black">
-                  <input type="number" class="cellMat" style="background-color: black" value="0.0" disabled=true/>
+                  <input
+                    type="number"
+                    class="cellMat"
+                    style="background-color: black"
+                    value="0.0"
+                    disabled="true"
+                  />
                 </td>
                 <td class="cellMat">
-                  <input type="number" class="cellMat" value="1.0" disabled=true/>
+                  <input
+                    type="number"
+                    class="cellMat"
+                    value="1.0"
+                    disabled="true"
+                  />
                 </td>
               </tr>
             </table>
-            <br>
+            <br />
             <button class="btn btn-gray" id="Configuracion">Reinicio</button>
           </div>
-          <div class="col-md">
+          <div class="col-sm-7">
             <div class="container container-fluid" style="width: 100%">
               <div id="graficoProcesoMarkov"></div>
             </div>
-            <br>
-            <script src="Modulos/Blog/06_Markov_Decission_Process/src/diagrama.js?20210202" type="module"></script>
-        
+            <br />
+            <script
+              src="Modulos/Blog/06_Markov_Decission_Process/src/diagrama.js?20210202"
+              type="module"
+            ></script>
+
             <div class="slidecontainer">
-              <input type="range" min="5" max="50" value="30" class="slider" id="tiemposSimulacion"/>
+              <input
+                type="range"
+                min="5"
+                max="50"
+                value="30"
+                class="slider"
+                id="tiemposSimulacion"
+              />
             </div>
             <p id="tiempoSimulacionConfiguracion"></p>
           </div>
         </div>
       </div>
 
-      <br>
+      <br />
       <h3>Procesos de Recompensa de Markov</h3>
-      <p>
-        Los MRP...
-      </p>
+      <p>Los MRP...</p>
     </div>
-    <br>
+    <br />
     <div class="container bg-blog-0">
       <h2>2. Procesos de decisión de Markov Finitos</h2>
       <p>
@@ -185,9 +220,12 @@
         probabilidad de tener un estado y una recompensada, dada la elección de
         una acción dado un estado \(p(s',r|s,a)\). Así mismo se pueden describir
         otras probabilidades relacionadas a partir de la expectación. La
-        definición formal de la función dinámica es: $$p(s', r|s, a) \doteq
-        \mathbb{P}\left\{S_t = s', R_t = r | S_{t-1}=s, A_{t-1}=a\right\}$$ Para
-        la función dinámica se cumple la siguiente propiedad \(\sum_{s'\in
+        definición formal de la función dinámica es:
+        <span class="equation"
+          >$$p(s', r|s, a) \doteq \mathbb{P}\left\{S_t = s', R_t = r |
+          S_{t-1}=s, A_{t-1}=a\right\}$$</span
+        >
+        Para la función dinámica se cumple la siguiente propiedad \(\sum_{s'\in
         S}{\sum_{r\in R}{p(s', r|s, a) }} = 1\) es decir la suma de todas las
         probabilidades para todas las posibles acciones subsecuentes \(s' \in
         \mathcal{S}\) y recompensas \(r \in \mathcal{R}\) es 1 condicionada a la
@@ -200,15 +238,21 @@
       </p>
       <ul>
         <li>
-          Probabilidad de transición de estado: $$\begin{aligned} p(s'|s,a)
-          &\doteq \mathbb{P}\left\{\left.S_t = s' \right| S_{t-1}=s, A_{t-1} =
-          a\right\}\\ &=\sum_{r \in R}{p(s',r|s,a)} \end{aligned}$$
+          Probabilidad de transición de estado:
+          <span class="equation"
+            >$$\begin{aligned} p(s'|s,a) &\doteq \mathbb{P}\left\{\left.S_t = s'
+            \right| S_{t-1}=s, A_{t-1} = a\right\}\\ &=\sum_{r \in
+            R}{p(s',r|s,a)} \end{aligned}$$</span
+          >
         </li>
         <br />
         <li>
-          Recompensa esperada para pares estado-acción: $$\begin{aligned}r(s,a)
-          &\doteq \mathbb{E}\left[R_t|S_{t-1}=s, A_{t-1}=a\right]\\ &=\sum_{r
-          \in R}{r \cdot \sum_{s' \in S}{p(s',r|s,a)}}\end{aligned} $$
+          Recompensa esperada para pares estado-acción:
+          <span class="equation"
+            >$$\begin{aligned}r(s,a) &\doteq \mathbb{E}\left[R_t|S_{t-1}=s,
+            A_{t-1}=a\right]\\ &=\sum_{r \in R}{r \cdot \sum_{s' \in
+            S}{p(s',r|s,a)}}\end{aligned} $$</span
+          >
           <button
             class="btn btn-gray"
             type="button"
@@ -221,21 +265,25 @@
           </button>
           <div class="collapse" id="collapse_21">
             <div class="card card-body">
-              $$\begin{aligned} r(s,a) &\doteq \mathbb{E}\left[R_t|S_{t-1}=s,
-              A_{t-1}=a\right]\\ &=\sum_{r \in R}{r \cdot \mathbb{P}\left\{
-              R_t=r|S_{t-1}=s, A_{t-1}=a \right\}}\\ &=\sum_{r \in R}{r \cdot
-              \sum_{s' \in S}{\mathbb{P}\left\{ R_t=r, S_t=s'|S_{t-1}=s,
-              A_{t-1}=a \right\}}}\\ &=\sum_{r \in R}{r \cdot \sum_{s' \in
-              S}{p(s',r|s,a)}} \end{aligned}$$
+              <span class="equation"
+                >$$\begin{aligned} r(s,a) &\doteq \mathbb{E}\left[R_t|S_{t-1}=s,
+                A_{t-1}=a\right]\\ &=\sum_{r \in R}{r \cdot \mathbb{P}\left\{
+                R_t=r|S_{t-1}=s, A_{t-1}=a \right\}}\\ &=\sum_{r \in R}{r \cdot
+                \sum_{s' \in S}{\mathbb{P}\left\{ R_t=r, S_t=s'|S_{t-1}=s,
+                A_{t-1}=a \right\}}}\\ &=\sum_{r \in R}{r \cdot \sum_{s' \in
+                S}{p(s',r|s,a)}} \end{aligned}$$</span
+              >
             </div>
           </div>
         </li>
         <br />
         <li>
           Recompensa esperada para estados, acciones y estados subsecuentes:
-          $$\begin{aligned} r(s,a,s') &\doteq \mathbb{E}\left[R_t|S_{t-1}=s,
-          A_{t-1}=a,S_t=s'\right]\\ &= \sum_{r \in R}{r \cdot
-          \frac{p(s',r|s,a)}{p(s'|s,a)}} \end{aligned}$$
+          <span class="equation"
+            >$$\begin{aligned} r(s,a,s') &\doteq \mathbb{E}\left[R_t|S_{t-1}=s,
+            A_{t-1}=a,S_t=s'\right]\\ &= \sum_{r \in R}{r \cdot
+            \frac{p(s',r|s,a)}{p(s'|s,a)}} \end{aligned}$$</span
+          >
           <button
             class="btn btn-gray"
             type="button"
@@ -249,13 +297,19 @@
           <div class="collapse" id="collapse_22">
             <div class="card card-body">
               Se debe tener en cuenta la regla del producto aplicada en la
-              función dinámica: $$\color{blue} p(s',r|s,a) = p(s'|s,a) \cdot
-              p(r|s,a,s')$$ $$\begin{aligned} r(s,a,s') &\doteq
-              \mathbb{E}\left[R_t|S_{t-1}=s, A_{t-1}=a,S_t=s'\right]\\ &=\sum_{r
-              \in R}{r \cdot \mathbb{P}\left\{ R_t=r|S_{t-1}=s, A_{t-1}=a,
-              S_t=s' \right\}}\\ &=\sum_{r \in R}{r \cdot p(r|s,a,s')}\\ &=
-              \sum_{r \in R}{r \cdot \frac{p(s',r|s,a)}{p(s'|s,a)}}
-              \end{aligned}$$
+              función dinámica:
+              <span class="equation"
+                >$$\color{blue} p(s',r|s,a) = p(s'|s,a) \cdot
+                p(r|s,a,s')$$</span
+              >
+              <span class="equation"
+                >$$\begin{aligned} r(s,a,s') &\doteq
+                \mathbb{E}\left[R_t|S_{t-1}=s, A_{t-1}=a,S_t=s'\right]\\
+                &=\sum_{r \in R}{r \cdot \mathbb{P}\left\{ R_t=r|S_{t-1}=s,
+                A_{t-1}=a, S_t=s' \right\}}\\ &=\sum_{r \in R}{r \cdot
+                p(r|s,a,s')}\\ &= \sum_{r \in R}{r \cdot
+                \frac{p(s',r|s,a)}{p(s'|s,a)}} \end{aligned}$$</span
+              >
             </div>
           </div>
         </li>
@@ -284,10 +338,11 @@
         \(t\) (\(\left\{R_k\right\}\)) por parte la interacción entre el agente
         y el ambiente: \(R_{t+1}, R_{t+2}, R_{t+3}, \cdots\). Se puede definir
         al <b>retorno esperado</b> (\(G_t\)) como la suma de recompensas
-        esperadas tras el paso \(t\), de la siguiente manera: $$G_t \doteq
-        R_{t+1} + R_{t+2} + R_{t+3} + \cdots + R_{T}$$ Donde \(T\) es el tiempo
-        en el cual ocurre el paso de tiempo final, el cual es aleatorio. Se
-        deben considerar dos tipos de tareas de aprendizaje RL:
+        esperadas tras el paso \(t\), de la siguiente manera:
+        <span class="equation" class="equation">$$G_t \doteq R_{t+1} + R_{t+2} + R_{t+3} + \cdots + R_{T}$$</span>
+        Donde \(T\) es el tiempo en el cual ocurre el paso de tiempo final, el
+        cual es aleatorio. Se deben considerar dos tipos de tareas de
+        aprendizaje RL:
       </p>
       <ul>
         <li>
@@ -302,9 +357,12 @@
       </ul>
       <p>
         En muchos problemas de aprendizaje es conveniente la utilización de
-        descuento en el retorno esperado: $$G_t = R_{t+1} + \gamma R_{t+2} +
-        \gamma^2 R_{t+3} + \cdots = \sum_{k=0}^{\infty}{\gamma^K R_{t+k+1}}$$ La
-        aplicación del descuento permite modular cuanta visión a largo plazo
+        descuento en el retorno esperado:
+        <span class="equation"
+          >$$G_t = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \cdots =
+          \sum_{k=0}^{\infty}{\gamma^K R_{t+k+1}}$$</span
+        >
+        La aplicación del descuento permite modular cuanta visión a largo plazo
         tiene el agente. Si la tasa de descuento (\(\gamma\)) tiene un valor
         cercano a cero el agente sólo tiene en cuenta las recompensas a corto
         plazo, pero si esta tiene un valor cercano a 1 le da el mismo peso a
@@ -315,13 +373,16 @@
 
       <p>
         La función de retorno también se puede expresar de forma recursiva
-        siguiendo el siguiente razonamiento: $$\begin{aligned} G_t &= R_{t+1} +
-        \gamma R_{t+2} + \gamma^2 R_{t+3} + \cdots \\ &= R_{t+1} + \gamma \left(
-        R_{t+2} + \gamma R_{t+3} + \cdots \right ) \\ &= R_{t+1} + \gamma
-        G_{t+1} \end{aligned}$$ Una formulación general del retorno para los dos
-        tipos de tareas se puede hacer de la siguiente manera: $$G_{T} \doteq
-        \sum_{K=t+1}^{T}{\gamma^{K-t-1} R_K}$$ La única condición es que sí \(T
-        = \infty\), entonces \(\gamma \neq 1\).
+        siguiendo el siguiente razonamiento:
+        <span class="equation"
+          >$$\begin{aligned} G_t &= R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3}
+          + \cdots \\ &= R_{t+1} + \gamma \left( R_{t+2} + \gamma R_{t+3} +
+          \cdots \right ) \\ &= R_{t+1} + \gamma G_{t+1} \end{aligned}$$</span
+        >
+        Una formulación general del retorno para los dos tipos de tareas se
+        puede hacer de la siguiente manera:
+        <span class="equation" class="equation">$$G_{T} \doteq \sum_{K=t+1}^{T}{\gamma^{K-t-1} R_K}$$</span> La
+        única condición es que sí \(T = \infty\), entonces \(\gamma \neq 1\).
       </p>
     </div>
     <br />
@@ -353,17 +414,25 @@
         Se pueden formular <b>funciones de valor</b> para
         <i>estados</i> (\(v_\pi\)) y para pares
         <i>acción-estado</i> (\(q_\pi\)). Para MDP se puede definir \(v_{\pi}\)
-        de la siguiente manera: $$v_{\pi} \doteq
-        \mathbb{E}_{\pi}\left[G_t|S_t=s\right] =
-        \mathbb{E}_{\pi}\left[\left.\sum_{k=0}^{\infty}{\gamma^K R_{t+k+1}}
-        \right|S_t=s\right],~~\forall s \in S$$ De manera similar se puede
-        definir a \(q_{\pi}\) de la siguiente manera: $$q_{\pi} \doteq
-        \mathbb{E}_\pi \left[G_t | S_t=s, A_t=a\right] = \mathbb{E}_\pi
-        \left[\left.\sum_{k=0}^{\infty}{\gamma^K R_{t+k+1}} \right| S_t=s, A_t=a
-        \right]$$ La función \(v_{\pi}\) se puede expresar en términos de
-        \(q_{\pi}\) y \(\pi\) de la siguiente manera: $$\begin{aligned}
-        v_{\pi}(s) &= \mathbb{E}_{\pi}\left[G_t|S_t=s\right]\\
-        &=\sum_{a}{\pi(a|s) \cdot q_{\pi}(s,a)}\\ \end{aligned}$$
+        de la siguiente manera:
+        <span class="equation"
+          >$$v_{\pi} \doteq \mathbb{E}_{\pi}\left[G_t|S_t=s\right] =
+          \mathbb{E}_{\pi}\left[\left.\sum_{k=0}^{\infty}{\gamma^K R_{t+k+1}}
+          \right|S_t=s\right],~~\forall s \in S$$</span
+        >
+        De manera similar se puede definir a \(q_{\pi}\) de la siguiente manera:
+        <span class="equation"
+          >$$q_{\pi} \doteq \mathbb{E}_\pi \left[G_t | S_t=s, A_t=a\right] =
+          \mathbb{E}_\pi \left[\left.\sum_{k=0}^{\infty}{\gamma^K R_{t+k+1}}
+          \right| S_t=s, A_t=a \right]$$</span
+        >
+        La función \(v_{\pi}\) se puede expresar en términos de \(q_{\pi}\) y
+        \(\pi\) de la siguiente manera:
+        <span class="equation"
+          >$$\begin{aligned} v_{\pi}(s) &=
+          \mathbb{E}_{\pi}\left[G_t|S_t=s\right]\\ &=\sum_{a}{\pi(a|s) \cdot
+          q_{\pi}(s,a)}\\ \end{aligned}$$</span
+        >
       </p>
       <button
         class="btn btn-gray"
@@ -377,22 +446,27 @@
       </button>
       <div class="collapse" id="collapse_41">
         <div class="card card-body">
-          $$\begin{aligned} v_{\pi}(s) &=
-          \mathbb{E}_{\pi}\left[G_t|S_t=s\right]\\
-          &=\sum_{g_t}{p(g_t|S_t=s)g_t}\\
-          &=\sum_{g_t}\sum_{a}{p(g_t,a|S_t=s)g_t}\\ &=\sum_{a}{p(a|S_t=s)}
-          \times \sum_{g_t}{p(g_t|S_t=s,A_t=a) g_t}\\ &=\sum_{a}{p(a|S_t=s)}
-          \times \mathbb{E}_{\pi}\left[G_t|S_t=s, A_t=a\right]\\
-          &=\sum_{a}{\pi(a|s) \cdot q_{\pi}(s,a)} \end{aligned}$$
+          <span class="equation"
+            >$$\begin{aligned} v_{\pi}(s) &=
+            \mathbb{E}_{\pi}\left[G_t|S_t=s\right]\\
+            &=\sum_{g_t}{p(g_t|S_t=s)g_t}\\
+            &=\sum_{g_t}\sum_{a}{p(g_t,a|S_t=s)g_t}\\ &=\sum_{a}{p(a|S_t=s)}
+            \times \sum_{g_t}{p(g_t|S_t=s,A_t=a) g_t}\\ &=\sum_{a}{p(a|S_t=s)}
+            \times \mathbb{E}_{\pi}\left[G_t|S_t=s, A_t=a\right]\\
+            &=\sum_{a}{\pi(a|s) \cdot q_{\pi}(s,a)} \end{aligned}$$</span
+          >
         </div>
       </div>
       <br />
       <p>
         Así mismo la función \(q_{\pi}\) se puede expresar en términos de
         \(v_{\pi}\) y la función dinámica, de la siguiente manera:
-        $$\begin{aligned} q_{\pi}(s,a) &=
-        \mathbb{E}_{\pi}\left[G_t|S_t=s,A_t=a\right]\\ &=\sum_{s',r}{p(s',r|s,a)
-        \left[r + \gamma v_\pi(s')\right]} \end{aligned}$$
+        <span class="equation"
+          >$$\begin{aligned} q_{\pi}(s,a) &=
+          \mathbb{E}_{\pi}\left[G_t|S_t=s,A_t=a\right]\\
+          &=\sum_{s',r}{p(s',r|s,a) \left[r + \gamma v_\pi(s')\right]}
+          \end{aligned}$$</span
+        >
       </p>
 
       <button
@@ -407,25 +481,29 @@
       </button>
       <div class="collapse" id="collapse_42">
         <div class="card card-body">
-          $$\begin{aligned} q_{\pi}(s,a) &=
-          \mathbb{E}_{\pi}\left[G_t|S_t=s,A_t=a\right]\\
-          &=\sum_{s',r,g_t}{p(s',r,g_t|s,a) \cdot g_t} \\
-          &=\sum_{s',r,g_t}{p(s',r,g_t|s,a) \cdot \left[r + \gamma
-          g_{t+1}\right]} \\ &=\sum_{s',r}{p(s',r|s,a) \sum_{g_t} p(g_t|s,a)
-          \cdot \left[r + \gamma g_{t+1}\right]} \\ &=\sum_{s',r}{p(s',r|s,a)
-          \left[r + \gamma \sum_{g_t}{p(g_t|s')g_t} \right]}\\
-          &=\sum_{s',r}{p(s',r|s,a) \left[r + \gamma
-          \mathbb{E}_{\pi}\left[G_t|S_t=s'\right] \right]}\\
-          &=\sum_{s',r}{p(s',r|s,a) \left[r + \gamma v_\pi(s')\right]}
-          \end{aligned}$$
+          <span class="equation"
+            >$$\begin{aligned} q_{\pi}(s,a) &=
+            \mathbb{E}_{\pi}\left[G_t|S_t=s,A_t=a\right]\\
+            &=\sum_{s',r,g_t}{p(s',r,g_t|s,a) \cdot g_t} \\
+            &=\sum_{s',r,g_t}{p(s',r,g_t|s,a) \cdot \left[r + \gamma
+            g_{t+1}\right]} \\ &=\sum_{s',r}{p(s',r|s,a) \sum_{g_t} p(g_t|s,a)
+            \cdot \left[r + \gamma g_{t+1}\right]} \\ &=\sum_{s',r}{p(s',r|s,a)
+            \left[r + \gamma \sum_{g_t}{p(g_t|s')g_t} \right]}\\
+            &=\sum_{s',r}{p(s',r|s,a) \left[r + \gamma
+            \mathbb{E}_{\pi}\left[G_t|S_t=s'\right] \right]}\\
+            &=\sum_{s',r}{p(s',r|s,a) \left[r + \gamma v_\pi(s')\right]}
+            \end{aligned}$$</span
+          >
         </div>
       </div>
       <br />
       <p>
         Por último, se puede obtener una expresión para obtener el valor
         esperado para la recompensa en \(t+1\) dado un estado:
-        $$\mathbb{E}{\left [ R_{t+1}|S_t = s \right ]} =
-        \sum_{a}{\pi(a|S_t=s)}\sum_{s',r}{p(s',r|s,a)}$$
+        <span class="equation"
+          >$$\mathbb{E}{\left [ R_{t+1}|S_t = s \right ]} =
+          \sum_{a}{\pi(a|S_t=s)}\sum_{s',r}{p(s',r|s,a)}$$</span
+        >
       </p>
 
       <p>
@@ -448,11 +526,14 @@
         Una propiedad fundamental de las funciones de valor usadas en RL y
         programación dinámica, es que se pueden expresar como relaciones
         recursivas. Por ejemplo, para la función de valor de estado se tiene:
-        $$\begin{aligned} v_{\pi}(s) &\doteq \mathbb{E}_{\pi} \left[ G_t | S_t=s
-        \right]\\ &= \mathbb{E}_{\pi} \left[ R_{t+1} + \gamma G_{t+1} | S_t=s
-        \right]\\ &= \sum_{a}{\pi(a|s)}\sum_{s'}\sum_{r}{p(s',r|s,a)\left(r +
-        \gamma\mathbb{E}_{\pi}{\left[G_{t+1}|S_{t+1}=s'\right]}\right)}
-        \end{aligned}$$
+        <span class="equation"
+          >$$\begin{aligned} v_{\pi}(s) &\doteq \mathbb{E}_{\pi} \left[ G_t |
+          S_t=s \right]\\ &= \mathbb{E}_{\pi} \left[ R_{t+1} + \gamma G_{t+1} |
+          S_t=s \right]\\ &=
+          \sum_{a}{\pi(a|s)}\sum_{s'}\sum_{r}{p(s',r|s,a)\left(r +
+          \gamma\mathbb{E}_{\pi}{\left[G_{t+1}|S_{t+1}=s'\right]}\right)}
+          \end{aligned}$$</span
+        >
       </p>
       <button
         class="btn btn-gray"
@@ -466,33 +547,38 @@
       </button>
       <div class="collapse" id="collapse_51">
         <div class="card card-body">
-          $$\begin{aligned} v_{\pi}(s) &\doteq \mathbb{E}_{\pi} \left[ G_t |
-          S_t=s \right]\\ &= \mathbb{E}_{\pi} \left[\left. R_{t+1} +
-          \gamma\sum_{k=0}^{\infty}{\gamma^k R_{(t+1)+k+1}} \right| S_t=s
-          \right]\\ &= \mathbb{E}_{\pi} \left[\left. R_{t+1} + \gamma G_{t+1}
-          \right| S_t = s\right]\\ &= \mathbb{E}_{\pi} \left[\left. R_{t+1} +
-          \gamma \mathbb{E}_{\pi} \left[G_{t+1}|S_{t+1}\right] \right| S_t =
-          s\right]\\ &= \mathbb{E}_{\pi} \left[\left. R_{t+1} + \gamma
-          v_{\pi}(S_{t+1}) \right| S_t = s\right]\\ &=
-          \sum_{s',a,r}p(a,r,s'|s)\left[r + \gamma v_{\pi}(s') \right]\\ &=
-          \sum_{a} \pi(a|s) \sum_{r,s'} p(r|s,a)p(s'|s,a) \left[r + \gamma
-          v_{\pi}(s') \right] \\ &=\sum_{a}{\pi(a|s)}\sum_{r}{p(r|s,a) r} +
-          \gamma\sum_{a}{\pi(a|s)}\sum_{s'}{p(s'|s,a)v_{\pi}(s')}\\
-          &=\sum_{a}{\pi(a|s)}\sum_{s'}\sum_{r}{p(r,s'|s,a)r} +
-          \gamma\sum_{a}{\pi(a|s)}\sum_{s'}\sum_{r}{p(s',r|s,a)v_{\pi}(s')}\\
-          &=\sum_{a}{\pi(a|s)}\sum_{s'}\sum_{r}{p(r,s'|s,a) \left[r+\gamma
-          v_{\pi}(s')\right]} \end{aligned}$$
+          <span class="equation"
+            >$$\begin{aligned} v_{\pi}(s) &\doteq \mathbb{E}_{\pi} \left[ G_t |
+            S_t=s \right]\\ &= \mathbb{E}_{\pi} \left[\left. R_{t+1} +
+            \gamma\sum_{k=0}^{\infty}{\gamma^k R_{(t+1)+k+1}} \right| S_t=s
+            \right]\\ &= \mathbb{E}_{\pi} \left[\left. R_{t+1} + \gamma G_{t+1}
+            \right| S_t = s\right]\\ &= \mathbb{E}_{\pi} \left[\left. R_{t+1} +
+            \gamma \mathbb{E}_{\pi} \left[G_{t+1}|S_{t+1}\right] \right| S_t =
+            s\right]\\ &= \mathbb{E}_{\pi} \left[\left. R_{t+1} + \gamma
+            v_{\pi}(S_{t+1}) \right| S_t = s\right]\\ &=
+            \sum_{s',a,r}p(a,r,s'|s)\left[r + \gamma v_{\pi}(s') \right]\\ &=
+            \sum_{a} \pi(a|s) \sum_{r,s'} p(r|s,a)p(s'|s,a) \left[r + \gamma
+            v_{\pi}(s') \right] \\ &=\sum_{a}{\pi(a|s)}\sum_{r}{p(r|s,a) r} +
+            \gamma\sum_{a}{\pi(a|s)}\sum_{s'}{p(s'|s,a)v_{\pi}(s')}\\
+            &=\sum_{a}{\pi(a|s)}\sum_{s'}\sum_{r}{p(r,s'|s,a)r} +
+            \gamma\sum_{a}{\pi(a|s)}\sum_{s'}\sum_{r}{p(s',r|s,a)v_{\pi}(s')}\\
+            &=\sum_{a}{\pi(a|s)}\sum_{s'}\sum_{r}{p(r,s'|s,a) \left[r+\gamma
+            v_{\pi}(s')\right]} \end{aligned}$$</span
+          >
         </div>
       </div>
       <br />
       <p>
         Para la función de valor de estado-acción se tiene la siguiente forma
-        recursiva: $$\begin{aligned} q_{\pi}(s,a) &\doteq \mathbb{E}_{\pi}
-        \left[ G_t | S_t=s,A_t=a \right]\\ &= \mathbb{E}_{\pi} \left[ R_{t+1} +
-        \gamma G_{t+1}| S_t=s,A_t=a \right]\\ &= \sum_{s', r} p(s', r |
-        s,a)\left[r + \gamma v_{\pi} (s')\right]\\ &= \sum_{s', r} p(s', r |
-        s,a)\left[r + \gamma{\sum_{a}{\pi{(a'|s)}q_{\pi}{(s',a')}}}\right]
-        \end{aligned}$$
+        recursiva:
+        <span class="equation"
+          >$$\begin{aligned} q_{\pi}(s,a) &\doteq \mathbb{E}_{\pi} \left[ G_t |
+          S_t=s,A_t=a \right]\\ &= \mathbb{E}_{\pi} \left[ R_{t+1} + \gamma
+          G_{t+1}| S_t=s,A_t=a \right]\\ &= \sum_{s', r} p(s', r | s,a)\left[r +
+          \gamma v_{\pi} (s')\right]\\ &= \sum_{s', r} p(s', r | s,a)\left[r +
+          \gamma{\sum_{a}{\pi{(a'|s)}q_{\pi}{(s',a')}}}\right]
+          \end{aligned}$$</span
+        >
       </p>
     </div>
     <br />
@@ -504,22 +590,33 @@
         acciones que alcancen las mejores recompensas a largo plazo. Una
         política \(\pi\) es mejor o igual a una política \(\pi'\) si tiene un
         mayor o igual retorno que \(\pi'\) para todos los estados, esto se puede
-        formular de manera matemática así: $$\pi \geq \pi' \Leftrightarrow
-        v_{\pi}(s) \geq v_{\pi'}(s)\qquad\text{$\forall s \in \mathcal{S}$}$$
+        formular de manera matemática así:
+        <span class="equation"
+          >$$\pi \geq \pi' \Leftrightarrow v_{\pi}(s) \geq
+          v_{\pi'}(s)\qquad\text{$\forall s \in \mathcal{S}$}$$</span
+        >
         Siempre existe al menos una política que es óptima frente al resto, el
         conjunto de políticas óptimas se denota por \(\pi_\ast\).
       </p>
       <p>
         Las políticas óptimas cuentan con las mismas funciones de valor que se
         denominan también como óptimas. La función de valor de estado óptima
-        (\(v_\ast\)) se define como: $$v_\ast(s) \doteq
-        \max_{\pi}{v_\pi(s)}\qquad\text{$\forall s \in \mathcal{S}$}$$ Mientras
-        que la función de valor-acción óptima \(q_\ast\) se define como:
-        $$q_\ast(s,a) \doteq \max_{\pi}{q_\pi(s,a)} \qquad\text{$\forall s \in
-        \mathcal{S}$ y $a \in \mathcal{A}$} $$ Se puede expresar a
-        \(q_\ast(s,a)\) en función de \(v_\ast(s)\): $$q_\ast(s,a) =
-        \mathbb{E}{\left[R_{t+1}+\gamma v_\ast(S_{t+1}) | S_t=s, A_t=a \right
-        ]}$$
+        (\(v_\ast\)) se define como:
+        <span class="equation"
+          >$$v_\ast(s) \doteq \max_{\pi}{v_\pi(s)}\qquad\text{$\forall s \in
+          \mathcal{S}$}$$</span
+        >
+        Mientras que la función de valor-acción óptima \(q_\ast\) se define
+        como:
+        <span class="equation"
+          >$$q_\ast(s,a) \doteq \max_{\pi}{q_\pi(s,a)} \qquad\text{$\forall s
+          \in \mathcal{S}$ y $a \in \mathcal{A}$} $$</span
+        >
+        Se puede expresar a \(q_\ast(s,a)\) en función de \(v_\ast(s)\):
+        <span class="equation"
+          >$$q_\ast(s,a) = \mathbb{E}{\left[R_{t+1}+\gamma v_\ast(S_{t+1}) |
+          S_t=s, A_t=a \right ]}$$</span
+        >
       </p>
       <br />
       <p>
@@ -527,52 +624,64 @@
         autoconsistencia de las ecuaciones de Bellman. En el caso de funciones
         de valor óptimas se pueden formular ecuaciones de Bellman sin necesidad
         de referenciar una política específica. Para \(v_\ast(s)\) se tiene:
-        $$\begin{aligned} v_\ast(s) &= \max_{a \in
-        \mathcal{A}(s)}{q_{\pi*}(s,a)}\\ &= \max_{a}{\mathbb{E}_{\pi*}{\left
-        [G_t|S_t=s, A_t=a \right ]}}\\ &= \max_{a}{\mathbb{E}_{\pi*}{\left
-        [R_{t+1} + \gamma G_{t+1}|S_t=s, A_t=a \right ]}}\\ &=
-        \max_{a}{\mathbb{E}_{\pi*}{\left [R_{t+1} + \gamma v_*(S_{t+1})|S_t=s,
-        A_t=a \right ]}}\\ &= \max_{a}{\sum_{s',r}{p(s',r|s,a)\left [ r + \gamma
-        v_*(s') \right ]}} \end{aligned}$$ Para \(q_\ast(s,a)\) se tiene:
-        $$\begin{aligned} q_*(s,a) &= \mathbb{E}{\left [ R_{t+1}+\gamma
-        \max_{a'}{q_*(S_{t+1}, a') | S_t=s, A_t=a} \right ]} \\ &=
-        \sum_{s',r}{p(s',r|s,a)\left [ r + \gamma \max_{a'}{q_*(s',a')} \right
-        ]} \end{aligned}$$
+        <span class="equation"
+          >$$\begin{aligned} v_\ast(s) &= \max_{a \in
+          \mathcal{A}(s)}{q_{\pi*}(s,a)}\\ &= \max_{a}{\mathbb{E}_{\pi*}{\left
+          [G_t|S_t=s, A_t=a \right ]}}\\ &= \max_{a}{\mathbb{E}_{\pi*}{\left
+          [R_{t+1} + \gamma G_{t+1}|S_t=s, A_t=a \right ]}}\\ &=
+          \max_{a}{\mathbb{E}_{\pi*}{\left [R_{t+1} + \gamma v_*(S_{t+1})|S_t=s,
+          A_t=a \right ]}}\\ &= \max_{a}{\sum_{s',r}{p(s',r|s,a)\left [ r +
+          \gamma v_*(s') \right ]}} \end{aligned}$$</span
+        >
+        Para \(q_\ast(s,a)\) se tiene:
+        <span class="equation"
+          >$$\begin{aligned} q_*(s,a) &= \mathbb{E}{\left [ R_{t+1}+\gamma
+          \max_{a'}{q_*(S_{t+1}, a') | S_t=s, A_t=a} \right ]} \\ &=
+          \sum_{s',r}{p(s',r|s,a)\left [ r + \gamma \max_{a'}{q_*(s',a')} \right
+          ]} \end{aligned}$$</span
+        >
       </p>
       <br />
       <p>
         La función \(v_\ast\) se puede escribir en términos de \(q_\ast\) de la
-        siguiente manera: $$v_\ast(s) = \max_{a}{q_\ast{(s,a)}}$$ Así mismo, la
+        siguiente manera:
+        <span class="equation" class="equation">$$v_\ast(s) = \max_{a}{q_\ast{(s,a)}}$$</span> Así mismo, la
         función \(q_\ast\) se puede escribir en términos de \(v_\ast\) de la
-        siguiente manera: $$q_\ast{(s,a)} = \sum_{s',r}{p(s',r|s,a) \left[r +
-        \gamma v_\ast{s'}\right] }$$ La política óptima se puede expresar en
-        función de las funciones de estado óptimas de la siguiente manera:
-        $$\begin{aligned} a_\ast = \mathrm{arg}~{\pi_\ast{\left ( a_\ast|s
-        \right )}} &= \underset{a}{\mathrm{argmax}}~{q_\ast(s,a)} \\ &=
-        \underset{a}{\mathrm{argmax}}~{ \sum_{s',r}{p(s',r|s,a) \left [ r +
-        \gamma v_\ast(s') \right ] } } \end{aligned}$$
+        siguiente manera:
+        <span class="equation"
+          >$$q_\ast{(s,a)} = \sum_{s',r}{p(s',r|s,a) \left[r + \gamma
+          v_\ast{s'}\right] }$$</span
+        >
+        La política óptima se puede expresar en función de las funciones de
+        estado óptimas de la siguiente manera:
+        <span class="equation"
+          >$$\begin{aligned} a_\ast = \mathrm{arg}~{\pi_\ast{\left ( a_\ast|s
+          \right )}} &= \underset{a}{\mathrm{argmax}}~{q_\ast(s,a)} \\ &=
+          \underset{a}{\mathrm{argmax}}~{ \sum_{s',r}{p(s',r|s,a) \left [ r +
+          \gamma v_\ast(s') \right ] } } \end{aligned}$$</span
+        >
       </p>
     </div>
     <br />
     <div class="container bg-blog-0">
       <p>
         En conclusión, los procesos de decisión de Markov son un esquema de
-        trabajo esencial para entender el aprendizaje por refuerzo. Estos 
-        procesos involucran estados, acciones y recompensas, que son elementos 
-        comunes en problemas de RL. En casos de problemas pequeños en donde 
-        se tiene un modelo del sistema y un conocimiento perfecto de su dinámica 
-        este se puede resolver de manera analítica, mediante transformaciones 
-        matriciales. En el caso de la mayoría de problemas de aprendizaje por 
-        refuerzo simplemente no se conocen las funciones dinámicas del sistema
-        y a lo más simplemente se obtienen las recompensas tras la interacción 
+        trabajo esencial para entender el aprendizaje por refuerzo. Estos
+        procesos involucran estados, acciones y recompensas, que son elementos
+        comunes en problemas de RL. En casos de problemas pequeños en donde se
+        tiene un modelo del sistema y un conocimiento perfecto de su dinámica
+        este se puede resolver de manera analítica, mediante transformaciones
+        matriciales. En el caso de la mayoría de problemas de aprendizaje por
+        refuerzo simplemente no se conocen las funciones dinámicas del sistema y
+        a lo más simplemente se obtienen las recompensas tras la interacción
         entre el agente y el ambiente dado un estado y una acción.
       </p>
     </div>
     <br />
     <div class="container bg-blog-0">
       <p>
-        A continuación, se muestra una presentación con aspectos 
-        matemáticos de los procesos de decisión de Markov.
+        A continuación, se muestra una presentación con aspectos matemáticos de
+        los procesos de decisión de Markov.
       </p>
       <object
         data="./Modulos/Blog/06_Markov_Decission_Process/MDP.pdf"

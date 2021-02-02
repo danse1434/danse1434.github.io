@@ -12,6 +12,7 @@ $device_sizes: 320, 480, 768, 1024;
 
   p,
   ul,
+  span.equation,
   div.card-body,
   button.btn-gray {
     font-size: medium;
@@ -23,6 +24,10 @@ $device_sizes: 320, 480, 768, 1024;
         font-size: #{nth($adapted_font_6, $i)};
       }
     }
+  }
+
+  span.equation {
+    display: block;
   }
 
   p.teorema {

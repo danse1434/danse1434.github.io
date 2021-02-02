@@ -4,9 +4,15 @@ export var initVec = [1e7, 0, 0];
 
 export function multiplyMatrixAndPoint(matrix, point) {
   // Give a simple variable name to each part of the matrix, a column and row number
-  let c0r0 = matrix[0], c1r0 = matrix[1], c2r0 = matrix[2];
-  let c0r1 = matrix[3], c1r1 = matrix[4], c2r1 = matrix[5];
-  let c0r2 = matrix[6], c1r2 = matrix[7], c2r2 = matrix[8];
+  let c0r0 = matrix[0],
+    c1r0 = matrix[1],
+    c2r0 = matrix[2];
+  let c0r1 = matrix[3],
+    c1r1 = matrix[4],
+    c2r1 = matrix[5];
+  let c0r2 = matrix[6],
+    c1r2 = matrix[7],
+    c2r2 = matrix[8];
 
   // Now set some simple names for the point
   let x = point[0];
@@ -18,4 +24,12 @@ export function multiplyMatrixAndPoint(matrix, point) {
   let resultY = x * c1r0 + y * c1r1 + z * c1r2;
   let resultZ = x * c2r0 + y * c2r1 + z * c2r2;
   return [resultX, resultY, resultZ];
+}
+
+export function convertRange(old_values, new_values, value) {
+  let newValue =
+    (((value - old_values[0]) * (new_values[1] - new_values[0])) /
+      (old_values[1] - old_values[0])) +
+    new_values[0];
+  return newValue;
 }

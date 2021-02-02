@@ -347,6 +347,7 @@ div.col-md-4 {
 /* CONTENEDORES PARA BLOGS */
 .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a,
 .bg-blog-0 ul,
+.bg-blog-0 span.equation,
 .bg-blog-0 div.card-body,
 .bg-blog-0 button.btn-gray {
   font-size: medium;
@@ -355,27 +356,34 @@ div.col-md-4 {
   @media screen and (max-width: 1024px) {
     .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a,
     .bg-blog-0 ul,
+    .bg-blog-0 span.equation,
     .bg-blog-0 div.card-body,
     .bg-blog-0 button.btn-gray {
       font-size: small; } }
   @media screen and (max-width: 768px) {
     .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a,
     .bg-blog-0 ul,
+    .bg-blog-0 span.equation,
     .bg-blog-0 div.card-body,
     .bg-blog-0 button.btn-gray {
       font-size: small; } }
   @media screen and (max-width: 480px) {
     .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a,
     .bg-blog-0 ul,
+    .bg-blog-0 span.equation,
     .bg-blog-0 div.card-body,
     .bg-blog-0 button.btn-gray {
       font-size: smaller; } }
   @media screen and (max-width: 320px) {
     .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a,
     .bg-blog-0 ul,
+    .bg-blog-0 span.equation,
     .bg-blog-0 div.card-body,
     .bg-blog-0 button.btn-gray {
       font-size: smaller; } }
+
+.bg-blog-0 span.equation {
+  display: block; }
 
 .bg-blog-0 p.teorema, .bg-blog-0 .bg-4 a.teorema, .bg-4 .bg-blog-0 a.teorema {
   background-color: dodgerblue;

@@ -1,4 +1,4 @@
-import {multiplyMatrixAndPoint, matA, matB, initVec} from './algebraLineal.js'
+import {multiplyMatrixAndPoint, convertRange, matA, matB, initVec} from './algebraLineal.js'
 import {generarMatriz} from './generarMatriz.js'
 
 
@@ -42,18 +42,17 @@ var yAxis = svg.append("g");
 var path1 = svg.append("path")
   .attr("fill", "none")
   .attr("stroke", "steelblue")
-  .attr("stroke-width", 1.5);
+  .attr("stroke-width", 5);
 
 var path2 = svg.append("path")
   .attr("fill", "none")
   .attr("stroke", "green")
-  .attr("stroke-width", 1.5);
+  .attr("stroke-width", 5);
 
 var path3 = svg.append("path")
   .attr("fill", "none")
   .attr("stroke", "red")
-  .attr("stroke-width", 1.5);
-
+  .attr("stroke-width", 5);
 
 function simulacion(timeSteps, transitionMatrix) {
   
@@ -98,6 +97,18 @@ function simulacion(timeSteps, transitionMatrix) {
     .x((d, i) => {return x_scale(i + 1);})
     .y((d, i) => {return y_scale(d[2]);})
     );
+  
+  svg.append("line").datum(matVEC)
+    .attr('x1', (d,i) => {return x_scale( convertRange([0,1], [d3.min(i)+1, d3.max(i)+1 ], 0.5)   )})
+    .attr('y1', (d,i) => {return y_scale( convertRange([0,1], [d3.min(d[1]), d3.max(d[1])], 0.6)   )})
+    .attr('x2', (d,i) => {return x_scale( convertRange([0,1], [d3.min(i)+5, d3.max(i)+5 ], 0.5)   )})
+    .attr('y2', (d,i) => {return y_scale( convertRange([0,1], [d3.min(d[1]), d3.max(d[1])], 0.6)   )})
+    .attr('stroke', 'red').attr('stroke-width', 5);
 }
 
+console.log(convertRange([0,1], [0,30], 0.6));
+// console.log(convertRange({'old_values': [0,1], 'new_values': [0,30], 'value': 0.6}));
+
 simulacion(30, matA);
+
+
