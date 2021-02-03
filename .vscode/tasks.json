@@ -9,6 +9,15 @@
             "command": "node-sass ./CSS/${fileBasenameNoExtension}.scss ./CSS/${fileBasenameNoExtension}.css",
             "group": "build",
             "problemMatcher": []
+        },
+        {
+            "label": "JavaScript Compile",
+            "type": "shell",
+            "command": "node",
+            "group": "build",
+            "problemMatcher": ["$jshint"],
+            "args": ["${file}"]
+            // type: module
         }
     ]
 }

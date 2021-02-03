@@ -145,16 +145,7 @@ function simulacion(timeSteps, transitionMatrix) {
       .attr('stroke', element['color']).attr('stroke-width', 5);
 
     legendText[element['pos']]
-      .attr('x', (d,i) => {
-        console.log(
-          // element['xmax'], 
-          // timeSteps,
-          // convertRange([0,1], [1, timeSteps+1 ], element['xmax'] ) ,
-          // parseInt(timeSteps),
-          // convertRange([0,1], [1, parseInt(timeSteps)+1 ], element['xmax'] + 0.2) 
-          );
-        return x_scale( convertRange([0,1], [1, timeSteps+1 ], element['xmax'] ) )
-      })
+      .attr('x', (d,i) => {return x_scale( convertRange([0,1], [1, timeSteps+1 ], element['xmax']))+5 })
       .attr('y', (d,i) => {return y_scale( convertRange([0,1], [0, 1E7], element['y'] ))} )
       .text(element['text']);
   }
