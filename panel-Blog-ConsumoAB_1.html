@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Medidas de Consumo de Antibióticos</title>
+
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href=".\CSS\estilos_blog.css?20210125"
+    />
+    <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg" />
+    <script type="text/javascript">
+      $(function () {
+        var includes = $("[data-include]");
+        jQuery.each(includes, function () {
+          var file = "components/" + $(this).data("include") + ".html";
+          $(this).load(file);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!--Incluir barra de navegación-->
+    <div data-include="navbar"></div>
+
+    <!--Título-->
+    <div class="jumbotron jumbotron-fluid bg-blog-jumbotron">
+      <div class="jumbotron__container">
+        <h1>
+          Medición de Consumo de Antimicrobianos como parte de Programas de Uso
+          Prudente de Antimicrobianos en Hospitales Pediátricos
+        </h1>
+      </div>
+    </div>
+
+    <div class="container bg-blog-0">
+      <h2>Resumen</h2>
+
+      <p>
+        Se elaboró una revisión narrativa sobre indicadores de consumo de
+        antimicrobianos haciendo un énfasis especial en estudios en pacientes
+        pediátricos. Lo anterior con el fin de conocer el mejor indicador a
+        utilizar en un hospital pediátrico con el fin de vigilar su uso de
+        manera más eficiente. Se encuentra en la literatura una gran cantidad de
+        indicadores disponibles previamente desarrollados. En una gran parte de
+        estudios en niños se ha reportado este parámetro por medio de
+        indicadores de duración. Se ha propuesto que el mejor indicador para
+        consumo de antimicrobianos es días de terapia frente al uso de dosis
+        diarias definidas.
+      </p>
+      <br />
+      <p>
+        <strong>Palabras clave</strong>: antimicrobianos, utilización de
+        medicamentos, pediatría
+      </p>
+      <br />
+
+      <h2>Abstract</h2>
+      <p>
+        A narrative review, about antimicrobial consumption indicators, was
+        developed with special emphasis on studies of pediatric patients. In
+        order to know the best indicator of consumption in a pediatric hospital,
+        in order to monitor its use more efficiently. In the literature, we
+        found a large number of indicators available. In part of studies in
+        children, this parameter has been reported by means of duration
+        indicators. It has been proposed that the best indicator for
+        antimicrobial consumption in the days of therapy versus the use of
+        defined daily doses.
+      </p>
+      <br />
+      <p><strong>Key words</strong>: antimicrobials, drug use, pediatrics</p>
+    </div>
+    <br />
+
+    <div class="container bg-blog-0">
+      <h2>1. Introducción</h2>
+      <br />
+      <p>
+        El mundo se enfrenta a una crisis por la resistencia bacteriana, debido
+        a la mayor incidencia de enfermedades infecciosas que afectan a la
+        población humana que son intratables por los agentes antimicrobianos
+        disponibles <q cite="#bib1"></q>. Las consecuencias de una era
+        post-antibiótica tendrán fuertes impactos en la sociedad en términos de
+        vidas humanas, enfermedad y recursos gastados. Con el fin de manejar el
+        problema los gobiernos del mundo han desarrollado una serie de políticas
+        que tienen como objetivo buscar nuevas terapias o mejorar la utilización
+        de los antimicrobianos disponibles <q cite="#bib1"></q
+        ><q cite="#bib2"></q>.
+      </p>
+      <br />
+      <p>
+        La intensidad en el uso de antibióticos se ha identificado como un
+        factor clave para la selección de resistencia <q cite="#bib3"></q>. La
+        alta prevalencia de resistencia en patógenos nosocomiales hace necesario
+        mejorar el uso de antimicrobianos en hospitales <q cite="#bib4"></q>.
+        Esta perspectiva impulsó el nacimiento de los programas de uso prudente
+        de antimicrobianos en hospitales. Estos programas que inicialmente se
+        enfocaban en la prevención y control de la resistencia
+        <q cite="#bib5"></q><q cite="#bib6"></q>, en la actualidad ofrecen un
+        manejo de los desenlaces negativos asociados al uso de antimicrobianos
+        <q cite="#bib7"></q><q cite="#bib8"></q>. En la actualidad los programas
+        de uso prudente de antimicrobianos, también conocidos como antimicrobial
+        stewardship programs (ASP) constituyen esfuerzos para optimizar el uso
+        de antimicrobianos con la intención de mejorar los resultados clínicos
+        de pacientes con infecciones, minimizar los eventos adversos y
+        garantizar la utilización de tratamientos costo/efectivos
+        <q cite="#bib9"></q>.
+      </p>
+      <br />
+      <p>
+        El impacto de intervenciones provenientes de un ASP debe ser evaluado
+        puesto que se pueden tener algunas con efectos redundantes, así como
+        desfavorables <q cite="#bib10"></q>. La utilización excesiva de
+        antimicrobianos se ha relacionado con mayor posibilidad de presentación
+        de resultados negativos o indeseables asociados. El consumo de
+        antimicrobianos se ha utilizado ampliamente con el fin de medir el
+        impacto de intervenciones. Sin embargo, existen diversas formas de medir
+        la misma con falta de estandarización al respecto. En ciertas
+        poblaciones especiales como pacientes pediátricos se podrían tener
+        sesgos importantes con el uso de algunos indicadores. La presente
+        revisión narrativa tiene como objetivo presentar diversas medidas de
+        consumo de antimicrobianos y realizar una comparación del desempeño de
+        las mismas.
+      </p>
+    </div>
+    <br />
+
+    <div class="container bg-blog-0">
+      <h2>2. Medición de Consumo de Antimicrobianos</h2>
+      <br />
+      <p>
+        La evaluación de programas de uso seguro se hace a través de indicadores
+        de procesos y de resultados <q cite="#bib7"></q><q cite="#bib11"></q>.
+        Los indicadores de resultado se relacionan con el mejoramiento del
+        estado de los pacientes, el cual es un objetivo central en la atención
+        en salud <q cite="#bib12"></q>. Por tal se consideran como indicadores
+        primarios p. ej. eventos adversos a medicamentos, resistencia bacteriana
+        e infecciones por <i>C. difficile</i>. Los indicadores de proceso como
+        consumo de antibióticos y costos, se utilizan como marcadores subrogados
+        de los resultados en salud y suelen ser más fáciles de medir que los
+        indicadores de resultados.
+      </p>
+
+      <p>
+        Los ASP deben hacer medición del consumo de antimicrobianos,
+        estratificado por antibiótico complementado con un análisis con consumo
+        total, por unidad y por servicio <q cite="#bib7"></q
+        ><q cite="#bib8"></q>. Más aún, se debe hacer seguimiento de las
+        tendencias de consumo con el fin de estandarizar y conocer valores de
+        referencia internos. Así como hacer benchmarking o comparación
+        estandarizada entre instituciones con el fin de hacer mejoramiento de la
+        calidad <q cite="#bib13"></q>. Lo anterior teniendo en cuenta las
+        limitaciones en las comparaciones y la necesidad potencial de ajustes de
+        riesgo <q cite="#bib7"></q>.
+      </p>
+
+      <p>
+        Los indicadores actúan como punto de partida para el mejoramiento
+        continuo y se establecen como estímulos para el cambio
+        <q cite="#bib14"></q>. Las comparaciones interhospitalarias, por medio
+        de benchmarking, permiten la definición de valores de referencia de
+        consumo de antimicrobianos que deben ser tenidos en cuenta entre
+        instituciones similares. En la realización benchmarking con datos de
+        consumo se tienen dificultades por el uso de diversos métodos de
+        medición, así como la falta de provisión de información metodológica
+        esencial <q cite="#bib15"></q>. La obtención de valores de referencia es
+        importante porque permite participar a a través del mejoramiento de la
+        calidad en la disminución de costos y la mejora de los resultados en
+        salud <q cite="#bib16"></q>.
+      </p>
+    </div>
+    <br />
+    <div class="container bg-blog-0">
+      <h2>
+        3. Relación entre consumo y eventos adversos relacionados a la
+        utilización de antimicrobianos
+      </h2>
+      <br />
+      <p>
+        Existe evidencia sobre la relación entre la intensidad del consumo de
+        antimicrobianos y la probabilidad de presentación de desenlaces
+        negativos relacionados a su uso. Entre estos desenlaces se cuenta al
+        daño colateral <q cite="#bib17"></q><q cite="#bib18"></q> generación y
+        persistencia de resistencia (19,20). El daño colateral es un término que
+        engloba a los efectos adversos ecológicos de la terapia antimicrobiana
+        como la selección de organismos resistentes y el desarrollo de
+        colonización o infección por organismos multirresistentes
+        <q cite="#bib18"></q>.
+      </p>
+
+      <p>
+        Se ha identificado el consumo de quinolonas y cefalosporinas de tercera
+        generación como factores de riesgo modificables para infecciones por
+        <i>Clostridium difficile</i> (CDI) <q cite="#bib21"></q>. Un estudio de
+        cohorte retrospectivo encontró un riesgo mayor de adquirir CDI
+        relacionado al número y días de exposición a antibióticos. El cociente
+        de riesgo (95% CR) para CDI fue 1.9-5.0 para pacientes con 8-18 DOTs y
+        4.6-13.4 para pacientes con >18 DOTs <q cite="#bib17"></q>.
+      </p>
+
+      <p>
+        Una intervención que redujo el uso de cefalosporinas (22.0%) y
+        quinolonas (38.7%) en conjunto con una intervención de aislamiento,
+        permitieron la reducción de la tasa de CDI de 1.30 a 0.69 casos por 1000
+        días-paciente <q cite="#bib21"></q>. Un análisis de serie de tiempo
+        encontró que la disminución en el consumo de quinolonas por 5 DDD/100 PD
+        estuvo asociada a un RR de 0.24-0.46 en riesgo de infección por CDI tras
+        la intervención. Con una disminución adicional con RR de 0.20-0.78 en
+        riesgo tras una intervención que disminuyó el consumo por 2 DDD/100 PD
+        <q cite="#bib22"></q>. El control adecuado de CDI depende de factores
+        como control de brotes, adecuada limpieza, aislamiento efectivo y uso
+        prudente de antibióticos <q cite="#bib23"></q>.
+      </p>
+
+      <p>
+        La intensidad en el consumo de antibióticos es identificada como un
+        factor clave para la selección y mantenimiento de la resistencia en
+        microorganismos <q cite="#bib3"></q>. Entre Enterobacteriaceae se ha
+        encontrado relación entre el consumo de antimicrobianos como
+        aminoglucósidos <q cite="#bib24"></q><q cite="#bib25"></q>, ceftriaxona
+        <q cite="#bib24"></q> y meropenem <q cite="#bib24"></q> con mayor
+        resistencia en <i>E. coli</i>. En la resistencia de
+        <i>K. pneumoniae</i> se han involucrado a piperacilina y gentamicina,
+        así mismo a la resistencia de E. cloacae con el consumo de amikacina
+        <q cite="#bib25"></q>. En el caso de <i>P. aeruginosa</i> se han
+        involucrado las tasas de consumo a la resistencia en el caso de
+        gentamicina, ceftazidima y meropenem <q cite="#bib24"></q>. Con respecto
+        a las fluoroquinolonas en varios estudios se ha demostrado la relación
+        <q cite="#bib20"></q><q cite="#bib24"></q>, pero en otros se ha
+        encontrado que se alcanzado un umbral en el cual la transferencia
+        horizontal de determinantes de resistencia es tan alta, que su
+        propagación es independiente del consumo <q cite="#bib25"></q>.
+      </p>
+
+      <p>
+        En el caso de <i>Staphylococcus aureus</i> se ha encontrado una relación
+        positiva entre el consumo de combinaciones con β-lactámicos y
+        resistencia a meticilina, quinolonas y aminoglucósidos, consumo de
+        carbapenémicos y resistencia a quinolonas <q cite="#bib26"></q>. Sin
+        embargo en algunos estudios no ha sido tan fácil demostrar la relación
+        entre resistencia por parte de cocos Gram-positivos y el consumo de
+        antibióticos <q cite="#bib20"></q>. En ocasiones la relación entre
+        consumo de antimicrobianos y resistencia no es tan clara debido a sesgos
+        ecológicos. Por ende se deben realizar análisis de datos a nivel de
+        paciente con el fin de elucidar mejor la relación entre ambos factores
+        <q cite="#bib19"></q>.
+      </p>
+
+      <p>
+        La relación entre la intensidad del uso de antimicrobianos y la
+        probabilidad de reacciones adversas a medicamentos no ha podido ser
+        establecida de una manera clara. Sin embargo el reporte de las mismas e
+        implementación de estrategias para reducir su incidencia son importantes
+        con el fin de cumplir con los objetivos clínicos de un ASP
+        <q cite="#bib27"></q>. Se puede utilizar medidas de consumo en el
+        análisis de eventos adversos con el fin de identificar el riesgo
+        desproporcionado asociado con antimicrobianos de menor prescripción
+        <q cite="#bib28"></q>.
+      </p>
+
+      <p>
+        En la medición de consumo de antibióticos se tiene un fuerte interés en
+        el impacto ecológico a diferencia de la medición de consumo de otros
+        medicamentos (antihipertensivos, antidepresivos, etc.) en los que
+        importan más los efectos adversos sobre el organismo humano
+        <q cite="#bib29"></q>. Por tanto la dosis acumulada puede no ser el
+        mejor predictor del riesgo en el consumo de antibióticos y quizás los
+        regímenes o la intensidad del uso sean mejores indicadores de consumo en
+        este tipo de medicamentos <q cite="#bib29"></q>. Por ejemplo, el uso de
+        DDD/ 100PD como un predictor de presión ecológica es conveniente pero
+        arbitrario puesto que no siempre los riesgos derivados del uso de
+        antibióticos están linealmente relacionados a dosis acumuladas.
+      </p>
+    </div>
+    <br />
+    <div class="container bg-blog-0">
+      <h2>4. Indicadores de consumo</h2>
+      <br />
+      <p>
+        El consumo se refiere a la medida agregada o ponderada de la cantidad de
+        antimicrobianos que son consumidos a nivel de pacientes, unidades,
+        servicios o instituciones <q cite="#bib30"></q>. Esta medida suele ser
+        expresada en forma de tasa ajustada, el numerador es la exposición
+        acumulada en cuanto a utilización de antibióticos dentro de una
+        población. Por otra parte el denominador tiene una medida de la cantidad
+        de individuos potencialmente expuestos a los antimicrobianos en un
+        periodo de tiempo determinado <q cite="#bib31"></q
+        ><q cite="#bib32"></q>. En una revisión de estudios sobre medición de
+        consumo de antimicrobianos se encontraron 26 medidas de consumo
+        distintas producto de la combinación de 13 tipos de numeradores con 5
+        tipos de denominadores <q cite="#bib33"></q>. Entre los numeradores más
+        utilizados se tienen dosis diarias definidas y días de terapia con
+        denominadores como pacientes-día y número de admisiones.
+      </p>
+
+      <p>
+        Con el fin de mejorar la precisión de las comparaciones
+        interhospitalarias las medidas de consumo de antibióticos en hospitales
+        deben cumplir ciertos requisitos. Entre estos incluir información sobre
+        el volumen de antibióticos utilizados, número de pacientes con un
+        antibiótico y proporción de pacientes tratados con antibióticos
+        <q cite="#bib34"></q>. De manera ideal, se deben medir las cantidades de
+        medicamento administradas y no la cantidad ordenada, dispensada,
+        facturada o comprada, puesto que el punto de interés es lo que el
+        paciente recibe <q cite="#bib13"></q>.
+      </p>
+    </div>
+    <br />
+    <div class="container bg-blog-0">
+      <h2>5. Medidas de consumo acumulativo (numeradores)</h2>
+      <br />
+      <h3>5.1. Dosis diaria definida</h3>
+      <p>
+        La dosis diaria definida (DDD) se considera como la dosis de
+        mantenimiento promedio diaria para un medicamento usado en su indicación
+        principal en adultos <q cite="#bib32"></q><q cite="#bib35"></q>. La DDD
+        tiene como objetivo estandarizar la medida de consumo de medicamentos
+        inicialmente expresada en unidades de peso como gramos o miligramos. Por
+        ejemplo, si un paciente ha consumido 30.000 gramos de ampicilina
+        intravenosa en un mes y se considera una DDD de 2.000 gramos para la vía
+        intravenosa, el consumo se puede expresar como 15 DDDs por mes.
+      </p>
+
+      <p>
+        Esta medida de consumo es definida para cada medicamento y vía de
+        administración por la Organización Mundial de la Salud (OMS). Las DDDs
+        hacen parte del sistema de clasificación Anatómico, Terapéutico y
+        Químico (ATC). El ATC es un sistema que permite la clasificación de los
+        medicamentos, de acuerdo al órgano o sistema en el cual estos actúan
+        junto a sus propiedades terapéuticas, farmacológicas y/o químicas. Los
+        medicamentos son clasificados en grupos dentro de cinco niveles
+        diferentes. En el ATC existen catorce grupos principales (primer nivel),
+        con subgrupos farmacológicos y terapéuticos (segundo nivel). Los niveles
+        tercero y cuarto son subgrupos químicos, farmacológicos y terapéuticos,
+        existe además un quinto nivel que es específico para cada fármaco
+        <q cite="#bib35"></q>.
+      </p>
+
+      <p>
+        El principio básico del sistema ATC/DDD, es asignar una dosis diaria
+        definida para cada medicamento y ruta de administración, definidos por
+        un código ATC en el quinto nivel de la clasificación. Las dosis diarias
+        definidas son asignadas para cada medicamento, a través de un consenso
+        proveniente de un grupo de expertos nombrados por la OMS. El sistema
+        ATC/DDD es coordinado en Europa por el Centro Colaborador de la OMS en
+        Metodología Estadística de los Medicamentos, establecido en Oslo en
+        1982. Las solicitudes de inclusión o modificación de códigos ATC/DDD son
+        elaboradas por usuarios del sistema para el Centro Colaborador.
+      </p>
+
+      <p>
+        Las solicitudes son enviadas por el Centro Colaborador al principal
+        regulador del ATC/DDD que es el Grupo Internacional de Trabajo de la OMS
+        en Metodología Estadística de los Medicamentos establecido en 1996
+        <q cite="#bib36"></q>. Al provenir de recomendación de expertos se
+        considera a las DDDs como unidades de medida, más que herramientas para
+        ajustar las diferencias observadas entre la dosis utilizadas por varios
+        individuos <q cite="#bib36"></q>. Así mismo no es infrecuente que la DDD
+        difiera de la dosis que normalmente es prescrita y/o recomendada en un
+        individuo en la práctica clínica <q cite="#bib34"></q>.
+      </p>
+
+      <p>
+        El sistema de DDDs no puede ser aplicado para la medición de consumo de
+        antimicrobianos en la población pediátrica. Lo anterior es debido a que
+        en niños la dosis es ajustada de acuerdo a la edad, peso corporal y
+        talla entre otros factores. La variabilidad en las dosis utilizadas es
+        tan amplia, que pierde sentido definir una dosis para todos los
+        pacientes. En adición muchos medicamentos no tienen indicaciones
+        aprobadas en niños y las recomendaciones de dosis no tienen evidencia
+        suficiente, por la falta de estudios clínicos que evalúen eficacia y
+        seguridad <q cite="#bib37"></q>. El Grupo Internacional de Trabajo de la
+        OMS en Metodología Estadística de los Medicamentos ha concluido que es
+        imposible asignar DDDs en estos pacientes. Por tanto la investigación en
+        problemas de utilización de medicamentos en este grupo se debe realizar
+        utilizando formas de medición con sistemas diferentes
+        <q cite="#bib35"></q>.
+      </p>
+
+      <p>
+        La variación del peso corporal en niños es amplia siendo el peso
+        promedio a la edad de 1 mes de 4.2 kg y el peso promedio a los 18 años
+        es 60kg. Por otra parte, en neonatos la variación es menor con un valor
+        de peso promedio de 2.1 ± 1.0 kg. En estos pacientes debido a la menor
+        variación se han propuesto modificaciones a la DDD como la dosis diaria
+        definida neonatal (nDDD) propuestas de acuerdo a literatura
+        <q cite="#bib38"></q>.
+      </p>
+
+      <h3>5.2. Dosis diaria prescrita</h3>
+      <p>
+        La dosis diaria prescrita (DDP) es el promedio de las dosis recibidas en
+        una muestra de pacientes (adultos) con función renal normal en la
+        práctica clínica <q cite="#bib34"></q>. La DDP se calcula para la
+        población de interés, por lo cual es más representativa de la dosis
+        utilizada en la práctica para un paciente. La DDP se puede definir de
+        acuerdo al diagnóstico infeccioso, por ejemplo el meropenem podría tener
+        una DDP de 1.5g para infecciones en piel, 3g para infecciones
+        intrabdominales y 6g para meningitis <q cite="#bib39"></q>.
+      </p>
+
+      <p>
+        La DDP presenta limitaciones cuando se intenta hacer comparaciones entre
+        hospitales, regiones o países. Estas limitaciones parten de su
+        variabilidad de acuerdo a las tradiciones terapéuticas nacionales y la
+        severidad de las condiciones tratadas, entre otros factores. Por lo
+        anterior, una DDP debería ser acompañada de una descripción
+        farmacoepidemiológica de la muestra de pacientes que fue utilizada en su
+        definición <q cite="#bib32"></q>. En algunas instituciones se han
+        utilizado dosis diarias definidas internamente con el fin de reflejar
+        mejor su propio uso <q cite="#bib13"></q>. Lo anterior puede generar
+        sesgos durante la realización de comparaciones interhospitalarias por lo
+        cual se debe preferir la denominación de DDP en estos casos.
+      </p>
+
+      <p>
+        La DDP no representa una medida de consumo aceptable para medicamentos
+        que se dosifican de acuerdo al peso como vancomicina o aminoglucósidos
+        <q cite="#bib40"></q>. Lo mismo ocurre en individuos que reciben
+        antimicrobianos de acuerdo a su peso o superficie de área corporal (por
+        ejemplo pacientes pediátricos o con insuficiencia renal)
+        <q cite="#bib40"></q>.
+      </p>
+
+      <h3>5.3. Dosis diaria recomendada</h3>
+      <p>
+        La recomendación de dosis diarias recomendadas (DDR) parte de un
+        consenso de expertos diferente a la OMS que es la que cobija al sistema
+        ATC/DDD. Esta dosis podría ser la recomendada por una guía de práctica
+        clínica local o nacional para una indicación de tratamiento específica
+        <q cite="#bib41"></q>.
+      </p>
+
+      <h3>5.4. Días de terapia con antimicrobianos</h3>
+      <p>
+        Los días de terapia (DOTs, <i>Days Of therapy</i>) constituyen una
+        medida de consumo alternativa a DDR y DDD para antimicrobianos. Se
+        define 1 DOT como cualquier dosis de antimicrobiano recibida durante un
+        periodo de 24 horas (empezando a una hora definida)
+        <q cite="#bib42"></q>. Cada antimicrobiano administrado a un paciente,
+        se suma en el conteo de días de terapia para obtener un consumo
+        acumulado. Por ejemplo, si un paciente recibe tratamiento con
+        ceftriaxona y vancomicina por 3 días con vancomicina por 4 días
+        adicionales, se tiene un consumo acumulado de 10 DOTs.
+      </p>
+
+      <p>
+        Los DOTs se relacionan directamente con la duración de la exposición por
+        un paciente a un antimicrobiano. Esta medida no depende de la dosis
+        utilizada por el paciente por lo cual se prefiere en poblaciones en las
+        cuales se hace dosificación basada en peso o área corporal. Entre los
+        cuales se tienen a pacientes pediátricos y pacientes con función renal
+        disminuida <q cite="#bib43"></q>. Los DOTs son buenos predictores del
+        impacto ecológico, al medir la intensidad de uso y no la dosis acumulada
+        <q cite="#bib29"></q>. Por lo anterior, esta unidad de consumo se
+        considera adecuada para la evaluar el consumo de antimicrobianos y
+        podría ser superior a DDD, RDD y PDD en este fin.
+      </p>
+
+      <p>
+        Un factor que limita la amplia utilización de este indicador es la falta
+        de información de consumo de antimicrobianos a nivel paciente en varias
+        instituciones <q cite="#bib44"></q>. En las mismas la obtención de datos
+        de consumo a través de DOTs tiene que hacerse de manera manual lo que es
+        propenso a errores e intensivo en cuanto al gasto en recursos y tiempo.
+        Los resultados de consumo a través de DDDs y DOTs se correlacionan
+        frecuentemente aunque existen excepciones <q cite="#bib45"></q>. En el
+        caso de comparaciones interhospitalarias se requiere un entendimiento
+        adecuado del método para obtener los estimados de DOT con el fin de
+        evitar sesgos <q cite="#bib13"></q>. Pese a estas limitaciones la guía
+        vigente de IDSA/SHEA para la implementación de ASPs sugiere monitorizar
+        el consumo de antimicrobianos mediante DOTs en lugar de DDDs
+        <q cite="#bib8"></q>.
+      </p>
+
+      <p>
+        Un método de medición de consumo relacionado a DOTs es la duración de
+        terapia (LOTs, <i>Length Of therapy</i>). El LOT es la suma de días
+        durante los cuales se administra al menos un antibiótico a un paciente,
+        en este no se tienen en cuenta el número y tipos de antibióticos que se
+        reciben <q cite="#bib42"></q>. Por ejemplo, si un paciente recibe
+        tratamiento con ceftriaxona y vancomicina por 3 días con vancomicina por
+        4 días adicionales, se cuentan 7 LOTs. La obtención de LOTs permite
+        obtener información adicional, la magnitud del ratio DOT/LOT refleja la
+        frecuencia de utilización de combinaciones de antibióticos frente a
+        monoterapia <q cite="#bib42"></q>.
+      </p>
+
+      <h3>5.5. Otras medidas de consumo de antibióticos</h3>
+
+      <p>
+        Los cursos de tratamiento se definen como cualquier periodo durante el
+        cual el mismo agente es administrado al mismo paciente en días
+        consecutivos, mientras los periodos de tratamiento son el periodo de
+        días consecutivos en los cual se administró al menos un antibiótico a un
+        paciente <q cite="#bib29"></q>. Por ejemplo, si un paciente recibe
+        tratamiento con ceftriaxona y vancomicina por 3 días con vancomicina por
+        4 días adicionales se cuentan dos cursos de tratamiento y un periodo de
+        tratamiento.
+      </p>
+
+      <p>
+        Los días libres de antimicrobiano se enfoca en sí el paciente recibe o
+        no antimicrobianos, y puede tener ciertas ventaja sobre DOTs pero es una
+        medida con uso poco extendido en ASPs <q cite="#bib30"></q>. En adición
+        se ha reportado la utilización de gramos totales de medicamento
+        utilizados como medida de consumo <q cite="#bib30"></q>. Por último, se
+        puede considerar al costo como una medida de consumo y su seguimiento es
+        importante para justificar la continuación del soporte administrativo
+        <q cite="#bib8"></q>.
+      </p>
+    </div>
+    <br />
+    <div class="container bg-blog-0">
+      <h2>6. Denominadores en el Consumo de Antibióticos</h2>
+      <br />
+      <p>
+        El uso de un denominador permite estandarizar la medida de exposición a
+        las variaciones en la ocupación del hospital <q cite="#bib34"></q>. Un
+        denominador adecuado se relaciona con la presión de selección ejercida
+        por un antibiótico <q cite="#bib40"></q>.
+      </p>
+
+      <p>
+        Los días paciente (PD, <i>patient-days</i>) son el número total de días
+        que los pacientes estuvieron en hospitalización <q cite="#bib46"></q>.
+        En los días de hospitalización la persona es confinada a una cama y
+        permanece durante al menos una noche en el hospital. Los PD se pueden
+        calcular multiplicando en número total de camas en los servicios por el
+        porcentaje de ocupación y por el número de días en el mes. El porcentaje
+        de ocupación se obtiene dividiendo el número de días-cama ocupados sobre
+        el número de días cama disponible en un periodo de tiempo
+        <q cite="#bib47"></q>. De manera alternativa se pueden calcular
+        multiplicando el número de pacientes admitidos y el promedio LOS
+        <q cite="#bib48"></q>. La duración o días de estancia (LOS), describe la
+        duración de un episodio de hospitalización, este se puede calcular al
+        substraer el día de admisión del día de egreso.
+      </p>
+
+      <p>
+        El uso de PD como denominador tiene limitaciones puesto que su magnitud
+        se ve alterada por las variaciones en el tipo de pacientes presentes en
+        una institución (severidad y diagnósticos), número de admisiones y/o
+        promedio de LOS <q cite="#bib34"></q>. Los PD en la medición del consumo
+        de pacientes en servicios ambulatorios no suele ser fiable ya que la
+        inclusión de este tipo de pacientes puede sobrestimar el consumo. El
+        aporte de pacientes ambulatorios en PD es nulo en el cálculo, puesto que
+        se admiten y se les da egreso el mismo día.
+      </p>
+
+      <p>
+        El número de episodios de consultante finalizados (FCE, Finished
+        Consultant Episodes) es la suma de las veces que un paciente es admitido
+        a un servicio por un facultativo en una institución
+        <q cite="#bib14"></q>. El número de admisiones suele ser menor que el
+        número de FCE en un hospital, porque cada vez que un paciente se
+        traslada entre servicios del hospital se adiciona un FCE
+        <q cite="#bib29"></q>. En el cálculo de FCEs se debe tener en cuenta que
+        el día de admisión y egreso cuentan como uno. El uso del número de FCE
+        es sensible a cambios en el consumo y tiene la ventaja de tener en
+        cuenta las diferencias en la complejidad (case-mix) de las instituciones
+        <q cite="#bib49"></q>.
+      </p>
+
+      <p>
+        En estudios de consumo de antibióticos en Reino Unido a nivel nación se
+        han realizado mediciones a través del indicador número de prescripciones
+        por STAR-PU <q cite="#bib50"></q><q cite="#bib51"></q>. El STAR-PU
+        (specific therapeutic group age-sex related prescribing unit) es una
+        unidad de prescripción estandarizada que tiene en cuenta la variabilidad
+        socio-económica y demográfica de una región <q cite="#bib52"></q>.
+        STAR-PU se considera robusto para mediciones de consumo de
+        antimicrobianos, a diferencia del número de prescripciones/ítems que no
+        mide la exposición a la que se ve sometido un paciente
+        <q cite="#bib29"></q>. Su uso no se encuentra muy extendido en la
+        actualidad y por lo general no es recomendable.
+      </p>
+    </div>
+    <br />
+    <div class="container bg-blog-0">
+      <h2>7. Comparación entre medidas de consumo de antimicrobianos</h2>
+      <br />
+      <p>
+        Las diferentes medidas de consumo se pueden agrupar en categorías de
+        acuerdo a la correlación que existe entre ellas. Un estudio realizado
+        con antibióticos prescritos en un hospital de 950 camas mostró la
+        correlación entre 10 tipos de medidas de consumo de antibióticos
+        <q cite="#bib29"></q>. Estas medidas resultaban de la combinación entre
+        5 tipos de numerador (DDDs, DOTs, LOTs, cursos de tratamiento y periodos
+        de tratamiento) con 2 tipos de denominador (1000PD y FCEs). Se
+        encontraron varias agrupaciones (con alta correlación) que miden
+        atributos diferentes: 1) DDDs, DOTs, LOTs por 1000PD, 2) DDDs, DOTs,
+        LOTs por 1000 FCEs, 3) cursos y periodos de tratamiento por 1000PD y 4)
+        cursos y periodos de tratamiento por 1000 FCEs.
+      </p>
+      <h3>7.1. Comparación entre numeradores</h3>
+      <p>
+        Las DDDs tienden a sobrestimar el consumo respecto a indicadores de
+        referencia como PDDs <q cite="#bib41"></q><q cite="#bib53"></q
+        ><q cite="#bib54"></q>. El indicador RDD por otra parte tiende a
+        subestimar el consumo <q cite="#bib41"></q>. Un estudio comparó
+        DDDs/100PD con PDDs/100PD, mientras examinaba las tendencias de consumo
+        durante varios años <q cite="#bib53"></q>. Se obtuvo el promedio de
+        utilización en dos periodos de tres años entre 1992-2003, y la variación
+        en el consumo promedio de un periodo a otro se expresó como porcentaje.
+        El cambio en utilización en DDDs/100PD fue +81% y +69% para servicios de
+        medicina interna y cirugía. Cuando se utilizó el indicador PDDs/100PD,
+        el aumento en el consumo observado fue menor con +48% y +38%, para los
+        mismos servicios. Las DDDs tienden a sobrestimar el consumo puesto que
+        las dosis definidas en la mayor parte de antibióticos sistémicos son
+        menores a las utilizadas en la práctica <q cite="#bib53"></q>.
+      </p>
+
+      <p>
+        En un hospital universitario de adultos se llevó a cabo una encuesta con
+        el fin de hacer comparación entre DDDs, PDDs y RDDs
+        <q cite="#bib41"></q>. La RDD se obtuvo de guías locales de consenso
+        sobre terapia antimicrobiana empírica. Se encontró que las PDDs
+        correspondieron en 36% a la definición de DDDs y en 58% a la definición
+        de RDDs. En pacientes con disfunción renal (aclaramiento de creatinina
+        50mL/min) la correspondencia de DDDs y RDDs con PDDs fue 36 y 42%
+        respectivamente. En comparación con PDDs, el uso de DDDs como medida de
+        consumo de antibióticos tiende a sobrestimar el mismo en 32%, mientras
+        el uso de RDDs tiende a generar una subestimación del consumo en 9%
+        <q cite="#bib41"></q>.
+      </p>
+
+      <p>
+        En otro hospital de 1228 camas se hizo un estudio para determinar las
+        discrepancias entre PDD y DDD en diferentes servicios de la institución
+        <q cite="#bib54"></q>. El promedio de consumo en el hospital fue 718.5
+        DDDs/1000PD. Este consumo fue mayor en la UCI, intermedio en medicina
+        general y menor en servicios quirúrgicos. En la mayoría de los
+        medicamentos estudiados la PDD era mayor a la recomendación DDD. Por
+        esta razón, con excepción del grupo de fluoroquinolonas y
+        cefalosporinas, al usar el sistema DDD se sobrestimaba el consumo de
+        antibióticos en 40% <q cite="#bib54"></q>.
+      </p>
+
+      <p>
+        Existe correlación entre el consumo medido por DDDs y DOTs en la mayoría
+        de las circunstancias <q cite="#bib45"></q>. Existen desviaciones cuando
+        la DDD difiere de la dosis prescrita, que tienden a que haya
+        sobrestimación en el consumo medido por DDDs comparados a DOTs
+        <q cite="#bib40"></q><q cite="#bib55"></q>. En un hospital de adultos se
+        llevó a cabo un estudio comparando el consumo medido por DDDs y PDDs
+        versus el consumo medido por DOTs obtenidos en registros de
+        administración <q cite="#bib40"></q>. Se encontraron variaciones
+        aleatorias que eran dependientes del tipo de antibiótico, forma de
+        administración y unidad de estudio. El valor promedio general de días de
+        tratamiento fue 340 DOTs/1000PD. La cantidad de días de tratamiento fue
+        sobreestimada cuando se utilizaron DDDs y PDDs (52.3% y 33.5%,
+        respectivamente) <q cite="#bib40"></q>.
+      </p>
+
+      <p>
+        La diferencia entre la DDD y la dosis utilizada realmente en la práctica
+        clínica puede constituir una limitación al generar inexactitud en la
+        medición del consumo. Un estudio analizó el consumo de antibacterianos
+        en 130 hospitales durante un año para conocer las diferencias entre DDDs
+        y DOTs <q cite="#bib55"></q>. Los antimicrobianos se agruparon de
+        acuerdo a si el consumo era sobrestimado (ampicilina + sulbactam),
+        subestimado (ceftriaxona) o no difería (levofloxacina IV) con el uso de
+        DDDs en vez de DOTs. El consumo de ampicilina-sulbactam medido por DDDs
+        (88.7 DDDs/1000PD) fue mayor al consumo medido a través de DOTs (22.1
+        DOTs/1000 PD). En este caso la dosis media administrada de 8.1 ± 1.8g es
+        mayor a la DDD de la OMS correspondiente a 2g. El consumo de ceftriaxona
+        medido a través de DDDs (44.9 DDDs/1000 PD) fue menor que el consumo
+        medido por DOTs (62.9 DOTs/1000 PD). Porque la dosis promedio
+        administrada de ceftriaxona de 1.1 ± 0.21g es menor a la recomendación
+        de la OMS de 2g. Para levofloxacina IV la cantidad de DDDs (71.6
+        DDDs/1000PD) no fue diferente a la cantidad de DOTs (70.9 DOTs /1000PD),
+        presentándose correlación aceptable entre ambas medidas. La dosis media
+        observada fue 0.5 ± 0.1g/día similar a la DDD de la OMS correspondiente
+        a 0.5g.
+      </p>
+
+      <p>
+        Un estudio en un hospital académico comparó DDDs frente a DOTs evaluando
+        las tendencias de consumo durante tres años <q cite="#bib56"></q>. El
+        método de referencia para medición de consumo fue días de terapias
+        obtenidos de los registros de dispensación de la farmacia. El consumo de
+        los antinfecciosos estudiados en este hospital era subestimado con el
+        uso de DDDs respecto a DOTs en la mayoría de los casos. La subestimación
+        fue alta con vancomicina (40.8 y 63.0% para formas intravenosa y oral) e
+        imipenem (28.9%), moderada para ceftazidima (18.2%) y gatifloxacino oral
+        (18.7%), baja para voriconazol (13.1%) y ciprofloxacina oral (10.1%). Al
+        contrario, se presentó sobrestimación con ciprofloxacina IV (28.2%) y
+        voriconazol IV (24.3%). En general las magnitud de consumo de
+        antibióticos se mantuvo pese al cambio en la unidad de medición
+        <q cite="#bib56"></q>. Un estudio en un hospital materno-infantil
+        describió el consumo de antifúngicos por medio de DDDs y DOTs
+        <q cite="#bib57"></q>. En un periodo discontinuo de tres años se
+        encontró alta correlación entre las medidas de consumo (r=0.995-0.998),
+        sin embargo los autores opinan que DOTs es una medida más relevante en
+        pediatría <q cite="#bib57"></q>.
+      </p>
+
+      <p>
+        El consumo a través de DDDs puede verse influenciado por cambios en la
+        composición del formulario de la institución. Un estudio
+        <q cite="#bib53"></q> encontró que el consumo de antimicrobianos en un
+        hospital entre 1999 a 2000, se vio afectado por el cambio de ofloxacina
+        a levofloxacina. La DDD para levofloxacina era 250mg mientras la PDD era
+        500mg, esta situación generó sobrestimación del consumo. Este efecto no
+        es observado con la utilización de DOTs o PDDs <q cite="#bib53"></q>.
+      </p>
+
+      <h2>7.2. Comparación entre denominadores</h2>
+      <p>
+        Un estudio comparó el consumo de antibióticos medido en DDDs por 100 PD
+        vs DDDs por FCEs encontrando una buena correlación (r=0.74) entre los
+        dos indicadores <q cite="#bib14"></q>. Un mejor manejo de
+        antimicrobianos por parte de una institución no se relaciona con un
+        mejor comportamiento en el consumo frente a aquellos que tienen un peor
+        manejo. El indicador de consumo DDDs/FCEs puede servir como medida
+        complementaria al indicador DDDs/100 PD <q cite="#bib14"></q>. El FCE
+        está mejor relacionado a las tasas de exposición a antibióticos que el
+        número de pacientes día, por ser una medición de los episodios de
+        cuidado individual <q cite="#bib14"></q>.
+      </p>
+
+      <p>
+        En otro estudio se hizo la recolección de datos de consumo
+        <q cite="#bib53"></q> cambiando el denominador de 100 PD por número de
+        admisiones. De esta manera el cambio en el consumo durante el periodo
+        1992-1994 a 2001-2003 en PDDs por número de admisiones es +22% y +50%
+        (para medicina interna y cirugía respectivamente). El cambio de consumo
+        tiene un menor valor debido a que a través de los años, se daba un
+        incremento en el número de admisiones junto a una disminución de la
+        duración de estancia, que era mayor en el servicio de medicina interna
+        <q cite="#bib53"></q>. El número de admisiones se ve afectado por LOS en
+        comparación al número de camas ocupados.
+      </p>
+
+      <p>
+        Existen factores dependientes de la metodología de medición que pueden
+        hacer cambiar los resultados de consumo obtenidos limitando la
+        comparabilidad de los resultados entre instituciones
+        <q cite="#bib15"></q>. En un estudio se encontraron discrepancias de
+        hasta 26% en el indicador de DDD/100 PD dependiendo sí los días de
+        admisión y egreso son contados como uno o dos, se sugiere contarlos como
+        un solo día. El consumo promedio de antibacterianos fue de 69.2 DDDs/100
+        PD equivalente a 300.3 DDDs/100 admisiones <q cite="#bib15"></q>. La
+        tendencia en el consumo de antibióticos sobre el tiempo se vio alterada
+        por la versión del índice ATC/DDD utilizada. Se observó una reducción
+        del consumo total del 20.6% (69.15 vs 87.09 DDD/100 PD) debido a la
+        utilización de la versión 2007 vs 2002. El cambio en la definición de
+        dosis para amoxicilina-clavulanato (antibiótico frecuentemente
+        utilizado) explica la variación <q cite="#bib15"></q>.
+      </p>
+    </div>
+    <br />
+    <div class="container bg-blog-0">
+      <h2>8. Consumo de antibióticos en falla renal</h2>
+      <p>
+        La necesidad de ajuste de dosis de antibióticos en pacientes con falla
+        renal constituye un factor que dificulta la medición del consumo de
+        antibióticos en este grupo de pacientes. Un estudio evaluó la influencia
+        de la falla renal en la medición de consumo a través de DDDs y DOTs, en
+        vancomicina, levofloxacina y ceftriaxona <q cite="#bib43"></q>. La tasa
+        de consumo en DDDs tiende a ser subestimada en pacientes con
+        insuficiencia renal. En pacientes con vancomicina (31.8 vs 49.3 DDDs/100
+        PD) y levofloxacina (57.8 vs 79.3 DDDs/100 PD) el consumo en DDDs es
+        menor en pacientes con falla renal, FR que, en pacientes con función
+        renal normal, FRN respectivamente. En el caso de ceftriaxona no se
+        encontraron diferencias en consumo (86.8 vs 88.7 DDDs/100 PD) en
+        pacientes con FR y FRN <q cite="#bib43"></q>.
+      </p>
+
+      <p>
+        Las medidas de consumo que evalúan la duración de tratamiento son menos
+        afectadas por variaciones en la función renal <q cite="#bib43"></q>. El
+        consumo de levofloxacina (51.7 vs 57.0 DOTs/100 PD) y ceftriaxona (51.1
+        vs 54.1 DOTs/100 PD), es similar en pacientes con FR y FRN
+        <q cite="#bib43"></q>. Sin embargo el consumo de vancomicina para
+        pacientes con FR (34.8 DOTs/100 PD) es diferente al consumo en aquellos
+        con FRN (45.2 DOTs/100 PD) <q cite="#bib43"></q>.
+      </p>
+
+      <p>
+        Los pacientes con requerimiento de diálisis requieren intervalos de
+        dosificación mayores a un día de acuerdo al tipo de medicamento. En
+        estos pacientes la definición de DOTs como conteo de días en los cuales
+        se administró el antibiótico al paciente podría no reflejar la verdadera
+        exposición al fármaco <q cite="#bib58"></q>. Debido a que el individuo
+        mantiene una concentración en sangre efectiva todos los días pese a que
+        no recibe la dosis diariamente. Los días en los cuales no se recibe la
+        dosis pueden ser considerados como días de exposición (ExDs). Estos días
+        se pueden incluir en la determinación de DOTs para evaluar la exposición
+        a antimicrobianos de manera precisa. Un estudio encontró que en la
+        mayoría de poblaciones no existen diferencias en el consumo de DOTs al
+        incluir ExDs en su cálculo. Lo anterior puede no ser exacto en
+        subpoblaciones con una proporción alta de individuos con falla renal
+        <q cite="#bib58"></q>.
+      </p>
+    </div>
+    <br />
+    <div class="container bg-blog-0">
+      <h2>9. Consumo de antibióticos en pediatría</h2>
+      <br />
+      <p>
+        No ha sido posible establecer de manera definitiva, una medida de
+        consumo de antimicrobianos óptima para la población pediátrica. Una
+        revisión sistemática en la que se incluyeron 79 estudios que cumplieron
+        con criterios de inclusión, no pudo identificar una medida de consumo
+        superior a otras en población pediátrica. Lo anterior, en razón de la
+        poca información disponible y la gran heterogeneidad de la misma
+        <q cite="#bib33"></q>.
+      </p>
+
+      <p>
+        En hospitales pediátricos la medición de consumo de antibióticos permite
+        conocer blancos importantes para intervenciones dentro de un ASP. Los
+        resultados de un estudio con 42 hospitales pediátricos sugieren que
+        implementar estrategias para optimizar el manejo de neumonía no
+        complicada, antibióticos en pacientes sometidos a apendicetomía,
+        pacientes con fibrosis quística y profilaxis quirúrgica, puede tener
+        impacto en la reducción del consumo de antibióticos
+        <q cite="#bib16"></q>. El consumo promedio de antimicrobianos fue de 698
+        DOTs/1000 PD. Los pacientes quirúrgicos recibieron en promedio un número
+        mayor de LOTs que los no quirúrgicos, pese a que se recomienda una
+        duración de 24 horas para antibióticos peri-operativos. La utilización
+        de antibióticos en neumonía, fibrosis quística, apendicetomía e
+        infecciones de piel/tejidos blandos represento >10% del consumo total
+        entre 316 grupos diagnósticos estudiados. La variabilidad fue evaluada
+        para el consumo de antibióticos en: manejo de neumonía no complicada,
+        terapia anti-MRSA en fibrosis quística e infecciones de piel sin
+        aislamientos de MRSA y antipseudomónicos en candidatos a apendicetomía.
+        La proporción de pacientes que recibían antibióticos de primera línea
+        para neumonía no complicada fue 1-80%, mientras el consumo estuvo en un
+        rango de 298-977 DOTs/1000 PD. La proporción de pacientes que recibían
+        antipseudomónicos para apendicetomía varió de 1 a > 94%. Esta variación
+        fue alta con el uso de agentes anti-MRSA en pacientes con infecciones y
+        fibrosis quística sin aislamientos de MRSA siendo la proporción de uso
+        de 1-60%. La variación en la utilización de agentes anti-MRSA en
+        pacientes con infecciones de piel y tejidos blandos sin aislamientos de
+        MRSA fue baja. La variabilidad no explicable en la atención en salud es
+        utilizada para identificar prioridades en estudios de efectividad
+        comparativa y mejoramiento de la calidad.
+      </p>
+
+      <p>
+        En las comparaciones interinstitucionales se puede encontrar gran
+        variabilidad en el consumo de antimicrobianos. En un estudio que
+        agrupaba a 40 hospitales pediátricos se encontró gran diversidad de
+        valores de consumo pese a normalización por complejidad en la atención
+        <q cite="#bib59"></q>. En instituciones en el cuartil superior del
+        consumo había una probabilidad +27% de que los pacientes recibieran
+        antibióticos respecto a instituciones en el cuartil inferior. El consumo
+        de antibióticos promedio fue 468 DOTs/1000 PD con un 38-72% de la
+        población recibiendo ≥1 antibiótico durante la hospitalización. En este
+        estudio se encontró una relación proporcional entre el porcentaje de
+        pacientes que recibía un antibiótico y el valor de consumo en DOTs
+        <q cite="#bib59"></q>. En los hospitales con mayor número de DOTs se
+        observaron más pacientes con terapia prolongada y mayor consumo de
+        antibióticos de amplio-espectro. Otros factores asociados a un mayor
+        consumo de antimicrobianos eran realización de procedimientos
+        quirúrgicos, presencia de diagnósticos de infección asociados y
+        complejidad en el cuidado <q cite="#bib59"></q>.
+      </p>
+
+      <p>
+        Un estudio realizado con una base de datos de prescripciones en 20
+        hospitales pediátricos reveló la tendencia en consumo de antibióticos
+        <q cite="#bib60"></q>. El consumo de antibióticos promedio para
+        hospitales estuvo entre 539-557 DOTs/1000 PD durante los años 2002 a
+        2007. No se observa diferencia en el consumo a lo largo de los años de
+        acuerdo al test ANOVA. La proporción media de pacientes que recibieron
+        terapia con antibióticos fue 21-45%. En el periodo de estudio los
+        antibióticos más utilizados, en orden descendente, fueron penicilinas
+        lábiles a β-lactamasa, aminoglucósidos, cefalosporinas de 3era o 4ta
+        generación, glucopéptidos y cefalosporinas de 1era generación. Se
+        presentó un incremento en la utilización de oxazolidionas y macrólidos,
+        con disminución del consumo de cefalosporinas de primera generación y
+        aminoglucósidos <q cite="#bib60"></q>.
+      </p>
+
+      <p>
+        El consumo de antimicrobianos por parte de unidades críticas es mayor
+        que el promedio general en pacientes pediátricos con excepción de
+        unidades críticas neonatales. Un estudio realizado por medio de
+        encuestas en 31 hospitales pediátricos, encontró una alta tasa de
+        utilización en pacientes en unidades de cuidado intensivo neonatales y
+        pediátricas <q cite="#bib61"></q>. Hasta 70.8% de los pacientes se
+        encontraban recibiendo antibióticos comparado con 43.2% en unidades
+        neonatales durante la encuesta. Los pacientes de UCIN recibían en
+        promedio un número más alto de antibióticos que aquellos en UCIP. Los
+        agentes más usados en UCIN son gentamicina, ampicilina y vancomicina, a
+        diferencia de la UCIP donde se utilizan más cefalosporinas de 1era y
+        3era generación junto a vancomicina <q cite="#bib61"></q>.
+      </p>
+
+      <p>
+        En una UCIN se realizó un estudio del consumo y patrones de prescripción
+        de antibióticos para identificar escenarios en los cuales se debían
+        aplicar intervenciones <q cite="#bib62"></q>. Se encontró un consumo de
+        343.2 DOTs/1000 PD (equivalente a 195.3 LOTs/1000 PD). Los diagnósticos
+        que se asociaron a un mayor número de DOTs fueron neumonía, sepsis con
+        cultivos negativos y enterocolitis necrosante. Los diagnósticos
+        anteriores se consideran objetivos para el diseño de intervenciones
+        dentro de un ASP <q cite="#bib62"></q>. Un estudio con antifúngicos en
+        un hospital materno-infantil no encontró diferencias importantes entre
+        la utilización de DDDs y DOTs para la medición de consumo
+        <q cite="#bib57"></q>.
+      </p>
+    </div>
+    <br />
+    <div class="container bg-blog-0">
+      <h2>10. Fuentes de Datos de Consumo</h2>
+      <p>
+        Es recomendable la utilización de datos de consumo basados en los
+        registros de administración de medicamentos llevados por el personal de
+        enfermería. Los datos provenientes de registros de prescripción o
+        dispensación tienden a sobrestimar el consumo y por tal son menos
+        precisos <q cite="#bib63"></q>. Este comportamiento es normal y refleja
+        variaciones interinstitucionales en la eficiencia y coordinación entre
+        procedimientos de prescripción, dispensación y administración de
+        medicamentos. La obtención de datos de consumo a través de revisión
+        manual de registros de administración es propensa a errores e intensiva
+        en el consumo de recursos materiales y de personal. Se deben programar
+        herramientas informáticos que permitan automatización del proceso
+        <q cite="#bib63"></q>.
+      </p>
+
+      <p>
+        Un estudio en 4 UCI de adultos comparó los datos de consumo de
+        antimicrobianos obtenidos por medio de herramientas informáticas de
+        fuentes de prescripción, dispensación y administración de medicamentos
+        <q cite="#bib63"></q>. Se compararon los resultados frente a un patrón
+        de oro consistente en la revisión retrospectiva de los registros de
+        administración manuales en una muestra representativa. Cuando se
+        utilizaron datos de dispensación de medicamentos de la farmacia, se
+        presentó una sobrestimación del consumo del 17.7% en DOTs y 14.5% en
+        LOTs. Con los datos de un sistema de prescripción informatizada (CPOE,
+        computer provider order entry) se obtuvo un nivel de sobrestimación
+        intermedio 6.8-10.7% en DOTs y 2.3-5.7% en LOTs. Los datos provenientes
+        de registros de administración de medicamentos electrónicos (eMAR,
+        electronic Medication Administration Records) no presentaron mayor
+        desviación del método de referencia (&#60;1%) <q cite="#bib63"></q>.
+      </p>
+    </div>
+    <br />
+    <div class="container bg-blog-0">
+      <h2>11. Conclusiones</h2>
+      <p>
+        Se encuentra en la literatura una gran diversidad de indicadores de
+        medición de consumo de antimicrobianos. Cada indicador cuenta con una
+        serie de ventajas y desventajas, pero en un sentido general no parece
+        haber uno superior a otro en su capacidad de discriminar el consumo. Por
+        otra parte, en situaciones específicas como en pacientes pediátricos,
+        los indicadores de duración parecen ser mejores. Por tal, se recomienda
+        hacer un cambio en los indicadores en la institución para poder tener un
+        mejor control sobre este parámetro.
+      </p>
+    </div>
+
+    <!-- <bibtex
+      src="./Modulos/Blog/02_consumo/coleccion_Antimictobianos.bib"
+    ></bibtex> -->
+
+    <!-- <script src="./node_modules/citation-js/index.js" type="text/javascript" type="module"></script> -->
+    <!-- <script>
+      const Cite = require("@citation-js");
+    </script> -->
+
+    <div class="container bg-blog-0">
+      <h2>Referencias</h2>
+      <br />
+      <ol>
+        <li id="#bib1">
+          Michael CA, Dominey-Howes D, Labbate M. The Antimicrobial Resistance
+          Crisis: Causes, Consequences, and Management. Front Public Heal.
+          2014;2(September):145.
+        </li>
+        <li id="#bib2">
+          World Economic Forum (WEF). Global Risks Report 2013 Eighth Edition.
+          World Economic Forum. 2013. 80 p.
+        </li>
+        <li id="#bib3">
+          Shlaes DM. Role of Antimicrobial Stewardship in Prevention and Control
+          of Antibiotic Resistance. Curr Infect Dis Rep. 1999;1(4):334-7.
+        </li>
+        <li id="#bib4">
+          Jones RN. Resistance patterns among nosocomial pathogens: Trends over
+          the past few years. Chest. 2001;119(2 SUPPL.):397S-404S.
+        </li>
+        <li id="#bib5">
+          McGowan J, Gerding D. Does antibiotic restriction prevent resistance?
+          New Horiz. 1996;4(3):370-6.
+        </li>
+        <li id="#bib6">
+          Shlaes DM, Gerding DN, John JF, Craig WA, Bornstein DL, Duncan RA, et
+          al. Society for Healthcare Epidemiology of America and Infectious
+          Diseases Society of America Joint Committee on the Prevention of
+          Antimicrobial Resistance: Guidelines for the prevention of
+          antimicrobial resistance in hospitals. Clin Infect Dis.
+          1997;25(3):584-99.
+        </li>
+        <li id="#bib7">
+          Dellit TH, Owens RC, MacGowan JE, Hooton TM, Gerding DN, Weinstein RA,
+          et al. Infectious Diseases Society of America and Society for
+          Healthcare Epidemiology of America Guidelines for developing an
+          institutional program to enhance antimicrobial stewardship. Clin
+          Infect Dis. 2007;44(1):159-77.
+        </li>
+        <li id="#bib8">
+          Barlam TF, Cosgrove SE, Abbo LM, Macdougall C, Schuetz AN, Septimus
+          EJ, et al. Executive summary: Implementing an antibiotic stewardship
+          program: Guidelines by the infectious diseases society of America and
+          the society for healthcare epidemiology of America. Clin Infect Dis.
+          2016;62(10):1197-202.
+        </li>
+        <li id="#bib9">
+          Rodríguez-Baño J, Paño-Pardo JR, Alvarez-Rocha L, Asensio Á, Calbo E,
+          Cercenado E, et al. Programas de optimización de uso de
+          antimicrobianos (PROA) en hospitales españoles: documento de consenso
+          GEIH-SEIMC, SEFH y SEMPSPH. Farm Hosp. 2012;36(1).
+        </li>
+        <li id="#bib10">
+          Dik J-WH, Hendrix R, Poelman R, Niesters HG, Postma MJ, Sinha B, et
+          al. Measuring the impact of antimicrobial stewardship programs. Expert
+          Rev Anti Infect Ther. 2016;14(6):569-75.
+        </li>
+        <li id="#bib11">
+          Donabedian A. The quality of care. How can it be assessed? JAMA.
+          1997;260(12):1743-8.
+        </li>
+        <li id="#bib12">
+          Ibrahim OM, Polk RE. Antimicrobial use metrics and benchmarking to
+          improve stewardship outcomes: Methodology, opportunities, and
+          challenges. Infect Dis Clin North Am. 2014;28(2):195-214.
+        </li>
+        <li id="#bib13">
+          Jacob JT, Gaynes R. Emerging trends in antibiotic use in US hospitals:
+          quality, quantification and stewardship. Expert Rev Anti Infect Ther.
+          2010;8(8):893-902.
+        </li>
+        <li id="#bib14">
+          Curtis C, Marriott J, Langley C. Development of a prescribing
+          indicator for objective quantification of antibiotic usage in
+          secondary care. J Antimicrob Chemother. 2004;54(2):529-33.
+        </li>
+        <li id="#bib15">
+          Kuster SP, Ruef C, Ledergerber B, Hintermann A, Deplazes C, Neuber L,
+          et al. Quantitative antibiotic use in hospitals: Comparison of
+          measurements, literature review, and recommendations for a standard of
+          reporting. Infection. 2008;36(6):549-59.
+        </li>
+        <li id="#bib16">
+          Gerber JS, Kronman MP, Ross RK, Hersh AL, Newland JG, Metjian TA, et
+          al. Identifying Targets for Antimicrobial Stewardship in Children’s
+          Hospitals. Infect Control Hosp Epidemiol. 2013;34(12):1252-8.
+        </li>
+        <li id="#bib17">
+          Stevens V, Dumyati G, Fine LS, Fisher SG, Van Wijngaarden E.
+          Cumulative antibiotic exposures over time and the risk of clostridium
+          difficile infection. Clin Infect Dis. 2011;53(1):42-8.
+        </li>
+        <li id="#bib18">
+          Paterson DL. «Collateral Damage» from Cephalosporin or Quinolone
+          Antibiotic Therapy. Clin Infect Dis. 2004;38(Supplement 4):S341-5.
+        </li>
+        <li id="#bib19">
+          Harbarth S, Harris AD, Carmeli Y, Samore MH. Parallel Analysis of
+          Individual and Aggregated Data on Antibiotic Exposure and Resistance
+          in Gram-Negative Bacilli. Clin Infect Dis. 2001;33:1462-168.
+        </li>
+        <li id="#bib20">
+          Kern W V., Steib-Bauert M, de With K, Reuter S, Bertz H, Frank U, et
+          al. Fluoroquinolone consumption and resistance in haematology-oncology
+          patients: Ecological analysis in two university hospitals 1999-2002. J
+          Antimicrob Chemother. 2005;55(1):57-60.
+        </li>
+        <li id="#bib21">
+          Price J, Cheek E, Lippett S. Impact of an intervention to control
+          Clostridium difficile infection on hospital and community-onset
+          disease; an interrupted time series analysis. Clin Microbiol Infect.
+          2010;16(8):1297-302.
+        </li>
+        <li id="#bib22">
+          Sarma JB, Marshall B, Cleeve V, Tate D, Oswald T, Woolfrey S. Effects
+          of fluoroquinolone restriction (from 2007 to 2012) on Clostridium
+          difficile infections: Interrupted time-series analysis. J Hosp Infect.
+          2015;91(1):74-80.
+        </li>
+        <li id="#bib23">
+          Ostrowsky B, Ruiz R, Brown S, Chung P, Koppelman E, van Deusen Lukas
+          C, et al. Lessons Learned from Implementing Clostridium difficile
+          –Focused Antibiotic Stewardship Interventions. Infect Control Hosp
+          Epidemiol. 2014;35(S3):S86-95.
+        </li>
+        <li id="#bib24">
+          Joseph NM, Bhanupriya B, Shewade DG, Harish BN. Relationship between
+          antimicrobial consumption and the incidence of antimicrobial
+          resistance in Escherichia coli and Klebsiella pneumoniae isolates. J
+          Clin Diagnostic Res. 2015;9(2):DC08-DC12.
+        </li>
+        <li id="#bib25">
+          Sedláková MH, Urbánek K, Vojtová V, Suchánková H, Imwensi P, Kolář M.
+          Antibiotic consumption and its influence on the resistance in
+          Enterobacteriaceae. BMC Res Notes. 2014;7:454.
+        </li>
+        <li id="#bib26">
+          Westh H, Zinn CS, Rosdahl VT. An international multicenter study of
+          antimicrobial consumption and resistance in Staphylococcus aureus
+          isolates from 15 hospitals in 14 countries. Microb Drug Resist.
+          2004;10(1076-6294 (Print)):169-76.
+        </li>
+        <li id="#bib27">
+          Hoffmann C, Khadem T, Schweighardt A, Brown J. New thoughts on the
+          «forgotten» aspect of Antimicrobial stewardship: Adverse event
+          reporting. Pharmacotherapy. 2015;35(1):59-63.
+        </li>
+        <li id="#bib28">
+          Hamad A, Cavell G, Wade P, Hinton J, Whittlesea C. Risk of medication
+          safety incidents with antibiotic use measured by defined daily doses.
+          Int J Clin Pharm. 2013;35(5):772-9.
+        </li>
+        <li id="#bib29">
+          Berrington A. Antimicrobial prescribing in hospitals: Be careful what
+          you measure. J Antimicrob Chemother. 2009;65(1):163-8.
+        </li>
+        <li id="#bib30">
+          Morris AM. Antimicrobial Stewardship Programs: Appropriate Measures
+          and Metrics to Study their Impact. Curr Treat Options Infect Dis.
+          2014;6(2):101-12.
+        </li>
+        <li id="#bib31">
+          Hutchinson JM, Patrick DM, Marra F, Ng H, Bowie WR, Heule L, et al.
+          Measurement of antibiotic consumption: A practical guide to the use of
+          the Anatomical Thgerapeutic Chemical classification and Definied Daily
+          Dose system methodology in Canada. Can J Infect Dis. 2004;15(1):29-35.
+        </li>
+        <li id="#bib32">
+          World Health Organization. Introduction to Drug Utilization Research.
+          Oslo: World Health Organization; 2003. 1-84 p.
+        </li>
+        <li id="#bib33">
+          Fortin ??, Fontela PS, Manges AR, Platt RW, Buckeridge DL, Quach C.
+          Measuring antimicrobial use in hospitalized patients: A systematic
+          review of available measures applicable to paediatrics. J Antimicrob
+          Chemother. 2014;69(6):1447-56.
+        </li>
+        <li id="#bib34">
+          Curtis CE. Indicators for the monitoring of antibiotic use. J Infect
+          Prev. 2010;11(4):124-6.
+        </li>
+        <li id="#bib35">
+          WHO Collaborating Centre for Drug Statistics Methodology. Guidelines
+          for ATC classification and DDD assignment 2016. 19th editi. Vol. 1.
+          Oslo; 2015. 1-292 p.
+        </li>
+        <li id="#bib36">
+          Monnet DL. Measuring Antimicrobial Use: The Way Forward. Clin Infect
+          Dis. 2007;44(5):671-3.
+        </li>
+        <li id="#bib37">
+          Joseph PD, Craig JC, Caldwell PHY. Clinical trials in children. Br J
+          Clin Pharmacol. 2015;79(3):357-69.
+        </li>
+        <li id="#bib38">
+          Liem TBY, Heerdink ER, Egberts ACG, Rademaker CMA. Quantifying
+          antibiotic use in paediatrics: A proposal for neonatal DDDs. Eur J
+          Clin Microbiol Infect Dis. 2010;29(10):1301-3.
+        </li>
+        <li id="#bib39">
+          AstraZeneca. Merrem Highlights of Prescribing Information. 2016;1-24.
+        </li>
+        <li id="#bib40">
+          Mandy B, Koutny E, Cornette C, Woronoff-Lemsi MC, Talon D.
+          Methodological validation of monitoring indicators of antibiotics use
+          in hospitals. Pharm World Sci. 2004;26(2):90-5.
+        </li>
+        <li id="#bib41">
+          De With K, Bestehorn H, Steib-Bauert M, Kern W V. Comparison of
+          defined versus recommended versus prescribed daily doses for measuring
+          hospital antibiotic consumption. Infection. 2009;37(4):349-52.
+        </li>
+        <li id="#bib42">
+          Polk RE, Hohmann SF, Medvedev S, Ibrahim O. Benchmarking risk-adjusted
+          adult antibacterial drug use in 70 US academic medical center
+          hospitals. Clin Infect Dis. 2011;53(11):1100-10.
+        </li>
+        <li id="#bib43">
+          Zagorski BM, Trick WE, Schwartz DN, Wisniewski MF, Hershow RC, Fridkin
+          SK, et al. The effect of renal dysfunction on antimicrobial use
+          measurements. Clin Infect Dis. 2002;35(12):1491-7.
+        </li>
+        <li id="#bib44">
+          Schechner V, Temkin E, Harbarth S, Carmeli Y, Schwaber MJ.
+          Epidemiological interpretation of studies examining the effect of
+          antibiotic usage on resistance. Clin Microbiol Rev.
+          2013;26(2):289-307.
+        </li>
+        <li id="#bib45">
+          Griffith M, Postelnick M, Scheetz M. Antimicrobial stewardship
+          programs: methods of operation and suggested outcomes. Expert Rev Anti
+          Infect Ther. 2012;10(1):63-73.
+        </li>
+        <li id="#bib46">
+          Klevens RM, Edwards JR, Richards CL, Horan TC, Gaynes RP, Pollock DA,
+          et al. Estimating Health Care-Associated Infections and Deaths in U.S.
+          Hospitals, 2002. Public Health Rep. 2007;122(2):160-6.
+        </li>
+        <li id="#bib47">
+          Retamal M. Autogestión hospitalaria en cifras. Rev Chil Salud Pública.
+          2009;13(3):169-74.
+        </li>
+        <li id="#bib48">
+          Filius PMG, Liem TBY, van der Linden PD, Janknegt R, Natsch S, Vulto
+          AG, et al. An additional measure for quantifying antibiotic use in
+          hospitals. J Antimicrob Chemother. 2005;55(5):805-8.
+        </li>
+        <li id="#bib49">
+          Fitzpatrick RW, Edwards CMC. Evaluation of a tool to benchmark
+          hospital antibiotic prescribing in the United Kingdom. Pharm World
+          Sci. 2008;30(1):73-8.
+        </li>
+        <li id="#bib50">
+          Lambert MF, Masters GA, Brent SL. Can mass media campaigns change
+          antimicrobial prescribing? A regional evaluation study. J Antimicrob
+          Chemother. 2007;59(3):537-43.
+        </li>
+        <li id="#bib51">
+          Wang KY, Seed P, Schofield P, Ibrahim S, Ashworth M. Which practices
+          are high antibiotic prescribers? A cross-sectional analysis. Br J Gen
+          Pract. 2009;59(567):724-7.
+        </li>
+        <li id="#bib52">
+          Lloyd DC, Harris CM, Roberts DJ. Specific therapeutic group age-sex
+          related prescribing units (STAR-PUs): weightings for analysing general
+          practices’ prescribing in England. Br Med J. 1995;311(7011):991-4.
+        </li>
+        <li id="#bib53">
+          De With K, Maier L, Steib-Bauert M, Kern P, Kern W V. Trends in
+          antibiotic use at a University Hospital: Defined or prescribed daily
+          doses? Patient days or admissions as denominator? Infection.
+          2006;34(2):91-4.
+        </li>
+        <li id="#bib54">
+          Muller A, Monnet DL, Talon D, Hénon T, Bertrand X. Discrepancies
+          between prescribed daily doses and WHO defined daily doses of
+          antibacterials at a university hospital. Br J Clin Pharmacol.
+          2006;61(5):585-91.
+        </li>
+        <li id="#bib55">
+          Polk RE, Fox C, Mahoney A, Letcavage J, MacDougall C. Measurement of
+          adult antibacterial drug use in 130 US hospitals: comparison of
+          defined daily dose and days of therapy. Clin Infect Dis. 2007;44(5).
+        </li>
+        <li id="#bib56">
+          Shetka M, Pastor J, Phelps P. Evaluation of the defined daily dose
+          method for estimating antiinfective use in a university hospital. Am J
+          Heal Pharm. 2005;62(21):2288-92.
+        </li>
+        <li id="#bib57">
+          Guillot J, Lebel D, Roy H, Ovetchkine P, Bussières J-F. Usefulness of
+          Defined Daily Dose and Days of Therapy in Pediatrics and
+          Obstetrics-Gynecology: A Comparative Analysis of Antifungal Drugs
+          (2000-2001, 2005-2006, and 2010-2011). J Pediatr Pharmacol Ther.
+          2014;19(3):196-201.
+        </li>
+        <li id="#bib58">
+          Kubin CJ, Jia H, Alba LR, Furuya EY. Lack of Significant Variability
+          among Different Methods for Calculating Antimicrobial Days of Therapy.
+          Infect Control Hosp Epidemiol. 2012;33(04):421-3.
+        </li>
+        <li id="#bib59">
+          Gerber JS, Newland JG, Coffin SE, Hall M, Thurm C, Prasad PA, et al.
+          Variability in antibiotic use at children’s hospitals. Pediatrics.
+          2010;126(6):1067-73.
+        </li>
+        <li id="#bib60">
+          Pakyz AL, Gurgle HE, Ibrahim OM, Oinonen MJ, Polk RE. Trends in
+          Antibacterial Use in Hospitalized Pediatric Patients in United States
+          Academic Health Centers. Infect Control Hosp Epidemiol.
+          2009;30(06):600-3.
+        </li>
+        <li id="#bib61">
+          Grohskopf LA, Huskins WC, Sinkowitz-Cochran RL, Levine GL, Goldmann
+          DA, Jarvis WR. Use of Antimicrobial Agents in United States Neonatal
+          and Pediatric Intensive Care Patients. Pediatr Infect Dis J.
+          2005;24(9):766-73.
+        </li>
+        <li id="#bib62">
+          Cantey JB, Wozniak PS, Sánchez PJ. Prospective surveillance of
+          antibiotic use in the neonatal intensive care unit: Results from the
+          SCOUT study. Pediatr Infect Dis J. 2015;34(3):267-72.
+        </li>
+        <li id="#bib63">
+          Schwartz DN, Evans RS, Camins BC, Khan YM, Lloyd JF, Shehab N, et al.
+          Deriving Measures of Intensive Care Unit Antimicrobial Use from
+          Computerized Pharmacy Data: Methods, Validation, and Overcoming
+          Barriers. Infect Control Hosp Epidemiol. 2011;32(05):472-80.
+        </li>
+      </ol>
+    </div>
+    <!--Incluir Footer-->
+    <div data-include="footer"></div>
+
+    <script>
+      var quotes = document.getElementsByTagName("q");
+
+      for (let i = 0; i < quotes.length; i++) {
+        let id = quotes[i].cite.match(/(?<=#bib)\d{1,2}/)[0];
+        quotes[i].textContent = `[${id}]`;
+      }
+
+      for (let j = 0; j < quotes.length; j++) {
+        // quotes[j].onclick = d => {
+        //   window.location = this.getAttribute("cite");
+        // }
+        quotes[j].addEventListener(
+          "click",
+          function () {
+            document.getElementById(this.getAttribute("cite")).scrollIntoView();
+            // window.location = this.getAttribute("cite");
+            // console.log(this.getAttribute("cite"));
+          },
+          true
+        );
+      }
+    </script>
+    <style>
+      li {
+        margin-bottom: 0.5rem;
+        scroll-margin-top: 1rem;
+      }
+    </style>
+  </body>
+</html>

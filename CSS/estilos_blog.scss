@@ -5,3 +5,19 @@
 // Cargar estilos para contenidos de blogs
 @import "components/blog__contenido.scss";
 
+q {
+  color: #2f7bae !important;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+
+  &:hover {
+    background-color: #2f7bae;
+    color: white !important;
+    font-size: bold;
+  }
+  &::after,
+  &::before {
+    content: none;
+  }
+}

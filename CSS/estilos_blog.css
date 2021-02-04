@@ -347,6 +347,7 @@ div.col-md-4 {
 /* CONTENEDORES PARA BLOGS */
 .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a,
 .bg-blog-0 ul,
+.bg-blog-0 ol,
 .bg-blog-0 span.equation,
 .bg-blog-0 div.card-body,
 .bg-blog-0 button.btn-gray {
@@ -356,6 +357,7 @@ div.col-md-4 {
   @media screen and (max-width: 1024px) {
     .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a,
     .bg-blog-0 ul,
+    .bg-blog-0 ol,
     .bg-blog-0 span.equation,
     .bg-blog-0 div.card-body,
     .bg-blog-0 button.btn-gray {
@@ -363,6 +365,7 @@ div.col-md-4 {
   @media screen and (max-width: 768px) {
     .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a,
     .bg-blog-0 ul,
+    .bg-blog-0 ol,
     .bg-blog-0 span.equation,
     .bg-blog-0 div.card-body,
     .bg-blog-0 button.btn-gray {
@@ -370,6 +373,7 @@ div.col-md-4 {
   @media screen and (max-width: 480px) {
     .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a,
     .bg-blog-0 ul,
+    .bg-blog-0 ol,
     .bg-blog-0 span.equation,
     .bg-blog-0 div.card-body,
     .bg-blog-0 button.btn-gray {
@@ -377,6 +381,7 @@ div.col-md-4 {
   @media screen and (max-width: 320px) {
     .bg-blog-0 p, .bg-blog-0 .bg-4 a, .bg-4 .bg-blog-0 a,
     .bg-blog-0 ul,
+    .bg-blog-0 ol,
     .bg-blog-0 span.equation,
     .bg-blog-0 div.card-body,
     .bg-blog-0 button.btn-gray {
@@ -439,3 +444,15 @@ div.col-md-4 {
   @media screen and (max-width: 320px) {
     .bg-blog-0 h4 {
       font-size: small; } }
+
+q {
+  color: #2f7bae !important;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600; }
+  q:hover {
+    background-color: #2f7bae;
+    color: white !important;
+    font-size: bold; }
+  q::after, q::before {
+    content: none; }

@@ -4,6 +4,7 @@
   "description": "Pagina web personal",
   "main": "index.js",
   "dependencies": {
+    "citation-js": "^0.5.0-alpha.10",
     "d3": "^6.5.0",
     "googleapis": "^39.2.0"
   },
