@@ -26,7 +26,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3.v6.js"></script>
 
     <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg" />
     <link
@@ -70,7 +70,7 @@
 
     <div class="jumbotron jumbotron-fluid">
       <div class="jumbotron__container">
-        <h1>Modelos de Decisión Markovianos</h1>
+        <h1>Procesos de Decisión Markovianos</h1>
       </div>
     </div>
     <div class="container bg-blog-0">
@@ -118,21 +118,28 @@
         <p>
           La simulación comienza con un estado inicial con 1e7 pacientes sanos,
           0 enfermos, y 0 muertos. En la matriz de \(p(s'|s)\) se considera en las 
-          filas a los estados iniciales y en las columnas a los estados 
-          siguientes.
+          filas a los estados iniciales (\(S_t\)) y en las columnas a los estados 
+          siguientes (\(S_{t+1}\)).
         </p>
         <br />
         <div class="row">
           <div class="col-md-5">
             <table style="max-width: 100%; table-layout: fixed">
               <tr>
-                <td class="cellStat">\(S_{t+1}\) \ \(S_t\)</td>
-                <td class="cellStat">Sano</td>
-                <td class="cellStat">Enfermo</td>
-                <td class="cellStat">Muerto</td>
+                <th></th>
+                <th></th>
+                <th colspan="3" style="text-align:center">\(S_{t+1}\)</th>
               </tr>
               <tr>
-                <td class="cellStat">Sano</td>
+                <th class="cellStat"></th>
+                <th class="cellStat"></th>
+                <th class="cellStat">Sano</th>
+                <th class="cellStat">Enfermo</th>
+                <th class="cellStat">Muerto</th>
+              </tr>
+              <tr>
+                <th rowspan="4"> \(S_t\) </th>
+                <th class="cellStat">Sano</th>
                 <td class="cellMat">
                   <input type="number" class="cellMat" value="0.6" />
                 </td>
@@ -144,7 +151,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="cellStat">Enfermo</td>
+                <th class="cellStat">Enfermo</th>
                 <td class="cellMat">
                   <input type="number" class="cellMat" value="0.0" />
                 </td>
@@ -156,7 +163,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="cellStat">Muerto</td>
+                <th class="cellStat">Muerto</th>
                 <td class="cellMat" style="background-color: black">
                   <input
                     type="number"
@@ -215,13 +222,43 @@
 
       <br />
       <h3>Procesos de Recompensa de Markov</h3>
-      <p>Los MRP...</p>
+      <p>Los procesos de recompensa de Markov cuentan con los estados y probabilidades 
+        de transición que tienen los procesos de Markov, y además cuentan con recompensas 
+        por la visita a cada estado (\(R_t\)). A continuación, se muestra un ejemplo con 
+        6 estados en los que se puede encontrar un investigador académico, cada estado 
+        tiene sus recompensas.</p>
+
+      <div class="row">
+        <div class="col-md-5" style="text-align: center;">
+          <object data="./Modulos/Blog/06_Markov_Decission_Process/Markov_Reward_Process.svg" 
+                  alt="Ejemplo_Proceso_Decision_Markov" type="image/svg+xml" width="90%"> </object>
+        </div>
+        <div class="col-md-5">
+          <div class="container fluid-container" id="graficoMRP"></div>
+          <script src="./Modulos/Blog/06_Markov_Decission_Process/src/001_programacion_dinamica.mjs" type="module"></script>
+          <div class="slidecontainer">
+            <input type="range" min="0" max="1" value="0.5" step="0.01" class="slider" id="tasaDescuento">
+          </div>
+          <p id="tasaDescuentoConfiguracion"></p>
+        </div>
+      </div>
+      <br>
+      
+      <p>Se observa como cada transición entre estados cuenta con una probabilidad y recompensa asociada. 
+        De acuerdo, a este proceso se tienen diversas funciones de valor \(V(S_t)\) para cado estado. Las 
+        funciones de valor dependen entre otras cosas de las tasas de descuento \(\gamma\) para cada acción.
+        Las \(V(S_t)\) se determinaron mediante una estimación iterativa a través de programación dinámica.
+        A continuación, se explica mejor que son las funciones de valor y como la tasa de descuento permite 
+        dar preferencia a recompensas a corto o largo plazo.
+      </p>
     </div>
     <br />
     <div class="container bg-blog-0">
       <h2>2. Procesos de decisión de Markov Finitos</h2>
       <p>
-        La <b>función dinámica</b> es uno de los conceptos más importantes para
+        Los procesos de decisión de Markov finitos parten de los MRP, y además 
+        incluyen acciones. La <b>función dinámica</b> es uno de los conceptos más 
+        importantes para
         entender la formulación de procesos MDP, esta se trata de la
         probabilidad de tener un estado y una recompensada, dada la elección de
         una acción dado un estado \(p(s',r|s,a)\). Así mismo se pueden describir

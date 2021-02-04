@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Imagen 2</title>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-</head>
-<body>
-  <h1>Nuevo grafico</h1>
-  <div class="container" id="graficoMRP">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imagen 2</title>
+    <script src="https://d3js.org/d3.v6.js"></script>
+  </head>
+  <body>
+    <h1>Nuevo grafico</h1>
+    <div class="container" id="graficoMRP"></div>
 
-  </div>
-  <script src="./src/proceso_recompensa.mjs?20210204" type="module"></script>
-</body>
+    <label for="Desucento">Tasa descuento (γ):</label><br />
+    <div class="slidecontainer">
+      <input type="range" min="0" max="1" value="0.5" step="0.01" class="slider" id="tasaDescuento">
+    </div>
+
+    <button type="submit" id="Configuracion">Configuración</button>
+    
+    <script src="./src/001_programacion_dinamica.mjs" type="module"></script>
+  </body>
 </html>

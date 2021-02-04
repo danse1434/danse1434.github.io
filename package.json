@@ -1,0 +1,29 @@
+{
+  "name": "danse1434.github.io",
+  "version": "1.0.0",
+  "description": "Pagina web personal",
+  "main": "index.js",
+  "dependencies": {
+    "d3": "^6.5.0",
+    "googleapis": "^39.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danse1434/danse1434.github.io.git"
+  },
+  "keywords": [
+    "hoja",
+    "de",
+    "vida"
+  ],
+  "author": "Daniel Parra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danse1434/danse1434.github.io/issues"
+  },
+  "homepage": "https://github.com/danse1434/danse1434.github.io#readme"
+}
