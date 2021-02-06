@@ -8,13 +8,27 @@ var tasaDescuentoSlider = document.getElementById("tasaDescuento");
 var output = document.getElementById("tasaDescuentoConfiguracion");
 output.innerHTML = `<b>Tasa de Descuento</b>: ${tasaDescuentoSlider.value}`; 
 
-tasaDescuentoSlider.oninput = function () {
-  var descuento1 = this.value;
-  output.innerHTML = `<b>Tasa de Descuento</b>: ${this.value}`;
+// tasaDescuentoSlider.oninput = function () {  
+  // console.log(dataFrame1);
+// };
+
+tasaDescuentoSlider.addEventListener("input", d => {
+  var descuento1 = d.target.value;
+  
+  let l = ((d.target.value - 0) *100 /(1-0));
+
+  output.style.left = `${l*0.8}%`;
+  output.style.visibility = 'visible';
+  output.style.bottom = "20%";
+
+  output.innerHTML = `<b>Tasa de Descuento</b>: ${parseFloat(d.target.value).toFixed(2)}`;
   var dataFrame1 = actualizarDP(descuento1);
   actualizarGrafico(dataFrame1, svg, margin, width, height, x, y);
-  // console.log(dataFrame1);
-};
+});
+
+tasaDescuentoSlider.addEventListener("touchend", ()=>{
+  output.style.visibility = "hidden";
+});
 
 const matA = [
   [0.0, 0.4, 0.0, 0.0, 0.0, 0.6],

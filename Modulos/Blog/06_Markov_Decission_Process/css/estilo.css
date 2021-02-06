@@ -1,4 +1,4 @@
-.slidecontainer {
+.barraContenedor {
   width: 100%; /* Width of the outside container */
 }
 /* The slider itself */
@@ -6,12 +6,13 @@
   -webkit-appearance: none; /* Override default CSS styles */
   appearance: none;
   width: 100%; /* Full-width */
-  height: 25px; /* Specified height */
-  background: #d3d3d3; /* Grey background */
+  height: 15px; /* Specified height */
+  background: #bababa; /* Grey background */
   outline: none; /* Remove outline */
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
   transition: opacity 0.2s;
+  border-radius: 5px;
 }
 
 /* Mouse-over effects */
@@ -25,15 +26,47 @@
   appearance: none;
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: #4caf50; /* Green background */
+  border-radius: 25px;
   cursor: pointer; /* Cursor on hover */
+  background: #0480be; /* Green background */
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 20%), 0 1px 2px rgb(0 0 0 / 5%);
 }
 
 .slider::-moz-range-thumb {
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: #4caf50; /* Green background */
+  background: #0480be; /* Green background */
   cursor: pointer; /* Cursor on hover */
+}
+
+.slider__tooltip {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 13px;
+  padding: 4px;
+  display: block;
+  /* margin-top: -75px; */
+
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+  width: 24%;
+  bottom: 10%;
+  margin-left: -12px;
+}
+
+.slider__tooltip::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
 }
 
 /* Estilo de matriz de inputación de datos */

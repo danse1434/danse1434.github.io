@@ -3,10 +3,10 @@ import {generarMatriz} from './generarMatriz.js?20210202'
 
 
 var configButton =  document.getElementById("Configuracion")
-var slider = document.getElementById("tiemposSimulacion");
+const slider = document.getElementById("tiempoSimulacion");
 var output = document.getElementById("tiempoSimulacionConfiguracion");
-output.innerHTML = `<b>Escala de tiempo</b>: ${slider.value} Años`; // Display the default slider value
 
+output.innerHTML = `<b>Escala de tiempo</b>: ${slider.value} Años`; // Display the default slider value
 // Traer la configuración de la matriz
 configButton.onclick = function(){
   let matEx = generarMatriz('cellMat', 'INPUT');
@@ -14,12 +14,28 @@ configButton.onclick = function(){
   simulacion(parseInt(slider.value), matEx);
 }
 
-// Actualizar el valor de slider
-slider.oninput = function () {
-  output.innerHTML = `<b>Escala de tiempo</b>: ${this.value} Años`;
+slider.addEventListener("touchstart", () => {
+  output.style.visibility = 'visible';
+});
+
+slider.addEventListener("input", (d)=>{
+  
+  let l = ((d.target.value - 10) *100 /(200-10))
+  
+  // Cambio de visibilidad y contenido de texto
+  output.style.visibility = 'visible';
+  output.innerHTML = `<b>Escala de tiempo</b>: <br> ${d.target.value} Años`;
+  // Cambio de posición de tooltip
+  output.style.left = `${l*0.9}%`;
+  // output.style.marginLeft = `${l * output.width}%`;
+
   let matEx = generarMatriz('cellMat', 'INPUT');
-  simulacion(parseInt(this.value), matEx);
-};
+  simulacion(parseInt(d.target.value), matEx);
+})
+
+slider.addEventListener("touchend", () => {
+  output.style.visibility = 'hidden';
+})
 
 var margin = { top: 10, right: 20, bottom: 50, left: 150 },
   width = 800 - margin.left - margin.right,

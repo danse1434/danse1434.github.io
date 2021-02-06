@@ -36,7 +36,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href=".\CSS\estilos_blog.css?20210201"
+      href=".\CSS\estilos_blog.css?20210205"
     />
     <script type="text/javascript">
       $(function () {
@@ -205,17 +205,10 @@
               type="module"
             ></script>
 
-            <div class="slidecontainer">
-              <input
-                type="range"
-                min="10"
-                max="200"
-                value="30"
-                class="slider"
-                id="tiemposSimulacion"
-              />
+            <div class="barraContenedor">
+              <input type="range" min="10" max="200" value="30" class="slider" id="tiempoSimulacion" />
+              <span class="slider__tooltip" id="tiempoSimulacionConfiguracion"></span>
             </div>
-            <p id="tiempoSimulacionConfiguracion"></p>
           </div>
         </div>
       </div>
@@ -229,17 +222,20 @@
         tiene sus recompensas.</p>
 
       <div class="row">
-        <div class="col-md-5" style="text-align: center;">
-          <object data="./Modulos/Blog/06_Markov_Decission_Process/Markov_Reward_Process.svg" 
-                  alt="Ejemplo_Proceso_Decision_Markov" type="image/svg+xml" width="90%"> </object>
+        <div class="col-md-6" style="text-align: center;">
+          <!-- <object data="./Modulos/Blog/06_Markov_Decission_Process/Markov_Reward_Process_2.png" 
+                  alt="Ejemplo_Proceso_Decision_Markov" width="90%"> </object> -->
+
+          <img src="./Modulos/Blog/06_Markov_Decission_Process/Markov_Reward_Process_2.png" 
+          alt="Ejemplo_Proceso_Decision_Markov" width="100%">
         </div>
-        <div class="col-md-5">
+        <div class="col-md-6">
           <div class="container fluid-container" id="graficoMRP"></div>
           <script src="./Modulos/Blog/06_Markov_Decission_Process/src/001_programacion_dinamica.mjs" type="module"></script>
           <div class="slidecontainer">
             <input type="range" min="0" max="1" value="0.5" step="0.01" class="slider" id="tasaDescuento">
+            <span id="tasaDescuentoConfiguracion" class="slider__tooltip"></span>
           </div>
-          <p id="tasaDescuentoConfiguracion"></p>
         </div>
       </div>
       <br>
