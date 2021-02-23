@@ -201,7 +201,7 @@
             </div>
             <br />
             <script
-              src="Modulos/Blog/06_Markov_Decission_Process/src/diagrama.js?20210202"
+              src="Modulos/Blog/06_Markov_Decission_Process/src/diagrama.js?20210222"
               type="module"
             ></script>
 
@@ -399,7 +399,7 @@
         descuento en el retorno esperado:
         <span class="equation"
           >$$G_t = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \cdots =
-          \sum_{k=0}^{\infty}{\gamma^K R_{t+k+1}}$$</span
+          \sum_{k=0}^{\infty}{\gamma^k R_{t+k+1}}$$</span
         >
         La aplicación del descuento permite modular cuanta visión a largo plazo
         tiene el agente. Si la tasa de descuento (\(\gamma\)) tiene un valor
@@ -456,13 +456,13 @@
         de la siguiente manera:
         <span class="equation"
           >$$v_{\pi} \doteq \mathbb{E}_{\pi}\left[G_t|S_t=s\right] =
-          \mathbb{E}_{\pi}\left[\left.\sum_{k=0}^{\infty}{\gamma^K R_{t+k+1}}
+          \mathbb{E}_{\pi}\left[\left.\sum_{k=0}^{\infty}{\gamma^k R_{t+k+1}}
           \right|S_t=s\right],~~\forall s \in S$$</span
         >
         De manera similar se puede definir a \(q_{\pi}\) de la siguiente manera:
         <span class="equation"
           >$$q_{\pi} \doteq \mathbb{E}_\pi \left[G_t | S_t=s, A_t=a\right] =
-          \mathbb{E}_\pi \left[\left.\sum_{k=0}^{\infty}{\gamma^K R_{t+k+1}}
+          \mathbb{E}_\pi \left[\left.\sum_{k=0}^{\infty}{\gamma^k R_{t+k+1}}
           \right| S_t=s, A_t=a \right]$$</span
         >
         La función \(v_{\pi}\) se puede expresar en términos de \(q_{\pi}\) y

@@ -1,7 +1,7 @@
-import { muestreoReemplazo } from "./components/001_funcionesMuestreo.mjs?20210201";
-import { arraySum, arrayMean } from "./components/004_funcionesVectores.mjs";
-import { evaluacionPoliticaIterativa } from "./components/005_evaluacionPoliticaIterativa_1.mjs?20210201";
-import {actualizarGrafico} from "./components/006_actualizarGraficoBarras.mjs?20210203"
+import { muestreoReemplazo }            from "./components/001_funcionesMuestreo.mjs?20210201";
+import { arraySum, arrayMean }          from "./components/004_funcionesVectores.mjs";
+import { evaluacionPoliticaIterativa }  from "./components/005_evaluacionPoliticaIterativa_1.mjs?20210201";
+import {actualizarGrafico}              from "./components/006_actualizarGraficoBarras.mjs?20210203"
 
 var configButton = document.getElementById("Configuracion");
 var tasaDescuentoSlider = document.getElementById("tasaDescuento");
@@ -11,6 +11,14 @@ output.innerHTML = `<b>Tasa de Descuento</b>: ${tasaDescuentoSlider.value}`;
 // tasaDescuentoSlider.oninput = function () {  
   // console.log(dataFrame1);
 // };
+
+var enterEvents = ['touchstart'];
+
+enterEvents.forEach( e => {
+  tasaDescuentoSlider.addEventListener(e, () => {
+    output.style.visibility = 'visible';
+  });
+});
 
 tasaDescuentoSlider.addEventListener("input", d => {
   var descuento1 = d.target.value;
@@ -26,9 +34,13 @@ tasaDescuentoSlider.addEventListener("input", d => {
   actualizarGrafico(dataFrame1, svg, margin, width, height, x, y);
 });
 
-tasaDescuentoSlider.addEventListener("touchend", ()=>{
-  output.style.visibility = "hidden";
-});
+var exitEvents = ['touchend', 'mouseout'];
+
+exitEvents.forEach( e => {
+  tasaDescuentoSlider.addEventListener(e, ()=>{
+    output.style.visibility = "hidden";
+  });
+})
 
 const matA = [
   [0.0, 0.4, 0.0, 0.0, 0.0, 0.6],

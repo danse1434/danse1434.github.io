@@ -14,8 +14,12 @@ configButton.onclick = function(){
   simulacion(parseInt(slider.value), matEx);
 }
 
-slider.addEventListener("touchstart", () => {
-  output.style.visibility = 'visible';
+var enterEvents = ['touchstart'];
+
+enterEvents.forEach( e => {
+  slider.addEventListener(e, () => {
+    output.style.visibility = 'visible';
+  });
 });
 
 slider.addEventListener("input", (d)=>{
@@ -33,11 +37,15 @@ slider.addEventListener("input", (d)=>{
   simulacion(parseInt(d.target.value), matEx);
 })
 
-slider.addEventListener("touchend", () => {
-  output.style.visibility = 'hidden';
+var exitEvents = ['touchend', 'mouseout'];
+
+exitEvents.forEach(e => {
+  slider.addEventListener(e, () => {
+    output.style.visibility = 'hidden';
+  })
 })
 
-var margin = { top: 10, right: 20, bottom: 50, left: 150 },
+var margin = { top: 10, right: 20, bottom: 50, left: 100 },
   width = 800 - margin.left - margin.right,
   height = 600 - margin.top - margin.bottom;
 
@@ -119,7 +127,9 @@ function simulacion(timeSteps, transitionMatrix) {
     .range([height, 0])
     .clamp(true);
     
-  xAxis.call(d3.axisLeft().scale(y_scale))
+  xAxis.call(d3.axisLeft()
+    .scale(y_scale)
+    .tickFormat(d3.format("~s")) )
     .attr("transform", "translate(" + 0 + ", " + 0 + ")")
     .attr('font-size', '24px');
 
