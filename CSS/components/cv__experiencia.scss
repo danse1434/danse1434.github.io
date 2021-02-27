@@ -1,6 +1,19 @@
 // Tamaño de dispositivo
 $device_sizes: 320, 480, 768, 1024;
 
+.experiencia:disabled {
+  color: blue;
+
+  div.col-md-4{
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  div.col-md-8{
+    display: none;
+  }
+}
+
 .experiencia {
   background-color: rgb(243, 239, 224);
   border-radius: 1%;

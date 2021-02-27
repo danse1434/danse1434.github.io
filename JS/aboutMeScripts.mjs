@@ -53,3 +53,13 @@ fetch("../resources/educationNF.json")
       );
     }
   });
+
+  var colExp = document.getElementsByClassName("experiencia");
+      
+  for (let i = 0; i < colExp.length; i++) {
+    console.log( colExp[i] );
+    
+    colExp[i].addEventListener("click", () => {
+      this.classList.toogle("experiencia:disabled");
+    })
+  }
