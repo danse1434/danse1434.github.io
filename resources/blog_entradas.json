@@ -55,5 +55,14 @@
         "Descrp": "Se muestran aspectos matemáticos de la formulación de procesos de decisión de Markov.", 
         "Fecha" : "24-Dic-2020", 
         "Link"  : "panel-Blog-MDP_1.html"
+    },
+    "07":{
+        "div": "ada7",
+        "Imagen": "Modulos/Blog/blog_entrada_7.png",
+        "ImgDes": "Mapa de origen de RAM VigiAccess", 
+        "Titulo": "Tutorial Web Scrapping Dinámico en VigiAccess", 
+        "Descrp": "Este tutorial muestra algunos aspectos en la extracción automática de datos desde VigiAccess de UMC.", 
+        "Fecha" : "08-Mar-2021", 
+        "Link"  : "panel-Blog-Tutorial_Web_Scrapping.html"
     }
 }
