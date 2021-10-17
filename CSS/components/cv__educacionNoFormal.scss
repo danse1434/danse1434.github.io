@@ -84,4 +84,13 @@
 }
 .entradaArticulo {
   @extend .educacionNoFormal_tituloEducativo;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.publicaciones .entradaArticulo{
+    @media (max-width: 768px) {
+      padding-bottom: 5%;
+      padding-top:    5%;
+    }
 }
