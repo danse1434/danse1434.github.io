@@ -1,69 +1,78 @@
 {
-    "05":{
-        "divName": "experiencia5",
-        "tituloTrabajo":"Fondo Nacional de Estupefacientes", 
-        "cargo": "Contratista", 
-        "periodo": "Jul 2019 - Nov 2019",
-        "descripcion": "Referente de Programa de Farmacovigilancia.",
-        "responsabilidades": ["Identificación y análisis de eventos adversos relacionados con medicamentos.",
-            "Estudios de consumo y seguridad de productos.",
-            "Revisión, seguimiento, y análisis de alertas a medicamentos.",
-            "Implementación de plan documental de programa de farmacovigilancia.",
-            "Gestión pre-contractual, y supervisión de contratos."],
-        "Locacion": "Bogotá"
-    },
-    "04":{
-        "divName": "experiencia4",
-        "tituloTrabajo":"Fundación Hospital de la Misericordia", 
-        "cargo": "Químico Farmacéutico", 
-        "periodo": "Oct 2014 - Dic 2017",
-        "descripcion": "Responsable por la elaboración de dosis unitarias por parte de la central de mezclas. Líder del área de farmacovigilancia y uso seguro de medicamentos.",
-        "responsabilidades": [
-            "Elaboración y control de calidad de magistrales estériles y no estériles.",
-            "Identificación y análisis de eventos adversos relacionados con medicamentos.",
-            "Responsable por la provisión de medicamentos de salud pública.",
-            "Responsable por el convenio de docencia-servicio con el departamento de farmacia.",
-            "Control de calidad de buenas prácticas de manufactura de sistema de aire medicinal."
-            ],
-        "Locacion": "Bogotá"
-    },
-    "03":{
-        "divName": "experiencia3",
-        "tituloTrabajo":"Universidad Nacional de Colombia", 
-        "cargo": "Asistente Docente", 
-        "periodo": "Feb 2016 - Dic 2017",
-        "descripcion": "Responsable de actividades de seguimiento, asesoría, y evaluación a estudiantes en curso de farmacia hospitalaria I: rotación Centro de Información de Medicamentos Universidad Nacional de Colombia",
-        "responsabilidades": [
-            "Coordinación de recibo y presentación de consultas a clientes externos del centro.",
-            "Participación en grupo editorial Sitio Web de CIMUN."],
-        "Locacion": "Bogotá"
-    },
-    "02":{
-        "divName": "experiencia2",
-        "tituloTrabajo":"Aristizábal & Jiménez Abogados", 
-        "cargo": "Analista Regulatorio", 
-        "periodo": "Feb 2014 - May 2014",
-        "descripcion": "Responsable por asesoría regulatoria en dispositivos médicos y medicamentos a clientes.",
-        "responsabilidades": [
-            "Elaboración de solicitudes de registro sanitario y modificaciones, autorizaciones, y certificados.",
-            "Reporte de eventos adversos serios.",
-            "Revisión de proyectos publicitarios de acuerdo a requerimientos regulatorios.",
-            "Asesoría al cliente."
-        ],
-        "Locacion": "Bogotá"
-    },
-    "01":{
-        "divName": "experiencia1",
-        "tituloTrabajo":"Fundación Hospital de la Misericordia", 
-        "cargo": "Practicante de farmacia hospitalaria", 
-        "periodo": "Ene 2013 - Dic 2013",
-        "descripcion": "Responsable por cumplimiento de objetivos planteados en el programa de la asignatura e implementación de proceso de reconciliación de medicamentos.",
-        "responsabilidades": [
-            "Implementación de plan piloto, capacitación de personal médico, reporte de errores durante interfaces de atención; preparación y control de calidad de magistrales estériles y no estériles, confirmación de órdenes, reporte de EAM.",
-            "Seguimiento farmacoterapéutico a pacientes pediátricos en clínica de epilepsia, reporte EAM y RAM, realización de acondicionamiento y control de calidad en la central de mezclas. Revisión de inventarios en farmacia central y salas de cirugía, elaboración de propuestas para optimizar almacenamiento."
-        ],
-        "Locacion": "Bogotá"
-    }
-
-
+  "06":{
+      "divName": "experiencia6",
+      "tituloTrabajo":"Fondo Nacional de Estupefacientes", 
+      "cargo": "Contratista", 
+      "periodo": "Mar 2021 - Dic 2021",
+      "descripcion": "Contratista Proyecto de Inversión Misión PRI 1901.",
+      "responsabilidades": ["Consolidación y análisis de información relacionada a la demanda de medicamentos monopolio del Estado.",
+          "Generación de pronósticos y reglas de decisión para optimizar la producción de medicamentos.",
+          "Estudio de variables operativas que afectan la demanda y comportamiento de compras de distribuidores a nivel nacional."],
+      "Locacion": "Bogotá"
+  },
+  "05":{
+      "divName": "experiencia5",
+      "tituloTrabajo":"Fondo Nacional de Estupefacientes", 
+      "cargo": "Contratista", 
+      "periodo": "Jul 2019 - Nov 2019",
+      "descripcion": "Referente de Programa de Farmacovigilancia.",
+      "responsabilidades": ["Identificación y análisis de eventos adversos relacionados con medicamentos.",
+          "Estudios de consumo y seguridad de productos.",
+          "Revisión, seguimiento, y análisis de alertas a medicamentos.",
+          "Implementación de plan documental de programa de farmacovigilancia.",
+          "Gestión pre-contractual, y supervisión de contratos."],
+      "Locacion": "Bogotá"
+  },
+  "04":{
+      "divName": "experiencia4",
+      "tituloTrabajo":"Fundación Hospital de la Misericordia", 
+      "cargo": "Químico Farmacéutico", 
+      "periodo": "Oct 2014 - Dic 2017",
+      "descripcion": "Responsable por la elaboración de dosis unitarias por parte de la central de mezclas. Líder del área de farmacovigilancia y uso seguro de medicamentos.",
+      "responsabilidades": [
+          "Elaboración y control de calidad de magistrales estériles y no estériles.",
+          "Identificación y análisis de eventos adversos relacionados con medicamentos.",
+          "Responsable por la provisión de medicamentos de salud pública.",
+          "Responsable por el convenio de docencia-servicio con el departamento de farmacia.",
+          "Control de calidad de buenas prácticas de manufactura de sistema de aire medicinal."
+          ],
+      "Locacion": "Bogotá"
+  },
+  "03":{
+      "divName": "experiencia3",
+      "tituloTrabajo":"Universidad Nacional de Colombia", 
+      "cargo": "Asistente Docente", 
+      "periodo": "Feb 2016 - Dic 2017",
+      "descripcion": "Responsable de actividades de seguimiento, asesoría, y evaluación a estudiantes en curso de farmacia hospitalaria I: rotación Centro de Información de Medicamentos Universidad Nacional de Colombia",
+      "responsabilidades": [
+          "Coordinación de recibo y presentación de consultas a clientes externos del centro.",
+          "Participación en grupo editorial Sitio Web de CIMUN."],
+      "Locacion": "Bogotá"
+  },
+  "02":{
+      "divName": "experiencia2",
+      "tituloTrabajo":"Aristizábal & Jiménez Abogados", 
+      "cargo": "Analista Regulatorio", 
+      "periodo": "Feb 2014 - May 2014",
+      "descripcion": "Responsable por asesoría regulatoria en dispositivos médicos y medicamentos a clientes.",
+      "responsabilidades": [
+          "Elaboración de solicitudes de registro sanitario y modificaciones, autorizaciones, y certificados.",
+          "Reporte de eventos adversos serios.",
+          "Revisión de proyectos publicitarios de acuerdo a requerimientos regulatorios.",
+          "Asesoría al cliente."
+      ],
+      "Locacion": "Bogotá"
+  },
+  "01":{
+      "divName": "experiencia1",
+      "tituloTrabajo":"Fundación Hospital de la Misericordia", 
+      "cargo": "Practicante de farmacia hospitalaria", 
+      "periodo": "Ene 2013 - Dic 2013",
+      "descripcion": "Responsable por cumplimiento de objetivos planteados en el programa de la asignatura e implementación de proceso de reconciliación de medicamentos.",
+      "responsabilidades": [
+          "Implementación de plan piloto, capacitación de personal médico, reporte de errores durante interfaces de atención; preparación y control de calidad de magistrales estériles y no estériles, confirmación de órdenes, reporte de EAM.",
+          "Seguimiento farmacoterapéutico a pacientes pediátricos en clínica de epilepsia, reporte EAM y RAM, realización de acondicionamiento y control de calidad en la central de mezclas. Revisión de inventarios en farmacia central y salas de cirugía, elaboración de propuestas para optimizar almacenamiento."
+      ],
+      "Locacion": "Bogotá"
+  }
 }

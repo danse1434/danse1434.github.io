@@ -42,7 +42,6 @@
     }
   }
 
-
   .educacionNoFormal__cajaDescripcion {
     width: auto;
     font-size: small;
@@ -77,4 +76,12 @@
     }
   }
 
+}
+
+// Publicaciones
+.publicaciones{
+  @extend .educacionNoFormal;
+}
+.entradaArticulo {
+  @extend .educacionNoFormal_tituloEducativo;
 }

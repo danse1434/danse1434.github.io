@@ -474,17 +474,17 @@ body {
       width: 90%; }
 
 /* Educación No Formal */
-.educacionNoFormal {
+.educacionNoFormal, .publicaciones {
   background-color: #f3efe0;
   border-radius: 1%;
   margin: auto;
   margin-bottom: 4px;
   margin-top: 4px; }
   @media (max-width: 768px) {
-    .educacionNoFormal {
+    .educacionNoFormal, .publicaciones {
       margin-top: 0px;
       margin-bottom: 0px; } }
-  .educacionNoFormal .educacionNoFormal__titulo {
+  .educacionNoFormal .educacionNoFormal__titulo, .publicaciones .educacionNoFormal__titulo {
     font-family: "Open Sans", sans-serif !important;
     font-size: 14px;
     font-weight: 700;
@@ -494,51 +494,51 @@ body {
     margin-bottom: 10px;
     width: auto; }
     @media (max-width: 768px) {
-      .educacionNoFormal .educacionNoFormal__titulo {
+      .educacionNoFormal .educacionNoFormal__titulo, .publicaciones .educacionNoFormal__titulo {
         padding-bottom: 0%;
         padding-top: 0%;
         margin-bottom: 5px;
         margin-top: 5px; } }
-  .educacionNoFormal .educacionNoFormal_tituloEducativo {
+  .educacionNoFormal .educacionNoFormal_tituloEducativo, .publicaciones .educacionNoFormal_tituloEducativo, .educacionNoFormal .entradaArticulo, .publicaciones .entradaArticulo {
     margin-top: 10px;
     margin-bottom: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: small; }
     @media (max-width: 768px) {
-      .educacionNoFormal .educacionNoFormal_tituloEducativo {
+      .educacionNoFormal .educacionNoFormal_tituloEducativo, .publicaciones .educacionNoFormal_tituloEducativo, .educacionNoFormal .entradaArticulo, .publicaciones .entradaArticulo {
         padding-bottom: 0%;
         padding-top: 0%;
         margin-top: 5px;
         margin-bottom: 5px; } }
-  .educacionNoFormal .educacionNoFormal__cajaDescripcion {
+  .educacionNoFormal .educacionNoFormal__cajaDescripcion, .publicaciones .educacionNoFormal__cajaDescripcion {
     width: auto;
     font-size: small; }
     @media screen and (max-width: 1024px) {
-      .educacionNoFormal .educacionNoFormal__cajaDescripcion {
+      .educacionNoFormal .educacionNoFormal__cajaDescripcion, .publicaciones .educacionNoFormal__cajaDescripcion {
         font-size: small; } }
     @media screen and (max-width: 768px) {
-      .educacionNoFormal .educacionNoFormal__cajaDescripcion {
+      .educacionNoFormal .educacionNoFormal__cajaDescripcion, .publicaciones .educacionNoFormal__cajaDescripcion {
         font-size: smaller; } }
     @media screen and (max-width: 480px) {
-      .educacionNoFormal .educacionNoFormal__cajaDescripcion {
+      .educacionNoFormal .educacionNoFormal__cajaDescripcion, .publicaciones .educacionNoFormal__cajaDescripcion {
         font-size: smaller; } }
     @media screen and (max-width: 320px) {
-      .educacionNoFormal .educacionNoFormal__cajaDescripcion {
+      .educacionNoFormal .educacionNoFormal__cajaDescripcion, .publicaciones .educacionNoFormal__cajaDescripcion {
         font-size: smaller; } }
-    .educacionNoFormal .educacionNoFormal__cajaDescripcion div {
+    .educacionNoFormal .educacionNoFormal__cajaDescripcion div, .publicaciones .educacionNoFormal__cajaDescripcion div {
       margin-top: 10px;
       margin-bottom: 10px; }
-    .educacionNoFormal .educacionNoFormal__cajaDescripcion ul > li {
+    .educacionNoFormal .educacionNoFormal__cajaDescripcion ul > li, .publicaciones .educacionNoFormal__cajaDescripcion ul > li {
       width: fit-content; }
-  .educacionNoFormal .educacionNoFormal__locacion {
+  .educacionNoFormal .educacionNoFormal__locacion, .publicaciones .educacionNoFormal__locacion {
     color: #22a39f;
     padding-bottom: 1%;
     width: 90%; }
-    .educacionNoFormal .educacionNoFormal__locacion img > path {
+    .educacionNoFormal .educacionNoFormal__locacion img > path, .publicaciones .educacionNoFormal__locacion img > path {
       fill: #22a39f;
       color: #22a39f; }
-    .educacionNoFormal .educacionNoFormal__locacion a {
+    .educacionNoFormal .educacionNoFormal__locacion a, .publicaciones .educacionNoFormal__locacion a {
       color: #22a39f;
       padding-bottom: 1%;
       width: 90%; }

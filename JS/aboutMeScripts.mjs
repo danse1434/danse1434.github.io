@@ -2,13 +2,16 @@ import {
   crearExperiencia1,
   crearTitulo,
   crearTituloNF,
-} from "./contenedoresAboutMe.js?20210126";
+} from "./contenedoresAboutMe.js?20211017";
 
 fetch("../resources/experience.json")
   .then((response) => response.json())
   .then((data) => {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
       let idLS1 = "0" + (i + 1);
+      
+      console.log(data[idLS1]);
+
       crearExperiencia1(
         data[idLS1]["divName"],
         data[idLS1]["tituloTrabajo"],
