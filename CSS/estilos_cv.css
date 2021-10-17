@@ -543,6 +543,15 @@ body {
       padding-bottom: 1%;
       width: 90%; }
 
+.entradaArticulo {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+@media (max-width: 768px) {
+  .publicaciones .entradaArticulo {
+    padding-bottom: 5%;
+    padding-top: 5%; } }
+
 .bg-cv-0 {
   background-color: #f1eee6;
   /* Leche de Coco PANTONE 11-0608-TCX */
