@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Modelos de farmacodinamia</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://d3js.org/d3.v6.js"></script>
+
+    <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg" />
+    <link
+      rel="stylesheet"
+      href="/Modulos/Blog/06_Markov_Decission_Process/css/estilo.css?20210201"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href=".\CSS\estilos_blog.css?20210205"
+    />
+    <script type="text/javascript">
+      $(function () {
+        var includes = $("[data-include]");
+        jQuery.each(includes, function () {
+          var file = "components/" + $(this).data("include") + ".html";
+          $(this).load(file);
+        });
+      });
+    </script>
+    <!--Configuración MathJax -->
+    <!-- <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          displayAlign: "right";
+          CommonHTML: { linebreaks: { automatic: true } },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }            
+      });
+    </script> -->
+    <!--Configuración MathJax -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          }                    
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <!--Incluir barra de navegación-->
+    <div data-include="navbar"></div>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="jumbotron__container">
+        <h1>Modelos de farmacodinamia</h1>
+      </div>
+    </div>
+
+    <div class="container bg-blog-0">
+      <h2>1. Introducción conceptos básicos</h2>
+      <p>
+        Un modelo es una representación de un sistema diseñada para proveer conocimiento o entendimiento del mismo (1). En la mayoría de los casos resultan en 
+        una simplificación de la naturalezaque provee una utilidad en el sentido de hacer predicciones o brindar explicaciones a fenómenos.
+      </p>
+      <p>
+        La farmacocinética (PK) es la ciencia el comportamiento de las concentraciones en la sangre u otros fluidos, tejidos o partes del organismo de un fármaco frente al tiempo. 
+        De esta manera se estudian procesos como absorción, distribución, metabolismo y excreción de fármacos, y otros compuestos xenobióticos. 
+        La farmacodinamia (PD) es el estudio de los efectos bioquímicos y fisiológicos de los fármacos en el organismo. Por tal, la misma se encarga de estudiar los 
+        mecanismos de acción terapéutica y toxicológica, así como la relación entre concentraciones en el sitio de acción farmacológica y la respuesta observada.
+      </p>
+      <p>
+        La integración de información PK con información PD ha permitido obtener modelos que permiten conocer el balance entre beneficios y riesgos de un tratamiento 
+        farmacológico. De manera que se puede derivar información sobre el manejo que se debe dar al tratamiento como su dosificación. En algunos casos también 
+        se puede entender la relación entre componentes de un sistema molecular, celular o fisiológico, y su influencia en la respuesta farmacológica. 
+        Un modelo PK-PD muestra el curso temporal de la acción farmacológica y las concentraciones de fármaco en el cuerpo.
+      </p>
+
+      <h3>1.1. Utilidad de modelos PK-PD</h3>
+      <p>
+        <ol>
+          <li>Determinar régimenes de dosificación para alcanzar concentraciones en plasma con seguridad y eficacia óptima.</li>
+          <li>Conocer el balance riesgo-beneficio de un fármaco en particular.</li>
+          <li>Predecir la seguridad y eficacia que tendrá un fármaco en un ensayo clínico controlado desde un diseño de estudio.</li>
+          <li>Entender la relación entre componentes de un sistema fisiológico y relacionarlo con la respuesta farmacológica.</li>
+        </ol>
+      </p>
+      <h3>1.2. Conceptos de farmacodinamia</h3>
+      <ol>
+        <li>Exposición</li>
+        <ol>
+          <li>EC: cualquier dosis o tasa de infusión al cuerpo</li>
+          <li>EQ: medida de concentración en plasma aguda o integrada en plasma o fluido biológico (\(\mathrm{C_{max}}\), \(\mathrm{C_{min}}\), \(\mathrm{C_{ss}}\), \(\mathrm{AUC}\)) </li>
+        </ol>
+        <li>Respuesta (\(R\)): Se refiere a una medida de la observación farmacológica. Por ejemplo: presión sanguínea diastólica. 
+          $$R_t=\mathrm{Respuesta~en~el~tiempo};~\mathrm{t,~Presi\acute{o}n~Arterial~Diast\acute{o}lica}$$
+        </li>
+        <li>Efecto (\(E\)): Se refiere al cambio en \(R\) en un intervalo de tiempo. Es un valor calculado desde la respuesta observada y un control.
+          $$E(t_8) = \Delta[R(t_8) - R(t_0)]$$
+        </li>
+      </ol>
+      
+      <h2>2. Generalidades modelos PK-PD</h2>
+      <h2>3. Modelos Reversibles</h2>
+      <h2>4. Modelos de Efectos de Fármaco Proporcionales y Aditivos</h2>
+      <h2>5. Modelos de Compartimento de Efectos o Unión</h2>
+      <h2>6. Modelos de Respuesta Indirecta</h2>
+      <h2>7. Modelos de Procesos Irreversibles</h2>
+      <h2>8. Modelos de Farmacología de Sistemas</h2>
+      <h2>9. Simulación de Ensayos Clinicos Controlados</h2>
+    </div>
+
+
+    <div class="container bg-blog-0">
+
+      <p class="teorema">
+        Este es un teorema 
+      </p>
+
+      <button
+            class="btn btn-gray"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapse_21"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+          >
+            Derivación
+          </button>
+          <div class="collapse" id="collapse_21">
+            <div class="card card-body">
+              <span class="equation"
+                >Este es un colapsible</span
+              >
+            </div>
+          </div>
+    </div>
+    
+    <br />
+    <div class="container bg-blog-0">
+      <p>
+        A continuación, se muestra una presentación con aspectos matemáticos de
+        los procesos de decisión de Markov.
+      </p>
+      <object
+        data="./Modulos/Blog/06_Markov_Decission_Process/MDP.pdf"
+        type="application/pdf"
+        width="90%"
+        height="500px"
+        class="container-fluid text-center"
+      >
+        <p>
+          Su navegador web no tiene un plugin para PDF. Usted puede
+          <a href="./Modulos/Blog/06_Markov_Decission_Process/MDP.pdf">
+            hacer click aquí para descargar el archivo PDF.</a
+          >
+        </p>
+      </object>
+    </div>
+    <br>
+    <div class="container bg-blog-0">
+      <h2>Bibliografía</h2>
+      <p>
+        [1] Sutton RS, Barto AG. Reinforcement Learning An Introduction. 2nd ed. London, UK: The MIT Press; 2018.
+      </p>
+    </div>
+    <hr />
+    <!--Incluir Footer-->
+    <div data-include="footer"></div>
+    <script type="text/JavaScript">
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Farmacocinética de antibióticos en pacientes con NF</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta
+      name="description"
+      content="Sitio Web Oficial de Daniel Sebastian Parra González"
+    />
+    <meta
+      name="keywords"
+      content="Daniel, Sebastian, Parra, González, Daniel Sebastian Parra González, Farmacéutico, Farmacia, Farmacocinética, QSP, quimico farmaceutico"
+    />
+    <meta name="author" content="Daniel Parra G." />
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href=".\CSS\original.css?210126" />
+    <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg" />
+
+    <script type="text/javascript">
+      $(function () {
+        var includes = $("[data-include]");
+        jQuery.each(includes, function () {
+          var file = "components/" + $(this).data("include") + ".html";
+          $(this).load(file);
+        });
+      });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <!--Incluir barra de navegación-->
+    <div data-include="navbar"></div>
+    <br /><br />
+    <div class="container-fluid"></div>
+    <br />
+    <div class="container bg-blog-0">
+
+      <h1>Recursos</h1>
+      <ul>
+        <li><a href="./Presentacion_Sustentacion/Sustentacion.html">Presentación de sustentación</a></li>
+        <li>Tesis de maestría</li>
+      </ul>
+    </div>
+    <br />
+    
+    <div id="alert_placeholder"></div>
+    <div class="container-fluid"></div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <!--Incluir Footer-->
+    <div data-include="footer"></div>
+
+    <!-- Configuración de Firebase -->
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>
+    <!--  -->
+
+    <script>
+      // TODO: Replace the following with your app's Firebase project configuration
+      // For Firebase JavaScript SDK v7.20.0 and later, `measurementId` is an optional field
+      // https://firebase.google.com/docs/web/setup#from-the-cdn
+      // var firebaseConfig = {
+      //   apiKey: "AIzaSyA8l5a9no3KVk6_RDh9B3wYheaocNvjmHA",
+      //   authDomain: "danse1434-1595134916454.firebaseapp.com",
+      //   projectId: "danse1434-1595134916454",
+      //   storageBucket: "danse1434-1595134916454.appspot.com",
+      //   messagingSenderId: "701580976119",
+      //   appId: "1:701580976119:web:e35b635bbe74558558d8f2",
+      //   measurementId: "G-NDCBFCN2EX",
+      // };
+
+      // Initialize Firebase
+      // firebase.initializeApp(firebaseConfig);
+
+      // firebase
+      //   .auth()
+      //   .signInWithCustomToken(token)
+      //   .then((userCredential) => {
+      //     // Signed in
+      //     var user = userCredential.user;
+      //     // ...
+      //   })
+      //   .catch((error) => {
+      //     var errorCode = error.code;
+      //     var errorMessage = error.message;
+      //     // ...
+      //   });
+    </script>
+
+    <!-- Genius4356 -->
+    <script src="./JS/indiceAutenticacion.js?202102"></script>
+    <script src="./JS/modulos/getUrlParameter.js?202102"></script>
+  </body>
+</html>
