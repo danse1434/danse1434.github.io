@@ -95,31 +95,38 @@
         a la terapéutica.
       </p>
       <button type="button" class="btn btn-outline-primary" type="submit">
-        Buscar
+        <a
+          href="https://www.google.com/search?q=%22Daniel+Sebastian+parra+gonzalez%22"
+          target="_blank"
+        >
+          Buscar
+        </a>
       </button>
     </div>
-    
-    <hr>
+
+    <hr />
     <!--Incluir Footer-->
     <div data-include="footer"></div>
 
     <!-- Lectura como tarjetas -->
     <script type="text/javascript">
-      fetch("./resources/blog_entradas.json?20210308")
+      fetch("./resources/blog_entradas.json?20220323")
         .then((response) => response.json())
         .then((data) => {
           let size1 = Object.keys(data).length;
 
           for (let i = 0; i < size1; i++) {
-            let idCard = "0" + (i + 1);
+            const selector = "0" + (i + 1);
+            const element = data[selector];
+
             crearEntrada(
-              data[idCard]["div"],
-              data[idCard]["Imagen"],
-              data[idCard]["ImgDes"],
-              data[idCard]["Titulo"],
-              data[idCard]["Descrp"],
-              data[idCard]["Fecha"],
-              data[idCard]["Link"]
+              element["div"],
+              element["Imagen"],
+              element["ImgDes"],
+              element["Titulo"],
+              element["Descrp"],
+              element["Fecha"],
+              element["Link"]
             );
           }
         });

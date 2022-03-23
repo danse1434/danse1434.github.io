@@ -2,24 +2,27 @@ import {
   crearExperiencia1,
   crearTitulo,
   crearTituloNF,
+  crearPublicacion,
 } from "./contenedoresAboutMe.js?20211017";
 
 fetch("../resources/experience.json")
   .then((response) => response.json())
   .then((data) => {
-    for (let i = 0; i < 6; i++) {
-      let idLS1 = "0" + (i + 1);
-      
-      console.log(data[idLS1]);
+    const elems = Object.keys(data).length;
+
+    for (let i = 0; i < elems; i++) {
+      const identifier = "0" + (i + 1);
+      const element = data[identifier];
+      // console.log(element);
 
       crearExperiencia1(
-        data[idLS1]["divName"],
-        data[idLS1]["tituloTrabajo"],
-        data[idLS1]["cargo"],
-        data[idLS1]["periodo"],
-        data[idLS1]["descripcion"],
-        data[idLS1]["responsabilidades"],
-        data[idLS1]["Locacion"]
+        element["divName"],
+        element["tituloTrabajo"],
+        element["cargo"],
+        element["periodo"],
+        element["descripcion"],
+        element["responsabilidades"],
+        element["Locacion"]
       );
     }
   });
@@ -29,14 +32,18 @@ fetch("../resources/experience.json")
 fetch("../resources/education.json")
   .then((response) => response.json())
   .then((data) => {
-    for (let i = 0; i < 3; i++) {
-      let idLS2 = "0" + (i + 1);
+    const elems = Object.keys(data).length;
+
+    for (let i = 0; i < elems; i++) {
+      const identifier = "0" + (i + 1);
+      const element = data[identifier];
+
       crearTitulo(
-        data[idLS2]["dv"],
-        data[idLS2]["institucion"],
-        data[idLS2]["titulo"],
-        data[idLS2]["periodo"],
-        data[idLS2]["locacion"]
+        element["dv"],
+        element["institucion"],
+        element["titulo"],
+        element["periodo"],
+        element["locacion"]
       );
     }
   });
@@ -44,25 +51,45 @@ fetch("../resources/education.json")
 fetch("../resources/educationNF.json")
   .then((response) => response.json())
   .then((data) => {
-    for (let i = 0; i < 8; i++) {
-      let idLS3 = "0" + (i + 1);
+    const elems = Object.keys(data).length;
+
+    for (let i = 0; i < elems; i++) {
+      const identifier = "0" + (i + 1);
+      const element = data[identifier];
+
       crearTituloNF(
-        data[idLS3]["dv"],
-        data[idLS3]["Institucion"],
-        data[idLS3]["Descripcion"],
-        data[idLS3]["Fecha"],
-        data[idLS3]["Lugar"],
-        data[idLS3]["URL"]
+        element["dv"],
+        element["Institucion"],
+        element["Descripcion"],
+        element["Fecha"],
+        element["Lugar"],
+        element["URL"]
       );
     }
   });
 
-  var colExp = document.getElementsByClassName("experiencia");
-      
-  for (let i = 0; i < colExp.length; i++) {
-    console.log( colExp[i] );
-    
-    colExp[i].addEventListener("click", () => {
-      this.classList.toogle("experiencia:disabled");
-    })
-  }
+var colExp = document.getElementsByClassName("experiencia");
+
+for (let i = 0; i < colExp.length; i++) {
+  // console.log( colExp[i] );
+
+  colExp[i].addEventListener("click", () => {
+    this.classList.toogle("experiencia:disabled");
+  });
+}
+
+// Lectura de publicaciones
+
+fetch("../resources/publications.json")
+  .then((response) => response.json())
+  .then((data) => {
+    for (let i = 0; i < Object.keys(data).length; i++) {
+      const identifier = "0" + (i + 1);
+      const element = data[identifier];
+      crearPublicacion(
+        element["divName"],
+        element["citacion"],
+        element["href"]
+      );
+    }
+  });

@@ -226,3 +226,37 @@ export function crearTituloNF(
   element.appendChild(div1);
   element.appendChild(div2);
 }
+
+
+// -----------------------------------------------------------------------------------------------
+export function crearPublicacion(
+  divName,
+  descripcion,
+  href
+) {
+  // 1. Principal
+  var divMain = document.createElement("div");
+  divMain.classList.add("col-md-12");
+
+  // 2. Contenido de publicación
+  var divP = document.createElement("p");
+  divP.classList.add("entradaArticulo");
+  divP.textContent += descripcion
+
+  // 3. Link de publicación
+  var aLink = document.createElement("a");
+  aLink.target = "_blank";
+  aLink.href = href;
+  aLink.textContent = href;
+  divP.appendChild(aLink);
+
+  divMain.appendChild(divP);  
+
+  // 4. Modificar página
+  var element = document.getElementById(divName);
+  element.classList.add("publicaciones");
+  element.classList.add("text-justify");
+  element.classList.add("row");
+
+  element.appendChild(divMain);
+}
