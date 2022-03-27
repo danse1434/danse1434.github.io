@@ -1,54 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <title>Modelos de farmacodinamia</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script
-      type="text/javascript"
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
 
-    <script src="https://d3js.org/d3.v6.js"></script>
+<head>
+  <title>Modelos de farmacodinamia</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 
-    <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg" />
-    <link
-      rel="stylesheet"
-      href="/Modulos/Blog/06_Markov_Decission_Process/css/estilo.css?20210201"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href=".\CSS\estilos_blog.css?20210205"
-    />
-    <script type="text/javascript">
-      $(function () {
-        var includes = $("[data-include]");
-        jQuery.each(includes, function () {
-          var file = "components/" + $(this).data("include") + ".html";
-          $(this).load(file);
-        });
+  <script src="https://d3js.org/d3.v6.js"></script>
+
+  <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg" />
+  <link rel="stylesheet" href="/Modulos/Blog/06_Markov_Decission_Process/css/estilo.css?20210201" />
+  <link rel="stylesheet" type="text/css" href=".\CSS\estilos_blog.css?20210205" />
+  <script type="text/javascript">
+    $(function () {
+      var includes = $("[data-include]");
+      jQuery.each(includes, function () {
+        var file = "components/" + $(this).data("include") + ".html";
+        $(this).load(file);
       });
-    </script>
-    <!--Configuración MathJax -->
-    <!-- <script type="text/x-mathjax-config">
+    });
+  </script>
+  <!--Configuración MathJax -->
+  <!-- <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
           displayAlign: "right";
           CommonHTML: { linebreaks: { automatic: true } },
@@ -56,146 +39,337 @@
         SVG: { linebreaks: { automatic: true } }            
       });
     </script> -->
-    <!--Configuración MathJax -->
-    <script type="text/x-mathjax-config">
+  <!--Configuración MathJax -->
+  <script type="text/x-mathjax-config">
+      window.MathJax = {
+        loader: {load: ['[tex]/mathtools']},
+        tex: {packages: {'[+]': ['mathtools']}}
+        };
+        /*M*/
         MathJax.Hub.Config({
           tex: {
             inlineMath: [['$', '$'], ['\\(', '\\)']]
           }                    
       });
     </script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script
-      id="MathJax-script"
-      async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-    ></script>
-  </head>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
 
-  <body>
-    <!--Incluir barra de navegación-->
-    <div data-include="navbar"></div>
+<body>
+  <!--Incluir barra de navegación-->
+  <div data-include="navbar"></div>
 
-    <div class="jumbotron jumbotron-fluid">
-      <div class="jumbotron__container">
-        <h1>Modelos de farmacodinamia</h1>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron__container">
+      <h1>Modelos de farmacodinamia</h1>
+    </div>
+  </div>
+
+  <div class="container bg-blog-0">
+    <h2>1. Introducción conceptos básicos</h2>
+    <p>
+      Un modelo es una representación de un sistema diseñada para proveer conocimiento o entendimiento del mismo (1). En
+      la mayoría de los casos resultan en una simplificación de la naturaleza que provee una utilidad en el sentido de
+      hacer predicciones o brindar explicaciones a fenómenos.
+    </p>
+    <p>
+      La farmacocinética (PK) es la ciencia el comportamiento de las concentraciones en la sangre u otros fluidos,
+      tejidos o partes del organismo de un fármaco frente al tiempo. De esta manera se estudian procesos como absorción,
+      distribución, metabolismo y excreción de fármacos, y otros compuestos xenobióticos. La farmacodinamia (PD) es el
+      estudio de los efectos bioquímicos y fisiológicos de los fármacos en el organismo. Por tal, la misma se encarga de
+      estudiar los mecanismos de acción terapéutica y toxicológica, así como la relación entre concentraciones en el
+      sitio de acción farmacológica y la respuesta observada.
+    </p>
+    <p>
+      La integración de información PK con información PD ha permitido obtener modelos que permiten conocer el balance
+      entre beneficios y riesgos de un tratamiento farmacológico. De manera que se puede derivar información sobre el
+      manejo que se debe dar al tratamiento como su dosificación. En algunos casos también se puede entender la relación
+      entre componentes de un sistema molecular, celular o fisiológico, y su influencia en la respuesta farmacológica.
+      Un modelo PK-PD muestra el curso temporal de la acción farmacológica y las concentraciones de fármaco en el
+      cuerpo.
+    </p>
+
+    <h3>1.1. Utilidad de modelos PK-PD</h3>
+    <p>
+    <ol>
+      <li>Determinar régimenes de dosificación para alcanzar concentraciones en plasma con seguridad y eficacia óptima.
+      </li>
+      <li>Conocer el balance riesgo-beneficio de un fármaco en particular.</li>
+      <li>Predecir la seguridad y eficacia que tendrá un fármaco en un ensayo clínico controlado desde un diseño de
+        estudio.</li>
+      <li>Entender la relación entre componentes de un sistema fisiológico y relacionarlo con la respuesta
+        farmacológica.</li>
+    </ol>
+    </p>
+    <h3>1.2. Conceptos de farmacodinamia</h3>
+    <ol>
+      <li>Exposición</li>
+      <ol>
+        <li>EC: cualquier dosis o tasa de infusión al cuerpo</li>
+        <li>EQ: medida de concentración en plasma aguda o integrada en plasma o fluido biológico (\(\mathrm{C_{max}}\),
+          \(\mathrm{C_{min}}\), \(\mathrm{C_{ss}}\), \(\mathrm{AUC}\)) </li>
+      </ol>
+      <li>Respuesta (\(R\)): Se refiere a una medida de la observación farmacológica. Por ejemplo: presión sanguínea
+        diastólica.
+        $$R_t=\mathrm{Respuesta~en~el~tiempo};~\mathrm{t,~Presi\acute{o}n~Arterial~Diast\acute{o}lica}$$
+      </li>
+      <li>Efecto (\(E\)): Se refiere al cambio en \(R\) en un intervalo de tiempo. Es un valor calculado desde la
+        respuesta observada y un control. A continuación, se muestra un efecto determinado a los 8 meses determinado
+        como la diferencia en las respuestas en este intervalo de tiempo.
+        $$E(t_8) = \Delta[R(t_8) - R(t_0)]$$
+      </li>
+    </ol>
+
+
+    <p>Entre los tipos de efectos que se pueden determinar en estudios de farmacodinamia se encuentran: </p>
+    <ol type="A">
+      <li>Biomarcadores. p.ej. un antígeno específico, una proteína, etc.</li>
+      <li>Efectos mecanísticos. p.ej. inhibición de actividad convertidora de angiotensina.</li>
+      <li>Subrogado potencial. p.ej. cambio en línea base de presión arterial o lípidos.</li>
+      <li>Desenlace clínico. p.ej. disminución de la mortalidad, disminución de complicaciones.</li>
+    </ol>
+
+    <h3>Interacción entre fármacos y receptores</h3>
+    <p>Los receptores son proteínas que interactuan con ligandos endógenos para generar una respuesta fisiológica que
+      permite regular la función celular. La interacción entre ligando y receptor sigue la ley de acción de masas de
+      acuerdo al modelo Clark. El nivel de respuesta farmacológica (\(R\)) en muchos casos depende de la concentración
+      de un complejo entre el fármaco (ligando) y el receptor. </p>
+
+    <p>$$ \left[\text{Fármaco}\right] + \left[\text{Receptor}\right] \rightleftharpoons \left[\text{Complejo Fármaco -
+      Receptor}\right] \rightarrow \text{Respuesta} $$</p>
+
+    <h4>Modelo entre el ligando y la diana (macromolécula)</h4>
+
+    <p>En este existe un ligando (\(L\)) que interacciona con una diana para formar un complejo entre la diana y ligado
+      (\(LR\)). Este complejo se convierte en una forma activa (\(LR^{\ast}\)) que es responsable por la actividad.</p>
+    <p> $$ L + R \rightleftharpoons LR \rightleftharpoons LR^{\ast} $$ </p>
+
+    <p>El modelo cuenta con una serie de supuestos:</p>
+
+    <ul>
+      <li>El ligando se une al receptor como una asociación biomolecular.</li>
+      <li>La unión al receptor es completamente reversible.</li>
+      <li>El modelo básico asume que sólo hay un tipo de sitio activo con uno por receptor. </li>
+      <li>La ocupación de un ligando al sitio receptor no altera la afinidad de otras moléculas que se unan al receptor.
+      </li>
+      <li>Cada receptor tiene igual afinidad por cada molécula.</li>
+    </ul>
+
+    <p>En la Figura 1 se muestra una comparación del comportamiento de la respuesta farmacológica respecto a la
+      concentración del ligando de acuerdo con el tipo de agonismo.</p>
+    <p style="text-align: center;">
+      <img src="./Modulos/Blog/09_ModelosFarmacodinamicos/001_agonismo.png" alt="Comparación de tipos de agonistas"
+        width="80%" style="display:block; margin-left:auto; margin-right:auto">
+    </p>
+    <p>Figura 1. Comparación de tipos de agonismo en ligandos con acción farmacológica.</p>
+
+    <h2>2. Generalidades modelos PK-PD</h2>
+
+    <h3>Relación entre la dosis y el efecto farmacológico</h3>
+    <p>La ecuación de Hill describe la unión de un ligando a una macromolécula.</p>
+    <p class="teorema-ecuacion">
+      <strong>Ecuación de Hill</strong>
+      $$E = \frac{E_{max} \times [L]^\gamma}{EC_{50} + [L]^\gamma} + E_0$$
+    </p>
+    <p>En donde:
+    <ul>
+      <li>\(E\) es la fracción de receptores ocupada.</li>
+      <li>\([L]\) es la concentración de ligando libre.</li>
+      <li>\(EC_{50}\) es la concentración de ligando a 0.5 de ocupación.</li>
+      <li>\(\gamma\) es el coeficiente de Hill o molecularidad.</li>
+    </ul>
+    </p>
+    <h2>3. Modelos Reversibles</h2>
+
+    <h3>Modelo de Efecto Concentración vs \(\mathrm{E_{max}}\) de fármaco</h3>
+
+    <p>Cuando el fármaco es administrado una o más moléculas del fármaco interactúan con el receptor ocasionando una
+      respuesta farmacológica:</p>
+    <p>$$ \left[\text{F}\right] + \left[\text{R}\right] \rightleftharpoons \left[\text{FR}\right] $$</p>
+
+    <p>A partir de consideraciones de la ley de acción de masas se puede obtener la ecuación de Hill.</p>
+    <p>$$ E = \frac{E_{max}\left[\text{F}\right]^\gamma}{ EC_{50} +\left[\text{F}\right]^\gamma } $$</p>
+
+    <div id="Derivación de ecuación de Hill">
+      <button class="btn btn-gray" type="button" data-toggle="collapse" data-target="#hill_eq" aria-expanded="false"
+        aria-controls="collapseExample">
+        Derivación
+      </button>
+      <div class="collapse" id="hill_eq">
+        <div class="card card-body">
+          <p>La tasa de cambio del complejo fármaco-receptor se puede describir por: </p>
+
+          <p>$$ \frac{d\left[\text{FR}\right]}{dt} = \mathrm{k_{on}}·(\mathrm{R_{T}} - \left[\text{FR}\right]) \cdot
+            \left[\text{F}\right] - \mathrm{k_{off}} \cdot \left[\text{FR}\right]$$</p>
+
+          <p>Donde \(\mathrm{R_{T}}\) es la densidad de receptores máxima, \(\left[\text{F}\right]\) es la concentración
+            del
+            fármaco en el sitio de acción farmacológica, \(\mathrm{k_{on}}\) es una constante de asociación de segundo
+            orden y
+            \(\mathrm{k_{off}}\) es una constante de disociación de primer orden y \(\mathrm{R_{T}} -
+            \left[\text{FR}\right]\)
+            representa la cantidad de receptores libres.</p>
+          <p>En condiciones de equilibrio donde no hay formación o disociación neta de complejos \(
+            {d\left[\text{FR}\right]}/{dt} = 0 \), la
+            ecuación se convierte en:
+          </p>
+
+          <p>$$ \mathrm{k_{on}} \cdot (\mathrm{R_{T}} - \left[\text{FR}\right]) \cdot
+            \left[\text{F}\right] = \mathrm{k_{off}} \cdot \left[\text{FR}\right]$$</p>
+
+          <p>Si se esta se organiza se tienen los siguientes resultados:</p>
+
+          <p>$$ \mathrm{k_{on}} \cdot \mathrm{R_{T}} \cdot \left[\text{F}\right] = \left[\text{FR}\right] \cdot
+            (\mathrm{k_{off}} + \mathrm{k_{on}} \left[\text{F}\right]) $$</p>
+
+          <p>$$ \left[\text{FR}\right] = \frac{\mathrm{k_{on}} \cdot \mathrm{R_{T}} \cdot
+            \left[\text{F}\right]}{\mathrm{k_{off}} + \mathrm{k_{on}} \left[\text{F}\right]} $$</p>
+
+          <p>$$ \left[\text{FR}\right] = \frac{ \mathrm{R_{T}} \cdot
+            \left[\text{F}\right]}{\dfrac{\mathrm{k_{off}}}{\mathrm{k_{on}}} + \left[\text{F}\right]} = \frac{
+            \mathrm{R_{T}} \cdot \left[\text{F}\right]}{\mathrm{k_{D}} + \left[\text{F}\right]} $$</p>
+
+          <p>Donde \(\mathrm{k_{D}}\) es una constante de disociación de equilibrio (\(
+            {\mathrm{k_{off}}}/{\mathrm{k_{on}}} \)). Si se asume que la magnitud del efecto (\(E\)) es proporcional a
+            la concentración del complejo \( \left[\text{FR}\right] \).</p>
+          <p>El efecto (\(E\)) se puede describir en términos de la fracción máxima del efecto \(\mathrm{E_{max}}\) y la
+            fracción de ocupación (\(f_{b}\)) por lo cual:</p>
+          <p>$$ f_b = \frac{E}{E_{max}} = \frac{\left[\text{FR}\right]}{\mathrm{R_{T}}} $$</p>
+
+          <p>$$ \frac{E}{E_{max}} = \frac{ \frac{ \mathrm{R_{T}} \cdot
+            \left[\text{F}\right]}{\mathrm{k_{D}}+\left[\text{F}\right]} }{\mathrm{R_{T}}} $$</p>
+          <p>Como \(K_{D}\) tiene unidades de concentración, representa la concentración que permite alcanzar el 50% el
+            efecto máximo (similar a \(EC_{50}\))</p>
+          <p>$$ E = \frac{E_{max}\left[\text{F}\right]}{ \mathrm{k_{D}}+\left[\text{F}\right] } =
+            \frac{E_{max}\left[\text{F}\right]}{ EC_{50} +\left[\text{F}\right] } $$</p>
+          <p>La ecuación de Hill, posee además al parámetro \(\gamma\) conocido como coeficiente de Hill, que se ha
+            relacionado con la molecularidad de la interacción entre fármaco y receptor.</p>
+          <p>$$ E = \frac{E_{max}\left[\text{F}\right]^\gamma}{ EC_{50} +\left[\text{F}\right]^\gamma } $$</p>
+        </div>
       </div>
     </div>
 
-    <div class="container bg-blog-0">
-      <h2>1. Introducción conceptos básicos</h2>
-      <p>
-        Un modelo es una representación de un sistema diseñada para proveer conocimiento o entendimiento del mismo (1). En la mayoría de los casos resultan en 
-        una simplificación de la naturalezaque provee una utilidad en el sentido de hacer predicciones o brindar explicaciones a fenómenos.
-      </p>
-      <p>
-        La farmacocinética (PK) es la ciencia el comportamiento de las concentraciones en la sangre u otros fluidos, tejidos o partes del organismo de un fármaco frente al tiempo. 
-        De esta manera se estudian procesos como absorción, distribución, metabolismo y excreción de fármacos, y otros compuestos xenobióticos. 
-        La farmacodinamia (PD) es el estudio de los efectos bioquímicos y fisiológicos de los fármacos en el organismo. Por tal, la misma se encarga de estudiar los 
-        mecanismos de acción terapéutica y toxicológica, así como la relación entre concentraciones en el sitio de acción farmacológica y la respuesta observada.
-      </p>
-      <p>
-        La integración de información PK con información PD ha permitido obtener modelos que permiten conocer el balance entre beneficios y riesgos de un tratamiento 
-        farmacológico. De manera que se puede derivar información sobre el manejo que se debe dar al tratamiento como su dosificación. En algunos casos también 
-        se puede entender la relación entre componentes de un sistema molecular, celular o fisiológico, y su influencia en la respuesta farmacológica. 
-        Un modelo PK-PD muestra el curso temporal de la acción farmacológica y las concentraciones de fármaco en el cuerpo.
-      </p>
+    <p style="text-align: center;">
+      <img src="./Modulos/Blog/09_ModelosFarmacodinamicos/002_ec_hill_gamma.png"
+        alt="Efecto de gamma en la función de Hill." width="80%"
+        style="display:block; margin-left:auto; margin-right:auto">
+    </p>
+    <p>Figura 2. Efecto de gamma en la función de Hill.</p>
 
-      <h3>1.1. Utilidad de modelos PK-PD</h3>
-      <p>
-        <ol>
-          <li>Determinar régimenes de dosificación para alcanzar concentraciones en plasma con seguridad y eficacia óptima.</li>
-          <li>Conocer el balance riesgo-beneficio de un fármaco en particular.</li>
-          <li>Predecir la seguridad y eficacia que tendrá un fármaco en un ensayo clínico controlado desde un diseño de estudio.</li>
-          <li>Entender la relación entre componentes de un sistema fisiológico y relacionarlo con la respuesta farmacológica.</li>
-        </ol>
-      </p>
-      <h3>1.2. Conceptos de farmacodinamia</h3>
-      <ol>
-        <li>Exposición</li>
-        <ol>
-          <li>EC: cualquier dosis o tasa de infusión al cuerpo</li>
-          <li>EQ: medida de concentración en plasma aguda o integrada en plasma o fluido biológico (\(\mathrm{C_{max}}\), \(\mathrm{C_{min}}\), \(\mathrm{C_{ss}}\), \(\mathrm{AUC}\)) </li>
-        </ol>
-        <li>Respuesta (\(R\)): Se refiere a una medida de la observación farmacológica. Por ejemplo: presión sanguínea diastólica. 
-          $$R_t=\mathrm{Respuesta~en~el~tiempo};~\mathrm{t,~Presi\acute{o}n~Arterial~Diast\acute{o}lica}$$
-        </li>
-        <li>Efecto (\(E\)): Se refiere al cambio en \(R\) en un intervalo de tiempo. Es un valor calculado desde la respuesta observada y un control.
-          $$E(t_8) = \Delta[R(t_8) - R(t_0)]$$
-        </li>
-      </ol>
-      
-      <h2>2. Generalidades modelos PK-PD</h2>
-      <h2>3. Modelos Reversibles</h2>
-      <h2>4. Modelos de Efectos de Fármaco Proporcionales y Aditivos</h2>
-      <h2>5. Modelos de Compartimento de Efectos o Unión</h2>
-      <h2>6. Modelos de Respuesta Indirecta</h2>
-      <h2>7. Modelos de Procesos Irreversibles</h2>
-      <h2>8. Modelos de Farmacología de Sistemas</h2>
-      <h2>9. Simulación de Ensayos Clinicos Controlados</h2>
-    </div>
+    <h3>Modelo de concentración-efecto lineal</h3>
+    <p>En este modelo el efecto es dependiente de la concentración del fármaco de manera lineal. Se cumple en la
+      ecuación de Hill cuando la \(\left[\mathrm{F}\right]\ll EC_{50}\). Este modelo se describe por: </p>
 
+    <p>$$ E = S \cdot \left[F\right]$$</p>
 
-    <div class="container bg-blog-0">
+    <p>En donde \(S\) es la pendiente. Este modelo rara vez es utilizado, aunque es muy común en la evaluación del
+      riesgo de arrítmia. En la Figura 3 se muestra un ejemplo de este tipo de modelos.</p>
 
-      <p class="teorema">
-        Este es un teorema 
-      </p>
+    <p style="text-align: center;">
+      <img src="./Modulos/Blog/09_ModelosFarmacodinamicos/030_aritmias.png"
+        alt="Ejemplo de aplicación de modelo PD lineal." width="60%"
+        style="display:block; margin-left:auto; margin-right:auto">
+    </p>
+    <p>Figura 3. Ejemplo de aplicación de modelo PD lineal. Adaptado de Gopalakrishnan M, Kumar V, Issar M. Chapter 21.
+      Relationship Between Pharmacokinetics and Pharmacodynamics. Shargel L, Yu A. (eds). Applied Biopharmaceutics and
+      Pharmacokinetics, 7th ed. USA: McGraw-Hill Education; 2016. pp. 635-678.
+    </p>
 
-      <button
-            class="btn btn-gray"
-            type="button"
-            data-toggle="collapse"
-            data-target="#collapse_21"
-            aria-expanded="false"
-            aria-controls="collapseExample"
-          >
-            Derivación
-          </button>
-          <div class="collapse" id="collapse_21">
-            <div class="card card-body">
-              <span class="equation"
-                >Este es un colapsible</span
-              >
-            </div>
-          </div>
-    </div>
+    <h3>Modelo de concentración-efecto log-lineal</h3>
+    <p>Sí se considera un rango entre el 20 y el 80% de la respuesta farmacológica, la relación de Hill se puede
+      aproximar mediante una ecuación lineal. Se tiene la siguiente relación: </p>
+
+    <p>$$ E = S \cdot \log{\left[\text{F}\right]} + E_{0} $$</p>
+    <p>$$\log{\left[\text{F}\right]} = \frac{E - E_{0}}{S} $$</p>
+
+    <p>Este modelo no puede predecir el efecto en el cero de concentración o la eficacia máxima. Se ha utilizado por
+      ejemplo para describir (1) La actividad en la tasa de síntesis del complejo de protrombima vs concentraciones
+      plasmáticas de warfarina y (2) concentración de propranolol y la reducción de taquicardia inducida por el
+      ejercicio.</p>
+
+    <p>En la Figura 4, se tiene un ejemplo de esta relación entre el área bajo la curva entre 0 y 24 horas para varias
+      dosis de atorvastatina y su efecto en la reducción de niveles de LDL.</p>
+
+    <p style="text-align: center;">
+      <img src="./Modulos/Blog/09_ModelosFarmacodinamicos/031_cambioLDL.png"
+        alt="Ejemplo de aplicación de modelo PD log-lineal." width="60%"
+        style="display:block; margin-left:auto; margin-right:auto">
+    </p>
+    <p>Figura 4. Ejemplo de aplicación de modelo PD log-lineal. Adaptado de Stern RH, Yang BB, Hounslow NJ, MacMahon M,
+      Abel RB, Olson SC. Pharmacodynamics and pharmacokinetic-pharmacodynamic relationships of atorvastatin, an HMG-CoA
+      reductase inhibitor. The Journal of Clinical Pharmacology. 2000 Jun;40(6):616-23.
+    </p>
+
+    <h2>4. Modelos de Efectos de Fármaco Proporcionales y Aditivos</h2>
+    <h3>Modelo de efecto aditivo</h3>
+
+    <p>Cuando un fármaco exhibe un efecto farmacológico aditivo, implica que la respuesta del fármaco es independiente
+      de la línea base y aplica cuando existe una respuesta aunque no haya fármaco, lo que actúa como linea base. </p>
+
+    <p>$$ R_t = R_0 + E $$</p>
+
+    <p>Para un modelo lineal aditivo se vuelve:</p>
+    <p>$$ R_t = R_0 + S \times \left[\mathrm{F}\right] $$</p>
     
-    <br />
-    <div class="container bg-blog-0">
-      <p>
-        A continuación, se muestra una presentación con aspectos matemáticos de
-        los procesos de decisión de Markov.
-      </p>
-      <object
-        data="./Modulos/Blog/06_Markov_Decission_Process/MDP.pdf"
-        type="application/pdf"
-        width="90%"
-        height="500px"
-        class="container-fluid text-center"
-      >
-        <p>
-          Su navegador web no tiene un plugin para PDF. Usted puede
-          <a href="./Modulos/Blog/06_Markov_Decission_Process/MDP.pdf">
-            hacer click aquí para descargar el archivo PDF.</a
-          >
-        </p>
-      </object>
+    <p>Para un modelo lineal con \(E_{max}\) se vuelve:</p>
+    <p>$$ R_t = R_0 + \frac{E_{max} \cdot \left[\mathrm{F}\right]}{EC_{50} + \left[\mathrm{F}\right]} $$</p>
+
+    <h2>5. Modelos de Compartimento de Efectos o Unión</h2>
+    <h2>6. Modelos de Respuesta Indirecta</h2>
+    <h2>7. Modelos de Procesos Irreversibles</h2>
+    <h2>8. Modelos de Farmacología de Sistemas</h2>
+    <h2>9. Simulación de Ensayos Clinicos Controlados</h2>
+  </div>
+
+
+  <div class="container bg-blog-0">
+
+    <p class="teorema">
+      Este es un teorema
+    </p>
+
+    <button class="btn btn-gray" type="button" data-toggle="collapse" data-target="#collapse_21" aria-expanded="false"
+      aria-controls="collapseExample">
+      Derivación
+    </button>
+    <div class="collapse" id="collapse_21">
+      <div class="card card-body">
+        <span class="equation">Este es un colapsible</span>
+      </div>
     </div>
-    <br>
-    <div class="container bg-blog-0">
-      <h2>Bibliografía</h2>
+  </div>
+
+  <br />
+  <div class="container bg-blog-0">
+    <p>
+      A continuación, se muestra una presentación con aspectos matemáticos de
+      los procesos de decisión de Markov.
+    </p>
+    <object data="./Modulos/Blog/06_Markov_Decission_Process/MDP.pdf" type="application/pdf" width="90%" height="500px"
+      class="container-fluid text-center">
       <p>
-        [1] Sutton RS, Barto AG. Reinforcement Learning An Introduction. 2nd ed. London, UK: The MIT Press; 2018.
+        Su navegador web no tiene un plugin para PDF. Usted puede
+        <a href="./Modulos/Blog/06_Markov_Decission_Process/MDP.pdf">
+          hacer click aquí para descargar el archivo PDF.</a>
       </p>
-    </div>
-    <hr />
-    <!--Incluir Footer-->
-    <div data-include="footer"></div>
-    <script type="text/JavaScript">
+    </object>
+  </div>
+  <br>
+  <div class="container bg-blog-0">
+    <h2>Bibliografía</h2>
+    <p>
+      [1] Sutton RS, Barto AG. Reinforcement Learning An Introduction. 2nd ed. London, UK: The MIT Press; 2018.
+    </p>
+  </div>
+  <hr />
+  <!--Incluir Footer-->
+  <div data-include="footer"></div>
+  <script type="text/JavaScript">
       $(function () {
         $('[data-toggle="tooltip"]').tooltip()
       })
     </script>
-  </body>
+</body>
+
 </html>
