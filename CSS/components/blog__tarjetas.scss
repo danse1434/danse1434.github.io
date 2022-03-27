@@ -14,7 +14,7 @@ div.col-md-4 {
   }
 
   @for $i from 4 to 0 {
-    @media screen and (max-width: nth($device_sizes, $i) + "px") {
+    @media screen and (max-width: (nth($device_sizes, $i) + "px")) {
       width: #{nth($adapted_width, $i) + "%"};
     }
   }
@@ -31,7 +31,7 @@ div.col-md-4 {
     font-size: 14px;
 
     @for $i from 4 to 0 {
-      @media screen and (max-width: nth($device_sizes, $i) + "px") {
+      @media screen and (max-width: (nth($device_sizes, $i) + "px")) {
         font-size: #{nth($adapted_size_2, $i) + "px"};
       }
     } 
@@ -40,7 +40,7 @@ div.col-md-4 {
     font-size: large;
 
     @for $i from 4 to 0 {
-      @media screen and (max-width: nth($device_sizes, $i) + "px") {
+      @media screen and (max-width: (nth($device_sizes, $i) + "px")) {
         font-size: #{nth($adapted_size_1, $i) + "px"};
       }
     } 

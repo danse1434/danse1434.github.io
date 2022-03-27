@@ -390,15 +390,24 @@ div.col-md-4 {
 .bg-blog-0 span.equation {
   display: block; }
 
+.bg-blog-0 p.teorema, .bg-blog-0 .bg-4 a.teorema, .bg-4 .bg-blog-0 a.teorema, .bg-blog-0 p.teorema-ecuacion, .bg-blog-0 .bg-4 a.teorema-ecuacion, .bg-4 .bg-blog-0 a.teorema-ecuacion {
+  border-color: dodgerblue;
+  border-style: solid;
+  margin-top: 20px; }
+
 .bg-blog-0 p.teorema, .bg-blog-0 .bg-4 a.teorema, .bg-4 .bg-blog-0 a.teorema {
   background-color: dodgerblue;
-  border-color: dodgerblue;
   color: white;
   padding: 25px;
   border-radius: 25px;
-  border-width: 3px;
-  border-style: solid;
-  margin-top: 20px; }
+  border-width: 3px; }
+
+.bg-blog-0 p.teorema-ecuacion, .bg-blog-0 .bg-4 a.teorema-ecuacion, .bg-4 .bg-blog-0 a.teorema-ecuacion {
+  background-color: #1e90ff40;
+  color: #474747;
+  padding: 16px;
+  border-radius: 20px;
+  border-width: 4px; }
 
 .bg-blog-0 h2 {
   font-size: larger; }

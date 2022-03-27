@@ -21,7 +21,7 @@ $device_sizes: 320, 480, 768, 1024;
     overflow: auto;
 
     @for $i from 4 to 0 {
-      @media screen and (max-width: nth($device_sizes, $i) + "px") {
+      @media screen and (max-width: (nth($device_sizes, $i) + "px")) {
         font-size: #{nth($adapted_font_6, $i)};
       }
     }
@@ -31,21 +31,35 @@ $device_sizes: 320, 480, 768, 1024;
     display: block;
   }
 
-  p.teorema {
-    background-color: dodgerblue;
+  %teorema-comp {
     border-color: dodgerblue;
-    color: white;
-    padding: 25px;
-    border-radius: 25px;
-    border-width: 3px;
     border-style: solid;
     margin-top: 20px;
   }
 
+  p.teorema {
+    background-color: dodgerblue;
+    color: white;
+    padding: 25px;
+    border-radius: 25px;
+    border-width: 3px;
+    @extend %teorema-comp
+  }
+  
+  p.teorema-ecuacion {
+    background-color: #1e90ff40;
+    color: #474747;
+    padding: 16px;
+    border-radius: 20px;
+    border-width: 4px;
+    @extend %teorema-comp
+  }
+  
+
   h2 {
     font-size: larger;
     @for $i from 4 to 0 {
-      @media screen and (max-width: nth($device_sizes, $i) + "px") {
+      @media screen and (max-width: (nth($device_sizes, $i) + "px")) {
         font-size: #{nth($adapted_font_2, $i)};
       }
     }
@@ -54,7 +68,7 @@ $device_sizes: 320, 480, 768, 1024;
   h3 {
     font-size: large;
     @for $i from 4 to 0 {
-      @media screen and (max-width: nth($device_sizes, $i) + "px") {
+      @media screen and (max-width: (nth($device_sizes, $i) + "px")) {
         font-size: #{nth($adapted_font_3, $i)};
       }
     }
@@ -63,7 +77,7 @@ $device_sizes: 320, 480, 768, 1024;
   h4 {
     font-size: large;
     @for $i from 4 to 0 {
-      @media screen and (max-width: nth($device_sizes, $i) + "px") {
+      @media screen and (max-width: (nth($device_sizes, $i) + "px")) {
         font-size: #{nth($adapted_font_4, $i)};
       }
     }
