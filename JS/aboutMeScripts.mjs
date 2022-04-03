@@ -89,7 +89,8 @@ fetch("../resources/publications.json")
       crearPublicacion(
         element["divName"],
         element["citacion"],
-        element["href"]
+        element["href"],
+        element["hrefTexto"]
       );
     }
   });

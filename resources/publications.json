@@ -2,6 +2,7 @@
   "01": {
     "divName": "public1",
     "citacion": "1. Álvarez JC, Cuervo SI, Silva E, Díaz JA, Jiménez LL, Parra DS, et al. Pharmacokinetics and Pharmacodynamics of Cefepime in Adults with Hematological Malignancies and Febrile Neutropenia after Chemotherapy. Antibiotics 2021; 10:504. ",
-    "href": "https://doi.org/10.3390/antibiotics10050504"
+    "href": "https://doi.org/10.3390/antibiotics10050504",
+    "hrefTexto": "doi.org/10.3390/antibiotics10050504"
   }
 }

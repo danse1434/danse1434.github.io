@@ -232,7 +232,8 @@ export function crearTituloNF(
 export function crearPublicacion(
   divName,
   descripcion,
-  href
+  href,
+  hrefTexto
 ) {
   // 1. Principal
   var divMain = document.createElement("div");
@@ -247,7 +248,7 @@ export function crearPublicacion(
   var aLink = document.createElement("a");
   aLink.target = "_blank";
   aLink.href = href;
-  aLink.textContent = href;
+  aLink.textContent = hrefTexto;
   divP.appendChild(aLink);
 
   divMain.appendChild(divP);  
