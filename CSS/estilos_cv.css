@@ -22,7 +22,7 @@ body {
 
 .jumbotron {
   background: #343a40;
-  background: linear-gradient(160deg, #343a40 1%, #4c408a 10%, #00b3ff 20%, #00c4ff 30%, #00fff6 50%, rgba(248, 255, 254, 0.8) 60%, rgba(248, 255, 254, 0.1) 90%), white;
+  background: linear-gradient(160deg, #343a40 1%, #4c408a 10%, #00b3ff 20%, #00c4ff 30%, #00fff6 50%, rgba(248, 255, 254, 0.8) 60%, rgba(248, 255, 254, 0.6) 90%), white;
   color: white;
   text-shadow: 4px 4px 6px #1d2124;
   padding: 25px 0px;

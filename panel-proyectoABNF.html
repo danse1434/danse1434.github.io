@@ -55,25 +55,31 @@
     <div class="container-fluid"></div>
     <br />
     <div class="container bg-blog-0">
-      <h1>Recursos</h1>
-      <ul>
+      <h1 class="h1">Recursos</h1>
+      <br>
+      <div class="container-fluid">
+        <ul>
+          <li>
+            <a
+            href="https://repositorio.unal.edu.co/handle/unal/80871"
+            target="_blank"
+            >
+            Tesis de maestría en repositorio institucional unal
+          </a>
+        </li>
+        <br>
         <li>
           <a
-          href="https://repositorio.unal.edu.co/handle/unal/80871"
-          target="_blank"
+            href="./Presentacion_Sustentacion/Sustentacion.html"
+            target="_blank"
+            >Presentación de sustentación</a
           >
-          Tesis de maestría en repositorio institucional unal
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="./Presentacion_Sustentacion/Sustentacion.html"
-          target="_blank"
-          >Presentación de sustentación</a
-        >
-      </li>
-      </ul>
+        </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container bg-blog-0">
+      
     </div>
     <br />
 
@@ -133,6 +139,16 @@
       //     var errorMessage = error.message;
       //     // ...
       //   });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+
+    <script type="application/javascript">
+      tf.loadLayersModel("/Modulos/ABNF/model/model.json")
+        .then(model => {
+          window.model = model;
+        });
+      console.log("Funcionó");
     </script>
 
     <!-- Genius4356 -->
