@@ -1,0 +1,15 @@
+@mixin contenedor(){
+  background-color: rgb(243, 239, 224);
+  margin-bottom: 1vw;
+  max-width: clamp(95%, calc(100% - 5 * ((100vw - 375px)/(1024-375)) ) , 100%);
+  border-radius: clamp(0%, calc(1% - ((100vw - 375px)/(1024-375)) ), 1%);
+  padding: 1%;
+}
+
+@mixin contenedor_titulo(){
+  font-size: clamp(14px, calc(14px + 2 * ((100vw - 375px)/(1024-375)) ), 16px);
+  padding-top: clamp(0px, calc(0px + 10 * ((100vw - 375px)/(1024-375))), 10px);
+  padding-bottom: clamp(0px, calc(0px + 10 * ((100vw - 375px)/(1024-375))), 10px);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
