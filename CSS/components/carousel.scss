@@ -1,35 +1,32 @@
 /* Configuraciones del Carrusel */
 .carousel-inner {
   img {
-    -webkit-filter: grayscale(90%);
-    filter: grayscale(90%); /* make all photos black and white */
+    filter: none;
+    -webkit-filter: none;
     margin: auto;
     height: auto;
-    max-height: 600px;
+    max-height: 200px;
     
-    /*Breakpoints para Sitio Web con responsibidad en el carrusel*/
-    @media (max-width: 575px) {
-      filter: none; /* Color normal */
-      -webkit-filter: none;
-      max-height: 300px;
+    
+    @media screen and (min-width: 375px) {
+      max-height: calc(200px + 400 * ((100vw - 375px)/(1024-375)));
+      
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%);
     }
-    @media (max-width: 768px) {
-      max-height: 400px;
+    @media screen and (min-width: 1024px) {
+      max-height: 600px;
+      
+      -webkit-filter: grayscale(80%);
+      filter: grayscale(80%);
     }
-    @media (max-width: 992px) {
-      width: 60%;
-    }
-    @media (max-width: 1200px) {
-      width: 50%;
-    }
-    //
   }
 }
 .carousel-caption {
   h3 {
     color: #fff !important;
   }
-  @media (max-width: 575px){
+  @media (max-width: 768px){
     display: none; /* Esconder el texto de carrusel cuando la pantalla es menor de W = 600px*/
   }
 }

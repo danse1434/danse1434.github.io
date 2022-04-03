@@ -21,9 +21,10 @@ body {
       padding-top: 56px; } }
 
 .jumbotron {
-  background: #020024;
-  background: linear-gradient(133deg, #020024 1%, #4c408a 19%, #00b3ff 43%, #00c4ff 72%, #00fff6 91%);
+  background: #343a40;
+  background: linear-gradient(160deg, #343a40 1%, #4c408a 10%, #00b3ff 20%, #00c4ff 30%, #00fff6 50%, rgba(248, 255, 254, 0.8) 60%, rgba(248, 255, 254, 0.1) 90%), white;
   color: white;
+  text-shadow: 4px 4px 6px #1d2124;
   padding: 25px 0px;
   position: relative; }
   @media screen and (max-width: 1024px) {
@@ -93,33 +94,26 @@ body {
 
 /* Configuraciones del Carrusel */
 .carousel-inner img {
-  -webkit-filter: grayscale(90%);
-  filter: grayscale(90%);
-  /* make all photos black and white */
+  filter: none;
+  -webkit-filter: none;
   margin: auto;
   height: auto;
-  max-height: 600px;
-  /*Breakpoints para Sitio Web con responsibidad en el carrusel*/ }
-  @media (max-width: 575px) {
+  max-height: 200px; }
+  @media screen and (min-width: 375px) {
     .carousel-inner img {
-      filter: none;
-      /* Color normal */
-      -webkit-filter: none;
-      max-height: 300px; } }
-  @media (max-width: 768px) {
+      max-height: calc(200px + 400 * ((100vw - 375px)/(1024-375)));
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); } }
+  @media screen and (min-width: 1024px) {
     .carousel-inner img {
-      max-height: 400px; } }
-  @media (max-width: 992px) {
-    .carousel-inner img {
-      width: 60%; } }
-  @media (max-width: 1200px) {
-    .carousel-inner img {
-      width: 50%; } }
+      max-height: 600px;
+      -webkit-filter: grayscale(80%);
+      filter: grayscale(80%); } }
 
 .carousel-caption h3 {
   color: #fff !important; }
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
   .carousel-caption {
     display: none;
     /* Esconder el texto de carrusel cuando la pantalla es menor de W = 600px*/ } }
@@ -180,9 +174,6 @@ body {
       .bg-2 p, .bg-2 .bg-4 a, .bg-4 .bg-2 a,
       .bg-2 a {
         font-size: 12px; } }
-  .bg-2 img {
-    max-width: 230px;
-    max-height: 300px; }
 
 /* Contenedor Gris de Contacto*/
 .bg-grey {

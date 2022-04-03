@@ -1,9 +1,11 @@
 // Tema de Jumbotron
-$gColor1: rgba(002, 000, 036, 1);
-$gColor2: rgba(076, 064, 138, 1);
-$gColor3: rgba(000, 179, 255, 1);
-$gColor4: rgba(000, 196, 255, 1);
-$gColor5: rgba(000, 255, 246, 1);
+$gColor1: rgb(52, 58, 64);
+$gColor2: rgb(76, 64, 138);
+$gColor3: rgb(0, 179, 255);
+$gColor4: rgb(0, 196, 255);
+$gColor5: rgb(0, 255, 246);
+$gColor6: rgba(248, 255, 254, 0.8);
+$gColor7: rgba(248, 255, 254, 0.1);
 
 // Tamaño de dispositivo
 $device_sizes: 320, 480, 768, 1024;
@@ -19,19 +21,22 @@ $device_sizes: 320, 480, 768, 1024;
 
   background: $gColor1;
   background: linear-gradient(
-    133deg,
-    $gColor1 1%,
-    $gColor2 19%,
-    $gColor3 43%,
-    $gColor4 72%,
-    $gColor5 91%
-  );
+    160deg,
+    $gColor1 01%,
+    $gColor2 10%,
+    $gColor3 20%,
+    $gColor4 30%,
+    $gColor5 50%,
+    $gColor6 60%,
+    $gColor7 90%,
+  ), white;
   color: white;
+  text-shadow: 4px 4px 6px rgb(29, 33, 36);
   padding: 25px 0px;
   position: relative;
 
   @for $i from 4 to 0 {
-    @media screen and (max-width: nth($device_sizes, $i) + "px") {
+    @media screen and (max-width: (nth($device_sizes, $i) + "px")) {
       padding-top: nth($adapted_padding, $i);
       padding-bottom: nth($adapted_padding, $i);
     }
@@ -42,7 +47,7 @@ $device_sizes: 320, 480, 768, 1024;
     font-size: 50px;
     // Tiene que ser en sentido contrario para respetar la cascada
     @for $i from 4 to 0 {
-      @media screen and (max-width: nth($device_sizes, $i) + "px") {
+      @media screen and (max-width: (nth($device_sizes, $i) + "px")) {
         font-size: nth($adapted_size_1, $i);
       }
     }
@@ -50,7 +55,7 @@ $device_sizes: 320, 480, 768, 1024;
 
   p {
     @for $i from 4 to 0 {
-      @media screen and (max-width: nth($device_sizes, $i) + "px") {
+      @media screen and (max-width: (nth($device_sizes, $i) + "px")) {
         font-size: #{nth($adapted_size_2, $i) + "px"};
       }
     }
@@ -63,7 +68,7 @@ $device_sizes: 320, 480, 768, 1024;
     margin-right: 30px;
 
     @for $i from 4 to 0 {
-      @media screen and (max-width: nth($device_sizes, $i) + "px") {
+      @media screen and (max-width: (nth($device_sizes, $i) + "px")) {
         margin-left: #{nth($adapted_margin, $i) + "px"};
         margin-right: #{nth($adapted_margin, $i) + "px"};
       }
