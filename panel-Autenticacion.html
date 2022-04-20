@@ -1,129 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <title>Autenticación</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-    <meta
-      name="description"
-      content="Sitio Web Oficial de Daniel Sebastian Parra González"
-    />
-    <meta
-      name="keywords"
-      content="Daniel, Sebastian, Parra, González, Daniel Sebastian Parra González, Farmacéutico, Farmacia, Farmacocinética, QSP, quimico farmaceutico"
-    />
-    <meta name="author" content="Daniel Parra G." />
-    <script
-      type="text/javascript"
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" type="text/css" href=".\CSS\original.css?210126" />
-    <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg" />
 
-    <script type="text/javascript">
-      $(function () {
-        var includes = $("[data-include]");
-        jQuery.each(includes, function () {
-          var file = "components/" + $(this).data("include") + ".html";
-          $(this).load(file);
-        });
+<head>
+  <title>Autenticación</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+  <meta name="description" content="Sitio Web Oficial de Daniel Sebastian Parra González" />
+  <meta name="keywords"
+    content="Daniel, Sebastian, Parra, González, Daniel Sebastian Parra González, Farmacéutico, Farmacia, Farmacocinética, QSP, quimico farmaceutico" />
+  <meta name="author" content="Daniel Parra G." />
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href=".\CSS\original.css?210126" />
+  <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg" />
+
+  <script type="text/javascript">
+    $(function () {
+      var includes = $("[data-include]");
+      jQuery.each(includes, function () {
+        var file = "components/" + $(this).data("include") + ".html";
+        $(this).load(file);
       });
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
+    });
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 
-  <body>
-    <!--Incluir barra de navegación-->
-    <div data-include="navbar"></div>
-    <br /><br />
-    <div class="container-fluid"></div>
-    <br />
-    <div class="text-center mb-4">
-      <h1>Verificación de Usuario</h1>
+<body>
+  <!--Incluir barra de navegación-->
+  <div data-include="navbar"></div>
+  <br /><br />
+  <div class="container-fluid"></div>
+  <br />
+  <div class="text-center mb-4">
+    <h1>Verificación de Usuario</h1>
+  </div>
+  <br />
+  <div class="container-lg mx-auto" style="width: 60%">
+    <div class="form-label-group pb-4">
+      <input type="text" class="form-control" id="inputEmail" placeholder="Email" required autofocus />
     </div>
-    <br />
-    <div class="container-lg mx-auto" style="width: 60%">
-      <div class="form-label-group pb-4">
-        <input
-          type="text"
-          class="form-control"
-          id="inputEmail"
-          placeholder="Email"
-          required
-          autofocus
-        />
-      </div>
 
-      <div class="form-label-group pb-4">
-        <input
-          type="password"
-          class="form-control"
-          id="password"
-          placeholder="Contraseña"
-          minlength="6"
-          required
-          autofocus
-        />
-      </div>
-
-      <div class="checkbox mb-3">
-        <label for=""
-          ><input type="checkbox" value="remember-me" />
-          Recuérdame
-        </label>
-      </div>
-      <button
-        class="btn btn-lg btn-primary btn-block"
-        type="submit"
-        id="btnSignIn"
-        onclick="getInfo()"
-      >
-        Ingresa
-      </button>
+    <div class="form-label-group pb-4">
+      <input type="password" class="form-control" id="password" placeholder="Contraseña" minlength="6" required
+        autofocus />
     </div>
-    <div id="alert_placeholder"></div>
-    <div class="container-fluid"></div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <!--Incluir Footer-->
-    <div data-include="footer"></div>
 
-    <!-- Configuración de Firebase -->
+    <div class="checkbox mb-3">
+      <label for=""><input type="checkbox" value="remember-me" />
+        Recuérdame
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" id="btnSignIn" onclick="getInfo()">
+      Ingresa
+    </button>
+  </div>
+  <div id="alert_placeholder"></div>
+  <div class="container-fluid"></div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <!--Incluir Footer-->
+  <div data-include="footer"></div>
 
-    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+  <!-- Configuración de Firebase -->
 
-    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
-    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
 
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>
-    <!--  -->
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
 
-    <script>
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>
+  <!--  -->
+
+  <script>
       // TODO: Replace the following with your app's Firebase project configuration
       // For Firebase JavaScript SDK v7.20.0 and later, `measurementId` is an optional field
       // https://firebase.google.com/docs/web/setup#from-the-cdn
@@ -153,10 +115,11 @@
       //     var errorMessage = error.message;
       //     // ...
       //   });
-    </script>
+  </script>
 
-    <!-- Genius4356 -->
-    <script src="./JS/indiceAutenticacion.js?202102"></script>
-    <script src="./JS/modulos/getUrlParameter.js?202102"></script>
-  </body>
+  <!-- Genius4356 -->
+  <script src="./JS/indiceAutenticacion.js?202102"></script>
+  <script src="./JS/modulos/getUrlParameter.js?202102"></script>
+</body>
+
 </html>

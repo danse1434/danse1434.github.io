@@ -7,15 +7,12 @@
   <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  
+
   <link rel="stylesheet" type="text/css" href=".\CSS\estilos_blog.css?20210125">
   <link rel="icon" type="image/svg" href=".\CSS\icons\logo_pagina.svg" />
   <script type="text/javascript">
@@ -42,128 +39,146 @@
 
   <div class="container bg-blog-0">
     <h2>Introducción</h2>
-    <p> La morfina es un fármaco de la familia de los opioides que se encuentra de forma natural en el opio que es el látex
-        seco obtenido de la cápsula de semillas de la planta de opio (<i> Papaver somniferum </i>). Por otra parte, la 
-        meperidina (también conocida como petidina) es un fármaco opioide sintético de la clase fenilpiperidina.
+    <p> La morfina es un fármaco de la familia de los opioides que se encuentra de forma natural en el opio que es el
+      látex
+      seco obtenido de la cápsula de semillas de la planta de opio (<i> Papaver somniferum </i>). Por otra parte, la
+      meperidina (también conocida como petidina) es un fármaco opioide sintético de la clase fenilpiperidina.
     </p>
-    
-    <p>Se ha considerado a los medicamentos basados en fármacos opioides como medicamentos de altos riesgo debido a que 
-      pueden causar daños significativos a un paciente cuando ocurren errores de medicación asociados a su uso. 
-      A continuación, se observa un mapa de eventos adversos de Morfina obtenidos mediante <em>web scrapping</em> 
+
+    <p>Se ha considerado a los medicamentos basados en fármacos opioides como medicamentos de altos riesgo debido a que
+      pueden causar daños significativos a un paciente cuando ocurren errores de medicación asociados a su uso.
+      A continuación, se observa un mapa de eventos adversos de Morfina obtenidos mediante <em>web scrapping</em>
       a partir del sitio web de <a href="http://www.vigiaccess.org/">VigiAccess</a> del Centro de Monitoreo de Uppsala.
     </p>
-    
-    <iframe src="./Modulos/Blog/01_morfina_meperidina/panel-Blog-Morfina_plotly_image_1.html"
-    title="Mapa Reacciones Adversas Morfina" width="100%" height="500px" style="border:none;">
-    </iframe>
-    
-    <p>El gráfico corresponde a un mapa de eventos adversos a morfina por lo cual corresponde a reacciones adversas 
-      y errores de medicación asociados al uso. Esta base de datos refleja reportes recolectados por diversos sistemas 
-      de farmacovigilancia en el mundo y brinda cierta idea del perfil de seguridad del fármaco. Sin embargo, puede 
-      tener algunos sesgos de selección ya que los 
-      <span class="font-weight-bold" data-toggle="tooltip" title="Cuando produce: muerte, situaciones cercanas a la muerte, hospitalización, daños permanentes, defectos entre otros"> reportes de seguridad serios</span> 
-      suelen ser reportados de manera mas frecuente. </p>
 
-    <p>En el mapa se puede observar que la muerte ha sido el evento más reportado, pero también sobresalen otros 
-      eventos adversos como toxicidad a varios agentes, sobredosis, naúsea, vómito, prurito, hipersensibilidad al 
-      fármaco, abuso, y somnolencia como los eventos con la mayor cantidad de reportes. Para morfina sobresalen 
-      reportes relacionados a desórdenes gastrointestinales, desórdenes de sistema nervioso central, desórdenes 
+    <iframe src="./Modulos/Blog/01_morfina_meperidina/panel-Blog-Morfina_plotly_image_1.html"
+      title="Mapa Reacciones Adversas Morfina" width="100%" height="500px" style="border:none;">
+    </iframe>
+
+    <p>El gráfico corresponde a un mapa de eventos adversos a morfina por lo cual corresponde a reacciones adversas
+      y errores de medicación asociados al uso. Esta base de datos refleja reportes recolectados por diversos sistemas
+      de farmacovigilancia en el mundo y brinda cierta idea del perfil de seguridad del fármaco. Sin embargo, puede
+      tener algunos sesgos de selección ya que los
+      <span class="font-weight-bold" data-toggle="tooltip"
+        title="Cuando produce: muerte, situaciones cercanas a la muerte, hospitalización, daños permanentes, defectos entre otros">
+        reportes de seguridad serios</span>
+      suelen ser reportados de manera mas frecuente.
+    </p>
+
+    <p>En el mapa se puede observar que la muerte ha sido el evento más reportado, pero también sobresalen otros
+      eventos adversos como toxicidad a varios agentes, sobredosis, naúsea, vómito, prurito, hipersensibilidad al
+      fármaco, abuso, y somnolencia como los eventos con la mayor cantidad de reportes. Para morfina sobresalen
+      reportes relacionados a desórdenes gastrointestinales, desórdenes de sistema nervioso central, desórdenes
       psiquiátricos, y desórdenes en piel y tejidos subcutáneos.
     </p>
 
     <p>Debido a la presencia del sesgo de selección no se conoce la frecuencia de dichas reacciones adversas,
-      y así mismo no se conoce si la proporción ilustrada en el mapa se relaciona de forma fiel a la frecuencia. 
+      y así mismo no se conoce si la proporción ilustrada en el mapa se relaciona de forma fiel a la frecuencia.
     </p>
-    
+
     <br><br>
 
     <h2>Modelo Toxicodinámico de Morfina y Meperidina</h2>
-    <p>Para examinar la relación entre la dosis y las respuestas no deseadas de morfina y meperidina se hizo un 
-      re-análisis de los datos obtenidos en un estudio de 1973 que realizó la evaluación de la relación entre 
+    <p>Para examinar la relación entre la dosis y las respuestas no deseadas de morfina y meperidina se hizo un
+      re-análisis de los datos obtenidos en un estudio de 1973 que realizó la evaluación de la relación entre
       estos dos fármacos y cuatro respuestas adversas conocidas.
     </p>
-    
+
     <blockquote class="blockquote" style="font-size: small;">
-      <p>Galway JE, Morrison, JD, Dundee, JW. Dosage/Side-Effect Relationships of Morphine and Meperidine. 
-        Anesthesia & Analgesia. 1973; 52, 4. p536-541 | <a href="https://journals.lww.com/anesthesia-analgesia/Citation/1973/07000/Dosage_Side_Effect_Relationships_of_Morphine_and.9.aspx">Sitio Web</a>
-      </p> 
+      <p>Galway JE, Morrison, JD, Dundee, JW. Dosage/Side-Effect Relationships of Morphine and Meperidine.
+        Anesthesia & Analgesia. 1973; 52, 4. p536-541 | <a
+          href="https://journals.lww.com/anesthesia-analgesia/Citation/1973/07000/Dosage_Side_Effect_Relationships_of_Morphine_and.9.aspx">Sitio
+          Web</a>
+      </p>
     </blockquote>
-    
-    <p>El estudio en mención se incluyeron a 608 pacientes con morfina, 872 pacientes con meperidina y 200 con 
+
+    <p>El estudio en mención se incluyeron a 608 pacientes con morfina, 872 pacientes con meperidina y 200 con
       control salino. En este estudio se evaluaó la presencia de reacciones adversas como Somnolencia, Vértigo,
-      Aprehensión, y Taquicardia, para diferentes rangos de dosificación de morfina (0.075-0.5 mg/kg) y 
+      Aprehensión, y Taquicardia, para diferentes rangos de dosificación de morfina (0.075-0.5 mg/kg) y
       meperidina (0.4-3.2 mg/kg).
     </p>
 
-    <p>Los resultados son reportados como la incidencia de pacientes que presentan la reacción durante el periodo 
+    <p>Los resultados son reportados como la incidencia de pacientes que presentan la reacción durante el periodo
       de estudio. La respuesta (reacción adversa) puede ser modelada como una variable binaria o como una proporción.
-      Para el caso de modelamiento como variable binaria, se puede entender como un problema de clasificación y se 
+      Para el caso de modelamiento como variable binaria, se puede entender como un problema de clasificación y se
       puede construir un modelo de regresión logística. En el caso del modelamiento de proporciones se puede construir
       un modelo de regresión beta.
     </p>
-    
+
     <h3>Regresión Logística</h3>
 
     <p>Para realizar la regresión logística se puede crear una columnas con una respuesta binaria mediante aumento
       de datos, al tener en cuenta la proporción de casos positivos así como el conteo poblacional en cada dosis. En la
-      figura mostrada a continuación se observa la predicción de probabilidad. 
+      figura mostrada a continuación se observa la predicción de probabilidad.
     </p>
 
-    <iframe src="./Modulos/Blog/01_morfina_meperidina/01_dosis_resp.html"
-      title="Resultados Modelo Logístico" width="100%" height="672px" style="border:none; margin: auto;">
+    <iframe src="./Modulos/Blog/01_morfina_meperidina/01_dosis_resp.html" title="Resultados Modelo Logístico"
+      width="100%" height="672px" style="border:none; margin: auto;">
     </iframe>
 
-    <p>Se observa que la morfina es un fármaco más potente que la meperidina y en consecuencia los rangos del 
-      estudio se encuentran ajustados a esta situación. La relación dosis respuesta es más clara para <strong>somnolencia</strong> y 
-      <strong>mareo</strong>. Para <strong>emésis</strong> esta relación no es tan evidente, y para <strong>aprehensión</strong> la 
+    <p>Se observa que la morfina es un fármaco más potente que la meperidina y en consecuencia los rangos del
+      estudio se encuentran ajustados a esta situación. La relación dosis respuesta es más clara para
+      <strong>somnolencia</strong> y
+      <strong>mareo</strong>. Para <strong>emésis</strong> esta relación no es tan evidente, y para
+      <strong>aprehensión</strong> la
       relación es inversa.
     </p>
-    
-    <p>El comportamiento de la respuesta es reflejado en el valor de los parámetros que no son significativamente 
-      diferentes de cero para aprehensión al tener en cuenta su valor y un intervalo de confianza de 95%, como se 
+
+    <p>El comportamiento de la respuesta es reflejado en el valor de los parámetros que no son significativamente
+      diferentes de cero para aprehensión al tener en cuenta su valor y un intervalo de confianza de 95%, como se
       muestra en la siguiente figura.
     </p>
 
-    <iframe src="./Modulos/Blog/01_morfina_meperidina/02_regBinominal.html"
-      title="Parámetros Modelo Logístico" width="100%" height="672px" style="border:none; margin: auto;">
+    <iframe src="./Modulos/Blog/01_morfina_meperidina/02_regBinominal.html" title="Parámetros Modelo Logístico"
+      width="100%" height="672px" style="border:none; margin: auto;">
     </iframe>
 
-    <p>Para morfina se recomiendan dosis de hasta 0.01 a 0.05 mg/kg en pacientes adultos sin previa exposición a opioides. 
-      Esta dosis se recomienda debido a la baja incidencia de efectos adversos con esta dosis, y en pacientes que requieran dosis 
-      más altas se recomienda la utilización de dosis de 90 MME (equivalentes de morfina), que en el caso de morfina IV corresponde a 15mg diarios y para 
+    <p>Para morfina se recomiendan dosis de hasta 0.01 a 0.05 mg/kg en pacientes adultos sin previa exposición a
+      opioides.
+      Esta dosis se recomienda debido a la baja incidencia de efectos adversos con esta dosis, y en pacientes que
+      requieran dosis
+      más altas se recomienda la utilización de dosis de 90 MME (equivalentes de morfina), que en el caso de morfina IV
+      corresponde a 15mg diarios y para
       pacientes en promedio con ~ 70 kg de peso corresponde a 0.21 mg/kg/día. </p>
-    
+
     <h3>Regresión Beta</h3>
-    <p>Con este modelo de regresión se puede modelar la respuesta farmacodinámica como una proporción respecto a la dosis. 
+    <p>Con este modelo de regresión se puede modelar la respuesta farmacodinámica como una proporción respecto a la
+      dosis.
       En la siguiente figura se observa la relación dosis-respuesta al tener un modelo de regresión beta.
     </p>
 
-    <iframe src="./Modulos/Blog/01_morfina_meperidina/03_regBeta.html"
-      title="Parámetros Modelo Beta" width="100%" height="672px" style="border:none; margin: auto;">
+    <iframe src="./Modulos/Blog/01_morfina_meperidina/03_regBeta.html" title="Parámetros Modelo Beta" width="100%"
+      height="672px" style="border:none; margin: auto;">
     </iframe>
-    
-    <p>En general, se observan resultados similares a los obtenidos con el modelo de regresión logística, y la única 
-      diferencia podría radicar en los intervalos de confianza alrededor de las predicciones, que son más amplios con 
-      este modelo. 
+
+    <p>En general, se observan resultados similares a los obtenidos con el modelo de regresión logística, y la única
+      diferencia podría radicar en los intervalos de confianza alrededor de las predicciones, que son más amplios con
+      este modelo.
     </p>
 
     <h2>Regresión Logística Ordinal</h2>
-    <p>Para la variable <strong>Somnolencia</strong> existe una categorización en tres niveles de severidad: (1) Leve, (2) 
-      Moderada y (3) Severa. En este caso se puede utilizar un modelo de regresión logística ordinal, debido a que los datos
-      son reportados en forma de proporción se debe realizar aumento de datos teniendo en cuenta la proporción y el número 
-      total en la población. A continuación, se muestran los resultados de para este modelo: 
+    <p>Para la variable <strong>Somnolencia</strong> existe una categorización en tres niveles de severidad: (1) Leve,
+      (2)
+      Moderada y (3) Severa. En este caso se puede utilizar un modelo de regresión logística ordinal, debido a que los
+      datos
+      son reportados en forma de proporción se debe realizar aumento de datos teniendo en cuenta la proporción y el
+      número
+      total en la población. A continuación, se muestran los resultados de para este modelo:
     </p>
-    <iframe src="./Modulos/Blog/01_morfina_meperidina/05_regLogisOrdinal.html"
-      title="Parámetros Modelo Beta" width="100%" height="672px" style="border:none; margin: auto;">
+    <iframe src="./Modulos/Blog/01_morfina_meperidina/05_regLogisOrdinal.html" title="Parámetros Modelo Beta"
+      width="100%" height="672px" style="border:none; margin: auto;">
     </iframe>
 
-    <p>Se puede observar que el perfil de seguridad es similar entre morfina y meperedina al considerar las clases. 
-      El modelo parece predecir de forma adecuada el comportamiento de la proporción con la que se presenta cada reacción 
-      adversa de acuerdo a la dosis. 
+    <p>Se puede observar que el perfil de seguridad es similar entre morfina y meperedina al considerar las clases.
+      El modelo parece predecir de forma adecuada el comportamiento de la proporción con la que se presenta cada
+      reacción
+      adversa de acuerdo a la dosis.
     </p>
 
-    <p>En conclusión, se observa que los dos fármacos cuentan con un perfil de eventos adversos similar al tener en cuenta
-      los efectos estudiados. Se construyeron diversos modelos de regresión para representar las respuestas farmacodinámicas 
+    <p>En conclusión, se observa que los dos fármacos cuentan con un perfil de eventos adversos similar al tener en
+      cuenta
+      los efectos estudiados. Se construyeron diversos modelos de regresión para representar las respuestas
+      farmacodinámicas
       en forma de variables discretas.
     </p>
 
