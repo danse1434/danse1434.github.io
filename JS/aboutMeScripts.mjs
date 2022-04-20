@@ -11,7 +11,7 @@ fetch("../resources/experience.json")
     const elems = Object.keys(data).length;
 
     for (let i = 0; i < elems; i++) {
-      const identifier = "0" + (i + 1);
+      const identifier = (i + 1).toString().padStart(2,'0');
       const element = data[identifier];
       // console.log(element);
 
@@ -35,7 +35,7 @@ fetch("../resources/education.json")
     const elems = Object.keys(data).length;
 
     for (let i = 0; i < elems; i++) {
-      const identifier = "0" + (i + 1);
+      const identifier = (i + 1).toString().padStart(2,'0');
       const element = data[identifier];
 
       crearTitulo(
@@ -54,7 +54,7 @@ fetch("../resources/educationNF.json")
     const elems = Object.keys(data).length;
 
     for (let i = 0; i < elems; i++) {
-      const identifier = "0" + (i + 1);
+      const identifier = (i + 1).toString().padStart(2,'0');
       const element = data[identifier];
 
       crearTituloNF(
@@ -84,7 +84,7 @@ fetch("../resources/publications.json")
   .then((response) => response.json())
   .then((data) => {
     for (let i = 0; i < Object.keys(data).length; i++) {
-      const identifier = "0" + (i + 1);
+      const identifier = (i + 1).toString().padStart(2,'0');
       const element = data[identifier];
       crearPublicacion(
         element["divName"],

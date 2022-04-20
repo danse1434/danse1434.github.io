@@ -60,5 +60,21 @@
         "Descripcion": "Fundamentals of Reinforcement Learning",
         "Lugar": "Online",
         "URL":{"Nombre": "Certificate", "URL": "https://coursera.org/share/298edf7216d24c44e6fc6f8b2e25ade3"}
+    },
+    "09":{
+        "dv": "educacionNF9",
+        "Institucion": "Lixoft",
+        "Fecha": 2022,
+        "Descripcion": "Pharmacometrics Spring School: Modeling & Simulation using MonolixSuite virtual course.",
+        "Lugar": "Online",
+        "URL":{"Nombre": "Certificate", "URL": "https://firebasestorage.googleapis.com/v0/b/comentarios-usuarios-danse1434.appspot.com/o/Lixoft%20Spring%20School%20PMx%20Cert%20199%20-%20Daniel%20Sebasti%C3%A1n%20Parra%20Gonz%C3%A1lez.pdf?alt=media&token=a2b10669-8ab9-4900-96a6-282e2d5ea096"}
+    },
+    "10":{
+        "dv": "educacionNF10",
+        "Institucion": "Lixoft",
+        "Fecha": 2022,
+        "Descripcion": "Non-compartmental Analysis, Bioequivalence & Beyond Spring School with PKanalix™ virtual course.",
+        "Lugar": "Online",
+        "URL":{"Nombre": "Certificate", "URL": "https://firebasestorage.googleapis.com/v0/b/comentarios-usuarios-danse1434.appspot.com/o/Lixoft%20Spring%20School%202022%20PKanalix%20Cert%2063%20-%20Daniel%20Sebasti%C3%A1n%20Parra%20Gonz%C3%A1lez.pdf?alt=media&token=46c9345e-9072-4b62-9ffc-fc678e46711a"}
     }
 }

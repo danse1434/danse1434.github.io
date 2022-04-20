@@ -73,7 +73,6 @@
           <li data-target="#demo" data-slide-to="1"></li>
           <li data-target="#demo" data-slide-to="2"></li>
           <li data-target="#demo" data-slide-to="3"></li>
-          <li data-target="#demo" data-slide-to="4"></li>
         </ul>
 
         <!-- The slideshow -->
@@ -87,18 +86,7 @@
           </div>
 
           <div class="carousel-item">
-            <img
-              src="figures/foto2.jpg"
-              alt="Hola Saludos desde Barranquilla."
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Barranquilla</h3>
-              <p>Con mi novia.</p>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <img src="figures/foto3.jpeg" alt="Grado." />
+            <img src="figures/foto2.jpeg" alt="Grado." />
             <div class="carousel-caption d-none d-md-block">
               <h3>Bogotá D.C.</h3>
               <p>Durante mi graduación, con mis seres queridos.</p>
@@ -106,7 +94,7 @@
           </div>
 
           <div class="carousel-item">
-            <img src="figures/foto4.jpg" alt="En Egipto." />
+            <img src="figures/foto3.jpg" alt="En Egipto." />
             <div class="carousel-caption d-none d-md-block">
               <h3>Giza, Egipto</h3>
               <p>
@@ -118,8 +106,8 @@
 
           <div class="carousel-item">
             <img
-              src="figures/foto5.jpg"
-              alt="Durante el confinamiento 2020!."
+              src="figures/foto4.jpg"
+              alt="Durante el confinamiento 2020."
             />
             <div class="carousel-caption d-none d-md-block">
               <h3>Bogotá</h3>
@@ -254,10 +242,6 @@
     <hr />
     <!--Incluir Footer-->
     <div data-include="footer"></div>
-
-    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
-    <script src="./JS/include-html.js"></script>
+    <script type="module" src="./JS/envioComentariosFireBase.mjs"></script>
   </body>
 </html>

@@ -428,7 +428,10 @@ body {
     margin-right: auto; }
   .educacionNoFormal .educacionNoFormal__cajaDescripcion, .publicaciones .educacionNoFormal__cajaDescripcion {
     width: auto;
-    font-size: small; }
+    font-size: small;
+    padding: 1%;
+    margin-left: auto;
+    margin-right: auto; }
     @media screen and (max-width: 1024px) {
       .educacionNoFormal .educacionNoFormal__cajaDescripcion, .publicaciones .educacionNoFormal__cajaDescripcion {
         font-size: small; } }
