@@ -56,7 +56,6 @@ fetch("../resources/educationNF.json")
     for (let i = 0; i < elems; i++) {
       const identifier = (i + 1).toString().padStart(2,'0');
       const element = data[identifier];
-
       crearTituloNF(
         element["dv"],
         element["Institucion"],
