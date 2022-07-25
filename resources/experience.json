@@ -1,9 +1,20 @@
 {
+  "07": {
+    "divName": "experiencia7",
+    "tituloTrabajo": "Parexel",
+    "cargo": "PK Scientist",
+    "periodo": "Jul 2021 - Actualidad",
+    "descripcion": "Pharmacokinetics Scientist.",
+    "responsabilidades": [
+      "Análisis y evaluación de modelos PK/PD."
+    ],
+    "Locacion": "Bogotá (Descentralizado)"
+  },
   "06": {
     "divName": "experiencia6",
     "tituloTrabajo": "Fondo Nacional de Estupefacientes",
     "cargo": "Profesional Universitario",
-    "periodo": "Mar 2021 - Abr 2022",
+    "periodo": "Mar 2021 - Jul 2022",
     "descripcion": "Contratista Proyecto de Inversión Misión PRI 1901.",
     "responsabilidades": [
       "Consolidación y análisis de información relacionada a la demanda de medicamentos monopolio del Estado.",
