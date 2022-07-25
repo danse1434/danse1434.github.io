@@ -54,7 +54,8 @@ function crearEntrada(divName, image, image_descrp, titulo, descrp, fecha, link)
 
     // 3. Modificar página
     var div1 = document.getElementById(divName);
-    div1.classList.add('col-md-4');
+    div1.classList.add('col-sm-4');
+    div1.classList.add('col-md-3');
     div1.appendChild(div2);
     
 }
