@@ -73,7 +73,7 @@
       La farmacocinética (PK) es la ciencia el comportamiento de las concentraciones en la sangre u otros fluidos,
       tejidos o partes del organismo de un fármaco frente al tiempo. De esta manera se estudian procesos como absorción,
       distribución, metabolismo y excreción de fármacos, y otros compuestos xenobióticos. La farmacodinamia (PD) es el
-      estudio de los efectos bioquímicos y fisiológicos de los fármacos en el organismo. Por tal, la misma se encarga de
+      estudio de los efectos bioquímicos y fisiológicos de los fármacos en el organismo. Por tal, la PD se encarga de
       estudiar los mecanismos de acción terapéutica y toxicológica, así como la relación entre concentraciones en el
       sitio de acción farmacológica y la respuesta observada.
     </p>
@@ -86,15 +86,15 @@
       cuerpo.
     </p>
 
-    <h3>1.1. Utilidad de modelos PK-PD</h3>
+    <h3>1.1. Beneficios de la utilidad de modelos PK-PD</h3>
     <p>
     <ol>
-      <li>Determinar régimenes de dosificación para alcanzar concentraciones en plasma con seguridad y eficacia óptima.
+      <li>Permite determinar régimenes de dosificación para alcanzar concentraciones en plasma con seguridad y eficacia óptima.
       </li>
-      <li>Conocer el balance riesgo-beneficio de un fármaco en particular.</li>
-      <li>Predecir la seguridad y eficacia que tendrá un fármaco en un ensayo clínico controlado desde un diseño de
+      <li>Permite conocer el balance riesgo-beneficio de un fármaco en particular.</li>
+      <li>Permite predecir la seguridad y eficacia que tendrá un fármaco en un ensayo clínico controlado desde un diseño de
         estudio.</li>
-      <li>Entender la relación entre componentes de un sistema fisiológico y relacionarlo con la respuesta
+      <li>Permite entender la relación entre componentes de un sistema fisiológico y relacionarlo con la respuesta
         farmacológica.</li>
     </ol>
     </p>
@@ -122,23 +122,22 @@
     <ol type="A">
       <li>Biomarcadores. p.ej. un antígeno específico, una proteína, etc.</li>
       <li>Efectos mecanísticos. p.ej. inhibición de actividad convertidora de angiotensina.</li>
-      <li>Subrogado potencial. p.ej. cambio en línea base de presión arterial o lípidos.</li>
-      <li>Desenlace clínico. p.ej. disminución de la mortalidad, disminución de complicaciones.</li>
+      <li>Desenlaces subrrogados. p.ej. cambio en línea base de presión arterial o lípidos.</li>
+      <li>Desenlaces clínicos. p.ej. disminución de la mortalidad, disminución de complicaciones.</li>
     </ol>
 
     <h3>Interacción entre fármacos y receptores</h3>
-    <p>Los receptores son proteínas que interactuan con ligandos endógenos para generar una respuesta fisiológica que
+    <p>Los receptores suelen ser proteínas que interactuan con ligandos endógenos para generar una respuesta fisiológica que
       permite regular la función celular. La interacción entre ligando y receptor sigue la ley de acción de masas de
-      acuerdo al modelo Clark. El nivel de respuesta farmacológica (\(R\)) en muchos casos depende de la concentración
+      acuerdo al modelo de Clark. El nivel de respuesta farmacológica (\(R\)) en muchos casos depende de la concentración
       de un complejo entre el fármaco (ligando) y el receptor. </p>
 
-    <p>$$ \left[\text{Fármaco}\right] + \left[\text{Receptor}\right] \rightleftharpoons \left[\text{Complejo Fármaco -
-      Receptor}\right] \rightarrow \text{Respuesta} $$</p>
+    <p>$$ \left[\text{Fármaco}\right] + \left[\text{Receptor}\right] \rightleftharpoons \left[\text{Complejo Fármaco-Receptor}\right] \rightarrow \text{Respuesta} $$</p>
 
     <h4>Modelo entre el ligando y la diana (macromolécula)</h4>
 
     <p>En este existe un ligando (\(L\)) que interacciona con una diana para formar un complejo entre la diana y ligado
-      (\(LR\)). Este complejo se convierte en una forma activa (\(LR^{\ast}\)) que es responsable por la actividad.</p>
+      (\(LR\)). Este complejo se convierte en una forma activa (\(LR^{\ast}\)) que es responsable de la actividad.</p>
     <p> $$ L + R \rightleftharpoons LR \rightleftharpoons LR^{\ast} $$ </p>
 
     <p>El modelo cuenta con una serie de supuestos:</p>
@@ -166,14 +165,16 @@
     <p>La ecuación de Hill describe la unión de un ligando a una macromolécula.</p>
     <p class="teorema-ecuacion">
       <strong>Ecuación de Hill</strong>
-      $$E = \frac{E_{max} \times [L]^\gamma}{EC_{50} + [L]^\gamma} + E_0$$
+      $$E = \frac{E_{max} \times [L]^\gamma}{EC_{50}^\gamma + [L]^\gamma} + E_0$$
     </p>
     <p>En donde:
     <ul>
-      <li>\(E\) es la fracción de receptores ocupada.</li>
+      <li>\(E\) es el efecto.</li>
+      <li>\(E_{max}\) es el efecto máximo que puede ser alcanzado.</li>
       <li>\([L]\) es la concentración de ligando libre.</li>
-      <li>\(EC_{50}\) es la concentración de ligando a 0.5 de ocupación.</li>
       <li>\(\gamma\) es el coeficiente de Hill o molecularidad.</li>
+      <li>\(EC_{50}\) es la concentración de ligando para alcanzar la mitad del efecto máximo.</li>
+      <li>\(E_{0}\) es el efecto base.</li>
     </ul>
     </p>
     <h2>3. Modelos Reversibles</h2>
@@ -184,11 +185,12 @@
       respuesta farmacológica:</p>
     <p>$$ \left[\text{F}\right] + \left[\text{R}\right] \rightleftharpoons \left[\text{FR}\right] $$</p>
 
+    <p>Donde, \(\left[\text{F}\right]\) es la concentración de fármaco, \(\left[\text{R}\right]\) es la concentración de receptor y \(\left[\text{FR}\right]\) es la concentración del complejo fármaco-receptor</p>
     <p>A partir de consideraciones de la ley de acción de masas se puede obtener la ecuación de Hill.</p>
-    <p>$$ E = \frac{E_{max}\left[\text{F}\right]^\gamma}{ EC_{50} +\left[\text{F}\right]^\gamma } $$</p>
+    <p>$$ E = \frac{E_{max}\left[\text{F}\right]^\gamma}{ EC_{50}^\gamma +\left[\text{F}\right]^\gamma } = \frac{E_{max}C^\gamma}{ EC_{50}^\gamma +C^\gamma }$$</p>
 
     <div id="Derivación de ecuación de Hill">
-      <button class="btn btn-gray" type="button" data-toggle="collapse" data-target="#hill_eq" aria-expanded="false"
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#hill_eq" aria-expanded="false"
         aria-controls="collapseExample">
         Derivación
       </button>
@@ -248,19 +250,17 @@
 
     <p style="text-align: center;">
       <img src="./Modulos/Blog/09_ModelosFarmacodinamicos/002_ec_hill_gamma.png"
-        alt="Efecto de gamma en la función de Hill." width="80%"
+        alt="Efecto de gamma en la función de Hill." width="70%"
         style="display:block; margin-left:auto; margin-right:auto">
     </p>
     <p>Figura 2. Efecto de gamma en la función de Hill.</p>
 
     <h3>Modelo de concentración-efecto lineal</h3>
-    <p>En este modelo el efecto es dependiente de la concentración del fármaco de manera lineal. Se cumple en la
-      ecuación de Hill cuando la \(\left[\mathrm{F}\right]\ll EC_{50}\). Este modelo se describe por: </p>
+    <p>En este modelo el efecto es dependiente de la concentración del fármaco de manera lineal. Se cumple en un rango de concentraciones limitado aproximando la ecuación de Hill cuando \(C \ll EC_{50}\). Este modelo se describe por: </p>
 
-    <p>$$ E = S \cdot \left[F\right]$$</p>
+    <p>$$ E = S \cdot C$$</p>
 
-    <p>En donde \(S\) es la pendiente. Este modelo rara vez es utilizado, aunque es muy común en la evaluación del
-      riesgo de arrítmia. En la Figura 3 se muestra un ejemplo de este tipo de modelos.</p>
+    <p>En donde, \(E\) es el efecto, \(S\) es la pendiente, y \(C\) es la concentración del fármaco. Este modelo tiene poca utilidad en la extrapolación a dosis altas debido a que no predice la eventual saturación que presenta el receptor a concentraciones muy altas. Este modelo es ha sido utilizado en la evaluación del riesgo de arrítmias. En la Figura 3 se muestra un ejemplo del ajuste de este tipo de modelos.</p>
 
     <p style="text-align: center;">
       <img src="./Modulos/Blog/09_ModelosFarmacodinamicos/030_aritmias.png"
@@ -274,10 +274,10 @@
 
     <h3>Modelo de concentración-efecto log-lineal</h3>
     <p>Sí se considera un rango entre el 20 y el 80% de la respuesta farmacológica, la relación de Hill se puede
-      aproximar mediante una ecuación lineal. Se tiene la siguiente relación: </p>
+      aproximar mediante una ecuación log-lineal. Se tiene las siguientes relaciones: </p>
 
-    <p>$$ E = S \cdot \log{\left[\text{F}\right]} + E_{0} $$</p>
-    <p>$$\log{\left[\text{F}\right]} = \frac{E - E_{0}}{S} $$</p>
+    <p>$$ E = S \cdot \log{C} + E_{0} $$</p>
+    <p>$$\log{C} = \frac{E - E_{0}}{S} $$</p>
 
     <p>Este modelo no puede predecir el efecto en el cero de concentración o la eficacia máxima. Se ha utilizado por
       ejemplo para describir (1) La actividad en la tasa de síntesis del complejo de protrombima vs concentraciones
@@ -301,15 +301,52 @@
     <h3>Modelo de efecto aditivo</h3>
 
     <p>Cuando un fármaco exhibe un efecto farmacológico aditivo, implica que la respuesta del fármaco es independiente
-      de la línea base y aplica cuando existe una respuesta aunque no haya fármaco, lo que actúa como linea base. </p>
+      de la línea base y aplica cuando existe una respuesta aunque la concentración del fármaco sea cero, lo que actúa como linea base. </p>
 
-    <p>$$ R_t = R_0 + E $$</p>
-
+    <p>$$ R = R_0 + E $$</p>
+    
     <p>Para un modelo lineal aditivo se vuelve:</p>
-    <p>$$ R_t = R_0 + S \times \left[\mathrm{F}\right] $$</p>
+    <p>$$ R = R_0 + S \cdot C $$</p>
+    
+    <p>Para un modelo aditivo de saturación estimulatorio (con \(E_{max}\)) se vuelve:</p>
+    <p>$$ R = R_0 + \frac{E_{max} \cdot C}{EC_{50} + C} $$</p>
+  
+    <p>Para un modelo aditivo de saturación inhibitorio (con \(I_{max}\)) se vuelve:</p>
+    <p>$$ R = R_0 + \frac{I_{max} \cdot C}{IC_{50} + C} $$</p>
+    
+    En la Figura 5 se muestra una comparación del comportamiento de la respuesta para diversos tipos de modelos aditivos.
 
-    <p>Para un modelo lineal con \(E_{max}\) se vuelve:</p>
-    <p>$$ R_t = R_0 + \frac{E_{max} \cdot \left[\mathrm{F}\right]}{EC_{50} + \left[\mathrm{F}\right]} $$</p>
+    <p style="text-align: center;">
+      <img src="./Modulos/Blog/09_ModelosFarmacodinamicos/040a_modelos_directos_aditivos.png"
+        alt="Comportamiento de modelos directos aditivos." width="75%"
+        style="display:block; margin-left:auto; margin-right:auto">
+    </p>
+    <p>Figura 5. Comportamiento de algunos modelos directos aditivos. A. Modelo lineal estimulatorio (\(S\) = 0.5), B. Modelo lineal inhibitorio (\(S\) = -0.5), C. Modelo con saturación estimulatorio (\(Emax\) = 100, \(EC50\)=50), D. Modelo con saturación inhibitorio (\(Imax\) = 100, \(IC50\)=50).
+    </p>
+
+    <h3>Modelo de efecto proporcional</h3>
+    El efecto se puede modelar de una forma proporcional al valor de la línea base. En tales casos se tiene la siguiente ecuación:
+    
+    <p>$$ R = R_0 \cdot \left(1+E\right) $$</p>
+    
+    <p>Para un modelo lineal proporcional se tiene:</p>
+    <p>$$ R = R_0 \cdot \left(1 + SC\right)$$</p>
+    
+    <p>Para un modelo proporcional con saturación estimulatorio (con \(E_{max}\)) se vuelve:</p>
+    <p>$$ R = R_0 \cdot \left(1 + \frac{E_{max}\cdot C}{EC_{50} + C}\right) $$</p>
+    
+    <p>Para un modelo proporcional con saturación inhibitorio (con \(I_{max}\)) se vuelve:</p>
+    <p>$$ R = R_0 \cdot \left(1 + \frac{I_{max}\cdot C}{IC_{50} + C}\right) $$</p>
+    
+    En la Figura 6 se muestra una comparación del comportamiento de la respuesta para diversos tipos de modelos proporcionales.
+
+    <p style="text-align: center;">
+      <img src="./Modulos/Blog/09_ModelosFarmacodinamicos/040b_modelos_directos_proporcionales.png"
+        alt="Comportamiento de modelos directos proporcionales." width="75%"
+        style="display:block; margin-left:auto; margin-right:auto">
+    </p>
+    <p>Figura 5. Comportamiento de algunos modelos directos proporcionales. A. Modelo lineal estimulatorio (\(S\) = 0.05), B. Modelo lineal inhibitorio (\(S\) = -0.05), C. Modelo con saturación estimulatorio (\(Emax\) = 0.5, \(EC50\)=50), D. Modelo con saturación inhibitorio (\(Imax\) = 20, \(IC50\)=50).
+    </p>
 
     <h2>5. Modelos de Compartimento de Efectos o Unión</h2>
     <h2>6. Modelos de Respuesta Indirecta</h2>
