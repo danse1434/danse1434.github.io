@@ -100,20 +100,25 @@
     </p>
     <h3>1.2. Conceptos de farmacodinamia</h3>
     <ol>
-      <li>Exposición</li>
+      <li>Exposición: se puede definir como:</li>
       <ol>
-        <li>EC: cualquier dosis o tasa de infusión al cuerpo</li>
-        <li>EQ: medida de concentración en plasma aguda o integrada en plasma o fluido biológico (\(\mathrm{C_{max}}\),
+        <li>Cualquier dosis o ingreso del fármaco al cuerpo</li>
+        <li>Medidas de concentración en plasma aguda o integrada en plasma o fluido biológico (\(\mathrm{C_{max}}\),
           \(\mathrm{C_{min}}\), \(\mathrm{C_{ss}}\), \(\mathrm{AUC}\)) </li>
       </ol>
-      <li>Respuesta (\(R\)): Se refiere a una medida de la observación farmacológica. Por ejemplo: presión sanguínea
+      <li>Respuesta (\(R\)): Se refiere a una medida directa de una observación farmacológica. Por ejemplo: presión sanguínea
         diastólica.
-        $$R_t=\mathrm{Respuesta~en~el~tiempo};~\mathrm{t,~Presi\acute{o}n~Arterial~Diast\acute{o}lica}$$
+        $$R_t: \mathrm{Presi\acute{o}n~Arterial~Diast\acute{o}lica}$$
+        <p>Donde, \(R_t\) es la respuesta a un tiempo \(t\).</p>
       </li>
-      <li>Efecto (\(E\)): Se refiere al cambio en \(R\) en un intervalo de tiempo. Es un valor calculado desde la
-        respuesta observada y un control. A continuación, se muestra un efecto determinado a los 8 meses determinado
-        como la diferencia en las respuestas en este intervalo de tiempo.
-        $$E(t_8) = \Delta[R(t_8) - R(t_0)]$$
+      <li>Efecto (\(E\)): Se refiere al cambio en \(R\) en un intervalo de tiempo. Es una cantidad calculada o derivada a partir de observaciones. Como ejemplo se tiene: 
+        $$E: \mathrm{Cambio~de~l\acute{i}nea~base~de~presi\acute{o}n~diast\acute{o}lica~a~8~semanas}$$
+        
+        <p>Donde, \(E\) es el efecto. \(t\).</p>
+
+        $$E = \Delta R = R_{t=8} - R_{t=0}$$
+
+        <p>En este ejemplo el efecto consiste en el cambio en 8 semanas de la presión diastólica calculado como la diferencia entre las dos respuestas.</p>
       </li>
     </ol>
 
@@ -162,33 +167,14 @@
     <h2>2. Generalidades modelos PK-PD</h2>
 
     <h3>Relación entre la dosis y el efecto farmacológico</h3>
-    <p>La ecuación de Hill describe la unión de un ligando a una macromolécula.</p>
-    <p class="teorema-ecuacion">
-      <strong>Ecuación de Hill</strong>
-      $$E = \frac{E_{max} \times [L]^\gamma}{EC_{50}^\gamma + [L]^\gamma} + E_0$$
-    </p>
-    <p>En donde:
-    <ul>
-      <li>\(E\) es el efecto.</li>
-      <li>\(E_{max}\) es el efecto máximo que puede ser alcanzado.</li>
-      <li>\([L]\) es la concentración de ligando libre.</li>
-      <li>\(\gamma\) es el coeficiente de Hill o molecularidad.</li>
-      <li>\(EC_{50}\) es la concentración de ligando para alcanzar la mitad del efecto máximo.</li>
-      <li>\(E_{0}\) es el efecto base.</li>
-    </ul>
-    </p>
-    <h2>3. Modelos Reversibles</h2>
+    
+    <p>Cuando el fármaco es administrado una o más moléculas del fármaco interactúan con el receptor ocasionando una respuesta farmacológica. El modelo de ocupación basado en la ley de acción de masas implica una unión del fármaco al receptor que es reversible</p>
+    <p>$$ \left[\text{F}\right] + \left[\text{R}\right] \underset{\mathrm{k_{off}}}{\overset{\mathrm{k_{on}}}{\rightleftharpoons}} \left[\text{FR}\right] $$</p>
 
-    <h3>Modelo de Efecto Concentración vs \(\mathrm{E_{max}}\) de fármaco</h3>
-
-    <p>Cuando el fármaco es administrado una o más moléculas del fármaco interactúan con el receptor ocasionando una
-      respuesta farmacológica:</p>
-    <p>$$ \left[\text{F}\right] + \left[\text{R}\right] \rightleftharpoons \left[\text{FR}\right] $$</p>
-
-    <p>Donde, \(\left[\text{F}\right]\) es la concentración de fármaco, \(\left[\text{R}\right]\) es la concentración de receptor y \(\left[\text{FR}\right]\) es la concentración del complejo fármaco-receptor</p>
+    <p>Donde, \(\left[\text{F}\right]\) es la concentración de fármaco, \(\left[\text{R}\right]\) es la concentración de receptor, \(\mathrm{k_{on}}\) es la constante de velocidad de asociación, \(\mathrm{k_{off}}\) es la constante de velocidad de disociación del complejo, y \(\left[\text{FR}\right]\) es la concentración del complejo fármaco-receptor</p>
     <p>A partir de consideraciones de la ley de acción de masas se puede obtener la ecuación de Hill.</p>
-    <p>$$ E = \frac{E_{max}\left[\text{F}\right]^\gamma}{ EC_{50}^\gamma +\left[\text{F}\right]^\gamma } = \frac{E_{max}C^\gamma}{ EC_{50}^\gamma +C^\gamma }$$</p>
 
+    <br>
     <div id="Derivación de ecuación de Hill">
       <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#hill_eq" aria-expanded="false"
         aria-controls="collapseExample">
@@ -196,18 +182,17 @@
       </button>
       <div class="collapse" id="hill_eq">
         <div class="card card-body">
-          <p>La tasa de cambio del complejo fármaco-receptor se puede describir por: </p>
+          <p>La tasa de cambio del complejo fármaco-receptor (\(\text{FR}\)) se puede describir por: </p>
 
-          <p>$$ \frac{d\left[\text{FR}\right]}{dt} = \mathrm{k_{on}}·(\mathrm{R_{T}} - \left[\text{FR}\right]) \cdot
+          <p>$$ \frac{d\left[\text{FR}\right]}{dt} = \mathrm{k_{on}} 
+            \left[\text{R}\right]\left[\text{F}\right] - \mathrm{k_{off}} \cdot \left[\text{FR}\right]$$</p>
+            
+            <p>Donde \(\left[\text{F}\right]\) es la concentración del fármaco en el sitio de acción farmacológica, \(\left[\text{R}\right]\) es la concentración del receptor en el sitio de acción farmacológica, \(\mathrm{k_{on}}\) es la constante de velocidad de asociación de segundo orden y \(\mathrm{k_{off}}\) es la constante de velocidad de disociación de primer orden. Sí se denomina a la concentración total de receptores (\(\mathrm{R_{T}}\)) como la suma de \(\left[\text{R}\right]\) y \(\left[\text{F}\right]\), se puede obtener la siguiente expresión para la tasa de cambio del complejo como:</p>
+          
+            <p>$$ \frac{d\left[\text{FR}\right]}{dt} = \mathrm{k_{on}}·(\mathrm{R_{T}} - \left[\text{FR}\right]) \cdot
             \left[\text{F}\right] - \mathrm{k_{off}} \cdot \left[\text{FR}\right]$$</p>
 
-          <p>Donde \(\mathrm{R_{T}}\) es la densidad de receptores máxima, \(\left[\text{F}\right]\) es la concentración
-            del
-            fármaco en el sitio de acción farmacológica, \(\mathrm{k_{on}}\) es una constante de asociación de segundo
-            orden y
-            \(\mathrm{k_{off}}\) es una constante de disociación de primer orden y \(\mathrm{R_{T}} -
-            \left[\text{FR}\right]\)
-            representa la cantidad de receptores libres.</p>
+          <p>Donde \(\mathrm{R_{T}}\) es la concentración total de receptores.</p>
           <p>En condiciones de equilibrio donde no hay formación o disociación neta de complejos \(
             {d\left[\text{FR}\right]}/{dt} = 0 \), la
             ecuación se convierte en:
@@ -229,24 +214,47 @@
             \mathrm{R_{T}} \cdot \left[\text{F}\right]}{\mathrm{k_{D}} + \left[\text{F}\right]} $$</p>
 
           <p>Donde \(\mathrm{k_{D}}\) es una constante de disociación de equilibrio (\(
-            {\mathrm{k_{off}}}/{\mathrm{k_{on}}} \)). Si se asume que la magnitud del efecto (\(E\)) es proporcional a
-            la concentración del complejo \( \left[\text{FR}\right] \).</p>
-          <p>El efecto (\(E\)) se puede describir en términos de la fracción máxima del efecto \(\mathrm{E_{max}}\) y la
+            {\mathrm{k_{off}}}/{\mathrm{k_{on}}} \)).</p> 
+          
+          <p>Si se asume que:</p>
+          <ul>
+            <li>La magnitud del efecto (\(E\)) es proporcional a la concentración del complejo (\(E = \alpha \left[\text{FR}\right] \))</li>
+            <li>La magnitud del efecto máximo (\(E_{\mathrm{max}}\)) es proporcional a la concentración total de receptores (\(E_{\mathrm{max}} = \alpha R_{T} \)).</li>
+            <p>Donde, \(\alpha\) se le conoce como eficacia.</p>
+          </ul>
+          <p>El efecto (\(E\)) se puede describir en términos de la fracción máxima del efecto \(E_{\mathrm{max}}\) y la
             fracción de ocupación (\(f_{b}\)) por lo cual:</p>
-          <p>$$ f_b = \frac{E}{E_{max}} = \frac{\left[\text{FR}\right]}{\mathrm{R_{T}}} $$</p>
+          <p>$$ f_b = \frac{E}{E_{\mathrm{max}}} = \frac{\left[\text{FR}\right]}{\mathrm{R_{T}}} $$</p>
 
-          <p>$$ \frac{E}{E_{max}} = \frac{ \frac{ \mathrm{R_{T}} \cdot
-            \left[\text{F}\right]}{\mathrm{k_{D}}+\left[\text{F}\right]} }{\mathrm{R_{T}}} $$</p>
-          <p>Como \(K_{D}\) tiene unidades de concentración, representa la concentración que permite alcanzar el 50% el
-            efecto máximo (similar a \(EC_{50}\))</p>
-          <p>$$ E = \frac{E_{max}\left[\text{F}\right]}{ \mathrm{k_{D}}+\left[\text{F}\right] } =
-            \frac{E_{max}\left[\text{F}\right]}{ EC_{50} +\left[\text{F}\right] } $$</p>
-          <p>La ecuación de Hill, posee además al parámetro \(\gamma\) conocido como coeficiente de Hill, que se ha
-            relacionado con la molecularidad de la interacción entre fármaco y receptor.</p>
-          <p>$$ E = \frac{E_{max}\left[\text{F}\right]^\gamma}{ EC_{50} +\left[\text{F}\right]^\gamma } $$</p>
+          <p>$$ \frac{E}{E_{\mathrm{max}}} = \dfrac{ \dfrac{ \mathrm{R_{T}}\left[\text{F}\right]}{\mathrm{k_{D}}+\left[\text{F}\right]}}{\mathrm{R_{T}}} $$</p>
+          <p>$$ E = \frac{E_{\mathrm{max}}\left[\text{F}\right]}{ \mathrm{k_{D}}+\left[\text{F}\right] } $$</p>
+          <p>Como \(\mathrm{k_{D}}\) tiene unidades de concentración, esta variable representa la concentración que permite alcanzar el 50% el
+            efecto máximo.</p>
+          <p>De manera frecuente la ecuación de Hill, posee un parámetro adicional \(\gamma\) conocido como coeficiente de Hill, que se 
+            relaciona con la molecularidad de la interacción entre fármaco y receptor.</p>
+          <p>$$ E = \frac{E_{\mathrm{max}}\left[\text{F}\right]^\gamma}{ \mathrm{k_{D}}^\gamma +\left[\text{F}\right]^\gamma } $$</p>
         </div>
       </div>
     </div>
+    <br>
+    <!-- <p>$$ E = \frac{E_{max}\left[\text{F}\right]^\gamma}{ EC_{50}^\gamma +\left[\text{F}\right]^\gamma }$$</p> -->
+
+    <p>La ecuación de Hill describe la unión de un fármaco a su diana.</p>
+    <p class="teorema-ecuacion">
+      <strong>Ecuación de Hill con sigmoidicidad</strong>
+      $$E = \frac{E_{\mathrm{max}} \times [F]^\gamma}{\mathrm{k_{D}}^\gamma + [F]^\gamma}$$
+    </p>
+    <p>En donde:
+    <ul>
+      <li>\(E\) es el efecto.</li>
+      <li>\(E_{\mathrm{max}}\) es el efecto máximo que puede ser alcanzado.</li>
+      <li>\([F]\) es la concentración del fármaco (ligando) libre.</li>
+      <li>\(\gamma\) es el coeficiente de Hill o molecularidad.</li>
+      <li>\(\mathrm{k_{D}}\) es la constante de disociación en equilibrio.</li>
+    </ul>
+    </p>
+
+    <br>
 
     <p style="text-align: center;">
       <img src="./Modulos/Blog/09_ModelosFarmacodinamicos/002_ec_hill_gamma.png"
@@ -254,6 +262,8 @@
         style="display:block; margin-left:auto; margin-right:auto">
     </p>
     <p>Figura 2. Efecto de gamma en la función de Hill.</p>
+
+    <h2>3. Modelos Reversibles</h2>
 
     <h3>Modelo de concentración-efecto lineal</h3>
     <p>En este modelo el efecto es dependiente de la concentración del fármaco de manera lineal. Se cumple en un rango de concentraciones limitado aproximando la ecuación de Hill cuando \(C \ll EC_{50}\). Este modelo se describe por: </p>
@@ -267,7 +277,7 @@
         alt="Ejemplo de aplicación de modelo PD lineal." width="60%"
         style="display:block; margin-left:auto; margin-right:auto">
     </p>
-    <p>Figura 3. Ejemplo de aplicación de modelo PD lineal. Adaptado de Gopalakrishnan M, Kumar V, Issar M. Chapter 21.
+    <p>Figura 3. Ejemplo de aplicación de modelo PD lineal. El eje Y se encuentra en escala logarítmica. Adaptado de Gopalakrishnan M, Kumar V, Issar M. Chapter 21.
       Relationship Between Pharmacokinetics and Pharmacodynamics. Shargel L, Yu A. (eds). Applied Biopharmaceutics and
       Pharmacokinetics, 7th ed. USA: McGraw-Hill Education; 2016. pp. 635-678.
     </p>
@@ -277,6 +287,9 @@
       aproximar mediante una ecuación log-lineal. Se tiene las siguientes relaciones: </p>
 
     <p>$$ E = S \cdot \log{C} + E_{0} $$</p>
+
+    <p>Donde, \(E\) es el efecto, \(S\) es la pendiente, \(C\) es la concentración, y \(E_{0}\) es el efecto cuando la concentración es igual a 1.</p>
+
     <p>$$\log{C} = \frac{E - E_{0}}{S} $$</p>
 
     <p>Este modelo no puede predecir el efecto en el cero de concentración o la eficacia máxima. Se ha utilizado por
@@ -312,14 +325,14 @@
     <p>$$ R = R_0 + \frac{E_{max} \cdot C}{EC_{50} + C} $$</p>
   
     <p>Para un modelo aditivo de saturación inhibitorio (con \(I_{max}\)) se vuelve:</p>
-    <p>$$ R = R_0 + \frac{I_{max} \cdot C}{IC_{50} + C} $$</p>
+    <p>$$ R = R_0 - \frac{I_{max} \cdot C}{IC_{50} + C} $$</p>
     
     En la Figura 5 se muestra una comparación del comportamiento de la respuesta para diversos tipos de modelos aditivos.
 
     <p style="text-align: center;">
       <img src="./Modulos/Blog/09_ModelosFarmacodinamicos/040a_modelos_directos_aditivos.png"
-        alt="Comportamiento de modelos directos aditivos." width="75%"
-        style="display:block; margin-left:auto; margin-right:auto">
+        alt="Comportamiento de modelos directos aditivos." width="1152px"
+        style="display:block; margin-left:auto; margin-right:auto; max-width: 100%;">
     </p>
     <p>Figura 5. Comportamiento de algunos modelos directos aditivos. A. Modelo lineal estimulatorio (\(S\) = 0.5), B. Modelo lineal inhibitorio (\(S\) = -0.5), C. Modelo con saturación estimulatorio (\(Emax\) = 100, \(EC50\)=50), D. Modelo con saturación inhibitorio (\(Imax\) = 100, \(IC50\)=50).
     </p>
@@ -336,17 +349,19 @@
     <p>$$ R = R_0 \cdot \left(1 + \frac{E_{max}\cdot C}{EC_{50} + C}\right) $$</p>
     
     <p>Para un modelo proporcional con saturación inhibitorio (con \(I_{max}\)) se vuelve:</p>
-    <p>$$ R = R_0 \cdot \left(1 + \frac{I_{max}\cdot C}{IC_{50} + C}\right) $$</p>
+    <p>$$ R = R_0 \cdot \left(1 - \frac{I_{max}\cdot C}{IC_{50} + C}\right) $$</p>
     
     En la Figura 6 se muestra una comparación del comportamiento de la respuesta para diversos tipos de modelos proporcionales.
 
     <p style="text-align: center;">
       <img src="./Modulos/Blog/09_ModelosFarmacodinamicos/040b_modelos_directos_proporcionales.png"
-        alt="Comportamiento de modelos directos proporcionales." width="75%"
-        style="display:block; margin-left:auto; margin-right:auto">
+        alt="Comportamiento de modelos directos proporcionales." width="1152px"
+        style="display:block; margin-left:auto; margin-right:auto; max-width: 100%;">
     </p>
     <p>Figura 5. Comportamiento de algunos modelos directos proporcionales. A. Modelo lineal estimulatorio (\(S\) = 0.05), B. Modelo lineal inhibitorio (\(S\) = -0.05), C. Modelo con saturación estimulatorio (\(Emax\) = 0.5, \(EC50\)=50), D. Modelo con saturación inhibitorio (\(Imax\) = 20, \(IC50\)=50).
     </p>
+
+    <!-- concentración de ligando para alcanzar la mitad del efecto máximo -->
 
     <h2>5. Modelos de Compartimento de Efectos o Unión</h2>
     <h2>6. Modelos de Respuesta Indirecta</h2>
