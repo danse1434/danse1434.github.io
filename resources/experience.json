@@ -3,10 +3,15 @@
     "divName": "experiencia7",
     "tituloTrabajo": "Parexel",
     "cargo": "PK Scientist",
-    "periodo": "Jul 2021 - Actualidad",
+    "fecha_inicio": "Jul 2022",
+    "fecha_final": "Actualidad",
     "descripcion": "Pharmacokinetics Scientist.",
     "responsabilidades": [
-      "Análisis y evaluación de modelos PK/PD."
+      "Análisis y evaluación de modelos PK/PD.",
+      "Trabajar con equipos clínicos para diseñar componentes PK/PD en varios diseños de estudio tales como first-in-human, bioequivalencia y estudios de interacción de fármacos.",
+      "Contribuir a las secciones PK/PD de documentos clínicos relevantes.",
+      "Contribuir al diseño, análisis, reporte, y presentación de iniciativas de modelamiento y simulación PK/PD, incluyendo análisis PK/PD poblacionales para todas las fases de desarrollo.",
+      "Revisión de documentación científica incluyendo protocolos de estudio clínico, SOPs, planes de análisis estadístico, y reportes de estudio clínico."
     ],
     "Locacion": "Bogotá (Descentralizado)"
   },
@@ -14,7 +19,8 @@
     "divName": "experiencia6",
     "tituloTrabajo": "Fondo Nacional de Estupefacientes",
     "cargo": "Profesional Universitario",
-    "periodo": "Mar 2021 - Jul 2022",
+    "fecha_inicio": "Mar 2021",
+    "fecha_final": "Jul 2022",
     "descripcion": "Contratista Proyecto de Inversión Misión PRI 1901.",
     "responsabilidades": [
       "Consolidación y análisis de información relacionada a la demanda de medicamentos monopolio del Estado.",
@@ -28,7 +34,8 @@
     "divName": "experiencia5",
     "tituloTrabajo": "Fondo Nacional de Estupefacientes",
     "cargo": "Referente de Programa de Farmacovigilancia",
-    "periodo": "Jul 2019 - Nov 2019",
+    "fecha_inicio": "Jul 2019",
+    "fecha_final": "Nov 2019",
     "descripcion": "Contratista.",
     "responsabilidades": [
       "Identificación y análisis de eventos adversos relacionados con medicamentos.",
@@ -43,7 +50,8 @@
     "divName": "experiencia4",
     "tituloTrabajo": "Fundación Hospital de la Misericordia",
     "cargo": "Químico Farmacéutico",
-    "periodo": "Oct 2014 - Dic 2017",
+    "fecha_inicio": "Oct 2014",
+    "fecha_final": "Dic 2017",
     "descripcion": "Responsable por la elaboración de dosis unitarias por parte de la central de mezclas. Líder del área de farmacovigilancia y uso seguro de medicamentos.",
     "responsabilidades": [
       "Elaboración y control de calidad de magistrales estériles y no estériles.",
@@ -58,7 +66,8 @@
     "divName": "experiencia3",
     "tituloTrabajo": "Universidad Nacional de Colombia",
     "cargo": "Asistente Docente",
-    "periodo": "Feb 2016 - Dic 2017",
+    "fecha_inicio": "Feb 2016",
+    "fecha_final": "Dic 2017",
     "descripcion": "Responsable de actividades de seguimiento, asesoría, y evaluación a estudiantes en curso de farmacia hospitalaria I: rotación Centro de Información de Medicamentos Universidad Nacional de Colombia",
     "responsabilidades": [
       "Coordinación de recibo y presentación de consultas a clientes externos del centro.",
@@ -70,7 +79,8 @@
     "divName": "experiencia2",
     "tituloTrabajo": "Aristizábal & Jiménez Abogados",
     "cargo": "Analista Regulatorio",
-    "periodo": "Feb 2014 - May 2014",
+    "fecha_inicio": "Feb 2014",
+    "fecha_final": "May 2014",
     "descripcion": "Responsable por asesoría regulatoria en dispositivos médicos y medicamentos a clientes.",
     "responsabilidades": [
       "Elaboración de solicitudes de registro sanitario y modificaciones, autorizaciones, y certificados.",
@@ -84,7 +94,8 @@
     "divName": "experiencia1",
     "tituloTrabajo": "Fundación Hospital de la Misericordia",
     "cargo": "Practicante de farmacia hospitalaria",
-    "periodo": "Ene 2013 - Dic 2013",
+    "fecha_inicio": "Ene 2013",
+    "fecha_final": "Dic 2013",
     "descripcion": "Responsable por cumplimiento de objetivos planteados en el programa de la asignatura e implementación de proceso de reconciliación de medicamentos.",
     "responsabilidades": [
       "Implementación de plan piloto, capacitación de personal médico, reporte de errores durante interfaces de atención; preparación y control de calidad de magistrales estériles y no estériles, confirmación de órdenes, reporte de EAM.",

@@ -19,7 +19,8 @@ fetch("../resources/experience.json")
         element["divName"],
         element["tituloTrabajo"],
         element["cargo"],
-        element["periodo"],
+        element["fecha_inicio"],
+        element["fecha_final"],
         element["descripcion"],
         element["responsabilidades"],
         element["Locacion"]

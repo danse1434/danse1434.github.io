@@ -1,10 +1,57 @@
+//------------------------------------------------------------------------------------------------
+function convertirCadenaFecha(cadena) {
+  // Verificar si la cadena es "Actualidad"
+  if (cadena.toLowerCase() === "actualidad") {
+    return new Date(); // Retorna la fecha actual
+  }
+  // Mapear los nombres de los meses a sus índices
+  const meses = {
+    "Ene": 0, "Feb": 1, "Mar": 2, "Abr": 3, "May": 4, "Jun": 5,
+    "Jul": 6, "Ago": 7, "Sep": 8, "Oct": 9, "Nov": 10, "Dic": 11
+  };
+
+  // Dividir la cadena en mes y año
+  const partes = cadena.split(' ');
+  const nombreMes = partes[0];
+  const año = partes[1];
+
+  // Obtener el índice del mes
+  const indiceMes = meses[nombreMes];
+
+  // Crear el objeto Date
+  const fecha = new Date(año, indiceMes);
+
+  return fecha;
+}
+
+//------------------------------------------------------------------------------------------------
+function diferenciaEnAniosYMeses(fecha1, fecha2) {
+  // Obtener la diferencia en milisegundos entre las dos fechas
+  const diferenciaEnMilisegundos = fecha2 - fecha1;
+
+  // Calcular la diferencia en años y meses
+  const mesesTotales = diferenciaEnMilisegundos / (1000 * 60 * 60 * 24 * 30.44); // Aproximadamente el número promedio de días en un mes
+  const años = Math.floor(mesesTotales / 12);
+  const mesesRestantes = Math.round(mesesTotales % 12);
+
+  let text_result; 
+
+  if (años === 0) {
+    text_result = `${mesesRestantes} meses`
+  } else {
+    text_result = `${años} años y ${mesesRestantes} meses`
+  }
+  return text_result;
+}
+
 
 //------------------------------------------------------------------------------------------------
 export function crearExperiencia1(
   divName,
   tituloTrabajo,
   cargo,
-  periodo,
+  fecha_inicio,
+  fecha_final,
   descripcion,
   responsabilidades,
   Locacion,
@@ -21,10 +68,17 @@ export function crearExperiencia1(
 
   var periodoContainer = document.createElement("p");
   periodoContainer.classList.add("experiencia__periodo");
-  periodoContainer.textContent += periodo;
-
+  periodoContainer.textContent += `${fecha_inicio} - ${fecha_final}`;
+  
+  let periodo_diferencia = diferenciaEnAniosYMeses(convertirCadenaFecha(fecha_inicio), convertirCadenaFecha(fecha_final));
+  
+  var periodoContainerDifference = document.createElement("p");
+  periodoContainerDifference.classList.add("experiencia__periodo");
+  periodoContainerDifference.textContent += `(${periodo_diferencia})`;
+  
   div1.appendChild(titleContainer);
   div1.appendChild(periodoContainer);
+  div1.appendChild(periodoContainerDifference);
 
   // 2. Caja de contenido
   var div2 = document.createElement("div");
