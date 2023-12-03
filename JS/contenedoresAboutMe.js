@@ -38,6 +38,8 @@ function diferenciaEnAniosYMeses(fecha1, fecha2) {
 
   if (años === 0) {
     text_result = `${mesesRestantes} meses`
+  } else if (años === 1) {
+    text_result = `${años} año y ${mesesRestantes} meses`
   } else {
     text_result = `${años} años y ${mesesRestantes} meses`
   }
